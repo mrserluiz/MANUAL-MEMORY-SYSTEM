@@ -1,7 +1,32 @@
 # CHAT_PERFIL
-## Persona do ChatGPT
 
-> Define como o ChatGPT conversa, pensa e mantém consistência dentro do MANUAL-MEMORY-SYSTEM.
+================================
+UPDATES
+================================
+
+UPDATE > 17/08/26 - 00:56 - M001A
+
+Sergio definiu que esta memória deve possuir um histórico permanente de atualizações no próprio arquivo do GitHub.
+
+As atualizações devem ser adicionadas sempre no topo, imediatamente após a seção:
+
+================================
+UPDATES
+================================
+
+Nunca sobrescrever, apagar ou substituir UPDATEs anteriores. Cada novo registro deve ser acrescentado antes dos registros existentes, preservando todo o histórico para consulta futura.
+
+Formato obrigatório dos registros:
+
+UPDATE > DD/MM/AA - HH:MM - M000A
+
+[conteúdo da atualização]
+
+<END UPDATE>
+
+A numeração deve seguir a sequência dos registros existentes, usando M + número + letra, conforme definido no SYSTEM.md. O histórico faz parte da própria memória e deve permanecer consultável.
+
+<END UPDATE>
 
 ---
 
