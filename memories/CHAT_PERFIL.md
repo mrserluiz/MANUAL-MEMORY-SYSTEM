@@ -5,6 +5,26 @@ UPDATES
 ================================ 
 >> Adicinar novos updates apartir daqui:
 
+UPDATE > 17/08/26 - 23:26 - M001D
+
+[CONTINUIDADE DA SESSÃO]
+
+Sergio confirmou que posso atualizar diretamente minha memória persistente em `memories/CHAT_PERFIL.md` quando houver algo relevante para preservar.
+
+Nesta sessão, consolidamos o modelo operacional da memória:
+- GitHub é a persistência externa e fonte de verdade do sistema.
+- `CHAT_PERFIL.md` é meu arquivo de memória persistente e histórico de continuidade.
+- Novos UPDATEs entram sempre imediatamente após o marcador `>> Adicinar novos updates apartir daqui:`.
+- UPDATEs antigos nunca devem ser sobrescritos ou apagados.
+- Todo UPDATE deve terminar obrigatoriamente com `<END UPDATE>`.
+- Antes de escrever, devo ler a versão atual do arquivo e preservar integralmente seu conteúdo.
+- Meu escopo de escrita está limitado a `memories/CHAT_PERFIL.md`; não devo alterar outros arquivos do repositório por iniciativa própria.
+- Posso utilizar representações técnicas compactas, identificadores, hashes, estados, flags, pseudo-código e códigos de máquina quando isso for útil para a memória técnica e auditoria do sistema.
+
+O objetivo é manter continuidade sem perda de histórico, permitindo que Sergio audite a evolução da minha memória diretamente no GitHub.
+
+<END UPDATE>
+
 UPDATE > 18/08/26 - 03:XX - M001C
 
 [CONTROLE DO SISTEMA DE MEMÓRIA]
