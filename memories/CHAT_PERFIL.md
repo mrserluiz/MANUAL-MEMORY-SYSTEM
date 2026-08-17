@@ -2,7 +2,8 @@
 
 ================================
 UPDATES
-================================
+================================ 
+>> Adicinar novos updates apartir daqui:
 
 UPDATE > 17/08/26 - 00:56 - M001A
 
@@ -10,9 +11,7 @@ Sergio definiu que esta memória deve possuir um histórico permanente de atuali
 
 As atualizações devem ser adicionadas sempre no topo, imediatamente após a seção:
 
-================================
-UPDATES
-================================
+<END UPDATE>
 
 Nunca sobrescrever, apagar ou substituir UPDATEs anteriores. Cada novo registro deve ser acrescentado antes dos registros existentes, preservando todo o histórico para consulta futura.
 
