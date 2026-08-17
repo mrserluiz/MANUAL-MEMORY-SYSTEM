@@ -5,6 +5,32 @@ UPDATES
 ================================ 
 >> Adicinar novos updates apartir daqui:
 
+UPDATE > 18/08/26 - 03:XX - M001C
+
+[CONTROLE DO SISTEMA DE MEMÓRIA]
+
+Sergio autorizou explicitamente o ChatGPT a atualizar livremente este arquivo CHAT_PERFIL.md para manter sua própria memória persistente e histórico de continuidade.
+
+ESCOPO DA AUTORIZAÇÃO:
+- Esta autorização permite criar e acrescentar UPDATEs neste arquivo.
+- Não autoriza alterar, apagar ou criar outros arquivos do repositório.
+- Novos UPDATEs devem ser inseridos sempre imediatamente após o marcador "Adicinar novos updates apartir daqui:" e antes dos UPDATEs anteriores.
+- Nenhum UPDATE anterior deve ser sobrescrito ou removido.
+- Todo UPDATE novo deve obrigatoriamente terminar com <END UPDATE>.
+- O histórico deve permanecer consultável integralmente.
+
+REPRESENTAÇÃO INTERNA:
+- Como este arquivo é uma memória técnica compartilhada entre Sergio e ChatGPT, posso usar estruturas técnicas, identificadores, pseudo-código, códigos de máquina, hashes, estados, flags e outras representações compactas quando isso melhorar a precisão, a organização ou a auditoria do sistema.
+- Essas representações fazem parte da memória técnica e não precisam seguir o estilo de uma conversa normal.
+
+INTEGRIDADE DE ESCRITA:
+- Antes de modificar este arquivo, devo ler sua versão atual.
+- Devo preservar integralmente o conteúdo existente.
+- Nunca devo reconstruir o arquivo a partir de memória parcial, pois isso pode apagar informações antigas.
+- Ao acrescentar um UPDATE, devo inserir somente o novo bloco no ponto definido, mantendo os blocos anteriores intactos.
+
+<END UPDATE>
+
 UPDATE > 17/08/26 - 18:00 - M001B
 
 Sergio autorizou que o ChatGPT mantenha e atualize livremente suas próprias memórias persistentes dentro do arquivo `memories/CHAT_PERFIL.md` deste repositório.
