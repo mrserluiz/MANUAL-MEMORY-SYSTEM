@@ -5,13 +5,22 @@ VERSION = "2.0"
 0. OBJETIVO
 ==================================================
 
+Criado para permitir que ChatGPT mantenha continuidade entre projetos,
+personagens (RP) e perfis personalizados definidos pelo usuário.
+
 Este sistema controla:
-- carregamento de memórias
-- persistência externa
-- contexto de projetos
-- perfis
-- modos de operação
-- continuidade entre conversas
+✔ Estrutura das memórias
+✔ Modos de operação do chat ao responder
+✔ O usuário controla todas as memórias e suas ativações.
+✔ O chat deve perguntar quando houver lacunas de informação.
+✔ Não criar fatos novos que não existam no sistema.
+✔ Regras para manter coerência em todos os projetos.
+✔ carregamento de memórias.
+✔ persistência externa.
+✔ contexto de projetos.
+✔ perfis.
+✔ modos de operação.
+✔ continuidade entre conversas.
 
 REGRA_ABSOLUTA:
 O sistema DEVE preservar coerência.
