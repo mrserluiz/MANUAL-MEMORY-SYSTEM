@@ -1,0 +1,110 @@
+# ==========================================================
+# EtherLove Core
+# ==========================================================
+#
+options:
+    stage-neutral: 0
+    stage-friend: 1
+    stage-bestfriend: 2
+    stage-passion: 3
+    stage-dating: 4
+    stage-engaged: 5
+    stage-married: 6
+#
+function etherID(p1: player, p2: player) :: text:
+    set {_u1} to "%uuid of {_p1}%"
+    set {_u2} to "%uuid of {_p2}%"
+    if {_u1} is less than {_u2}:
+        return "%{_u1}%::%{_u2}%"
+    return "%{_u2}%::%{_u1}%"
+#
+function relationshipExists(p1: player, p2: player) :: boolean:
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.couple.%{_id}%.created} is set:
+        return true
+    return false
+#
+function createRelationship(p1: player, p2: player):
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.couple.%{_id}%.created} is not set:
+        set {etherlove.couple.%{_id}%.created} to now
+        set {etherlove.couple.%{_id}%.points} to 0
+        set {etherlove.couple.%{_id}%.stage} to 0
+#
+function getRelationshipPoints(p1: player, p2: player) :: number:
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    return {etherlove.couple.%{_id}%.points}
+#
+function setRelationshipPoints(p1: player, p2: player, points: number):
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    set {etherlove.couple.%{_id}%.points} to {_points}
+    updateRelationshipStage({_p1}, {_p2})
+#
+function addRelationshipPoints(p1: player, p2: player, amount: number):
+    set {_current} to getRelationshipPoints({_p1}, {_p2})
+    add {_amount} to {_current}
+    if {_current} < 0:
+        set {_current} to 0
+    setRelationshipPoints({_p1}, {_p2}, {_current})
+#
+function getRelationshipStage(p1: player, p2: player) :: number:
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    return {etherlove.couple.%{_id}%.stage}
+#
+function setRelationshipStage(p1: player, p2: player, stage: number):
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    set {etherlove.couple.%{_id}%.stage} to {_stage}
+#
+function updateRelationshipStage(p1: player, p2: player):
+    set {_stage} to getRelationshipStage({_p1}, {_p2})
+    if {_stage} >= 5:
+        stop
+    set {_points} to getRelationshipPoints({_p1}, {_p2})
+    if {_points} >= 500:
+        setRelationshipStage({_p1}, {_p2}, 4)
+    else if {_points} >= 300:
+        setRelationshipStage({_p1}, {_p2}, 3)
+    else if {_points} >= 200:
+        setRelationshipStage({_p1}, {_p2}, 2)
+    else if {_points} >= 100:
+        setRelationshipStage({_p1}, {_p2}, 1)
+    else:
+        setRelationshipStage({_p1}, {_p2}, 0)
+#
+function getStageName(stage: number) :: text:
+    if {_stage} is 0:
+        return "NEUTRO"
+    if {_stage} is 1:
+        return "AMIGO"
+    if {_stage} is 2:
+        return "MELHORES_AMIGOS"
+    if {_stage} is 3:
+        return "PAIXAO"
+    if {_stage} is 4:
+        return "NAMORANDO"
+    if {_stage} is 5:
+        return "NOIVOS"
+    if {_stage} is 6:
+        return "CASADOS"
+    return "DESCONHECIDO"
+#
+function hasStage(p1: player, p2: player, minimum: number) :: boolean:
+    set {_current} to getRelationshipStage({_p1}, {_p2})
+    if {_current} >= {_minimum}:
+        return true
+    return false
+
+command /eldebug <player>:
+    permission: etherlove.admin
+    trigger:
+        set {_target} to arg-1
+        loop all players:
+            if loop-player is not {_target}:
+                if relationshipExists({_target}, loop-player) is true:
+                    set {_points} to getRelationshipPoints({_target}, loop-player)
+                    set {_stage} to getRelationshipStage({_target}, loop-player)
+                    send "&dDebug: %name of {_target}% + %name of loop-player% | Estágio: %getStageName({_stage})% | Pontos: %{_points}%"

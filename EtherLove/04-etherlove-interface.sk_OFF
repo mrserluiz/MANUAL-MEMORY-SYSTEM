@@ -1,0 +1,35 @@
+# ==========================================================
+# EtherLove Interface
+# ==========================================================
+#
+command /el [<text>]:
+    trigger:
+        if arg-1 is "menu" or not set:
+            set {_gui} to a new chest inventory with 6 rows named "&d❤ Seus Relacionamentos"
+            set {_slot} to 0
+            loop all players:
+                if loop-player is not player:
+                    if relationshipExists(player, loop-player) is true:
+                        set {_s} to getRelationshipStage(player, loop-player)
+                        set {_p} to getRelationshipPoints(player, loop-player)
+                        set slot {_slot} of {_gui} to player head named "&e%name of loop-player%" with lore "&7Estágio: &f%getStageName({_s})%", "&7Pontos: &a%{_p}%"
+                        add 1 to {_slot}
+            open {_gui} to player
+        else if arg-1 is "debug":
+            make player execute command "/eldebug %player%"
+
+on inventory click:
+    if name of event-inventory is "&d❤ Seus Relacionamentos":
+        cancel event
+
+every 5 seconds:
+    loop all players:
+        set {_p1} to loop-player
+        loop players in radius 10 of {_p1}:
+            set {_p2} to loop-player-2
+            if {_p1} is not {_p2}:
+                if relationshipExists({_p1}, {_p2}) is true:
+                    set {_s} to getRelationshipStage({_p1}, {_p2})
+                    if {_s} >= 1:
+                        set {_pts} to getRelationshipPoints({_p1}, {_p2})
+                        send action bar "&d❤ %name of {_p2}% &7- &f%getStageName({_s})% &7(&a%{_pts}% pts&7)" to {_p1}

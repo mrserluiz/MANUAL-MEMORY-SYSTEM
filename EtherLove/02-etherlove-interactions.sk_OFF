@@ -1,0 +1,43 @@
+# ==========================================================
+# EtherLove Interactions
+# ==========================================================
+#
+command /rp:
+    trigger:
+        if canUseRP(player) is true:
+            startRPCooldown(player)
+            loop all players:
+                if loop-player is not player:
+                    if relationshipExists(player, loop-player) is true:
+                        addRelationshipPoints(player, loop-player, 10)
+            send "&dRelacionamentos fortalecidos!"
+        else:
+            send "&cEm cooldown."
+
+command /ab <player>:
+    trigger:
+        set {_t} to arg-1
+        if canUseAB(player) is true:
+            if hasStage(player, {_t}, 1) is true:
+                startABCooldown(player)
+                addRelationshipPoints(player, {_t}, 5)
+                play 15 of heart at location 1.5 meters above {_t} with offset 0.5, 0.5, 0.5 with extra 0.1
+                send "&fVocê abraçou &e%name of {_t}%"
+            else:
+                send "&cRequer estágio AMIGO."
+        else:
+            send "&cEm cooldown."
+
+command /bj <player>:
+    trigger:
+        set {_t} to arg-1
+        if canUseBJ(player, {_t}) is true:
+            if hasStage(player, {_t}, 3) is true:
+                startBJCooldown(player, {_t})
+                addRelationshipPoints(player, {_t}, 15)
+                play 20 of heart at location 1.5 meters above {_t} with offset 0.3, 0.3, 0.3 with extra 0.2
+                send "&fVocê beijou &e%name of {_t}%"
+            else:
+                send "&cRequer estágio PAIXAO."
+        else:
+            send "&cEm cooldown."

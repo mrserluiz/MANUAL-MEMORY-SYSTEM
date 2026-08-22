@@ -1,0 +1,34 @@
+# ==========================================================
+# EtherLove Progression
+# ==========================================================
+#
+command /namorar <player>:
+    trigger:
+        set {_t} to arg-1
+        if hasStage(player, {_t}, 3) is true:
+            createRequest(player, {_t}, "NAMORO")
+            send "&fPedido de namoro enviado para &e%name of {_t}%"
+        else:
+            send "&cRequer estágio PAIXAO."
+
+command /lcasar <player>:
+    trigger:
+        set {_t} to arg-1
+        if hasStage(player, {_t}, 4) is true:
+            createRequest(player, {_t}, "CASAMENTO")
+            send "&fPedido de casamento enviado para &e%name of {_t}%"
+        else:
+            send "&cRequer estágio NAMORANDO."
+
+command /lcc <player> <player>:
+    permission: etherlove.ceremonialist
+    trigger:
+        set {_p1} to arg-1
+        set {_p2} to arg-2
+        if getRelationshipStage({_p1}, {_p2}) is 5:
+            setRelationshipStage({_p1}, {_p2}, 6)
+            broadcast "&d❤ %name of {_p1}% e %name of {_p2}% agora estão CASADOS!"
+            play 30 of heart at location 2 meters above {_p1} with offset 1, 1, 1 with extra 0.1
+            play 30 of heart at location 2 meters above {_p2} with offset 1, 1, 1 with extra 0.1
+        else:
+            send "&cEles precisam ser NOIVOS."

@@ -1,0 +1,73 @@
+# ==========================================================
+# EtherLove Utils (Cooldowns & Requests)
+# ==========================================================
+#
+function canUseRP(p: player) :: boolean:
+    if {el.cd.rp.%uuid of {_p}%} is not set:
+        return true
+    if difference between now and {el.cd.rp.%uuid of {_p}%} >= 12 hours:
+        return true
+    return false
+#
+function startRPCooldown(p: player):
+    set {el.cd.rp.%uuid of {_p}%} to now
+#
+function canUseAB(p: player) :: boolean:
+    if {el.cd.ab.%uuid of {_p}%} is not set:
+        return true
+    if difference between now and {el.cd.ab.%uuid of {_p}%} >= 50 seconds:
+        return true
+    return false
+#
+function startABCooldown(p: player):
+    set {el.cd.ab.%uuid of {_p}%} to now
+#
+function canUseBJ(p1: player, p2: player) :: boolean:
+    set {_id} to etherID({_p1}, {_p2})
+    if {el.cd.bj.%{_id}%} is not set:
+        return true
+    if difference between now and {el.cd.bj.%{_id}%} >= 80 seconds:
+        return true
+    return false
+#
+function startBJCooldown(p1: player, p2: player):
+    set {_id} to etherID({_p1}, {_p2})
+    set {el.cd.bj.%{_id}%} to now
+#
+# REQUESTS
+#
+function hasPendingRequest(sender: player, receiver: player) :: boolean:
+    if {el.req.%uuid of {_sender}%::%uuid of {_receiver}%.type} is set:
+        return true
+    return false
+#
+function createRequest(sender: player, receiver: player, type: text):
+    set {el.req.%uuid of {_sender}%::%uuid of {_receiver}%.type} to {_type}
+#
+function removeRequest(sender: player, receiver: player):
+    delete {el.req.%uuid of {_sender}%::%uuid of {_receiver}%.type}
+#
+function getRequestType(sender: player, receiver: player) :: text:
+    return {el.req.%uuid of {_sender}%::%uuid of {_receiver}%.type}
+
+command /ls <player>:
+    trigger:
+        set {_s} to arg-1
+        if hasPendingRequest({_s}, player) is true:
+            set {_t} to getRequestType({_s}, player)
+            if {_t} is "NAMORO":
+                setRelationshipStage({_s}, player, 4)
+                send "&aNamoro aceito!"
+            else if {_t} is "CASAMENTO":
+                setRelationshipStage({_s}, player, 5)
+                send "&aPedido de casamento aceito!"
+            removeRequest({_s}, player)
+        else:
+            send "&cSem pedidos pendentes."
+
+command /ln <player>:
+    trigger:
+        set {_s} to arg-1
+        if hasPendingRequest({_s}, player) is true:
+            removeRequest({_s}, player)
+            send "&cPedido negado."
