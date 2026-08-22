@@ -5,6 +5,753 @@ UPDATE > 00/00/00 - 00:00 - M000A
 [conteúdo]
 <END UPDATE>
 =============================
+
+UPDATE > 22/08/26 - 00:XX - M003A
+
+[ETHERLOVE — MODELO DE XP, RELACIONAMENTOS E PROGRESSÃO]
+
+==================================================
+CORREÇÃO IMPORTANTE
+==================================================
+
+Durante a definição da progressão houve uma confusão sobre o desbloqueio do /BJ.
+
+Foi mencionado anteriormente que:
+
+CASE 2 → /BJ
+
+Isso foi identificado como um erro de interpretação durante a conversa.
+
+A regra correta permanece:
+
+CASE 3 → /BJ
+
+Portanto, a matriz oficial continua:
+
+CASE 0 → /RP
+CASE 1 → /AB + /PRESETE
+CASE 2 → /DATE
+CASE 3 → /BJ
+CASE 4 → /NOIVAR
+CASE 5 → nenhum novo comando
+CASE 6 → /TPC + /OBAOBA
+
+==================================================
+CONCEITO FUNDAMENTAL
+==================================================
+
+EtherLove é um sistema de relacionamento baseado em PARES.
+
+O progresso NÃO pertence individualmente ao jogador.
+
+O progresso pertence à relação entre dois jogadores.
+
+Exemplo:
+
+PLAYER1 + PLAYER2
+        ↓
+Relationship-001
+        ↓
+XP independente
+        ↓
+CASE independente
+
+Enquanto:
+
+PLAYER1 + PLAYER3
+        ↓
+Relationship-002
+        ↓
+XP independente
+        ↓
+CASE independente
+
+E:
+
+PLAYER1 + PLAYER4
+        ↓
+Relationship-003
+        ↓
+XP independente
+        ↓
+CASE independente
+
+Portanto, um jogador pode possuir vários relacionamentos simultaneamente, cada um com seu próprio XP e CASE.
+
+Exemplo:
+
+PLAYER1
+│
+├── PLAYER2
+│     └── Relationship-001
+│          XP = 150
+│          CASE = 1
+│
+├── PLAYER3
+│     └── Relationship-002
+│          XP = 20
+│          CASE = 0
+│
+└── PLAYER4
+      └── Relationship-003
+           XP = 200
+           CASE = 2
+
+==================================================
+XP
+==================================================
+
+XP representa a qualidade/progresso da relação entre dois jogadores.
+
+O XP pode aumentar ou diminuir.
+
+XP POSITIVO:
+Uma interação bem-sucedida ou uma boa avaliação aumenta o relacionamento.
+
+XP NEGATIVO:
+Uma interação ruim ou uma avaliação negativa pode diminuir o relacionamento.
+
+Portanto:
+
+AÇÃO
+ ↓
+RESULTADO
+ ↓
+AVALIAÇÃO
+ ↓
+XP POSITIVO OU NEGATIVO
+
+O sistema não deve tratar todas as ações como recompensas fixas.
+
+==================================================
+AÇÕES DE XP
+==================================================
+
+/RP
+
+É uma ação básica de relacionamento.
+
+Exemplo atual:
+
+/RP
+ ↓
++10 XP
+
+O XP é aplicado somente à relação entre os dois jogadores envolvidos.
+
+Não deve alterar todos os relacionamentos do jogador simultaneamente.
+
+--------------------------------------------------
+
+/AB
+
+É uma ação de relacionamento desbloqueada posteriormente.
+
+Exemplo atual:
+
+/AB
+ ↓
++10 XP
+
+O XP pertence exclusivamente à relação entre os jogadores envolvidos.
+
+--------------------------------------------------
+
+/BJ
+
+É uma ação de relacionamento desbloqueada no CASE 3.
+
+Exemplo atual:
+
+/BJ
+ ↓
++15 XP
+
+O XP pertence exclusivamente à relação entre os jogadores envolvidos.
+
+==================================================
+EVENTOS ESPECIAIS
+==================================================
+
+/DATE
+
+/PRESETE
+
+Essas mecânicas possuem comportamento diferente de /RP, /AB e /BJ.
+
+Não devem necessariamente fornecer XP fixo.
+
+São eventos/interações direcionadas a outro jogador.
+
+O resultado pode ser avaliado pelo jogador participante.
+
+Fluxo:
+
+PLAYER1
+ ↓
+/DATE
+ ↓
+PLAYER2 participa
+ ↓
+resultado da interação
+ ↓
+avaliação
+ ↓
+XP positivo / neutro / negativo
+
+O mesmo conceito deve ser utilizado para:
+
+/PRESETE
+
+Exemplo:
+
+PLAYER1 → PRESENTE → PLAYER2
+
+PLAYER2 pode considerar a interação positiva ou negativa.
+
+Resultado:
+
++XP
+
+ou:
+
+-XP
+
+ou eventualmente:
+
+0 XP
+
+A lógica exata de avaliação ainda precisa ser definida e implementada.
+
+==================================================
+COOLDOWNS
+==================================================
+
+Cooldowns existem para impedir farming/spam de XP.
+
+O objetivo é impedir que um jogador execute rapidamente:
+
+/RP
+/RP
+/RP
+/RP
+/RP
+
+ou:
+
+/AB
+/AB
+/AB
+
+ou:
+
+/BJ
+/BJ
+/BJ
+
+simplesmente para acumular XP rapidamente.
+
+Portanto:
+
+/RP → cooldown
+/AB → cooldown
+/BJ → cooldown
+
+Cooldown é uma proteção contra abuso da progressão.
+
+Cooldown não representa o relacionamento.
+
+Cooldown não deve alterar o XP diretamente.
+
+Cooldown deve apenas controlar quando uma ação pode ser executada novamente.
+
+==================================================
+XP E CASE
+==================================================
+
+O CASE representa a progressão/desbloqueio da relação.
+
+A relação possui:
+
+XP
+ ↓
+CASE
+ ↓
+UNLOCKS
+
+O CASE deve ser derivado ou determinado a partir da progressão de XP, mantendo também as condições especiais de eventos.
+
+Exemplo:
+
+XP = 0
+ ↓
+CASE 0
+ ↓
+/RP
+
+XP = 100
+ ↓
+CASE 1
+ ↓
+/RP
+/AB
+/PRESETE
+
+XP = 200
+ ↓
+CASE 2
+ ↓
+/RP
+/AB
+/DATE
+
+XP suficiente para CASE 3
+ ↓
+CASE 3
+ ↓
+/RP
+/AB
+/PRESETE
+/DATE
+/BJ
+
+A tabela definitiva de todos os thresholds ainda deve ser validada antes de ser implementada.
+
+==================================================
+UNLOCK MATRIX
+==================================================
+
+CASE 0
+-------
+
+/RP
+
+
+CASE 1
+-------
+
+/RP
+/AB
+/PRESETE
+
+
+CASE 2
+-------
+
+/RP
+/AB
+/PRESETE
+/DATE
+
+
+CASE 3
+-------
+
+/RP
+/AB
+/PRESETE
+/DATE
+/BJ
+
+
+CASE 4
+-------
+
+/RP
+/AB
+/PRESETE
+/DATE
+/BJ
+/NOIVAR
+
+
+CASE 5
+-------
+
+/RP
+/AB
+/PRESETE
+/DATE
+/BJ
+/NOIVAR
+
+Nenhum novo comando é desbloqueado.
+
+CASE 5 é o último estágio que pode ser alcançado sozinho através da progressão normal.
+
+
+CASE 6
+-------
+
+/RP
+/AB
+/PRESETE
+/DATE
+/BJ
+/NOIVAR
+/TPC
+/OBAOBA
+
+CASE 6 somente pode ser alcançado mediante evento de casamento.
+
+==================================================
+CASE 5 → CASE 6
+==================================================
+
+A transição para CASE 6 é especial.
+
+Não deve ser tratada simplesmente como:
+
+XP >= threshold
+
+Fluxo:
+
+CASE 5
+ ↓
+EVENTO DE CASAMENTO
+ ↓
+CASAMENTO CONCLUÍDO
+ ↓
+CASE 6
+ ↓
+/TPC
+/OBAOBA
+
+CASE 6 representa uma condição especial/pós-casamento.
+
+A regra de casamento deverá ser implementada como evento próprio.
+
+==================================================
+INSPIRAÇÃO DO SISTEMA
+==================================================
+
+A lógica de relacionamento é inspirada no sistema de relacionamentos de The Sims, especialmente The Sims 2.
+
+Referência conceitual:
+
+https://sims.fandom.com/wiki/Relationship#Relationship_levels_in_The_Sims_2
+
+A principal inspiração é:
+
+- relações são individuais entre pares;
+- diferentes jogadores podem possuir diferentes níveis de relacionamento;
+- ações/interações alteram a qualidade da relação;
+- interações positivas podem aumentar a relação;
+- interações negativas podem diminuir a relação;
+- progressão depende das interações realizadas entre os participantes.
+
+EtherLove não deve copiar o sistema do The Sims literalmente.
+
+A referência serve como inspiração para o modelo de relacionamento dinâmico.
+
+==================================================
+ARQUITETURA CONCEITUAL ATUAL
+==================================================
+
+A relação deve ser representada conceitualmente como:
+
+RELATIONSHIP
+│
+├── XP
+│
+├── CASE
+│
+├── STATUS
+│
+├── CREATED
+│
+├── LAST-INTERACTION
+│
+└── EVENT STATE
+
+O fluxo principal:
+
+PLAYER A + PLAYER B
+        ↓
+RELATIONSHIP
+        ↓
+XP
+        ↓
+CASE
+        ↓
+UNLOCKS
+        ↓
+AÇÕES / EVENTOS
+        ↓
+RESULTADO
+        ↓
+XP + / XP -
+        ↓
+CASE atualizado
+
+==================================================
+SEPARAÇÃO DE RESPONSABILIDADES
+==================================================
+
+CORE:
+
+Responsável por:
+
+- relacionamento;
+- XP;
+- CASE;
+- cálculo de progressão;
+- leitura/escrita dos dados de relacionamento;
+- atualização do estado do casal.
+
+COOLDOWNS:
+
+Responsável somente por:
+
+- cooldowns;
+- prevenção de spam/farming.
+
+REQUESTS:
+
+Responsável somente por:
+
+- pedidos;
+- remetente;
+- destinatário;
+- tipo de pedido;
+- expiração;
+- aceite/recusa do pedido.
+
+MÓDULOS DE INTERAÇÃO:
+
+Responsáveis por:
+
+- verificar se a ação está desbloqueada;
+- iniciar a interação;
+- chamar as funções apropriadas do Core;
+- aplicar a consequência da interação.
+
+EVENTOS:
+
+Responsáveis por:
+
+- iniciar eventos;
+- receber resultado/avaliação;
+- informar ao Core quanto de XP deve ser aplicado;
+- controlar transições especiais como casamento.
+
+Nenhum módulo de interação deve modificar diretamente variáveis internas de outro módulo quando existir uma função apropriada para isso.
+
+==================================================
+PRINCÍPIO IMPORTANTE
+==================================================
+
+CASE não é o mesmo que COMMAND.
+
+CASE determina quais comandos/mecânicas estão desbloqueados.
+
+Exemplo:
+
+CASE 3
+
+não significa:
+
+"o jogador está no /BJ"
+
+Significa:
+
+"o relacionamento chegou ao CASE 3 e, portanto, /BJ está desbloqueado."
+
+==================================================
+PRINCÍPIO DO XP POR RELACIONAMENTO
+==================================================
+
+NUNCA:
+
+{etherlove.player.%uuid%.xp}
+
+como representação do progresso de relacionamento.
+
+O XP deve pertencer ao relacionamento entre dois jogadores.
+
+Conceitualmente:
+
+{etherlove.relationship.%relationshipID%.xp}
+
+onde:
+
+relationshipID
+
+representa exclusivamente o par:
+
+PLAYER A + PLAYER B
+
+Isso garante:
+
+PLAYER1 + PLAYER2 ≠ PLAYER1 + PLAYER3
+
+mesmo que PLAYER1 seja o mesmo jogador.
+
+==================================================
+EXEMPLO COMPLETO
+==================================================
+
+PLAYER1 + PLAYER2
+ ↓
+Relationship-001
+ ↓
+XP = 200
+ ↓
+CASE 2
+ ↓
+/RP
+/AB
+/PRESETE
+/DATE
+
+PLAYER1 + PLAYER3
+ ↓
+Relationship-002
+ ↓
+XP = 20
+ ↓
+CASE 0
+ ↓
+/RP
+
+PLAYER1 + PLAYER4
+ ↓
+Relationship-003
+ ↓
+XP = 200
+ ↓
+CASE 2
+
+Cada relação possui progressão independente.
+
+==================================================
+REGRAS AINDA NÃO DEFINIDAS
+==================================================
+
+Antes da implementação final do Core ainda precisam ser definidos:
+
+1. Threshold exato de XP para todos os CASES.
+
+2. XP mínimo.
+
+É necessário decidir se:
+
+XP < 0
+
+é permitido ou se:
+
+XP mínimo = 0.
+
+3. XP máximo.
+
+4. Se uma relação pode perder CASE quando perde XP.
+
+5. Se CASE pode regredir.
+
+6. Como CASE 4 é atingido.
+
+7. Como /NOIVAR funciona.
+
+8. Como CASE 5 é mantido.
+
+9. Como o evento de casamento transforma CASE 5 em CASE 6.
+
+10. Se CASE 6 pode perder XP/CASE ou se é permanente.
+
+11. Valores de XP negativos para interações ruins.
+
+12. Sistema de avaliação de /DATE.
+
+13. Sistema de avaliação de /PRESETE.
+
+14. Cooldowns exatos de /RP, /AB e /BJ.
+
+15. Se cooldowns são individuais por jogador, por relacionamento ou por ação.
+
+Esses pontos não devem ser inventados antes de serem definidos.
+
+==================================================
+PRÓXIMA ETAPA
+==================================================
+
+O próximo passo é AUDITAR O CORE REAL.
+
+Arquivo:
+
+etherlove-core.sk
+
+Objetivo:
+
+Verificar se a implementação atual consegue representar corretamente:
+
+PLAYER A + PLAYER B
+        ↓
+RELATIONSHIP
+        ↓
+XP INDEPENDENTE
+        ↓
+CASE INDEPENDENTE
+        ↓
+UNLOCKS
+        ↓
+AÇÕES
+        ↓
+XP POSITIVO / NEGATIVO
+
+Depois do Core:
+
+etherlove-cooldowns.sk
+etherlove-requests.sk
+etherlove-rp.sk
+etherlove-ab.sk
+etherlove-bj.sk
+etherlove-date.sk
+etherlove-namoro.sk
+
+Somente depois da auditoria completa será decidido quais arquivos serão:
+
+- corrigidos;
+- reestruturados;
+- recriados.
+
+==================================================
+ESTADO ATUAL DO PROJETO
+==================================================
+
+EtherLove possui uma implementação existente, porém ela apresenta problemas de funcionamento e inconsistências arquiteturais.
+
+O objetivo desta fase é transformar a implementação atual em um sistema funcional e coerente.
+
+A arquitetura correta agora deve considerar:
+
+RELACIONAMENTO POR PAR
++
+XP INDIVIDUAL POR RELAÇÃO
++
+XP POSITIVO/NEGATIVO
++
+CASE DERIVADO DA PROGRESSÃO
++
+UNLOCKS POR CASE
++
+EVENTOS ESPECIAIS
++
+COOLDOWNS ANTI-FARM
++
+CONSENTIMENTO
++
+EVENTO DE CASAMENTO
+
+O sistema deve permanecer compatível com o ambiente do projeto:
+
+Paper
+Skript
+SkBee
+LuckPerms
+Geyser/Floodgate
+
+<END UPDATE>
+
 UPDATE > 21/08/26 - 23:XX - M002A
 
 [ETHERLOVE — RECONSTRUÇÃO E CORREÇÃO DA ARQUITETURA]
