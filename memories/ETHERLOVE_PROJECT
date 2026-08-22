@@ -1,0 +1,83 @@
+ETHERLOVE PROJECT MEMORY
+=============================
+
+PROJECT:
+EtherLove
+
+STATUS:
+Core foundation created.
+
+==================================================
+CREATED FUNCTIONS
+==================================================
+
+1. etherID(playerA, playerB)
+- Generates unique pair identifier
+- UUID order always normalized
+- A+B = B+A
+
+2. relationshipExists(playerA, playerB)
+- Checks if couple data exists
+
+3. createRelationship(playerA, playerB)
+- Initializes relationship variables
+
+4. getRelationshipStage(playerA, playerB)
+- Returns current relationship stage
+
+5. addRelationshipPoints(playerA, playerB, amount)
+- Adds couple progression points
+
+6. updateRelationshipStage(coupleID)
+- Updates stage automatically by points
+
+==================================================
+VARIABLES ACTIVE
+==================================================
+
+{etherlove.couple.%id%.points}
+{etherlove.couple.%id%.stage}
+{etherlove.couple.%id%.created}
+{etherlove.couple.%id%.status}
+{etherlove.couple.%id%.last-interaction}
+
+==================================================
+STAGE THRESHOLDS
+==================================================
+
+0 Neutral
+1 Friend
+2 Best Friend
+3 Passion
+4 Dating
+5 Engaged
+6 Married
+
+==================================================
+PENDING TASKS
+==================================================
+
+- Build request system
+- /ls command
+- accept request flow
+- deny request flow
+- expiration timer
+
+==================================================
+NEXT STEP
+==================================================
+
+Implement:
+
+/ls <player>
+
+/ls aceitar
+
+/ls recusar
+
+with:
+sender UUID
+target UUID
+request type
+couple ID
+expiration timestamp
