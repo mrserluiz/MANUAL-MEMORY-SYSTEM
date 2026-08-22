@@ -5,6 +5,1194 @@ UPDATE > 00/00/00 - 00:00 - M000A
 [conteúdo]
 <END UPDATE>
 =============================
+UPDATE > 22/08/2026
+ETHERLOVE — RELATIONSHIP / XP / CASE / STATUS SYSTEM
+======================================================
+
+OBJETIVO DESTE UPDATE
+======================================================
+
+Este update consolida a arquitetura definitiva da progressão de relacionamento do EtherLove.
+
+O sistema é inspirado no conceito de relacionamentos de The Sims, onde ações positivas e negativas modificam individualmente a relação entre dois personagens.
+
+A regra fundamental permanece:
+
+PLAYER A + PLAYER B
+        ↓
+RELATIONSHIP
+        ↓
+XP
+        ↓
+CASE
+        ↓
+UNLOCKS / ESTADOS / EVENTOS
+
+O XP e o CASE pertencem à RELAÇÃO entre dois jogadores e nunca ao jogador individualmente.
+
+======================================================
+1. RELATIONSHIP ID
+======================================================
+
+Cada combinação de dois jogadores possui um relacionamento independente.
+
+Exemplo:
+
+PLAYER1 + PLAYER2
+        ↓
+Relationship-001
+
+PLAYER1 + PLAYER3
+        ↓
+Relationship-002
+
+PLAYER1 + PLAYER4
+        ↓
+Relationship-003
+
+Cada Relationship possui seu próprio:
+
+- XP
+- CASE
+- STATUS
+- CREATED
+- LAST-INTERACTION
+- demais dados específicos da relação
+
+O relacionamento deve utilizar uma chave de par consistente, onde:
+
+PLAYER A + PLAYER B
+=
+PLAYER B + PLAYER A
+
+Os UUIDs devem ser ordenados para garantir que a mesma dupla nunca gere dois relacionamentos diferentes.
+
+======================================================
+2. XP PERTENCE AO RELACIONAMENTO
+======================================================
+
+Nunca utilizar XP global do jogador para representar progresso de relacionamento.
+
+INCORRETO:
+
+{etherlove.player.%uuid%.xp}
+
+CORRETO CONCEITUALMENTE:
+
+{etherlove.relationship.%relationshipID%.xp}
+
+Exemplo:
+
+PLAYER1 ↔ PLAYER2
+XP = 250
+
+PLAYER1 ↔ PLAYER3
+XP = 80
+
+PLAYER1 possui duas relações completamente independentes.
+
+O XP de PLAYER1 ↔ PLAYER2 não interfere automaticamente em PLAYER1 ↔ PLAYER3.
+
+======================================================
+3. XP POSITIVO E NEGATIVO
+======================================================
+
+O relacionamento pode ganhar ou perder XP.
+
+XP POSITIVO:
+
+Uma interação positiva aumenta a relação.
+
+XP NEGATIVO:
+
+Uma interação negativa diminui a relação.
+
+Fluxo:
+
+AÇÃO
+ ↓
+RESULTADO
+ ↓
+AVALIAÇÃO / CONSEQUÊNCIA
+ ↓
+XP + OU XP -
+ ↓
+RECALCULAR CASE
+
+O sistema deve permitir regressão de CASE quando XP negativo fizer a relação ultrapassar o limite inferior do CASE atual.
+
+Exemplo:
+
+CASE 4
+XP = 500
+
+Recebe:
+
+-50 XP
+
+Resultado:
+
+XP = 450
+
+Se 450 ainda estiver dentro das regras do CASE 4, permanece CASE 4.
+
+Se uma sequência de ações negativas fizer o XP cair abaixo do limite do CASE 4, o relacionamento deverá regredir para o CASE correspondente ao novo XP.
+
+Portanto:
+
+XP ↓
+CASE ↓
+UNLOCKS ↓
+
+O relacionamento pode perder privilégios conquistados.
+
+======================================================
+4. LIMITE MÁXIMO DE XP
+======================================================
+
+O XP normal do EtherLove possui limite máximo de:
+
+500 XP
+
+O XP utilizado para progressão normal vai de:
+
+0 XP
+até
+500 XP
+
+CASE 6 NÃO é obtido simplesmente através de XP.
+
+CASE 6 é obtido exclusivamente por EVENTO ESPECIAL DE CASAMENTO.
+
+Portanto:
+
+XP máximo normal = 500 XP
+
+CASE 6 = evento especial.
+
+======================================================
+5. PROGRESSÃO OFICIAL DE XP / CASE
+======================================================
+
+CASE 0
+-------
+
+0 XP+
+
+UNLOCK:
+
+/RP
+
+
+CASE 1
+-------
+
+100 XP+
+
+UNLOCK:
+
+/AB
+
+
+CASE 2
+-------
+
+200 XP+
+
+UNLOCK:
+
+/DATE
+/PRESENTE
+
+
+CASE 3
+-------
+
+300 XP+
+
+UNLOCK:
+
+/BJ
+
+400 XP+
+
+UNLOCK:
+
+/NAMORAR
+
+
+CASE 4
+-------
+
+500 XP+
+
+ESTADO:
+
+NAMORANDO
+
+UNLOCK:
+
+/CASAR
+
+
+CASE 5
+-------
+
+END UPDATE LEVEL
+
+ESTADO:
+
+NOIVO
+
+Nenhum novo nível de XP é criado.
+
+O sistema de XP normal termina em 500 XP.
+
+CASE 6
+-------
+
+NÃO É OBTIDO POR XP.
+
+É obtido exclusivamente através de:
+
+EVENTO ESPECIAL DE CASAMENTO
+
+ESTADO:
+
+CASADO
+
+UNLOCK:
+
+/TPC
+/OBAOBA
+
+======================================================
+6. MATRIZ DE PROGRESSÃO
+======================================================
+
+A progressão conceitual é:
+
+0 XP
+ ↓
+CASE 0
+ ↓
+/RP
+ ↓
+100 XP
+ ↓
+CASE 1
+ ↓
+/AB
+ ↓
+200 XP
+ ↓
+CASE 2
+ ↓
+/DATE
+/PRESENTE
+ ↓
+300 XP
+ ↓
+CASE 3
+ ↓
+/BJ
+ ↓
+400 XP
+ ↓
+/NAMORAR
+ ↓
+ACEITAÇÃO
+ ↓
+500 XP
+ ↓
+CASE 4
+ ↓
+NAMORANDO
+ ↓
+/CASAR
+ ↓
+PEDIDO / EVENTO
+ ↓
+CASE 5
+ ↓
+NOIVO
+ ↓
+EVENTO ESPECIAL DE CASAMENTO
+ ↓
+CASE 6
+ ↓
+CASADO
+ ↓
+/TPC
+/OBAOBA
+
+======================================================
+7. IMPORTANTE — XP E TRANSIÇÕES DE ESTADO
+======================================================
+
+Nem toda mudança de CASE é apenas uma mudança automática baseada em XP.
+
+Existem CASES que representam estados afetivos e precisam de confirmação/eventos.
+
+CASE 0 → CASE 1 → CASE 2 → CASE 3
+
+São progressões normais baseadas em XP.
+
+Porém:
+
+CASE 3
++
+XP suficiente para /NAMORAR
++
+pedido de namoro
++
+ACEITAÇÃO
+=
+CASE 4
+
+CASE 4
++
+/CASAR
++
+aceitação/evento apropriado
+=
+CASE 5
+
+CASE 5
++
+EVENTO ESPECIAL DE CASAMENTO
+=
+CASE 6
+
+Portanto, o XP habilita determinadas possibilidades, mas não substitui a necessidade de aceitação/eventos.
+
+======================================================
+8. CASE 3 E /NAMORAR
+======================================================
+
+CASE 3 possui duas etapas de progressão:
+
+300 XP+
+→ /BJ
+
+400 XP+
+→ /NAMORAR
+
+O desbloqueio de /NAMORAR permite que o jogador envie um pedido de namoro.
+
+Exemplo:
+
+PLAYER1
+ ↓
+/NAMORAR PLAYER2
+ ↓
+REQUEST
+ ↓
+PLAYER2 decide
+
+Se PLAYER2 ACEITAR:
+
+PLAYER1 ↔ PLAYER2
+ ↓
+CASE 4
+ ↓
+STATUS = NAMORANDO
+
+Se PLAYER2 NEGAR:
+
+PLAYER1 ↔ PLAYER2
+ ↓
+XP -50
+ ↓
+recalcular CASE
+
+O relacionamento pode permanecer no CASE 3 ou regredir para CASE 2, dependendo do XP restante.
+
+======================================================
+9. CASE 4 = NAMORANDO
+======================================================
+
+CASE 4 representa efetivamente um namoro aceito.
+
+Não deve existir:
+
+CASE 4 + SOLTEIRO
+
+Um relacionamento só entra em CASE 4 quando:
+
+1. A relação alcança as condições necessárias.
+2. /NAMORAR é enviado.
+3. O outro jogador aceita.
+
+Portanto:
+
+CASE 4 = NAMORANDO
+
+O CASE 4 não é simplesmente um nível automático de XP.
+
+======================================================
+10. EXCLUSIVIDADE DE NAMORO
+======================================================
+
+Um jogador só pode possuir UM namoro ativo.
+
+Exemplo:
+
+PLAYER1
+ └── PLAYER2
+      CASE 4
+      STATUS = NAMORANDO
+
+PLAYER1 não pode iniciar outro namoro com PLAYER3.
+
+Mesmo que:
+
+PLAYER1 ↔ PLAYER3
+CASE 3
+XP suficiente para /NAMORAR
+
+O comando deve ser bloqueado porque PLAYER1 já está namorando PLAYER2.
+
+A mesma verificação deve ocorrer para o alvo.
+
+Se PLAYER3 já estiver namorando PLAYER4:
+
+PLAYER3
+ └── PLAYER4
+      CASE 4
+      STATUS = NAMORANDO
+
+PLAYER1 não pode iniciar namoro com PLAYER3.
+
+O sistema deve informar que o jogador já está em um relacionamento.
+
+======================================================
+11. STATUS GLOBAL E STATUS DA RELAÇÃO
+======================================================
+
+Existe uma diferença entre:
+
+RELATIONSHIP DATA
+
+e
+
+PLAYER RELATIONSHIP STATE.
+
+A relação possui:
+
+- XP
+- CASE
+- STATUS
+
+Enquanto o sistema também precisa conseguir consultar:
+
+"Com quem este jogador está namorando?"
+
+"Este jogador está noivo?"
+
+"Este jogador está casado?"
+
+Isso é necessário para garantir exclusividade.
+
+Exemplo:
+
+PLAYER1
+ ├── PLAYER2 → CASE 4 → NAMORANDO
+ ├── PLAYER3 → CASE 3
+ └── PLAYER4 → CASE 1
+
+PLAYER1 está namorando PLAYER2.
+
+======================================================
+12. MÁQUINA DE ESTADOS AFETIVOS
+======================================================
+
+Estados oficiais:
+
+SOLTEIRO
+ ↓
+NAMORANDO
+ ↓
+NOIVO
+ ↓
+CASADO
+
+Transições:
+
+SOLTEIRO
+ ↓
+pedido de namoro + aceitação
+ ↓
+NAMORANDO
+
+NAMORANDO
+ ↓
+/CASAR + aceitação/evento
+ ↓
+NOIVO
+
+NOIVO
+ ↓
+evento especial de casamento
+ ↓
+CASADO
+
+======================================================
+13. DIVÓRCIO
+======================================================
+
+/DIVORCIO destrói/resetará o progresso do relacionamento entre os dois jogadores.
+
+Foi definida a:
+
+OPÇÃO B — RESETAR RELATIONSHIP
+
+O RelationshipID permanece o mesmo.
+
+Porém:
+
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO / NEUTRAL
+
+Exemplo:
+
+ANTES:
+
+Relationship-001
+PLAYER1 ↔ PLAYER2
+XP = 500
+CASE = 6
+STATUS = CASADO
+
+/DIVORCIO
+
+DEPOIS:
+
+Relationship-001
+PLAYER1 ↔ PLAYER2
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO
+
+Não será criado um novo RelationshipID.
+
+O relacionamento existente será resetado.
+
+======================================================
+14. DIVÓRCIO PODE OCORRER EM ESTADOS COMPROMETIDOS
+======================================================
+
+NAMORANDO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+NOIVO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+CASADO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+Em todos os casos:
+
+XP = 0
+CASE = 0
+
+======================================================
+15. /NOIVAR
+======================================================
+
+/NOIVAR é uma ação exclusiva do CASE 4.
+
+CASE 3
+→ /NOIVAR BLOQUEADO
+
+CASE 4
+→ /NOIVAR PERMITIDO
+
+CASE 5
+→ /NOIVAR BLOQUEADO
+
+CASE 6
+→ /NOIVAR BLOQUEADO
+
+O motivo é que /NOIVAR representa a transição:
+
+NAMORANDO
+ ↓
+NOIVO
+
+Exemplo:
+
+PLAYER1
+ ↓
+/NOIVAR PLAYER2
+ ↓
+REQUEST
+ ↓
+PLAYER2 aceita
+ ↓
+CASE 5
+ ↓
+STATUS = NOIVO
+
+======================================================
+16. RECUSA DO /NOIVAR
+======================================================
+
+Se PLAYER1 estiver namorando PLAYER2:
+
+CASE 4
+STATUS = NAMORANDO
+
+PLAYER1:
+
+/NOIVAR PLAYER2
+
+PLAYER2 pode:
+
+/LS → aceitar
+
+ou:
+
+/LN → negar
+
+Se PLAYER2 aceitar:
+
+CASE 4
+ ↓
+CASE 5
+ ↓
+STATUS = NOIVO
+
+Se PLAYER2 negar:
+
+XP -50
+ ↓
+recalcular CASE
+
+O relacionamento pode permanecer CASE 4 ou regredir para CASE 3, dependendo do XP restante.
+
+Exemplo:
+
+CASE 4
+XP = 500
+
+-50 XP
+
+XP = 450
+
+Se 450 permanecer dentro do CASE 4:
+
+CASE 4
+
+Porém, se a relação tiver XP próximo ao limite inferior do CASE 4:
+
+CASE 4
+ ↓
+-50 XP
+ ↓
+abaixo do limite
+ ↓
+CASE 3
+
+Ao regredir, privilégios exclusivos do CASE 4 são removidos.
+
+======================================================
+17. PRINCÍPIO DE REGRESSÃO
+======================================================
+
+Assim como no conceito de relacionamento do The Sims, XP negativo pode destruir progresso.
+
+Exemplo:
+
+CASE 4
+ ↓
+XP negativo
+ ↓
+XP cai abaixo do limite
+ ↓
+CASE 3
+ ↓
+privilégios de CASE 4 removidos
+
+Portanto:
+
+XP positivo
+→ evolução
+→ novos privilégios
+
+XP negativo
+→ regressão
+→ perda de privilégios
+
+Isso é uma parte fundamental da mecânica do EtherLove.
+
+======================================================
+18. UNLOCKS PERTENCEM À RELAÇÃO
+======================================================
+
+Os comandos NÃO são desbloqueados globalmente para o jogador.
+
+Eles são desbloqueados para a RELAÇÃO específica.
+
+Exemplo:
+
+PLAYER1 ↔ PLAYER2
+CASE 3
+
+/BJ PLAYER2
+→ PERMITIDO
+
+Enquanto:
+
+PLAYER1 ↔ PLAYER3
+CASE 0
+
+/BJ PLAYER3
+→ BLOQUEADO
+
+Mesmo que PLAYER1 possua CASE 3 com PLAYER2.
+
+O sistema sempre deve consultar:
+
+Relationship(EXECUTOR, TARGET)
+
+antes de executar uma ação de relacionamento.
+
+======================================================
+19. REGRA FUNDAMENTAL DE EXECUÇÃO
+======================================================
+
+Toda ação de relacionamento deve seguir:
+
+COMANDO
+ ↓
+IDENTIFICAR EXECUTOR
+ ↓
+IDENTIFICAR TARGET
+ ↓
+GERAR / OBTER RelationshipID
+ ↓
+CONSULTAR RELAÇÃO EXECUTOR ↔ TARGET
+ ↓
+OBTER XP
+ ↓
+OBTER CASE
+ ↓
+VERIFICAR UNLOCK
+ ↓
+VERIFICAR REGRAS GLOBAIS
+ ↓
+EXECUTAR AÇÃO
+ ↓
+APLICAR XP / EVENTO
+ ↓
+RECALCULAR ESTADO
+
+Nunca utilizar o CASE de outra relação para autorizar uma ação.
+
+======================================================
+20. EXEMPLO DE RELACIONAMENTOS INDEPENDENTES
+======================================================
+
+PLAYER1
+
+PLAYER1 ↔ PLAYER2
+XP = 450
+CASE = 4
+STATUS = NAMORANDO
+
+PLAYER1 ↔ PLAYER3
+XP = 300
+CASE = 3
+STATUS = SOLTEIRO
+
+PLAYER1 ↔ PLAYER4
+XP = 200
+CASE = 2
+STATUS = SOLTEIRO
+
+PLAYER1 ↔ PLAYER5
+XP = 50
+CASE = 0
+STATUS = SOLTEIRO
+
+Resultado:
+
+/BJ PLAYER2
+→ PERMITIDO
+
+/BJ PLAYER3
+→ PERMITIDO
+
+/BJ PLAYER4
+→ BLOQUEADO
+
+/BJ PLAYER5
+→ BLOQUEADO
+
+/NAMORAR PLAYER3
+→ BLOQUEADO porque PLAYER1 já está namorando PLAYER2.
+
+======================================================
+21. COOLDOWNS
+======================================================
+
+Cooldowns são mecanismos independentes do relacionamento.
+
+Objetivo:
+
+Evitar spam/farming de XP.
+
+Aplicados principalmente a:
+
+/RP
+/AB
+/BJ
+
+Exemplo:
+
+/RP
+ ↓
++10 XP
+ ↓
+COOLDOWN
+
+O jogador não pode executar repetidamente a ação para acumular XP instantaneamente.
+
+Cooldown não representa o relacionamento.
+
+Cooldown não deve substituir XP ou CASE.
+
+======================================================
+22. EVENTOS ESPECIAIS
+======================================================
+
+/DATE
+
+/PRESENTE
+
+São eventos/interações que podem resultar em:
+
++XP
+0 XP
+-XP
+
+Dependendo do resultado/avaliação.
+
+Exemplo:
+
+PLAYER1
+ ↓
+/DATE PLAYER2
+ ↓
+EVENTO
+ ↓
+PLAYER2 avalia resultado
+ ↓
+XP + / XP -
+
+O mesmo princípio se aplica a /PRESENTE.
+
+======================================================
+23. COMANDOS E PROGRESSÃO OFICIAL
+======================================================
+
+CASE 0
+→ /RP
+
+CASE 1
+→ /AB
+
+CASE 2
+→ /DATE
+→ /PRESENTE
+
+CASE 3
+→ /BJ
+→ /NAMORAR a partir de 400 XP
+
+CASE 4
+→ NAMORANDO
+→ /CASAR
+
+CASE 5
+→ NOIVO
+→ END UPDATE LEVEL
+
+CASE 6
+→ CASADO
+→ /TPC
+→ /OBAOBA
+
+======================================================
+24. REGRA ESPECIAL DO XP NO CASE 3
+======================================================
+
+CASE 3 começa em:
+
+300 XP+
+
+A partir de:
+
+400 XP+
+
+/NAMORAR é desbloqueado.
+
+Isso significa que o CASE 3 possui uma progressão interna:
+
+300 XP
+→ /BJ
+
+400 XP
+→ /NAMORAR
+
+O jogador permanece CASE 3 até que o pedido de namoro seja aceito.
+
+A aceitação transforma:
+
+CASE 3
++
+/NAMORAR
++
+ACEITAÇÃO
+=
+CASE 4
+
+======================================================
+25. CASE 4 E LIMITE DE XP
+======================================================
+
+CASE 4 possui limite máximo normal de:
+
+500 XP
+
+O XP normal não deve ultrapassar 500.
+
+Quando atingir:
+
+500 XP
+
+o relacionamento está no limite máximo de XP normal.
+
+A próxima progressão não é:
+
+501 XP
+502 XP
+etc.
+
+A evolução passa a depender dos eventos especiais.
+
+======================================================
+26. CASE 5
+======================================================
+
+CASE 5 é o último estágio obtido através da progressão normal.
+
+Não existe:
+
+600 XP
+700 XP
+etc.
+
+O sistema de XP termina em:
+
+500 XP
+
+CASE 5 representa:
+
+NOIVO
+
+e é obtido através do evento de:
+
+/CASAR
+
+após o relacionamento estar em CASE 4 / NAMORANDO e ocorrer a transição apropriada.
+
+Nenhum novo nível normal de XP será criado depois disso.
+
+======================================================
+27. CASE 6
+======================================================
+
+CASE 6 não é um nível de XP.
+
+CASE 6 é uma condição especial.
+
+Fluxo:
+
+CASE 5
+ ↓
+NOIVO
+ ↓
+EVENTO ESPECIAL DE CASAMENTO
+ ↓
+CASE 6
+ ↓
+CASADO
+
+Ao atingir CASE 6:
+
+/TPC
+/OBAOBA
+
+são liberados.
+
+======================================================
+28. MODELO GERAL DEFINITIVO
+======================================================
+
+                    PLAYER A
+                       +
+                    PLAYER B
+                       │
+                       ▼
+                 RELATIONSHIP
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+          XP          CASE        STATUS
+          │            │            │
+          │            │            │
+       0 → 500         │        SOLTEIRO
+          │            │            ↓
+          │            │       NAMORANDO
+          │            │            ↓
+          │            │          NOIVO
+          │            │            ↓
+          │            │          CASADO
+          │            │
+          ▼            ▼
+       + / - XP      UNLOCKS
+                       │
+       ┌───────────────┼────────────────┐
+       │       │       │       │        │
+      /RP     /AB   /DATE   /BJ    /NAMORAR
+                       │       │        │
+                    EVENTS     │     REQUEST
+                       │       │        │
+                     XP +/-    │      ACCEPT
+                               │        │
+                               └────────┘
+
+======================================================
+29. REGRAS QUE NÃO DEVEM SER VIOLADAS
+======================================================
+
+1. XP pertence ao relacionamento, nunca ao jogador globalmente.
+
+2. CASE pertence ao relacionamento.
+
+3. Unlock pertence à relação específica.
+
+4. PLAYER1 ter CASE alto com PLAYER2 não permite usar os mesmos comandos com PLAYER3.
+
+5. CASE 4 significa NAMORANDO.
+
+6. CASE 4 só pode ser alcançado mediante pedido de namoro + aceitação.
+
+7. Um jogador só pode possuir um namoro ativo.
+
+8. O alvo também precisa estar solteiro para aceitar um novo namoro.
+
+9. CASE 5 significa NOIVO.
+
+10. /NOIVAR é exclusivo do CASE 4.
+
+11. CASE 6 só pode ser alcançado através de evento especial de casamento.
+
+12. CASE 6 significa CASADO.
+
+13. XP normal possui máximo de 500.
+
+14. XP negativo pode causar regressão de CASE.
+
+15. Ao regredir, privilégios correspondentes ao CASE perdido devem ser removidos.
+
+16. /DIVORCIO reseta a relação.
+
+17. Após /DIVORCIO:
+    XP = 0
+    CASE = 0
+    STATUS = SOLTEIRO
+
+18. O RelationshipID é mantido após o divórcio.
+
+19. Cooldowns existem para impedir farming de XP.
+
+20. Eventos podem fornecer XP positivo, neutro ou negativo.
+
+======================================================
+30. PRÓXIMA ETAPA
+======================================================
+
+Antes de implementar novas mecânicas:
+
+AUDITAR O PROJETO EXISTENTE.
+
+Prioridade:
+
+1. etherlove-core.sk
+
+Verificar:
+
+- criação de RelationshipID;
+- ordenação dos UUIDs;
+- armazenamento de XP;
+- armazenamento de CASE;
+- armazenamento de STATUS;
+- criação de relacionamento;
+- recuperação de relacionamento;
+- cálculo de CASE;
+- progressão;
+- regressão;
+- reset;
+- consistência entre XP/CASE/STATUS.
+
+Depois:
+
+2. Sistema de requests
+
+3. /RP
+
+4. /AB
+
+5. /DATE
+
+6. /PRESENTE
+
+7. /BJ
+
+8. /NAMORAR
+
+9. /NOIVAR
+
+10. /CASAR
+
+11. /DIVORCIO
+
+12. /TPC
+
+13. /OBAOBA
+
+14. Cooldowns
+
+Nenhuma nova implementação deve ser feita antes de verificar como a versão atual do EtherLove está estruturada.
+
+O objetivo é corrigir/reconstruir o projeto de maneira coerente, em vez de continuar adicionando código sobre uma arquitetura quebrada.
+
+======================================================
+FIM DO UPDATE
+======================================================
 
 UPDATE > 22/08/26 - 00:XX - M003A
 
