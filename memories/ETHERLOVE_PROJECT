@@ -359,7 +359,7 @@ CASE 5
 /PRESETE
 /DATE
 /BJ
-/NOIVAR
+LOCK > /NOIVAR (exclusivo do CASE 4)
 
 Nenhum novo comando é desbloqueado.
 
