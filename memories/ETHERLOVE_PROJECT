@@ -5,6 +5,1122 @@ UPDATE > 00/00/00 - 00:00 - M000A
 [conteúdo]
 <END UPDATE>
 =============================
+
+UPDATE > 22/08/2026
+ETHERLOVE — CERIMONIALISTA / CASAMENTO / RELATIONSHIP MENU
+==========================================================
+
+OBJETIVO DESTE UPDATE
+==========================================================
+
+Este update adiciona duas partes importantes que não estavam definidas anteriormente:
+
+1. SISTEMA DE CERIMONIALISTA E EVENTO DE CASAMENTO.
+2. MENU DE RELACIONAMENTOS DO JOGADOR.
+
+Também consolida as regras anteriores de:
+
+- RelationshipID
+- XP
+- CASE
+- STATUS
+- progressão
+- regressão
+- namoro
+- noivado
+- casamento
+- divórcio
+- exclusividade
+- requests
+- unlocks por relacionamento
+- cooldowns
+- eventos
+
+==========================================================
+1. PRINCÍPIO FUNDAMENTAL
+==========================================================
+
+EtherLove é um sistema de relacionamento baseado em PARES.
+
+PLAYER A + PLAYER B
+        ↓
+RELATIONSHIP
+        ↓
+XP
+        ↓
+CASE
+        ↓
+STATUS
+        ↓
+UNLOCKS / EVENTOS
+
+O XP, CASE e STATUS pertencem à relação entre os dois jogadores.
+
+Nunca devem representar o progresso global de um jogador.
+
+Exemplo:
+
+PLAYER1 + PLAYER2
+→ Relationship-001
+
+PLAYER1 + PLAYER3
+→ Relationship-002
+
+Cada relação possui progresso independente.
+
+==========================================================
+2. RELATIONSHIP ID
+==========================================================
+
+Cada par de jogadores possui um RelationshipID único.
+
+A ordem dos jogadores não pode criar relações duplicadas.
+
+PLAYER1 + PLAYER2
+=
+PLAYER2 + PLAYER1
+
+Os UUIDs devem ser ordenados para gerar uma chave consistente.
+
+Exemplo conceitual:
+
+uuidA::uuidB
+
+com:
+
+uuidA < uuidB
+
+O RelationshipID permanece associado ao mesmo par.
+
+==========================================================
+3. RESET DE RELATIONSHIP
+==========================================================
+
+Foi definida a OPÇÃO B para divórcio:
+
+O RelationshipID permanece.
+
+A relação é resetada.
+
+ANTES:
+
+Relationship-001
+PLAYER1 ↔ PLAYER2
+XP = 500
+CASE = 6
+STATUS = CASADO
+
+/DIVORCIO
+
+DEPOIS:
+
+Relationship-001
+PLAYER1 ↔ PLAYER2
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO
+
+Não criar um novo RelationshipID após o divórcio.
+
+==========================================================
+4. XP
+==========================================================
+
+XP pertence exclusivamente ao relacionamento.
+
+O XP pode:
+
++ aumentar
+- diminuir
+
+XP positivo representa evolução da relação.
+
+XP negativo representa deterioração da relação.
+
+Exemplo:
+
+PLAYER1 ↔ PLAYER2
+XP = 450
+
+Interação positiva:
+
++10 XP
+
+Resultado:
+
+XP = 460
+
+Interação negativa:
+
+-50 XP
+
+Resultado:
+
+XP = 410
+
+==========================================================
+5. LIMITE NORMAL DE XP
+==========================================================
+
+XP normal:
+
+0 → 500 XP
+
+500 XP é o limite máximo da progressão normal.
+
+Não existe progressão normal para:
+
+501
+502
+600
+700
+etc.
+
+CASE 6 não é alcançado por XP.
+
+CASE 6 é alcançado através de evento especial de casamento.
+
+==========================================================
+6. REGRESSÃO
+==========================================================
+
+XP negativo pode fazer a relação perder CASE.
+
+Exemplo:
+
+CASE 4
+XP próximo do limite inferior
+
+-50 XP
+
+↓ recalcular CASE
+
+Pode resultar:
+
+CASE 4 → CASE 3
+
+Ao perder CASE, os privilégios daquele CASE também são perdidos.
+
+O sistema deve recalcular o estado após alterações de XP.
+
+Fluxo:
+
+XP ALTERADO
+ ↓
+RECALCULAR CASE
+ ↓
+VERIFICAR REGRESSÃO/EVOLUÇÃO
+ ↓
+ATUALIZAR UNLOCKS
+ ↓
+ATUALIZAR STATUS SE NECESSÁRIO
+
+==========================================================
+7. PROGRESSÃO OFICIAL
+==========================================================
+
+CASE 0
+0 XP+
+
+UNLOCK:
+
+/RP
+
+
+CASE 1
+100 XP+
+
+UNLOCK:
+
+/AB
+
+
+CASE 2
+200 XP+
+
+UNLOCK:
+
+/DATE
+/PRESENTE
+
+
+CASE 3
+300 XP+
+
+UNLOCK:
+
+/BJ
+
+400 XP+
+
+UNLOCK:
+
+/NAMORAR
+
+
+CASE 4
+500 XP+
+
+ESTADO:
+
+NAMORANDO
+
+UNLOCK:
+
+/CASAR
+
+
+CASE 5
+
+END UPDATE LEVEL
+
+ESTADO:
+
+NOIVO
+
+Nenhum novo nível normal de XP.
+
+CASE 6
+
+Não depende de XP.
+
+É obtido através de:
+
+EVENTO ESPECIAL DE CASAMENTO
+
+ESTADO:
+
+CASADO
+
+UNLOCK:
+
+/TPC
+/OBAOBA
+
+==========================================================
+8. UNLOCKS PERTENCEM À RELAÇÃO
+==========================================================
+
+Comandos não são desbloqueados globalmente.
+
+Eles pertencem à relação específica entre executor e alvo.
+
+Exemplo:
+
+PLAYER1 ↔ PLAYER2
+CASE 3
+
+/BJ PLAYER2
+→ permitido
+
+PLAYER1 ↔ PLAYER3
+CASE 0
+
+/BJ PLAYER3
+→ bloqueado
+
+Mesmo que PLAYER1 tenha CASE 3 com PLAYER2.
+
+Sempre consultar:
+
+Relationship(EXECUTOR, TARGET)
+
+antes de executar ações de relacionamento.
+
+==========================================================
+9. CASE 3 / NAMORAR
+==========================================================
+
+CASE 3 começa em:
+
+300 XP+
+
+/BJ é desbloqueado.
+
+A partir de:
+
+400 XP+
+
+/NAMORAR é desbloqueado.
+
+Porém, /NAMORAR não transforma automaticamente a relação em namoro.
+
+É necessário:
+
+CASE 3
++
+XP suficiente
++
+/NAMORAR
++
+REQUEST
++
+ACEITAÇÃO
+
+Resultado:
+
+CASE 4
+STATUS = NAMORANDO
+
+==========================================================
+10. CASE 4 = NAMORANDO
+==========================================================
+
+CASE 4 representa um namoro aceito.
+
+Não deve existir:
+
+CASE 4 + SOLTEIRO
+
+CASE 4 = NAMORANDO
+
+O CASE 4 só pode ser alcançado através de:
+
+pedido de namoro
++
+aceitação do outro jogador.
+
+==========================================================
+11. EXCLUSIVIDADE DE NAMORO
+==========================================================
+
+Um jogador só pode possuir UM namoro ativo.
+
+Exemplo:
+
+PLAYER1
+└── PLAYER2
+    CASE 4
+    STATUS = NAMORANDO
+
+PLAYER1 não pode iniciar outro namoro com PLAYER3.
+
+O sistema deve procurar se o jogador possui outro relacionamento com:
+
+CASE 4
+ou
+STATUS = NAMORANDO
+
+antes de permitir novo pedido.
+
+A verificação também deve ser realizada no TARGET.
+
+Se PLAYER3 já estiver namorando PLAYER4:
+
+PLAYER3
+└── PLAYER4
+    CASE 4
+    STATUS = NAMORANDO
+
+PLAYER1 não pode iniciar namoro com PLAYER3.
+
+==========================================================
+12. RECUSA DE NAMORO
+==========================================================
+
+PLAYER1:
+
+/NAMORAR PLAYER2
+
+PLAYER2:
+
+/LN
+
+Resultado:
+
+XP -50
+
+Depois:
+
+RECALCULAR CASE
+
+Pode permanecer CASE 3 ou regredir para CASE 2, dependendo do XP.
+
+STATUS permanece:
+
+SOLTEIRO
+
+==========================================================
+13. /NOIVAR
+==========================================================
+
+/NOIVAR é exclusivo do CASE 4.
+
+CASE 3
+→ /NOIVAR bloqueado
+
+CASE 4
+→ /NOIVAR permitido
+
+CASE 5
+→ /NOIVAR bloqueado
+
+CASE 6
+→ /NOIVAR bloqueado
+
+O motivo é que /NOIVAR representa:
+
+NAMORANDO
+ ↓
+NOIVO
+
+==========================================================
+14. RECUSA DE NOIVADO
+==========================================================
+
+PLAYER1 está namorando PLAYER2:
+
+CASE 4
+STATUS = NAMORANDO
+
+PLAYER1:
+
+/NOIVAR PLAYER2
+
+PLAYER2 pode aceitar ou negar.
+
+ACEITA:
+
+CASE 4
+ ↓
+CASE 5
+ ↓
+STATUS = NOIVO
+
+NEGA:
+
+XP -50
+ ↓
+RECALCULAR CASE
+
+Pode resultar:
+
+CASE 4 → CASE 4
+
+ou:
+
+CASE 4 → CASE 3
+
+dependendo do XP restante.
+
+Ao regredir:
+
+Privilégios exclusivos do CASE 4 são removidos.
+
+==========================================================
+15. MÁQUINA DE ESTADOS AFETIVOS
+==========================================================
+
+Estados oficiais:
+
+SOLTEIRO
+ ↓
+NAMORANDO
+ ↓
+NOIVO
+ ↓
+CASADO
+
+Transições:
+
+SOLTEIRO
+ ↓
+/NAMORAR
+ ↓
+REQUEST
+ ↓
+ACEITAÇÃO
+ ↓
+NAMORANDO
+
+NAMORANDO
+ ↓
+/NOIVAR
+ ↓
+REQUEST
+ ↓
+ACEITAÇÃO
+ ↓
+NOIVO
+
+NOIVO
+ ↓
+EVENTO DE CASAMENTO
+ ↓
+CASADO
+
+==========================================================
+16. DIVÓRCIO
+==========================================================
+
+/DIVORCIO pode ocorrer nos estados comprometidos.
+
+NAMORANDO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+NOIVO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+CASADO
+ ↓
+DIVORCIO
+ ↓
+SOLTEIRO
+
+Em todos os casos:
+
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO
+
+O RelationshipID permanece.
+
+==========================================================
+17. CASAMENTO — NOVO MODELO
+==========================================================
+
+O casamento não é iniciado diretamente pelos noivos.
+
+O casamento necessita de um TERCEIRO JOGADOR:
+
+CERIMONIALISTA
+
+O cerimonialista é um jogador que possui uma permissão especial para realizar/iniciar casamentos.
+
+Modelo:
+
+👨‍💼 CERIMONIALISTA
+        +
+🤵 PLAYER 1
+        +
+👰 PLAYER 2
+        ↓
+EVENTO DE CASAMENTO
+        ↓
+CASE 6
+STATUS = CASADO
+
+==========================================================
+18. PERMISSÃO DE CERIMONIALISTA
+==========================================================
+
+O cerimonialista possui uma permissão específica do EtherLove.
+
+Conceitualmente:
+
+etherlove.ceremonialist
+
+A permissão exata poderá ser definida na implementação.
+
+Jogador comum:
+
+→ não pode iniciar evento de casamento.
+
+Jogador com permissão:
+
+→ pode iniciar evento de casamento.
+
+O cerimonialista não precisa possuir Relationship com os noivos.
+
+Ele é um terceiro participante autorizado do EVENTO.
+
+==========================================================
+19. REQUISITOS PARA CASAMENTO
+==========================================================
+
+Para iniciar o casamento:
+
+PLAYER1 + PLAYER2 devem estar em:
+
+CASE 5
+
+STATUS:
+
+NOIVO
+
+E deve existir:
+
+CERIMONIALISTA autorizado.
+
+Fluxo:
+
+PLAYER1
+CASE 5
+NOIVO
+
+PLAYER2
+CASE 5
+NOIVO
+
+        +
+
+CERIMONIALISTA
+permission = TRUE
+
+        ↓
+
+EVENTO DE CASAMENTO
+
+        ↓
+
+EVENTO CONCLUÍDO
+
+        ↓
+
+PLAYER1 ↔ PLAYER2
+
+CASE 6
+STATUS = CASADO
+
+==========================================================
+20. CASE 6
+==========================================================
+
+CASE 6 não é uma progressão de XP.
+
+É uma condição especial resultante do evento de casamento.
+
+CASE 5
+ ↓
+CERIMONIALISTA
+ ↓
+EVENTO DE CASAMENTO
+ ↓
+CASE 6
+
+CASE 6:
+
+STATUS = CASADO
+
+UNLOCK:
+
+/TPC
+/OBAOBA
+
+==========================================================
+21. MENU DE RELACIONAMENTOS
+==========================================================
+
+EtherLove terá um MENU DE RELACIONAMENTOS.
+
+O objetivo é permitir que o jogador visualize o estado de suas relações.
+
+O menu deve consultar os relacionamentos daquele jogador.
+
+Exemplo:
+
+PLAYER1
+│
+├── PLAYER2
+│   XP = 450
+│   CASE = 4
+│   STATUS = NAMORANDO
+│
+├── PLAYER3
+│   XP = 220
+│   CASE = 2
+│   STATUS = SOLTEIRO
+│
+└── PLAYER4
+    XP = 80
+    CASE = 0
+    STATUS = SOLTEIRO
+
+O menu deve apresentar essas informações de forma organizada.
+
+==========================================================
+22. INFORMAÇÕES DO MENU
+==========================================================
+
+O Menu de Relacionamentos deve ser capaz de apresentar, conforme o design final:
+
+- jogador relacionado;
+- XP da relação;
+- CASE;
+- STATUS;
+- progresso;
+- estado afetivo;
+- informações relevantes da relação;
+- possíveis interações/desbloqueios.
+
+Exemplo conceitual:
+
+╔══════════════════════════════════╗
+║       ❤️ RELACIONAMENTOS         ║
+╠══════════════════════════════════╣
+║                                  ║
+║ 👤 PLAYER2                       ║
+║ ❤️ NAMORANDO                     ║
+║ CASE 4                           ║
+║ XP 450 / 500                     ║
+║                                  ║
+║ 👤 PLAYER3                       ║
+║ 🙂 SOLTEIRO                      ║
+║ CASE 2                           ║
+║ XP 220 / 500                     ║
+║                                  ║
+║ 👤 PLAYER4                       ║
+║ 🙂 SOLTEIRO                      ║
+║ CASE 0                           ║
+║ XP 80 / 500                      ║
+║                                  ║
+╚══════════════════════════════════╝
+
+O layout definitivo ainda será desenvolvido.
+
+==========================================================
+23. MENU NÃO PODE USAR STATUS GLOBAL
+==========================================================
+
+O menu deve listar cada relacionamento individualmente.
+
+INCORRETO:
+
+PLAYER1
+CASE 4
+
+CORRETO:
+
+PLAYER1
+
+PLAYER2
+→ CASE 4
+→ NAMORANDO
+
+PLAYER3
+→ CASE 2
+→ SOLTEIRO
+
+PLAYER4
+→ CASE 0
+→ SOLTEIRO
+
+Cada relacionamento possui seus próprios dados.
+
+==========================================================
+24. ARQUITETURA ATUAL
+==========================================================
+
+                         ETHERLOVE
+                             │
+          ┌──────────────────┼──────────────────┐
+          │                  │                  │
+          ▼                  ▼                  ▼
+    RELATIONSHIPS        REQUESTS          COOLDOWNS
+          │
+          ▼
+   P1 ↔ P2 RELATIONSHIP
+          │
+      ┌───┼────┐
+      │   │    │
+     XP CASE STATUS
+      │   │    │
+      │   │    ├── SOLTEIRO
+      │   │    ├── NAMORANDO
+      │   │    ├── NOIVO
+      │   │    └── CASADO
+      │   │
+      │   └── UNLOCKS
+      │
+      └── +XP / -XP
+
+
+                     EVENTS
+                        │
+        ┌───────────────┼─────────────────┐
+        │               │                 │
+       DATE          PRESENTE          CASAMENTO
+                                          │
+                                          ▼
+                                  👨‍💼 CERIMONIALISTA
+                                          │
+                                   🤵 + 👰
+                                          │
+                                          ▼
+                                       CASE 6
+                                          │
+                                       CASADOS
+
+
+                   PLAYER VIEW
+                        │
+                        ▼
+              ❤️ RELATIONSHIP MENU
+                        │
+          ┌─────────────┼─────────────┐
+          │             │             │
+         P2            P3            P4
+       CASE 4        CASE 2        CASE 0
+      NAMORANDO      SOLTEIRO      SOLTEIRO
+
+==========================================================
+25. PRINCÍPIO DE EXECUÇÃO
+==========================================================
+
+Toda ação de relacionamento deve:
+
+1. identificar EXECUTOR;
+2. identificar TARGET;
+3. obter RelationshipID;
+4. consultar a relação;
+5. obter XP;
+6. obter CASE;
+7. obter STATUS;
+8. verificar unlock;
+9. verificar regras globais;
+10. verificar estado afetivo;
+11. executar ação/evento;
+12. aplicar XP positivo/negativo;
+13. recalcular CASE;
+14. atualizar STATUS;
+15. atualizar estado global quando necessário.
+
+==========================================================
+26. NOVA DISTINÇÃO ARQUITETURAL
+==========================================================
+
+EtherLove possui agora três camadas de lógica:
+
+CAMADA 1
+RELATIONSHIP
+
+Responsável por:
+
+- XP
+- CASE
+- STATUS
+- progresso
+- regressão
+- relacionamento entre dois jogadores
+
+CAMADA 2
+PLAYER RELATIONSHIP STATE
+
+Responsável por:
+
+- verificar se o jogador está solteiro;
+- identificar parceiro atual;
+- garantir exclusividade de namoro;
+- garantir exclusividade de noivado;
+- garantir exclusividade de casamento.
+
+CAMADA 3
+EVENT SYSTEM
+
+Responsável por:
+
+- /DATE
+- /PRESENTE
+- /NAMORAR REQUEST
+- /NOIVAR REQUEST
+- CASAMENTO
+- DIVÓRCIO
+
+==========================================================
+27. NOVA REGRA FUNDAMENTAL
+==========================================================
+
+CASE alto em uma relação NÃO concede acesso global ao jogador.
+
+Exemplo:
+
+PLAYER1 ↔ PLAYER2
+CASE 3
+
+não significa:
+
+PLAYER1 possui /BJ globalmente.
+
+Significa:
+
+PLAYER1 pode usar /BJ especificamente com PLAYER2.
+
+Portanto:
+
+/BJ PLAYER2
+→ permitido
+
+/BJ PLAYER3
+→ depende do CASE de PLAYER1 ↔ PLAYER3
+
+==========================================================
+28. PRINCÍPIO DO CERIMONIALISTA
+==========================================================
+
+O cerimonialista não altera diretamente o XP dos jogadores.
+
+Ele inicia/conduz o evento.
+
+O evento de casamento é responsável pela transição:
+
+CASE 5
+ ↓
+CASE 6
+
+O cerimonialista é apenas o jogador autorizado a iniciar esse evento.
+
+==========================================================
+29. PRINCÍPIO DO MENU
+==========================================================
+
+O Menu de Relacionamentos não deve armazenar uma segunda versão dos dados.
+
+Ele deve consultar o Core.
+
+CORE
+ ↓
+RELATIONSHIP DATA
+ ↓
+MENU
+
+O menu é uma INTERFACE DE VISUALIZAÇÃO.
+
+A fonte de verdade continua sendo o sistema de relacionamento.
+
+==========================================================
+30. REGRAS DEFINIDAS ATÉ AGORA
+==========================================================
+
+1. Relacionamentos pertencem a pares.
+
+2. XP pertence ao relacionamento.
+
+3. CASE pertence ao relacionamento.
+
+4. STATUS pertence ao relacionamento.
+
+5. RelationshipID é independente por par.
+
+6. UUIDs devem ser ordenados.
+
+7. XP normal vai de 0 a 500.
+
+8. XP pode aumentar.
+
+9. XP pode diminuir.
+
+10. XP negativo pode causar regressão.
+
+11. Regressão remove privilégios.
+
+12. CASE 0 → /RP.
+
+13. CASE 1 → /AB.
+
+14. CASE 2 → /DATE + /PRESENTE.
+
+15. CASE 3 → /BJ.
+
+16. 400 XP → /NAMORAR.
+
+17. /NAMORAR exige aceitação.
+
+18. CASE 4 = NAMORANDO.
+
+19. Um jogador só pode ter um namoro ativo.
+
+20. O alvo também precisa estar solteiro.
+
+21. /NOIVAR é exclusivo do CASE 4.
+
+22. /NOIVAR exige aceitação.
+
+23. Recusa de namoro = -50 XP.
+
+24. Recusa de noivado = -50 XP.
+
+25. CASE 5 = NOIVO.
+
+26. CASE 5 é o último estágio normal.
+
+27. CASE 6 não depende de XP.
+
+28. CASE 6 = CASADO.
+
+29. Casamento exige evento especial.
+
+30. Casamento é iniciado por Cerimonialista.
+
+31. Cerimonialista é um jogador com permissão especial.
+
+32. O cerimonialista não precisa ter relação com os noivos.
+
+33. CASE 5 é requisito para casamento.
+
+34. /TPC e /OBAOBA são liberados no CASE 6.
+
+35. /DIVORCIO reseta XP e CASE.
+
+36. RelationshipID permanece após divórcio.
+
+37. Divórcio retorna STATUS para SOLTEIRO.
+
+38. Namoro, noivado e casamento são exclusivos.
+
+39. Cooldowns impedem farming.
+
+40. Menu de Relacionamentos será uma interface de consulta.
+
+41. O menu deve mostrar relações individualmente.
+
+42. O menu não deve duplicar a fonte de dados do Core.
+
+==========================================================
+31. PRÓXIMA ETAPA
+==========================================================
+
+Com a arquitetura conceitual muito mais definida, o próximo passo será:
+
+AUDITAR O PROJETO REAL DO ETHERLOVE.
+
+Prioridade:
+
+1. etherlove-core.sk
+
+Depois:
+
+2. requests
+3. cooldowns
+4. /RP
+5. /AB
+6. /DATE
+7. /PRESENTE
+8. /BJ
+9. /NAMORAR
+10. /NOIVAR
+11. /CASAR
+12. CERIMONIALISTA
+13. /DIVORCIO
+14. /TPC
+15. /OBAOBA
+16. RELATIONSHIP MENU
+
+O código existente não deve ser considerado correto apenas porque existe.
+
+Cada parte deve ser comparada com esta arquitetura.
+
+Se houver incompatibilidade:
+
+CORRIGIR
+ou
+RECRIAR
+
+conforme necessário.
+
+Objetivo:
+
+Criar um EtherLove funcional, coerente, persistente e baseado em relacionamentos reais entre pares de jogadores.
+
+==========================================================
+FIM DO UPDATE
+==========================================================
+
 UPDATE > 22/08/2026
 ETHERLOVE — RELATIONSHIP / XP / CASE / STATUS SYSTEM
 ======================================================
