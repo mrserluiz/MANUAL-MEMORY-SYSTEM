@@ -28,6 +28,969 @@ https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/SkBee_Confi
 https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/skript-variables.md
 https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/SkeiptLuckPerms.md
 
+ETHERLOVE:
+
+VERSION: 0.1.0-dev
+DATE:2026-06-04
+
+PURPOSE
+=======
+This document is the primary source of truth for EtherLove.
+If code conflicts with this document:
+The document is correct.
+The code must be corrected.
+==================================================
+AI CONTINUATION PROTOCOL
+========================
+Before generating any code:
+1. Read this entire document.
+2. Validate all architecture contracts.
+3. Check current development state.
+4. Continue from NEXT MODULE.
+5. Never redesign the architecture.
+6. Never migrate progression to player ownership.
+7. Couple ownership is permanent.
+==================================================
+CORE PHILOSOPHY
+===============
+EtherLove is a relationship system.
+Progression belongs to a couple.
+Never to a player.
+Correct:
+PlayerA + PlayerB
+Incorrect:
+PlayerA
+==================================================
+COUPLE IDENTIFIER
+=================
+UUID_A::UUID_B
+UUIDs must be sorted.
+This guarantees:
+A+B = B+A
+==================================================
+ARCHITECTURE CONTRACTS
+======================
+CONTRACT 001
+Relationship belongs to couple.
+CONTRACT 002
+UUID only internally.
+CONTRACT 003
+Only core.sk modifies relationship data.
+CONTRACT 004
+Only cooldowns.sk modifies cooldowns.
+CONTRACT 005
+Only requests.sk modifies requests.
+CONTRACT 006
+Modules communicate using functions.
+CONTRACT 007
+Points belong to couple.
+CONTRACT 008
+Stages belong to couple.
+CONTRACT 009
+NOIVOS and CASADOS are event stages.
+CONTRACT 010
+All consent uses:
+
+/ls
+/ln
+
+CONTRACT 011
+Bedrock compatibility required.
+CONTRACT 012
+Cooldowns must survive restart.
+==================================================
+RELATIONSHIP STAGES
+===================
+0 NEUTRO
+1 AMIGO
+2 MELHORES_AMIGOS
+3 PAIXAO
+4 NAMORANDO
+5 NOIVOS
+6 CASADOS
+==================================================
+POINT THRESHOLDS
+================
+AMIGO = 100
+MELHORES_AMIGOS = 200
+PAIXAO = 300
+NAMORANDO = Special Event
+NOIVOS = Special Event
+CASADOS = Special Event
+==================================================
+STAGE RULES
+===========
+Points may automatically unlock:
+AMIGO / MELHORES_AMIGOS / PAIXAO
+AUTOMATIC UPGRADES: 0 -> 100 -> 200 -> 300 PAIXAO It is the final automatic stage.
+NAMORANDO is unlocked only through a NAMORO request accepted via /ls.
+NOIVOS is unlocked only through an accepted marriage proposal.
+CASADOS is unlocked only through a marriage ceremony initiated by a Ceremonialist. ==================================================
+PERSISTENT VARIABLES
+====================
+{etherlove.couple.%id%.points}
+{etherlove.couple.%id%.stage}
+{etherlove.couple.%id%.created}
+==================================================
+REQUEST SYSTEM
+==============
+Universal system.
+Request types:
+BJ
+DATE
+NAMORO
+CASAMENTO
+OBAOBA
+CEREMONY
+Commands:
+/ls
+/ln
+
+==================================================
+COOLDOWNS
+=========
+/rp > 12 hours
+Cooldown ownership: PLAYER
+/ab > 50 seconds
+Cooldown ownership: PLAYER  
+/bj > 80 seconds
+Cooldown ownership: COUPLE 
+==================================================
+BEDROCK RULES
+=============
+Forbidden:
+Display Entities
+Text Displays
+Item Displays
+Block Displays
+Preferred:
+Particles / BossBars / ActionBars / Scoreboards / Inventories
+
+==================================================
+CURRENT COMPLETED MODULES
+=========================
+etherlove-core.sk
+etherlove-cooldowns.sk
+etherlove-rp.sk
+etherlove-ab.sk
+etherlove-bj.sk
+etherlove-requests.sk
+etherlove-namoro.sk
+==================================================
+CURRENT DEVELOPMENT STATE
+========================
+Foundation complete.
+Consent system complete.
+Cooldown system complete.
+Relationship system complete.
+==================================================
+NEXT MODULE = etherlove-date.sk
+==================================================
+REJECTED IDEAS
+==============
+Player based progression.
+Display Entities.
+Java-only HUD systems.
+==================================================
+RECONSTRUCTION
+==============
+If loaded in a future conversation:
+Read entire document.
+Do not redesign EtherLove.
+Continue from NEXT MODULE.
+Validate all contracts before coding.
+ETHERLOVE_CHANGELOG
+2026-06-04 v0.1.1-dev
+Created couple-based architecture.
+Created UUID relationship model.
+Created relationship stages.
+Created cooldown system.
+Created request system.
+Implemented:
+/rp
+/ab
+/ls
+/ln
+/bj
+/namorar
+
+Created Bedrock compatibility rules.
+Created Architecture Contracts.
+Created AI Continuation Protocol.
+
+PHASE 2
+etherlove-date.sk
+* DATE request
+* DATE acceptance
+* DATE denial
+* point rewards
+* point penalties
+
+PHASE 3
+etherlove-ceremonialist.sk
+/lcc
+PHASE 4
+etherlove-marriage.sk
+/lcasar
+NOIVOS
+CASADOS
+PHASE 5
+etherlove-admin.sk
+/l nivel
+/eldebug
+PHASE 6
+etherlove-hud.sk
+ActionBar
+BossBar
+Scoreboard
+PHASE 7
+EtherLove GUI
+Inventory based
+Bedrock compatible
+
+
+
+CONTENTS OF MODULES:
+# ==========================================================
+# EtherLove Core
+# Versão: 0.1-dev
+# Base do sistema de relacionamentos
+# ==========================================================
+#
+options:
+    stage-neutral: 0
+    stage-friend: 1
+    stage-bestfriend: 2
+    stage-passion: 3
+    stage-dating: 4
+    stage-engaged: 5
+    stage-married: 6
+#
+# ==========================================================
+# FUNÇÕES
+# ==========================================================
+#
+#
+# Gera um ID único para o casal
+# UUID menor sempre vem primeiro
+#
+function etherID(p1: player, p2: player) :: text:
+    set {_u1} to "%uuid of {_p1}%"
+    set {_u2} to "%uuid of {_p2}%"
+    if {_u1} is less than {_u2}:
+        return "%{_u1}%::%{_u2}%"
+
+    return "%{_u2}%::%{_u1}%"
+#
+# Existe relacionamento?
+#
+function relationshipExists(p1: player, p2: player) :: boolean:
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.couple.%{_id}%.created} is set:
+        return true
+    return false
+#
+# Cria relacionamento
+#
+function createRelationship(p1: player, p2: player):
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.couple.%{_id}%.created} is not set:
+
+        set {etherlove.couple.%{_id}%.created} to now
+        set {etherlove.couple.%{_id}%.points} to 0
+        set {etherlove.couple.%{_id}%.stage} to {@stage-neutral}
+
+#
+# Retorna pontos
+#
+function getRelationshipPoints(p1: player, p2: player) :: number:
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    return {etherlove.couple.%{_id}%.points}
+#
+# Define pontos
+#
+function setRelationshipPoints(p1: player, p2: player, points: number):
+
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    set {etherlove.couple.%{_id}%.points} to {_points}
+    updateRelationshipStage({_p1}, {_p2})
+
+#
+# Adiciona pontos
+#
+function addRelationshipPoints(p1: player, p2: player, amount: number):
+    createRelationship({_p1}, {_p2})
+    set {_current} to getRelationshipPoints({_p1}, {_p2})
+    add {_amount} to {_current}
+    if {_current} < 0:
+        set {_current} to 0
+    setRelationshipPoints({_p1}, {_p2}, {_current})
+#
+# Obtém estágio
+#
+function getRelationshipStage(p1: player, p2: player) :: number:
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    return {etherlove.couple.%{_id}%.stage}
+#
+# Define estágio
+#
+function setRelationshipStage(p1: player, p2: player, stage: number):
+    createRelationship({_p1}, {_p2})
+    set {_id} to etherID({_p1}, {_p2})
+    set {etherlove.couple.%{_id}%.stage} to {_stage}
+
+#
+# Atualiza estágio automaticamente
+#
+# NOIVOS (5)
+# CASADOS (6)
+#
+# NÃO são alterados automaticamente
+#
+function updateRelationshipStage(p1: player, p2: player):
+    set {_stage} to getRelationshipStage({_p1}, {_p2})
+    if {_stage} >= {@stage-engaged}:
+        stop
+    set {_points} to getRelationshipPoints({_p1}, {_p2})
+    if {_points} >= 500:
+        setRelationshipStage({_p1}, {_p2}, {@stage-dating})
+        stop
+    if {_points} >= 300:
+        setRelationshipStage({_p1}, {_p2}, {@stage-passion})
+        stop
+    if {_points} >= 200:
+        setRelationshipStage({_p1}, {_p2}, {@stage-bestfriend})
+        stop
+    if {_points} >= 100:
+        setRelationshipStage({_p1}, {_p2}, {@stage-friend})
+        stop
+    setRelationshipStage({_p1}, {_p2}, {@stage-neutral})
+#
+# Nome do estágio
+#
+function getStageName(stage: number) :: text:
+
+    switch {_stage}:
+        case 0:
+            return "NEUTRO"
+        case 1:
+            return "AMIGO"
+        case 2:
+            return "MELHORES_AMIGOS"
+        case 3:
+            return "PAIXAO"
+        case 4:
+            return "NAMORANDO"
+        case 5:
+            return "NOIVOS"
+        case 6:
+            return "CASADOS"
+    return "DESCONHECIDO"
+#
+# Verifica estágio mínimo
+#
+function hasStage(p1: player, p2: player, minimum: number) :: boolean:
+    set {_current} to getRelationshipStage({_p1}, {_p2})
+    if {_current} >= {_minimum}:
+        return true
+    return false
+#
+# ==========================================================
+# DEBUG
+# ==========================================================
+#
+
+command /eldebug <player>:
+
+    permission: etherlove.admin
+    trigger:
+        set {_target} to arg-1
+        send "&cUso: /eldebug <jogador>" to player if {_target} is not set
+        loop all players:
+            if loop-player is player:
+                next loop
+            set {_id} to etherID({_target}, loop-player)
+            if relationshipExists({_target}, loop-player):
+                set {_points} to getRelationshipPoints({_target}, loop-player)
+                set {_stage} to getRelationshipStage({_target}, loop-player)
+                send "&8&m-----------------------------------"
+                send "&dEtherLove Debug"
+                send ""
+                send "&fCasal:"
+                send "&e%name of {_target}% &7+ &e%name of loop-player%"
+                send ""
+                send "&fID:"
+                send "&7%{_id}%"
+                send ""
+                send "&fPontos:"
+                send "&a%{_points}%"
+                send ""
+                send "&fEstágio:"
+                send "&b%getStageName({_stage})%"
+                send ""
+                send "&fCriado:"
+                send "&7%{etherlove.couple.%{_id}%.created}%"
+                send "&8&m-----------------------------------"
+
+
+# ==========================================================
+# EtherLove Cooldowns
+# ==========================================================
+#
+options:
+    rp-cooldown: 12 hours
+    ab-cooldown: 50 seconds
+    bj-cooldown: 80 seconds
+#
+# ==========================================================
+# FUNÇÕES
+# ==========================================================
+#
+#
+# RP
+#
+function canUseRP(p: player) :: boolean:
+    if {etherlove.cooldown.rp.%uuid of {_p}%} is not set:
+        return true
+    if difference between now and {etherlove.cooldown.rp.%uuid of {_p}%} >= {@rp-cooldown}:
+        return true
+    return false
+function getRPRemaining(p: player) :: timespan:
+    if {etherlove.cooldown.rp.%uuid of {_p}%} is not set:
+        return 0 seconds
+    return {@rp-cooldown} - (difference between now and {etherlove.cooldown.rp.%uuid of {_p}%})
+function startRPCooldown(p: player):
+    set {etherlove.cooldown.rp.%uuid of {_p}%} to now
+# AB
+function canUseAB(p: player) :: boolean:
+
+    if {etherlove.cooldown.ab.%uuid of {_p}%} is not set:
+        return true
+    if difference between now and {etherlove.cooldown.ab.%uuid of {_p}%} >= {@ab-cooldown}:
+        return true
+    return false
+function getABRemaining(p: player) :: timespan:
+    if {etherlove.cooldown.ab.%uuid of {_p}%} is not set:
+        return 0 seconds
+    return {@ab-cooldown} - (difference between now and {etherlove.cooldown.ab.%uuid of {_p}%})
+function startABCooldown(p: player):
+    set {etherlove.cooldown.ab.%uuid of {_p}%} to now
+#
+# BJ
+#
+# Cooldown compartilhado pelo casal
+#
+function canUseBJ(p1: player, p2: player) :: boolean:
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.cooldown.bj.%{_id}%} is not set:
+        return true
+    if difference between now and {etherlove.cooldown.bj.%{_id}%} >= {@bj-cooldown}:
+        return true
+    return false
+function getBJRemaining(p1: player, p2: player) :: timespan:
+    set {_id} to etherID({_p1}, {_p2})
+    if {etherlove.cooldown.bj.%{_id}%} is not set:
+        return 0 seconds
+    return {@bj-cooldown} - (difference between now and {etherlove.cooldown.bj.%{_id}%})
+
+function startBJCooldown(p1: player, p2: player):
+    set {_id} to etherID({_p1}, {_p2})
+    set {etherlove.cooldown.bj.%{_id}%} to now
+#
+# ==========================================================
+# DEBUG
+# ==========================================================
+#
+command /elcooldowns:
+    permission: etherlove.admin
+    trigger:
+        send "&8&m----------------------------------"
+        send "&dEtherLove Cooldowns"
+        send ""
+        send "&fRP:"
+        if {etherlove.cooldown.rp.%uuid of player%} is set:
+            send "&7Último uso: %{etherlove.cooldown.rp.%uuid of player%}%"
+        else:
+            send "&aDisponível"
+        send ""
+        send "&fAB:"
+        if {etherlove.cooldown.ab.%uuid of player%} is set:
+            send "&7Último uso: %{etherlove.cooldown.ab.%uuid of player%}%"
+        else:
+            send "&aDisponível"
+        send "&8&m----------------------------------"
+
+# ==========================================================
+# EtherLove RP
+# ==========================================================
+#
+# /rp
+#
+# Interação social geral.
+#
+# Adiciona +10 pontos para TODOS os relacionamentos
+# existentes do jogador.
+#
+# Cooldown:
+# 12 horas
+#
+# ==========================================================
+#
+options:
+    rp-points: 10
+#
+# ==========================================================
+# COMANDO
+# ==========================================================
+#
+command /rp:
+    trigger:
+        #
+        # Cooldown
+        #
+        if canUseRP(player) is false:
+
+            set {_remaining} to getRPRemaining(player)
+            send "&cVocê já utilizou /rp."
+            send "&7Tempo restante: &f%{_remaining}%"
+            stop
+        #
+        # Inicia cooldown
+        #
+        startRPCooldown(player)
+        #
+        # Procura relacionamentos
+        #
+        set {_count} to 0
+        loop all players:
+            #
+            # Ignora si mesmo
+            #
+            if loop-player is player:
+                next loop
+            #
+            # Verifica relacionamento
+            #
+            if relationshipExists(player, loop-player):
+                #
+                # Adiciona pontos
+                #
+                addRelationshipPoints(
+                    player,
+                    loop-player,
+                    {@rp-points}
+                )
+
+                add 1 to {_count}
+        #
+        # Feedback
+        #
+        if {_count} = 0:
+            send "&eVocê ainda não possui relacionamentos registrados."
+            stop
+        send "&d❤ EtherLove"
+        send "&fVocê fortaleceu %{_count}% relacionamento(s)."
+        send "&a+{@rp-points}% pontos aplicados."
+#
+# ==========================================================
+# DEBUG
+# ==========================================================
+#
+command /rpdebug:
+    permission: etherlove.admin
+    trigger:
+        send "&8&m------------------------------------"
+        send "&dEtherLove RP Debug"
+        send ""
+        send "&fCooldown ativo:"
+        send "&7%canUseRP(player)%"
+        if canUseRP(player) is false:
+            send "&fTempo restante:"
+            send "&7%getRPRemaining(player)%"
+        send "&8&m------------------------------------"
+
+# ==========================================================
+# EtherLove AB
+# ==========================================================
+#
+# /ab
+#
+# Abraço
+#
+# Requer:
+# AMIGO (1) ou superior
+#
+# Cooldown:
+# 50 segundos
+#
+# Ganho:
+# +10 pontos
+#
+# ==========================================================
+#
+options:
+    ab-points: 10
+    stage-friend: 1
+#
+# ==========================================================
+# COMANDO
+# ==========================================================
+#
+command /ab:
+    trigger:
+        #
+        # Cooldown
+        #
+        if canUseAB(player) is false:
+            send "&cVocê precisa esperar para abraçar novamente."
+            send "&7Tempo restante: &f%getABRemaining(player)%"
+            stop
+        #
+        # Procura relacionamentos válidos
+        #
+        set {_affected} to 0
+        loop all players:
+            if loop-player is player:
+                next loop
+            if relationshipExists(player, loop-player):
+                #
+                # Precisa ser AMIGO+
+                #
+                if hasStage(player, loop-player, {@stage-friend}):
+                    addRelationshipPoints(
+                        player,
+                        loop-player,
+                        {@ab-points}
+                    )
+                    add 1 to {_affected}
+        #
+        # Nenhum relacionamento elegível
+        #
+        if {_affected} <= 0:
+            send "&cVocê não possui nenhum relacionamento em nível AMIGO ou superior."
+            stop
+        #
+        # Inicia cooldown
+        #
+        startABCooldown(player)
+        send "&d❤ EtherLove"
+        send "&fVocê distribuiu abraços."
+        send "&a+{@ab-points}% pontos em %{_affected}% relacionamento(s)."
+#
+# ==========================================================
+# DEBUG
+# ==========================================================
+#
+command /abdebug:
+    permission: etherlove.admin
+    trigger:
+        send "&8&m-------------------------------"
+        send "&dEtherLove AB Debug"
+        send ""
+        send "&fPode usar:"
+        send "&a%canUseAB(player)%"
+        if canUseAB(player) is false:
+            send ""
+            send "&fTempo restante:"
+            send "&7%getABRemaining(player)%"
+        send "&8&m-------------------------------"
+
+# ==========================================================
+# EtherLove BJ
+# ==========================================================
+#
+options:
+    bj-points: 10
+    bj-required-stage: 3
+#
+# ==========================================================
+# /bj
+# ==========================================================
+#
+command /bj <player>:
+    trigger:
+        set {_target} to arg-player
+        if {_target} is not online:
+            send "&cJogador não encontrado."
+            stop
+        if {_target} is player:
+            send "&cVocê não pode usar isso em si mesmo."
+            stop
+        if relationshipExists(player, {_target}) is false:
+            send "&cVocês não possuem relacionamento."
+            stop
+        if hasStage(player, {_target}, {@bj-required-stage}) is false:
+            send "&cSeu relacionamento não atingiu PAIXAO."
+            stop
+        if canUseBJ(player, {_target}) is false:
+            send "&cAguarde para usar /bj novamente."
+            send "&7Tempo restante: &f%getBJRemaining(player, {_target})%"
+            stop
+        #
+        # Cria pedido
+        #
+        set {_requestId} to random integer between 100000 and 999999
+        set {etherlove.request.%uuid of {_target}%} to {_requestId}
+        set {etherlove.request.type.%uuid of {_target}%} to "BJ"
+        set {etherlove.request.sender.%uuid of {_target}%} to uuid of player
+        set {etherlove.request.target.%uuid of {_target}%} to uuid of {_target}
+        set {etherlove.request.expire.%uuid of {_target}%} to now
+        send "&d❤ Pedido enviado para %{_target}%."
+        send ""
+        send "&d❤ EtherLove"
+        send "&f%player% quer dar um beijo em você."
+        send ""
+        send "&aAceitar: /ls"
+        send "&cNegar: /ln"
+
+# ==========================================================
+# EtherLove Requests
+# ==========================================================
+#
+# Sistema universal de pedidos.
+#
+# Utilizado por:
+# - BJ
+# - NAMORO
+# - DATE
+# - CASAMENTO
+# - OBA_OBA
+# - CERIMÔNIA
+#
+# ==========================================================
+#
+options:
+    request-expire-seconds: 60
+#
+# ==========================================================
+# FUNÇÃO
+# ==========================================================
+#
+function hasPendingRequest(p: player) :: boolean:
+    if {etherlove.request.type.%uuid of {_p}%} is set:
+        return true
+    return false
+function createRequest(sender: player, target: player, type: text):
+    set {etherlove.request.type.%uuid of {_target}%} to {_type}
+    set {etherlove.request.sender.%uuid of {_target}%} to uuid of {_sender}
+    set {etherlove.request.created.%uuid of {_target}%} to now
+# ==========================================================
+# ACEITAR
+# ==========================================================
+
+command /ls:
+    trigger:
+        if hasPendingRequest(player) is false:
+            send "&cVocê não possui pedidos pendentes."
+            stop
+        set {_type} to {etherlove.request.type.%uuid of player%}
+        set {_senderUUID} to {etherlove.request.sender.%uuid of player%}
+        set {_sender} to offline player from uuid {_senderUUID}
+        #
+        # BJ
+        #
+        if {_type} = "BJ":
+            addRelationshipPoints(
+                player,
+                {_sender},
+                10
+            )
+            startBJCooldown(
+                player,
+                {_sender}
+            )
+            send "&d❤ Você aceitou o beijo."
+            if {_sender} is online:
+                send "&d❤ %{player}% aceitou seu beijo." to {_sender}
+        #
+        # NAMORO
+        #
+        else if {_type} = "NAMORO":
+            setRelationshipStage(
+                player,
+                {_sender},
+                4
+            )
+
+            broadcast "&d❤ %player% e %{_sender}% agora estão namorando!"
+        #
+        # DATE
+        #
+        else if {_type} = "DATE":
+
+            addRelationshipPoints(
+                player,
+                {_sender},
+                10
+            )
+            send "&aEncontro aceito."
+            if {_sender} is online:
+                send "&aSeu encontro foi aceito." to {_sender}
+        #
+        # CASAMENTO
+        #
+        else if {_type} = "CASAMENTO":
+            setRelationshipStage(
+                player,
+                {_sender},
+                5
+            )
+            broadcast "&6❤ %player% e %{_sender}% ficaram noivos!"
+        # OBAOBA
+        else if {_type} = "OBAOBA":
+            send "&d❤ Momento especial iniciado."
+
+            if {_sender} is online:
+                send "&d❤ Pedido aceito." to {_sender}
+        #
+        # Limpeza
+        #
+        delete {etherlove.request::*%uuid of player%}
+#
+# ==========================================================
+# NEGAR
+# ==========================================================
+#
+command /ln:
+    trigger:
+        if hasPendingRequest(player) is false:
+            send "&cVocê não possui pedidos pendentes."
+            stop
+        set {_type} to {etherlove.request.type.%uuid of player%}
+        set {_senderUUID} to {etherlove.request.sender.%uuid of player%}
+        set {_sender} to offline player from uuid {_senderUUID}
+        #
+        # BJ
+        #
+        if {_type} = "BJ":
+            send "&cVocê recusou o beijo."
+            if {_sender} is online:
+                send "&c%player% recusou seu beijo." to {_sender}
+        #
+        # NAMORO
+        #
+        else if {_type} = "NAMORO":
+
+            addRelationshipPoints(
+                player,
+                {_sender},
+                -10
+            )
+            send "&cPedido de namoro recusado."
+            if {_sender} is online:
+                send "&c%player% recusou seu pedido." to {_sender}
+
+        #
+        # DATE
+        #
+        else if {_type} = "DATE":
+            addRelationshipPoints(
+                player,
+                {_sender},
+                -10
+            )
+            send "&cEncontro recusado."
+            if {_sender} is online:
+                send "&cSeu encontro foi recusado." to {_sender}
+        #
+        # CASAMENTO
+        #
+        else if {_type} = "CASAMENTO":
+            setRelationshipStage(
+                player,
+                {_sender},
+                3
+            )
+
+            setRelationshipPoints(
+                player,
+                {_sender},
+                300
+            )
+            send "&cPedido recusado."
+            if {_sender} is online:
+                send "&cSeu pedido foi recusado." to {_sender}
+        #
+        # OBAOBA
+        #
+        else if {_type} = "OBAOBA":
+            send "&cPedido recusado."
+            if {_sender} is online:
+                send "&cPedido recusado." to {_sender}
+        #
+        # Limpeza
+        #
+        delete {etherlove.request::*%uuid of player%}
+# ==========================================================
+# EXPIRAÇÃO
+# ==========================================================
+every 10 seconds:
+    loop all players:
+        if {etherlove.request.type.%uuid of loop-player%} is set:
+            set {_created} to {etherlove.request.created.%uuid of loop-player%}
+            if difference between now and {_created} > {@request-expire-seconds} seconds:
+                send "&cSeu pedido expirou." to loop-player
+
+                delete {etherlove.request::*%uuid of loop-player%}
+
+# ==========================================================
+# EtherLove Namoro
+# ==========================================================
+#
+options:
+    namoro-required-stage: 3
+    namoro-deny-penalty: 10
+#
+# ==========================================================
+# /namorar
+# ==========================================================
+#
+command /namorar <player>:
+    trigger:
+        set {_target} to arg-player
+        if {_target} is not online:
+            send "&cJogador não encontrado."
+            stop
+        if {_target} is player:
+            send "&cVocê não pode namorar consigo mesmo."
+            stop
+        if relationshipExists(player, {_target}) is false:
+            send "&cVocês ainda não possuem relacionamento."
+            stop
+        #
+        # precisa ser PAIXAO
+        #
+        if hasStage(player, {_target}, {@namoro-required-stage}) is false:
+            send "&cSeu relacionamento ainda não atingiu PAIXAO."
+            stop
+
+        #
+        # bloqueia se já estiver acima
+        #
+        if getRelationshipStage(player, {_target}) >= 4:
+            send "&cVocês já possuem um relacionamento avançado."
+            stop
+        #
+        # cria pedido
+        #
+        createRequest(
+    player,
+    {_target},
+    "NAMORO"
+       )
+        send "&d❤ Pedido de namoro enviado para %{_target}%."
+        send ""
+        send "&d❤ EtherLove"
+        send "&f%player% quer namorar você."
+        send ""
+        send "&aAceitar: /ls"
+        send "&cNegar: /ln"
+        send "" to {_target}
+
+
 ==================================================
 CREATED FUNCTIONS
 ==================================================
