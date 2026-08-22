@@ -14,7 +14,19 @@ PROJECT:
 EtherLove
 
 STATUS:
-Core foundation created.
+Created all Script.
+
+GAME VARIANT:
+
+Minecraft 26.2 (new game nomenclature to be used in 2026: https://www.minecraft.net/pt-br/updates/minecraft-updates-timeline-and-evolution)
+[Minecraft uses a versioning system based on the current year and frequent content packages (Game Drops). The latest versions vary by edition: Java Edition is on version 26.2 (with snapshots like 26.3), while Bedrock Edition (consoles, mobile, and Windows) is on version 26.44.]
+
+Use these files as references to create the Skcript: 
+
+https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/Skript.config.md
+https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/SkBee_Config.md
+https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/skript-variables.md
+https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/SkeiptLuckPerms.md
 
 ==================================================
 CREATED FUNCTIONS
