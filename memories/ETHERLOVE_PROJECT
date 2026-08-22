@@ -1,12 +1,767 @@
 ================================
 UPDATES SITE:
 Exemplo:
-UPDATE > 00/00/00 - 00:00 - M000A
+UPDATE > 00/00/00 - 00:00 - M007A
 [conteúdo]
 <END UPDATE>
 =============================
 
-UPDATE > 22/08/2026
+UPDATE > 22/08/26 - 03:00 - M006A
+==========================================================
+ETHERLOVE REBUILD 001
+==========================================================
+
+STATUS:
+REBUILD 001 — BLOCO 2 CONCLUÍDO
+
+==========================================================
+1. CONTEXTO
+==========================================================
+
+O EtherLove está sendo reconstruído a partir do zero lógico,
+utilizando o GitHub MANUAL-MEMORY-SYSTEM como fonte de verdade
+da arquitetura e continuidade do projeto.
+
+O arquivo principal de especificação é:
+
+memories/ETHERLOVE_PROJECT
+
+O código do projeto está localizado em:
+
+EtherLove/
+
+A memória deve ser atualizada ao final de cada bloco importante
+de desenvolvimento.
+
+==========================================================
+2. BLOCO 1 — CORE
+==========================================================
+
+Arquivo:
+
+EtherLove/00-etherlove-core.sk
+
+O Core foi reconstruído para separar:
+
+- RelationshipID
+- XP
+- CASE
+- STATUS
+- criação de relacionamento
+- existência de relacionamento
+- progressão
+- regressão
+- reset
+- estados de relacionamento
+
+==========================================================
+3. RELATIONSHIP ID
+==========================================================
+
+Cada relação pertence a um par:
+
+PLAYER A ↔ PLAYER B
+
+Os UUIDs são ordenados para garantir:
+
+A + B = B + A
+
+Formato conceitual:
+
+uuidA::uuidB
+
+Cada par possui seu próprio RelationshipID.
+
+Exemplo:
+
+PLAYER1 + PLAYER2
+→ Relationship-001
+
+PLAYER1 + PLAYER3
+→ Relationship-002
+
+O progresso é independente entre relações.
+
+==========================================================
+4. XP
+==========================================================
+
+XP pertence à RELAÇÃO e não ao jogador.
+
+Limite normal:
+
+0 → 500 XP
+
+XP pode ser:
+
++ positivo
+- negativo
+
+XP positivo representa evolução.
+
+XP negativo representa deterioração.
+
+XP negativo pode causar regressão de CASE.
+
+Quando o XP muda:
+
+XP ALTERADO
+↓
+RECALCULAR CASE
+↓
+VERIFICAR REGRESSÃO/PROGRESSÃO
+↓
+ATUALIZAR UNLOCKS
+
+==========================================================
+5. CASES
+==========================================================
+
+CASE 0
+0 XP+
+
+UNLOCK:
+/RP
+
+
+CASE 1
+100 XP+
+
+UNLOCK:
+/AB
+
+
+CASE 2
+200 XP+
+
+UNLOCK:
+/DATE
+/PRESENTE
+
+
+CASE 3
+300 XP+
+
+UNLOCK:
+/BJ
+
+400 XP+
+
+UNLOCK:
+/NAMORAR
+
+
+CASE 4
+500 XP+
+
+REPRESENTA:
+
+NAMORANDO
+
+IMPORTANTE:
+
+CASE 4 NÃO DEVE SER OBTIDO AUTOMATICAMENTE
+APENAS POR ALCANÇAR 500 XP.
+
+CASE 4 exige:
+
+/NAMORAR
++
+REQUEST
++
+ACEITAÇÃO
+
+
+CASE 5
+
+REPRESENTA:
+
+NOIVO
+
+É o último estágio normal de XP/progressão.
+
+
+CASE 6
+
+REPRESENTA:
+
+CASADO
+
+Não depende de XP.
+
+É obtido através de evento especial de casamento.
+
+UNLOCK:
+
+/TPC
+/OBAOBA
+
+==========================================================
+6. STATUS
+==========================================================
+
+STATUS é separado de XP e CASE.
+
+Estados oficiais:
+
+SOLTEIRO
+NAMORANDO
+NOIVO
+CASADO
+
+Fluxo:
+
+SOLTEIRO
+↓
+NAMORANDO
+↓
+NOIVO
+↓
+CASADO
+
+Divórcio:
+
+NAMORANDO
+↓
+DIVORCIADO
+↓
+SOLTEIRO
+
+NOIVO
+↓
+DIVORCIADO
+↓
+SOLTEIRO
+
+CASADO
+↓
+DIVORCIADO
+↓
+SOLTEIRO
+
+No reset:
+
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO
+
+RelationshipID permanece.
+
+==========================================================
+7. EXCLUSIVIDADE
+==========================================================
+
+Um jogador pode possuir somente um namoro ativo.
+
+Se PLAYER1 estiver:
+
+PLAYER1 ↔ PLAYER2
+CASE 4
+STATUS = NAMORANDO
+
+PLAYER1 não pode iniciar outro namoro com PLAYER3.
+
+O sistema deve verificar o estado global de relacionamentos
+do jogador antes de permitir outro namoro.
+
+O TARGET também precisa estar solteiro.
+
+==========================================================
+8. BLOCO 2 — UTILS
+==========================================================
+
+Arquivo:
+
+EtherLove/01-etherlove-utils.sk
+
+O arquivo foi reconstruído e colocado manualmente no GitHub
+pelo usuário.
+
+STATUS:
+
+CONCLUÍDO / APLICADO NO REPOSITÓRIO
+
+Responsabilidades:
+
+- Cooldowns
+- Request System
+- criação de Requests
+- consulta de Requests
+- expiração
+- remoção
+- RelationshipID associado ao Request
+
+==========================================================
+9. COOLDOWNS
+==========================================================
+
+Cooldown atual definido:
+
+/RP
+→ 12 horas
+
+/AB
+→ 50 segundos
+
+/BJ
+→ 80 segundos
+
+/BJ utiliza cooldown baseado no RelationshipID.
+
+Portanto:
+
+PLAYER1 → PLAYER2
+
+possui cooldown independente de:
+
+PLAYER1 → PLAYER3
+
+Isso mantém o cooldown associado à relação correta.
+
+==========================================================
+10. REQUEST SYSTEM
+==========================================================
+
+Cada Request agora possui:
+
+- Sender UUID
+- Target UUID
+- Type
+- RelationshipID
+- Created
+- Expires
+
+Estrutura conceitual:
+
+{etherlove.request.%senderUUID%::%targetUUID%.type}
+
+{etherlove.request.%senderUUID%::%targetUUID%.relationship}
+
+{etherlove.request.%senderUUID%::%targetUUID%.created}
+
+{etherlove.request.%senderUUID%::%targetUUID%.expires}
+
+==========================================================
+11. REQUEST TYPES
+==========================================================
+
+Tipos planejados:
+
+NAMORAR
+
+NOIVAR
+
+Outros tipos podem ser adicionados futuramente.
+
+IMPORTANTE:
+
+CASAMENTO não deve ser tratado como simples
+request de mudança para CASE 5.
+
+A diferença oficial é:
+
+/NOIVAR
+→ Request
+→ Aceitação
+→ CASE 5 / NOIVO
+
+CASAMENTO
+→ Evento especial
+→ Cerimonialista
+→ CASE 6 / CASADO
+
+==========================================================
+12. EXPIRAÇÃO
+==========================================================
+
+Requests possuem:
+
+created
+expires
+
+Um Request expirado não é considerado pendente.
+
+O sistema possui funções para:
+
+- verificar existência
+- verificar expiração
+- limpar Request expirado
+- remover Request
+
+Tempo atual configurado provisoriamente:
+
+10 minutos
+
+IMPORTANTE:
+
+O período de 10 minutos é PROVISÓRIO.
+
+Ainda não foi definido como regra permanente do projeto.
+
+Deve ser confirmado posteriormente.
+
+==========================================================
+13. RESPONSABILIDADE DO 01-UTILS
+==========================================================
+
+O arquivo 01 não deve executar diretamente mudanças de
+relacionamento.
+
+Ele NÃO deve:
+
+- alterar CASE diretamente
+- alterar STATUS diretamente
+- executar /ls
+- executar /ln
+- executar /namorar
+- executar /noivar
+- executar casamento
+
+Sua responsabilidade é fornecer infraestrutura para essas
+camadas superiores.
+
+Arquitetura:
+
+CORE
+↓
+UTILS
+↓
+REQUEST DATA
+↓
+COMMAND / EVENT HANDLERS
+
+==========================================================
+14. IMPORTANTE — CORREÇÃO ARQUITETURAL
+==========================================================
+
+No código antigo:
+
+/ls
+
+alterava diretamente CASE.
+
+Exemplo antigo:
+
+NAMORO
+→ CASE 4
+
+CASAMENTO
+→ CASE 5
+
+Isso foi considerado incorreto.
+
+A nova arquitetura exige:
+
+REQUEST
+↓
+VALIDAÇÃO
+↓
+ACEITAÇÃO
+↓
+ALTERAÇÃO DE STATUS
+↓
+ALTERAÇÃO DE CASE
+↓
+REAVALIAÇÃO
+
+O Request System não deve decidir sozinho o resultado
+do relacionamento.
+
+==========================================================
+15. RECUSA
+==========================================================
+
+Recusa de namoro:
+
+/NAMORAR
+↓
+REQUEST
+↓
+/LN
+↓
+-50 XP
+↓
+RECALCULAR CASE
+
+Recusa de noivado:
+
+/NOIVAR
+↓
+REQUEST
+↓
+/LN
+↓
+-50 XP
+↓
+RECALCULAR CASE
+
+A penalidade pode causar regressão.
+
+==========================================================
+16. CERIMONIALISTA
+==========================================================
+
+Foi definido um terceiro participante para casamento.
+
+Modelo:
+
+👨‍💼 CERIMONIALISTA
++
+🤵 PLAYER 1
++
+👰 PLAYER 2
+↓
+EVENTO DE CASAMENTO
+↓
+CASE 6
+STATUS = CASADO
+
+O cerimonialista:
+
+- é um jogador;
+- possui permissão especial;
+- inicia/conduz o evento;
+- não precisa possuir relacionamento com os noivos.
+
+Permissão conceitual:
+
+etherlove.ceremonialist
+
+O nome exato da permission ainda pode ser revisado.
+
+==========================================================
+17. MENU DE RELACIONAMENTOS
+==========================================================
+
+Existe um arquivo de interface:
+
+EtherLove/04-etherlove-interface.sk
+
+O menu existente é um protótipo e será reconstruído
+posteriormente.
+
+O menu deverá mostrar as relações INDIVIDUALMENTE.
+
+Exemplo:
+
+PLAYER1
+
+PLAYER2
+→ CASE 4
+→ NAMORANDO
+→ XP 450/500
+
+PLAYER3
+→ CASE 2
+→ SOLTEIRO
+→ XP 220/500
+
+PLAYER4
+→ CASE 0
+→ SOLTEIRO
+→ XP 80/500
+
+O menu não deve criar uma segunda fonte de dados.
+
+Ele deve consultar o Core.
+
+CORE
+↓
+RELATIONSHIP DATA
+↓
+MENU
+
+==========================================================
+18. ARQUIVOS ATUAIS
+==========================================================
+
+EtherLove/
+
+00-etherlove-core.sk
+→ CORE
+→ BLOCO 1 CONCLUÍDO
+
+01-etherlove-utils.sk
+→ COOLDOWNS + REQUESTS
+→ BLOCO 2 CONCLUÍDO
+
+02-etherlove-interactions.sk
+→ AINDA NÃO RECONSTRUÍDO
+
+03-etherlove-progression.sk
+→ AINDA NÃO RECONSTRUÍDO
+
+04-etherlove-interface.sk
+→ PROTÓTIPO / AINDA NÃO RECONSTRUÍDO
+
+
+==========================================================
+19. SITUAÇÃO DO CÓDIGO ANTIGO
+==========================================================
+
+O código anterior do EtherLove foi considerado incompatível
+em vários pontos com a nova especificação.
+
+Exemplos encontrados:
+
+- /RP afetava múltiplos jogadores em vez de uma relação específica;
+- CASE era tratado como simples consequência de XP;
+- /namorar não respeitava completamente os 400 XP;
+- não havia verificação completa de exclusividade;
+- requests não possuíam RelationshipID;
+- requests não possuíam expiração;
+- namoro/noivado/casamento estavam misturados;
+- casamento era tratado como simples alteração para CASE 5;
+- /ls alterava CASE diretamente;
+- /ln não aplicava -50 XP;
+- interface não refletia completamente a nova arquitetura.
+
+Portanto:
+
+CÓDIGO ANTIGO ≠ FONTE DE VERDADE
+
+A especificação do projeto é a referência principal.
+
+==========================================================
+20. REGRA DE DESENVOLVIMENTO
+==========================================================
+
+Não implementar uma camada superior antes de estabilizar
+a camada inferior.
+
+Ordem:
+
+CORE
+↓
+REQUESTS / COOLDOWNS
+↓
+INTERACTIONS
+↓
+RELATIONSHIP STATES
+↓
+NAMORO
+↓
+NOIVADO
+↓
+CASAMENTO
+↓
+CERIMONIALISTA
+↓
+DIVÓRCIO
+↓
+RELATIONSHIP MENU
+↓
+TESTES
+
+==========================================================
+21. PRÓXIMO BLOCO
+==========================================================
+
+PRÓXIMO:
+
+EtherLove/02-etherlove-interactions.sk
+
+Objetivo:
+
+Reconstruir as interações:
+
+/RP
+/AB
+/BJ
+
+seguindo rigorosamente:
+
+EXECUTOR
++
+TARGET
+↓
+RelationshipID
+↓
+VERIFICAR RELAÇÃO
+↓
+VERIFICAR CASE
+↓
+VERIFICAR COOLDOWN
+↓
+EXECUTAR AÇÃO
+↓
+ADICIONAR XP
+↓
+ATUALIZAR LAST-INTERACTION
+↓
+RECALCULAR CASE
+
+Cada ação deve afetar SOMENTE a relação entre
+EXECUTOR e TARGET.
+
+==========================================================
+22. REGRAS DE XP DAS INTERAÇÕES
+==========================================================
+
+/RP
+
+CASE 0:
++10 XP
+
+CASE 1:
++10 XP
+
+CASE 2:
++10 XP
+
+CASE 3:
++10 XP
+
+/AB
+
+Disponível a partir de CASE 1.
+
+Valor normal:
+
++10 XP
+
+/BJ
+
+Disponível a partir de CASE 3.
+
+Valor:
+
++15 XP
+
+IMPORTANTE:
+
+Esses valores representam a definição atual.
+
+Eventos /DATE e /PRESENTE terão lógica própria posteriormente,
+podendo gerar XP positivo ou negativo dependendo da avaliação
+do desempenho do jogador participante.
+
+==========================================================
+23. PRINCÍPIO FINAL
+==========================================================
+
+EtherLove não é um sistema de "nível de jogador".
+
+É um sistema de:
+
+RELACIONAMENTOS ENTRE JOGADORES.
+
+Cada relação possui:
+
+RelationshipID
+XP
+CASE
+STATUS
+Created
+Last Interaction
+
+O jogador apenas participa de várias relações independentes.
+
+==========================================================
+FIM DA MEMORY 003
+==========================================================
+
+UPDATE > 22/08/2026 - 00:00 - M005A
 ETHERLOVE — CERIMONIALISTA / CASAMENTO / RELATIONSHIP MENU
 ==========================================================
 
