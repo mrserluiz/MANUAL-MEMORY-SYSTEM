@@ -5,6 +5,558 @@ UPDATE > 00/00/00 - 00:00 - M000A
 [conteúdo]
 <END UPDATE>
 =============================
+UPDATE > 21/08/26 - 23:XX - M002A
+
+[ETHERLOVE — RECONSTRUÇÃO E CORREÇÃO DA ARQUITETURA]
+
+==================================================
+CONTEXTO
+==================================================
+
+Foi iniciada uma nova etapa de desenvolvimento do EtherLove.
+
+A implementação atualmente registrada no projeto apresenta erros e não funciona corretamente.
+
+O objetivo desta etapa não é preservar código quebrado por estar previamente registrado como "complete".
+
+O objetivo é AUDITAR, CORRIGIR, RECRIAR ou REESTRUTURAR os módulos necessários, mantendo os contratos arquiteturais válidos.
+
+O acesso ao repositório GitHub permite analisar o projeto como um sistema completo, em vez de tentar reconstruí-lo apenas através da memória de conversas anteriores.
+
+A memória do GitHub continua sendo a fonte de verdade do projeto.
+
+IMPORTANTE:
+
+O código anteriormente produzido em conversas não deve ser considerado automaticamente correto.
+
+A existência de um módulo na seção "CURRENT COMPLETED MODULES" não significa que sua implementação esteja funcional.
+
+==================================================
+FONTE DE VERDADE
+==================================================
+
+Repository:
+
+https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM
+
+Project memory:
+
+memories/ETHERLOVE_PROJECT
+
+Technical references:
+
+memories/Skript.config.md
+memories/SkBee_Config.md
+memories/skript-variables.md
+memories/SkeiptLuckPerms.md
+
+O arquivo ETHERLOVE_PROJECT define que:
+
+"If code conflicts with this document:
+The document is correct.
+The code must be corrected."
+
+Portanto:
+
+MEMÓRIA / ARQUITETURA
+        ↓
+CÓDIGO
+        ↓
+AUDITORIA
+        ↓
+CORREÇÃO
+
+==================================================
+CORREÇÃO DE INTERPRETAÇÃO
+==================================================
+
+Durante a análise inicial houve uma interpretação incorreta da arquitetura de progressão.
+
+Foi inicialmente representado o EtherLove como uma coleção de módulos diretamente ligados ao CORE.
+
+Essa representação NÃO descreve corretamente a lógica de progressão.
+
+EtherLove possui uma estrutura de CASES que determina quais mecânicas/comandos ficam disponíveis.
+
+IMPORTANTE:
+
+CASE ≠ COMMAND
+
+Um CASE representa um estágio/estado de progressão.
+
+Os comandos são mecânicas desbloqueadas pelo CASE.
+
+==================================================
+PROGRESSÃO OFICIAL DOS CASES
+==================================================
+
+CASE 0
+-------
+
+Desbloqueio:
+
+/RP
+
+É o estágio inicial.
+
+Nenhuma outra mecânica de progressão é liberada neste estágio além de /RP.
+
+
+CASE 1
+-------
+
+Desbloqueios:
+
+/AB
+/PRESETE
+
+CASE 1 também mantém acesso às mecânicas anteriormente desbloqueadas.
+
+Portanto, progressão não deve remover comandos anteriormente conquistados.
+
+
+CASE 2
+-------
+
+Desbloqueio:
+
+/DATE
+
+CASE 2 mantém as mecânicas anteriores.
+
+
+CASE 3
+-------
+
+Desbloqueio:
+
+/BJ
+
+CASE 3 mantém as mecânicas anteriores.
+
+
+CASE 4
+-------
+
+Desbloqueio:
+
+/NOIVAR
+
+CASE 4 mantém as mecânicas anteriores.
+
+
+CASE 5
+-------
+
+Não libera novo comando.
+
+É o ÚLTIMO ESTÁGIO que o jogador/casal pode alcançar sozinho através da progressão normal.
+
+CASE 5 representa o teto da progressão autônoma.
+
+
+CASE 6
+-------
+
+Desbloqueios:
+
+/TPC
+/OBAOBA
+
+CASE 6 NÃO é alcançado simplesmente através de progressão normal.
+
+CASE 6 exige um EVENTO DE CASAMENTO.
+
+Fluxo:
+
+CASE 5
+   ↓
+EVENTO DE CASAMENTO
+   ↓
+CASAMENTO CONCLUÍDO
+   ↓
+CASE 6
+   ↓
+/TPC
+/OBAOBA
+
+==================================================
+MODELO DE PROGRESSÃO
+==================================================
+
+A progressão deve ser entendida como:
+
+CASE 0
+   ↓
+CASE 1
+   ↓
+CASE 2
+   ↓
+CASE 3
+   ↓
+CASE 4
+   ↓
+CASE 5
+   ↓
+EVENTO DE CASAMENTO
+   ↓
+CASE 6
+
+CASE 0 → CASE 5:
+
+Progressão autônoma.
+
+CASE 5 → CASE 6:
+
+Progressão especial mediante evento de casamento.
+
+CASE 5 é o último estágio normal.
+
+CASE 6 é um estágio especial/pós-casamento.
+
+==================================================
+UNLOCK MATRIX
+==================================================
+
+CASE 0
+/rp
+
+CASE 1
+/rp
+/ab
+/presete
+
+CASE 2
+/rp
+/ab
+/presete
+/date
+
+CASE 3
+/rp
+/ab
+/presete
+/date
+/bj
+
+CASE 4
+/rp
+/ab
+/presete
+/date
+/bj
+/noivar
+
+CASE 5
+/rp
+/ab
+/presete
+/date
+/bj
+/noivar
+
+CASE 6
+/rp
+/ab
+/presete
+/date
+/bj
+/noivar
+/tpc
+/obaoba
+
+Os comandos anteriores permanecem disponíveis após serem desbloqueados.
+
+O sistema não deve tratar cada CASE como substituição dos comandos anteriores.
+
+==================================================
+EVENTO DE CASAMENTO
+==================================================
+
+A transição:
+
+CASE 5 → CASE 6
+
+é especial.
+
+Não deve ser implementada como simples:
+
+points >= threshold
+
+O casamento é um evento que deve ser concluído antes que CASE 6 seja liberado.
+
+Portanto:
+
+CASE 6 deve possuir uma condição/event flag própria relacionada ao casamento.
+
+==================================================
+RELACIONAMENTO ENTRE CASE E PROGRESSÃO
+==================================================
+
+Foi identificado que a documentação anterior utilizava stages:
+
+0 NEUTRO
+1 AMIGO
+2 MELHORES_AMIGOS
+3 PAIXAO
+4 NAMORANDO
+5 NOIVOS
+6 CASADOS
+
+Entretanto, os CASES de desbloqueio representam uma camada funcional diferente.
+
+Não assumir automaticamente:
+
+CASE = STAGE
+
+É necessário auditar o código existente para determinar exatamente como:
+
+- points
+- relationship stage
+- CASE
+- events
+- unlocks
+
+estão relacionados.
+
+Essa relação deve ser definida antes de reconstruir o core.
+
+==================================================
+ARQUITETURA ORIGINAL A PRESERVAR
+==================================================
+
+Os seguintes contratos continuam sendo referências importantes:
+
+CONTRACT 001
+Relationship belongs to couple.
+
+CONTRACT 002
+UUID only internally.
+
+CONTRACT 003
+Only core.sk modifies relationship data.
+
+CONTRACT 004
+Only cooldowns.sk modifies cooldowns.
+
+CONTRACT 005
+Only requests.sk modifies requests.
+
+CONTRACT 006
+Modules communicate using functions.
+
+CONTRACT 007
+Points belong to couple.
+
+CONTRACT 008
+Stages belong to couple.
+
+CONTRACT 009
+NOIVOS and CASADOS are event stages.
+
+CONTRACT 010
+All consent uses:
+
+/ls
+/ln
+
+CONTRACT 011
+Bedrock compatibility required.
+
+CONTRACT 012
+Cooldowns must survive restart.
+
+Esses contratos não devem ser descartados sem análise.
+
+==================================================
+BEDROCK COMPATIBILITY
+==================================================
+
+Continua proibido utilizar:
+
+Display Entities
+Text Displays
+Item Displays
+Block Displays
+
+Preferir:
+
+Particles
+BossBars
+ActionBars
+Scoreboards
+Inventories
+
+O EtherLove deve continuar compatível com Java + Bedrock através do ambiente do servidor.
+
+==================================================
+PROBLEMA ATUAL
+==================================================
+
+A versão atualmente registrada não funciona corretamente.
+
+Portanto, a informação:
+
+"Foundation complete."
+"Consent system complete."
+"Cooldown system complete."
+"Relationship system complete."
+
+deve ser interpretada como:
+
+ESTADO REGISTRADO / PRETENDIDO
+
+e não como:
+
+IMPLEMENTAÇÃO VALIDADA.
+
+A implementação real precisa ser auditada.
+
+==================================================
+PLANO DE RECONSTRUÇÃO
+==================================================
+
+Não reescrever imediatamente um único arquivo isolado.
+
+Primeiro realizar auditoria do projeto completo.
+
+Ordem recomendada:
+
+1. etherlove-core.sk
+2. etherlove-cooldowns.sk
+3. etherlove-requests.sk
+4. etherlove-rp.sk
+5. etherlove-ab.sk
+6. etherlove-bj.sk
+7. etherlove-namoro.sk
+8. etherlove-date.sk
+9. módulos de casamento
+10. dependências e referências técnicas
+
+Durante a auditoria procurar:
+
+- erros de sintaxe Skript;
+- funções inexistentes;
+- argumentos incompatíveis;
+- variáveis inconsistentes;
+- UUID incorreto;
+- player/offline player incompatível;
+- funções chamadas antes de existirem;
+- dependências circulares;
+- módulos alterando variáveis de outros módulos;
+- lógica de CASE incorreta;
+- desbloqueios incorretos;
+- perda de desbloqueios anteriores;
+- persistência incorreta;
+- cooldowns perdidos após restart;
+- problemas de consentimento;
+- problemas de eventos;
+- incompatibilidade Bedrock;
+- conflitos de comandos;
+- problemas de reload;
+- estados impossíveis;
+- condições de transição incorretas.
+
+==================================================
+PRINCÍPIO DE DESENVOLVIMENTO
+==================================================
+
+Não preservar código apenas porque já existe.
+
+Se estiver correto:
+PRESERVAR.
+
+Se estiver parcialmente correto:
+CORRIGIR.
+
+Se estiver arquiteturalmente incorreto:
+REESTRUTURAR.
+
+Se estiver irrecuperável:
+RECRIAR.
+
+O objetivo é obter um EtherLove FUNCIONAL e COERENTE, e não simplesmente manter a aparência da versão anterior.
+
+==================================================
+ESTADO ATUAL
+==================================================
+
+PROJECT:
+EtherLove
+
+VERSION:
+0.1.0-dev
+
+STATUS REAL:
+Existing implementation contains errors and requires complete audit/correction.
+
+ARCHITECTURE:
+Partially defined and requires validation against actual code.
+
+PROGRESSION:
+CASE 0 → CASE 1 → CASE 2 → CASE 3 → CASE 4
+
+SPECIAL:
+CASE 4 → player a marriage proposal, if accepted by the other player → CASE 5
+CASE 5 → marriage event → CASE 6
+
+NEXT MAJOR TASK:
+Full project audit.
+
+FIRST FILE TO AUDIT:
+etherlove-core.sk
+
+==================================================
+IMPORTANT DISCOVERY
+==================================================
+
+A representação correta da arquitetura não deve ser:
+
+ETHERLOVE
+├── CORE
+├── RP
+├── AB
+├── BJ
+├── DATE
+└── NAMORO
+
+como se todos fossem sistemas independentes ligados diretamente ao CORE.
+
+O sistema deve ser analisado como:
+
+CORE
+ │
+ ├── relationship state
+ │
+ ├── progression / CASE
+ │
+ ├── unlock conditions
+ │
+ └── event transitions
+          │
+          ├── requests
+          ├── interactions
+          ├── dating
+          ├── engagement
+          └── marriage
+
+Enquanto os módulos de comandos representam mecânicas que dependem do CASE atual.
+
+==================================================
+NEXT
+==================================================
+
+AUDITAR O CÓDIGO REAL DO GITHUB.
+
+Primeiro:
+
+etherlove-core.sk
+
+Depois verificar suas dependências e chamadas.
+
+Não implementar novas funcionalidades antes de entender e validar a arquitetura existente.
+
+<END UPDATE>
 
 =============================
 ETHERLOVE PROJECT MEMORY
