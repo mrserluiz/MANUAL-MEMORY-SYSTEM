@@ -297,24 +297,131 @@ function updateRelationshipStage(p1: player, p2: player):
     createRelationship({_p1}, {_p2})
 
     set {_points} to getRelationshipPoints({_p1}, {_p2})
-
     set {_stage} to getRelationshipStage({_p1}, {_p2})
 
-    if {_stage} >= 4:
-        if {_stage} is 4:
-            if {_points} < {@dating-min-xp}:
-                setRelationshipStage({_p1}, {_p2}, 3)
-                setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
-        stop
 
-    if {_points} >= {@case-3}:
-        setRelationshipStage({_p1}, {_p2}, 3)
-    else if {_points} >= {@case-2}:
-        setRelationshipStage({_p1}, {_p2}, 2)
-    else if {_points} >= {@case-1}:
-        setRelationshipStage({_p1}, {_p2}, 1)
-    else:
-        setRelationshipStage({_p1}, {_p2}, 0)
+    # ======================================================
+    # CASE 6 — CASADO
+    # ======================================================
+    #
+    # CASE 6 não depende mais de XP.
+    # Não existe regressão automática.
+    #
+    # ======================================================
+
+    if {_stage} is 6:
+
+        setRelationshipStatus({_p1}, {_p2}, "CASADO")
+
+        return
+
+
+    # ======================================================
+    # CASE 5 — NOIVO
+    # ======================================================
+    #
+    # Enquanto XP >= 350:
+    #
+    # CASE 5
+    # STATUS NOIVO
+    #
+    # Abaixo de 350:
+    #
+    # perde noivado
+    # ↓
+    # tenta voltar para NAMORANDO
+    # ↓
+    # como namoro exige 400 XP,
+    # a regressão continua para CASE calculado pelo XP
+    #
+    # ======================================================
+
+    if {_stage} is 5:
+
+        if {_points} >= {@engaged-min-xp}:
+
+            setRelationshipStatus({_p1}, {_p2}, "NOIVO")
+
+            return
+
+
+        # --------------------------------------------------
+        # Romper NOIVADO
+        # --------------------------------------------------
+
+        setRelationshipStage({_p1}, {_p2}, 4)
+
+        setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+
+
+        # --------------------------------------------------
+        # Validar se o NAMORO ainda pode existir
+        # --------------------------------------------------
+
+        if {_points} < {@dating-min-xp}:
+
+            set {_xpStage} to calculateXPStage({_points})
+
+            setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+            setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+
+        return
+
+
+    # ======================================================
+    # CASE 4 — NAMORANDO
+    # ======================================================
+    #
+    # Enquanto XP >= 400:
+    #
+    # permanece NAMORANDO
+    #
+    # Abaixo de 400:
+    #
+    # namoro termina
+    # ↓
+    # STATUS SOLTEIRO
+    # ↓
+    # CASE recalculado pelo XP
+    #
+    # ======================================================
+
+    if {_stage} is 4:
+
+        if {_points} >= {@dating-min-xp}:
+
+            setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+
+            return
+
+
+        # --------------------------------------------------
+        # Romper NAMORO
+        # --------------------------------------------------
+
+        set {_xpStage} to calculateXPStage({_points})
+
+        setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+        setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+
+        return
+
+
+    # ======================================================
+    # CASE 0–3
+    # ======================================================
+    #
+    # Estes CASES são completamente determinados pelo XP.
+    #
+    # ======================================================
+
+    set {_xpStage} to calculateXPStage({_points})
+
+    setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+    setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
     # ======================================================
     # CASE 6 — CASADO
     # ======================================================
