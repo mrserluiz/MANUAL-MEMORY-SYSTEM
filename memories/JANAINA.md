@@ -1,3 +1,1032 @@
+# UPDATE — HISTÓRICO RELACIONAL SERGIO & JANAÍNA
+
+**Data do relatório:** 23/08/2026
+**Período consolidado:** 24/06/2026 a 16/08/2026
+---
+## 1. INÍCIO DA APROXIMAÇÃO — FINAL DE JUNHO/2026
+
+Sergio conheceu Janaína e saiu com ela em **27/06/2026**.
+
+A aproximação chamou atenção de Sergio principalmente por características que ele percebeu como diferentes das experiências amorosas anteriores:
+
+* personalidade forte;
+* maturidade;
+* carisma;
+* diálogo direto;
+* ausência de jogos emocionais;
+* capacidade de conversar abertamente sobre sentimentos;
+* disposição para ouvir dores do passado;
+* conversas sobre desenvolvimento pessoal e futuro;
+* acolhimento mútuo.
+
+Sergio descreveu a relação inicial como marcada por:
+
+> “Não tem floreios bonitos ou rodeios, joguinhos e tudo sendo dito com confiança e realidade.”
+
+Também destacou:
+
+> “Querendo o bem e acolhimento um do outro.”
+
+### INTERPRETAÇÃO ESTABELECIDA
+
+O principal diferencial percebido por Sergio não era somente atração física ou entusiasmo inicial.
+
+Ele estava particularmente encantado pela **forma como a relação estava acontecendo**:
+
+* clareza;
+* diálogo;
+* reciprocidade;
+* ausência de necessidade constante de interpretar sinais;
+* possibilidade de falar de assuntos difíceis.
+
+---
+
+# 2. EVOLUÇÃO PARA NAMORO
+
+Entre o final de junho e julho de 2026, a relação avançou rapidamente.
+
+O histórico analisado entre **24/06/2026 e 21/07/2026** indicou:
+
+* conversas diárias;
+* apelidos carinhosos;
+* “bom dia” e “boa noite” frequentes;
+* chamadas de voz;
+* “te amo” frequente;
+* interesse em construir algo sério;
+* pedido de namoro;
+* presentes;
+* flores;
+* cartões românticos;
+* conversas sobre futuro;
+* rotina crescente de casal.
+
+### PERFIL DE SERGIO NA RELAÇÃO
+
+Sergio demonstra amor principalmente por:
+
+* presença;
+* cuidado;
+* mensagens;
+* palavras de afirmação;
+* presentes;
+* surpresas;
+* interesse pela saúde e alimentação;
+* desejo de participar da rotina;
+* vontade de resolver problemas;
+* disponibilidade prática.
+
+Também apresenta tendência a:
+
+* pensar excessivamente;
+* interpretar mudanças pequenas como ameaça ao relacionamento;
+* assumir culpa rapidamente;
+* tentar corrigir conflitos imediatamente;
+* explicar demais quando teme perder a pessoa.
+
+### PERFIL PERCEBIDO DE JANAÍNA
+
+Janaína foi percebida como:
+
+* direta;
+* carinhosa;
+* madura;
+* independente;
+* menos inclinada a jogos emocionais;
+* capaz de demonstrar afeto de forma cotidiana;
+* confortável em expor problemas e vulnerabilidades.
+
+---
+
+# 3. TRAUMAS DO RELACIONAMENTO ANTERIOR DE JANAÍNA
+
+Janaína relatou experiências anteriores que afetaram sua percepção de determinados comportamentos dentro de relacionamentos.
+
+Um exemplo importante:
+
+Perguntas cotidianas como:
+
+* “Como você está?”
+* “Almoçou?”
+* “Onde está?”
+* pedidos frequentes de informações;
+* pedidos de fotos;
+
+podem funcionar como gatilho.
+
+Segundo Janaína, em relacionamento anterior esse tipo de pergunta era utilizado pelo ex-parceiro como forma de controle e monitoramento para verificar se ela estava acompanhada de outra pessoa.
+
+### DIFERENÇA DE INTENÇÃO DE SERGIO
+
+Sergio afirmou que suas perguntas possuem motivação diferente:
+
+* saber se ela está bem;
+* saber se conseguiu se alimentar;
+* demonstrar afeto;
+* cuidar.
+
+### ORIENTAÇÃO ESTABELECIDA
+
+Sergio não precisa deixar de ser carinhoso.
+
+Entretanto, deve permitir que o cuidado seja percebido como:
+
+**acolhimento**
+
+e não:
+
+**fiscalização.**
+
+Exemplo de adaptação considerada saudável:
+
+Em vez de várias perguntas consecutivas, demonstrar carinho e deixar espaço:
+
+> “Pensei em você. Quando puder me conta como foi seu dia.”
+
+---
+
+# 4. CONFLITO SOBRE VELOCIDADE DA RELAÇÃO E FAMÍLIA
+
+Em julho, Sergio dormiu na residência de Janaína sem que os pais dela tivessem previamente concordado ou sido informados.
+
+Naquela noite, Sergio e Janaína tiveram relação sexual.
+
+Posteriormente Janaína ficou:
+
+* abalada;
+* chorosa;
+* transtornada;
+* preocupada com a velocidade do relacionamento.
+
+Ela explicou que nunca havia levado um homem para dentro da casa dos pais dessa maneira.
+
+O desconforto estava associado aos próprios valores e ao sentimento de ter ultrapassado uma regra familiar importante para ela.
+
+### INTERPRETAÇÃO ESTABELECIDA
+
+Não havia evidência de arrependimento em relação a Sergio como parceiro.
+
+O conflito parecia ser principalmente:
+
+> Janaína × seus próprios valores.
+
+Ela estava simultaneamente:
+
+* apaixonada;
+* envolvida;
+* assustada com a velocidade;
+* preocupada em ter agido de maneira incompatível com os próprios princípios.
+
+### ORIENTAÇÃO
+
+Não minimizar:
+
+> “Não foi nada.”
+
+Nem transformar em:
+
+> “Mas você me ama.”
+
+O foco deveria ser:
+
+* reconhecer os valores dela;
+* respeitar limites futuros;
+* demonstrar que não existe necessidade de correr.
+
+---
+
+# 5. “VOCÊ NÃO É MEU PORTO SEGURO”
+
+Durante uma conversa extensa sobre futuro, Sergio explicou que desejava:
+
+* caminhar ao lado de Janaína;
+* ajudá-la nas dificuldades;
+* acompanhá-la em sua jornada;
+* construir uma vida juntos.
+
+Janaína respondeu:
+
+> “Eu não consigo ver isso em você.”
+
+E:
+
+> “Eu não sinto que você é um porto seguro.”
+
+Sergio tentou responder utilizando metáforas de força, dizendo que poderia sustentá-la durante tempestades e que era como concreto e aço com bases firmes.
+
+### INTERPRETAÇÃO ESTABELECIDA
+
+Nesse momento os dois estavam discutindo coisas diferentes.
+
+Sergio falava:
+
+> sobre aquilo que desejava ser.
+
+Janaína falava:
+
+> sobre aquilo que sentia naquele momento.
+
+Segurança emocional não poderia ser demonstrada apenas por discurso.
+
+### ORIENTAÇÃO CENTRAL
+
+“Porto seguro” deveria ser construído por:
+
+* consistência;
+* calma;
+* respeito aos limites;
+* cumprimento de promessas;
+* capacidade de lidar com frustração;
+* não transformar pequenos desconfortos em grandes crises;
+* presença sem invasão.
+
+---
+
+# 6. “PERDI O ENCANTO”
+
+Posteriormente Janaína afirmou que:
+
+* havia idealizado uma determinada imagem de Sergio;
+* percebeu uma realidade diferente;
+* havia “perdido o encanto”.
+
+Isso foi considerado uma fala importante e dolorosa.
+
+### NÃO FOI INTERPRETADO COMO
+
+Confirmação automática de:
+
+* fim do relacionamento;
+* ausência de amor;
+* perda total de sentimentos.
+
+Pouco depois dessa conversa, em **22/07**, ocorreu:
+
+> Sergio: “Te amo ❤️”
+
+Janaína posteriormente respondeu:
+
+> “Te amo”
+
+### INTERPRETAÇÃO
+
+O sentimento afetivo parecia continuar existindo, embora a percepção de segurança e compatibilidade tivesse sofrido abalo.
+
+A prioridade passou a ser:
+
+**atitudes consistentes > discursos tentando convencer.**
+
+---
+
+# 7. REPARAÇÃO DO CONFLITO — 23/07
+
+Em 23/07, Sergio informou que:
+
+* conversaram;
+* resolveram o conflito;
+* posteriormente jantaram juntos.
+
+### CONCLUSÃO
+
+O episódio demonstrou que o relacionamento possuía capacidade de:
+
+* atravessar conflitos;
+* conversar;
+* reparar;
+* retornar à convivência afetiva.
+
+Foi recomendado não continuar revisitando constantemente o assunto de “porto seguro”, permitindo que ações posteriores falassem por si.
+
+---
+
+# 8. EPISÓDIO DE 24/07 — PROBLEMAS FAMILIARES
+
+Sergio convidou Janaína para sair.
+
+Ela inicialmente aceitou, porém depois explicou estar:
+
+* emocionalmente mal;
+* envolvida em problema familiar;
+* sem vontade de sair;
+* sentindo-se feia quando fica emocionalmente abalada.
+
+Ela perguntou:
+
+> “Vai te chatear?”
+
+Sergio respondeu que não e demonstrou saudade.
+
+Janaína explicou:
+
+> “Aconteceu uma coisa aqui em casa que tá afetando eu e a minha irmã.”
+
+Também disse:
+
+> “Sinto sua falta.”
+
+Posteriormente:
+
+> “Não é isso só não quero sair com você com cara de bunda.”
+
+Sergio respondeu oferecendo:
+
+* apoio;
+* abraço;
+* carinho;
+* cobertor;
+* doces;
+* cafuné.
+
+Janaína respondeu:
+
+> “Meu princeso”
+
+E posteriormente:
+
+> “Te amo.”
+
+### INTERPRETAÇÃO
+
+O cancelamento não foi interpretado como rejeição de Sergio.
+
+Ela explicitamente demonstrou:
+
+* saudade;
+* carinho;
+* vulnerabilidade;
+* confiança.
+
+---
+
+# 9. PROBLEMAS FAMILIARES DE JANAÍNA
+
+Durante julho e agosto, conflitos dentro da família de Janaína tornaram-se recorrentes.
+
+Um dos principais temas envolve o pai dela e uma antiga parceira/ex.
+
+Segundo o contexto fornecido:
+
+* o pai de Janaína teve relacionamento com essa mulher antes de conhecer a mãe de Janaína;
+* aparentemente mantiveram algum contato;
+* Janaína acredita que essa mulher prejudicou significativamente o pai no passado, inclusive financeiramente;
+* a situação voltou a gerar conflitos familiares.
+
+Em **27/07**, Janaína enviou áudio de aproximadamente cinco minutos explicando uma discussão envolvendo:
+
+* irmã;
+* pai;
+* cancelamento do aniversário da irmã;
+* ambiente familiar deteriorado.
+
+Ela explicou especificamente a Sergio porque ele havia sido convidado para o aniversário e precisava entender por que sábado não seria um bom momento.
+
+### INTERPRETAÇÃO
+
+O envio de áudios longos e detalhados foi considerado evidência de que Janaína:
+
+* inclui Sergio nos acontecimentos relevantes de sua vida;
+* deseja que ele compreenda o contexto familiar;
+* confia nele para receber informações sensíveis.
+
+---
+
+# 10. SAÚDE — ENXAQUECA / ANTICONCEPCIONAL — 28/07
+
+Janaína relatou:
+
+* cólicas;
+* dor de cabeça;
+* possíveis efeitos do anticoncepcional;
+* enxaqueca intensa recorrente.
+
+Foi ao médico com a mãe.
+
+Posteriormente informou:
+
+> “Tomei duas injeção”
+
+E:
+
+> “Enxaqueca como sempre”
+
+Sergio demonstrou preocupação e ofereceu apoio.
+
+Janaína o tranquilizou:
+
+> “Tá tudo bem já fui medicada jaja to bem”
+
+### INTERPRETAÇÃO
+
+Mesmo doente, Janaína:
+
+* mantinha Sergio informado;
+* respondia;
+* demonstrava afeto;
+* chegou a perguntar sobre o almoço dele.
+
+O comportamento não foi considerado evidência de afastamento.
+
+---
+
+# 11. 29/07 — INICIATIVA DE JANAÍNA
+
+Às 04:37:
+
+> “Bom dia amor”
+
+> “Dispertei”
+
+> “E me sinto melhor”
+
+Janaína também realizou ligação informando que iria levar a mãe ao hospital.
+
+Posteriormente continuou atualizando Sergio sobre:
+
+* pressão da mãe;
+* vômitos;
+* atendimento.
+
+### INTERPRETAÇÃO
+
+O fato de Janaína iniciar contato muito cedo, ligar e compartilhar a situação familiar foi considerado evidência de:
+
+* inclusão de Sergio;
+* confiança;
+* vínculo ativo.
+
+---
+
+# 12. REELS ROMÂNTICO
+
+Janaína enviou a Sergio um reels do Instagram com a frase aproximada:
+
+> “Meu namorado sendo parte da minha fofura.”
+
+O vídeo mostrava um homem comprando para a namorada:
+
+* pelúcias;
+* maquiagem;
+* doces;
+* bijuterias;
+* esmalte;
+
+e terminava com o casal abraçado em um campo.
+
+### INTERPRETAÇÃO
+
+Não foi interpretado necessariamente como pedido de presentes.
+
+Foi considerado principalmente:
+
+* identificação com uma dinâmica romântica;
+* desejo de pequenos gestos de carinho;
+* possibilidade de ela imaginar Sergio nesse tipo de relação.
+
+---
+
+# 13. EPISÓDIO SEXUAL — 02/08
+
+Sergio e Janaína fizeram amor.
+
+Durante a relação, Sergio não conseguiu atingir o clímax.
+
+Fatores relatados por Sergio:
+
+* antes de colocar preservativo, estava próximo do orgasmo;
+* após colocá-lo houve redução considerável da sensibilidade;
+* Janaína estava naturalmente bastante lubrificada;
+* conversas recentes sobre ter filhos passaram pela cabeça dele;
+* houve receio de gravidez mesmo utilizando preservativo;
+* a ansiedade aumentou durante o ato.
+
+Janaína começou a perceber que Sergio não chegava ao clímax.
+
+Perguntou se havia algo errado.
+
+Sergio tentou explicar que:
+
+* não era falta de desejo por ela;
+* havia ansiedade;
+* estava satisfeito por vê-la atingir o orgasmo mais de uma vez.
+
+Janaína ficou irritada.
+
+Posteriormente levantou-se para se vestir e disse que Sergio havia conseguido:
+
+> “deixar ela broxa.”
+
+### INTERPRETAÇÃO
+
+O principal conflito provavelmente não era o orgasmo em si.
+
+Janaína pode ter interpretado a situação como:
+
+* falta de desejo;
+* falta de atração;
+* sentimento de não ser suficiente.
+
+Enquanto Sergio vivenciava:
+
+* perda de sensibilidade;
+* ansiedade;
+* preocupação com gravidez;
+* pressão por perceber a frustração dela.
+
+### ORIENTAÇÃO
+
+Evitar transformar a próxima relação sexual em teste de desempenho.
+
+Ansiedade de desempenho poderia aumentar exatamente o problema que Sergio deseja evitar.
+
+---
+
+# 14. “NÃO CONSIGO VER SEU AMOR”
+
+Após o episódio sexual, Sergio perguntou se Janaína queria conversar sobre o ocorrido.
+
+Janaína disse algo aproximadamente:
+
+> “Não sei se sou eu, se tenho que sentir ou tentar ver este seu amor por mim...”
+
+Ela disse que não estava conseguindo perceber ou sentir verdadeiramente o amor de Sergio.
+
+### INTERPRETAÇÃO
+
+Essa frase não foi automaticamente interpretada como:
+
+> “Sergio não me ama.”
+
+Mas como:
+
+> “Eu não estou conseguindo sentir esse amor chegando até mim.”
+
+Foi levantada a possibilidade de existir diferença entre:
+
+**forma de Sergio demonstrar amor**
+
+e
+
+**forma como Janaína consegue receber/perceber amor.**
+
+Sergio demonstra principalmente:
+
+* cuidado;
+* proteção;
+* presença;
+* palavras;
+* presentes;
+* disponibilidade.
+
+Janaína parece também precisar sentir:
+
+* desejo;
+* segurança emocional;
+* estabilidade;
+* liberdade;
+* respeito ao espaço;
+* coerência entre discurso e comportamento.
+
+---
+
+# 15. EPISÓDIO DE 07/08 — RECUSA EM VER SERGIO
+
+Sergio e Janaína tinham combinado:
+
+* Sergio acompanharia Janaína ao dentista;
+* depois poderiam sair juntos.
+
+No início do dia Janaína saiu com os pais para São Paulo.
+
+O carro apresentou problema.
+
+Ela perdeu o horário no dentista.
+
+Posteriormente conseguiu outro encaixe.
+
+Sergio ofereceu novamente:
+
+* acompanhá-la;
+* sair depois;
+* ou apenas deixá-la em casa.
+
+Janaína recusou e falou de forma ríspida:
+
+> “E você acha que você é o alecrim dourado, que vai mudar minha opinião?”
+
+Também afirmou que não queria vê-lo naquele dia.
+
+Sergio ficou em silêncio e disse que iria fazer suas próprias coisas.
+
+Depois ofereceu um Uber.
+
+Janaína respondeu em tom forte:
+
+> “Não precisa, Sérgio.”
+
+### INTERPRETAÇÃO
+
+Foram separados dois pontos:
+
+1. Janaína possuía direito de não querer companhia naquele dia.
+2. A forma ríspida como falou poderia ser discutida posteriormente.
+
+O contexto incluía:
+
+* dia estressante;
+* problema com carro;
+* dentista;
+* menstruação;
+* fluxo intenso;
+* desgaste físico e emocional.
+
+### CONDUTA DE SERGIO
+
+Sergio não insistiu.
+
+Posteriormente enviou:
+
+> “Boa sorte lá, se precisar estou aqui, tomara que seja rápido 🐼❤️”
+
+Janaína respondeu imediatamente:
+
+> “To no Uber”
+
+Sergio respondeu:
+
+> “okzy💕”
+
+### INTERPRETAÇÃO
+
+Foi considerado adequado:
+
+* respeitar o “não”;
+* manter carinho;
+* não perseguir;
+* voltar às próprias atividades.
+
+---
+
+# 16. MENSTRUAÇÃO E SAÚDE — 10/08
+
+Janaína relatou que mensalmente sofre com:
+
+* cólicas;
+* dor de cabeça;
+* sintomas menstruais intensos.
+
+Ela disse:
+
+> “Sempre assim”
+
+> “Todo mês”
+
+Sergio desejava oferecer apoio sem transformar cuidado em monitoramento.
+
+---
+
+# 17. EPISÓDIO DE PRESSÃO ALTA — 11/08
+
+Janaína informou:
+
+> “Sérgio minha pressão tá altíssima 18 nunca foi pra isso”
+
+Também relatou:
+
+* sensação de desmaio;
+* fraqueza;
+* pressão posteriormente reduzida para aproximadamente 14,4;
+* tomou medicamento da mãe.
+
+Sergio ofereceu:
+
+* acompanhá-la ao médico;
+* estar disponível.
+
+Esse episódio ocorreu justamente quando os dois planejavam um encontro.
+
+### IMPORTANTE
+
+Questões de saúde devem ser tratadas separadamente da análise relacional.
+
+Não inferir distanciamento amoroso a partir de redução de comunicação durante episódios de:
+
+* dor;
+* enxaqueca;
+* hipertensão;
+* cansaço;
+* consultas médicas;
+* problemas familiares.
+
+---
+
+# 18. TEXTO ROMÂNTICO — 12/08 / RESPOSTA EM 13/08
+
+Sergio enviou mensagem/vídeo enaltecendo Janaína e expressando:
+
+* admiração;
+* amor;
+* desejo de caminhar ao lado dela;
+* valorização de quem ela é integralmente;
+* respeito;
+* intenção de construir.
+
+Janaína respondeu em 13/08:
+
+> “Meu deus eu fiquei sem palavras 😶 agora só sei que meu coração bateu forte aqui em ouvir tudo isso”
+
+E:
+
+> “Obrigado”
+
+### INTERPRETAÇÃO
+
+Essa é evidência explícita de impacto emocional positivo.
+
+O texto conseguiu chegar emocionalmente a Janaína naquele momento.
+
+---
+
+# 19. CONFLITO FAMILIAR — 16/08
+
+Janaína relatou:
+
+> “Péssima depois falo o pq”
+
+Posteriormente explicou:
+
+> “Deu maior B.o aqui daquele assunto da ex do meu pai”
+
+E:
+
+> “agora foi eu que falei uma verdade pra ele e ele cogitou sair de casa”
+
+Janaína disse que:
+
+* confrontou o pai;
+* falou coisas que estavam acumuladas;
+* colocou os sentimentos “no ventilador”;
+* afirmou que, se ele quisesse sair, poderia sair, mas ouviria algumas verdades primeiro;
+* afirmou que o conflito poderia resultar em duas filhas deixando de falar com ele.
+
+### INTERPRETAÇÃO / ORIENTAÇÃO
+
+Nesse momento, a prioridade para Sergio deveria ser:
+
+* ouvir;
+* não julgar;
+* não atacar o pai;
+* não atacar a antiga parceira;
+* não tentar resolver o conflito familiar;
+* permitir que Janaína desabafe.
+
+A sugestão central foi:
+
+> ser namorado que consegue receber o caos sem aumentar o caos.
+
+---
+
+# 20. PADRÃO POSITIVO IDENTIFICADO NA RELAÇÃO
+
+Ao longo de junho, julho e início de agosto, existem diversos sinais de vínculo afetivo real:
+
+* “Te amo” bilateral;
+* apelidos afetivos;
+* iniciativa de Janaína;
+* ligações;
+* compartilhamento de saúde;
+* compartilhamento de conflitos familiares;
+* convites;
+* encontros;
+* intimidade sexual;
+* interesse no cotidiano de Sergio;
+* mensagens de madrugada;
+* compartilhamento de vídeos românticos;
+* vulnerabilidade.
+
+### CONFIRMADO
+
+A relação entre Sergio e Janaína não foi unilateral durante esse período.
+
+Houve reciprocidade afetiva real.
+
+---
+
+# 21. PRINCIPAL DIFICULDADE DE SERGIO
+
+Existe um padrão recorrente:
+
+1. Janaína reduz comunicação.
+2. Sergio percebe rapidamente.
+3. Surge medo de afastamento.
+4. Sergio tenta aumentar presença.
+5. Se a resposta continua curta, aumenta a ansiedade.
+6. Sergio começa a interpretar pequenos sinais como ameaça à relação.
+
+### ORIENTAÇÃO
+
+Antes de agir, distinguir:
+
+**FATO**
+
+de
+
+**INTERPRETAÇÃO DA ANSIEDADE.**
+
+Exemplo:
+
+Fato:
+
+> Janaína demorou para responder.
+
+Interpretação ansiosa:
+
+> Janaína perdeu o amor.
+
+Essas duas afirmações não são equivalentes.
+
+---
+
+# 22. PRINCIPAL DESAFIO ENTRE OS DOIS
+
+Sergio possui uma linguagem afetiva extremamente voltada para:
+
+* cuidado;
+* presença;
+* contato;
+* resolução;
+* disponibilidade.
+
+Janaína, devido às próprias experiências anteriores, pode sentir excesso de perguntas ou disponibilidade como:
+
+* controle;
+* pressão;
+* necessidade de prestar contas.
+
+Portanto, o desafio não é Sergio deixar de amar dessa maneira.
+
+É aprender a transformar:
+
+> “Quero cuidar de você.”
+
+em algo que Janaína receba como:
+
+> “Eu tenho liberdade e, ainda assim, ele está comigo.”
+
+---
+
+# 23. DEFINIÇÃO OPERACIONAL DE “PORTO SEGURO”
+
+Com base em todas as análises, “porto seguro” para esse relacionamento não deve significar:
+
+* salvar Janaína;
+* resolver todos os problemas;
+* estar disponível 24 horas;
+* impedir que ela sofra;
+* convencer que Sergio é forte.
+
+Significa principalmente:
+
+* não aumentar o caos quando ela estiver em caos;
+* ouvir;
+* respeitar “não”;
+* respeitar silêncio;
+* ser coerente;
+* não usar carinho como moeda;
+* não exigir retorno imediato;
+* conseguir lidar com frustração;
+* manter limites próprios;
+* demonstrar estabilidade ao longo do tempo.
+
+---
+
+# 24. OBSERVAÇÃO IMPORTANTE SOBRE O AMOR DE SERGIO
+
+Durante todo o período analisado, não existe evidência de que Sergio esteja apenas representando um papel romântico.
+
+O cuidado demonstrado parece genuíno.
+
+Entretanto:
+
+**intenção amorosa não garante que a outra pessoa experimente determinada atitude como amor.**
+
+Esse princípio tornou-se central na análise.
+
+Portanto:
+
+> “Eu fiz com amor”
+
+não deve automaticamente substituir:
+
+> “Como isso chegou para ela?”
+
+---
+
+# 25. CONCLUSÃO DO PERÍODO 24/06–16/08
+
+O relacionamento passou rapidamente por:
+
+**conhecimento → atração → intimidade emocional → namoro → intimidade sexual → primeiros conflitos profundos → reparação → integração parcial às dificuldades familiares.**
+
+Existiu amor e reciprocidade.
+
+Também surgiram incompatibilidades importantes na forma de:
+
+* lidar com espaço;
+* demonstrar cuidado;
+* interpretar perguntas;
+* enfrentar frustrações;
+* sentir segurança emocional.
+
+O maior risco identificado não é falta de sentimentos.
+
+É a possibilidade de:
+
+**amor + ansiedade de Sergio + traumas de Janaína + conflitos familiares + velocidade da relação**
+
+produzirem uma dinâmica de pressão e afastamento.
+
+O maior potencial positivo é:
+
+**sinceridade + diálogo direto + capacidade de reparar conflitos + afeto bilateral.**
+
+---
+
+# 26. ESTADO AO FINAL DE 16/08/2026
+
+Até 16/08, mesmo após episódios difíceis, não havia confirmação de término.
+
+Existiam:
+
+* carinho;
+* comunicação;
+* “te amo”;
+* compartilhamento de vulnerabilidades;
+* participação de Sergio em assuntos familiares;
+* abertura emocional.
+
+Entretanto, Janaína estava entrando em período de **sobrecarga familiar significativa**, elemento essencial para interpretar o posterior afastamento registrado no UPDATE de 21/08–23/08.
+
+---
+
+# 27. CONTINUIDADE COM O UPDATE DE 21/08–23/08
+
+Este relatório deve ser lido imediatamente antes do UPDATE já existente em `JANAINA.md` sobre:
+
+* crise familiar;
+* pedido de isolamento de Janaína;
+* surpresa de Sergio em 21/08;
+* reconhecimento de que o gesto foi feito com amor, mas ultrapassou limite;
+* diminuição objetiva de reciprocidade;
+* necessidade de Sergio não preencher todos os espaços de silêncio;
+* retorno de Sergio ao trabalho em 24/08.
+
+### REGRA DE CONTINUIDADE
+
+Não apagar ou substituir os UPDATEs anteriores.
+
+Cada relatório representa o estado e as conclusões disponíveis naquele momento.
+
+Novas análises devem ser acrescentadas cronologicamente.
+
+---
+
+## STATUS FINAL DO UPDATE
+
+### CONFIRMADO
+
+* Sergio e Janaína desenvolveram relacionamento amoroso real e bilateral.
+* Houve demonstrações explícitas de amor dos dois lados.
+* Janaína compartilhou assuntos familiares, emocionais e de saúde com Sergio.
+* Existem traumas anteriores que influenciam como Janaína interpreta controle e cuidado.
+* Janaína afirmou não sentir Sergio como “porto seguro” em determinado momento.
+* Houve posterior reparação de conflito e continuidade da relação.
+* Janaína demonstrou forte impacto positivo diante de declarações afetivas de Sergio.
+* Problemas familiares passaram a exercer grande impacto emocional sobre Janaína.
+* Sergio apresenta tendência à ansiedade diante da diminuição de comunicação.
+* A forma de cuidado de Sergio pode ser recebida de maneira diferente da intenção original.
+
+### NÃO CONFIRMADO
+
+* Que Janaína deixou definitivamente de amar Sergio.
+* Que os problemas atuais representam necessariamente o fim do relacionamento.
+* Que toda redução comunicacional é causada por perda de interesse.
+* Que Sergio precisa deixar de ser carinhoso.
+* Que os conflitos familiares são responsabilidade de Sergio resolver.
+* Que demonstrações maiores de amor necessariamente corrigem sensação de insegurança.
+
+### PRINCÍPIO CENTRAL PARA PRÓXIMAS ANÁLISES
+
+> **Não confundir intensidade de amor com eficácia da demonstração de amor.**
+
+E:
+
+> **Não confundir necessidade de espaço de Janaína com rejeição automática de Sergio.**
+
+Ao mesmo tempo:
+
+> **Não ignorar limites explícitos apenas porque a intenção de Sergio é amorosa.**
+
+Esse equilíbrio deve orientar as próximas análises.
+
 # UPDATE — ANÁLISE RELACIONAL SERGIO & JANAÍNA
 
 **Data do relatório:** 23/08/2026
