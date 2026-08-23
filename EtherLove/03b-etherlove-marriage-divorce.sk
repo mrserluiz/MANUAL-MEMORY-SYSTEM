@@ -1,7 +1,7 @@
 # ==========================================================
 # EtherLove
 # 03B - Marriage & Divorce
-# MARRIAGE / DIVORCE REBUILD 002
+# MARRIAGE / DIVORCE REBUILD 003
 # ==========================================================
 # RESPONSABILIDADES:
 # - Cerimonialista
@@ -217,10 +217,10 @@ function homologateDivorceByUUIDs(uuid1: text, uuid2: text, ceremonialistUUID: t
     removeDivorceCaseByID({_id})
 
 # ==========================================================
-# /HOMOLOGARDIVORCIO
+# /HDIVORCIO
 # ==========================================================
 
-command /homologardivorcio <player>:
+command /hdivorcio <player>:
     permission: etherlove.ceremonialist
     permission message: &cVocê não possui permissão de Cerimonialista.
     trigger:
