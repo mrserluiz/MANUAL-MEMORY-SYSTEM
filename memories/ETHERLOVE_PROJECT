@@ -1,10 +1,1040 @@
 ================================
 UPDATES SITE:
 Exemplo:
-UPDATE > 00/00/00 - 00:00 - M008A
+UPDATE > 00/00/00 - 00:00 - M009A
 [conteúdo]
 <END UPDATE>
 =============================
+
+UPDATE > 23/08/2026 - 13:29 - M008A
+ETHERLOVE REBUILD 001 — MATRIZ DE REGRESSÃO / DIVÓRCIO / AUDITORIA SKRIPT
+==========================================================
+
+STATUS
+==========================================================
+
+Foi fechada a matriz principal de regressão dos relacionamentos
+e definida a regra estrutural para CASE 4, CASE 5 e CASE 6.
+
+Também foi realizada nova conferência da documentação técnica
+local do Skript disponível em:
+
+memories/Skript_Doc/
+
+Arquivos disponíveis:
+
+- Skript.config.md
+- SkBee_Config.md
+- SkeiptLuckPerms.md
+- skript-variables.md
+
+O desenvolvimento NÃO deve avançar para o novo
+03-etherlove-progression.sk antes de corrigir:
+
+1. regressão do Core;
+2. bloqueio de XP no CASE 6;
+3. expiração de Requests no 01-utils;
+4. nova auditoria cruzada do 02-interactions.
+
+==========================================================
+1. PRINCÍPIO DE REGRESSÃO
+==========================================================
+
+EtherLove mantém a inspiração no sistema de relacionamentos
+de The Sims.
+
+Relações não possuem apenas progressão positiva.
+
+XP pode:
+
++ aumentar;
+- diminuir.
+
+XP negativo pode causar:
+
+- regressão;
+- perda de privilégios;
+- término de estados afetivos;
+- mudança de CASE.
+
+Porém, estados especiais possuem regras próprias.
+
+==========================================================
+2. CASE 0–3
+==========================================================
+
+CASE 0–3 continuam sendo diretamente determinados pelo XP.
+
+Matriz:
+
+CASE 0
+0–99 XP
+
+CASE 1
+100–199 XP
+
+CASE 2
+200–299 XP
+
+CASE 3
+300–500 XP
+enquanto não houver transição afetiva especial.
+
+Dentro do CASE 3:
+
+300 XP+
+→ /BJ
+
+400 XP+
+→ /NAMORAR
+
+Se XP diminuir:
+
+CASE é recalculado normalmente.
+
+Exemplo:
+
+320 XP
+CASE 3
+
+-50 XP
+
+270 XP
+CASE 2
+
+Ao perder CASE, perde também os desbloqueios correspondentes.
+
+==========================================================
+3. CASE 4 — NAMORANDO
+==========================================================
+
+CASE 4 representa:
+
+STATUS = NAMORANDO
+
+CASE 4 não é alcançado automaticamente por XP.
+
+Requisitos:
+
+CASE 3
++
+400 XP+
++
+/NAMORAR
++
+REQUEST
++
+ACEITAÇÃO
+
+Resultado:
+
+CASE 4
+STATUS = NAMORANDO
+
+==========================================================
+4. REGRESSÃO DO CASE 4
+==========================================================
+
+CASE 4 possui limite mínimo afetivo de:
+
+400 XP
+
+Enquanto:
+
+XP >= 400
+
+a relação permanece:
+
+CASE 4
+STATUS = NAMORANDO
+
+Se:
+
+XP < 400
+
+o namoro é automaticamente rompido.
+
+Fluxo:
+
+CASE 4
+STATUS NAMORANDO
+↓
+XP < 400
+↓
+ROMPER NAMORO
+↓
+STATUS = SOLTEIRO
+↓
+RECALCULAR CASE PELO XP
+
+Exemplo:
+
+CASE 4
+450 XP
+NAMORANDO
+
+-60 XP
+
+390 XP
+
+Resultado:
+
+CASE 3
+STATUS = SOLTEIRO
+
+==========================================================
+5. CASE 5 — NOIVO
+==========================================================
+
+CASE 5 representa:
+
+STATUS = NOIVO
+
+CASE 5 é alcançado por transição de noivado.
+
+Fluxo:
+
+CASE 4
+NAMORANDO
+↓
+/NOIVAR
+↓
+REQUEST
+↓
+ACEITAÇÃO
+↓
+CASE 5
+STATUS = NOIVO
+
+O CASE 5 não é criado automaticamente por XP.
+
+==========================================================
+6. REGRESSÃO DO CASE 5
+==========================================================
+
+CASE 5 possui uma margem própria de estabilidade.
+
+Enquanto:
+
+XP >= 350
+
+o relacionamento continua:
+
+CASE 5
+STATUS = NOIVO
+
+Mesmo que XP caia abaixo de 500.
+
+Exemplo:
+
+500 XP
+CASE 5
+NOIVO
+
+↓ XP negativo
+
+450 XP
+CASE 5
+NOIVO
+
+↓ XP negativo
+
+360 XP
+CASE 5
+NOIVO
+
+==========================================================
+7. QUEBRA DO NOIVADO
+==========================================================
+
+Se:
+
+XP < 350
+
+o noivado é rompido.
+
+Porém:
+
+ROMPER NOIVADO
+NÃO SIGNIFICA
+ROMPER NAMORO IMEDIATAMENTE.
+
+Resultado inicial:
+
+CASE 5
+NOIVO
+↓
+XP < 350
+↓
+PERDE NOIVADO
+↓
+CASE 4
+STATUS = NAMORANDO
+
+Essa regressão deve ser explícita.
+
+CASE 4 não é calculado automaticamente pelo XP.
+
+CASE 4 representa o estado afetivo NAMORANDO.
+
+==========================================================
+8. REGRESSÃO EM CASCATA APÓS NOIVADO
+==========================================================
+
+Após a perda do noivado:
+
+CASE 4
+STATUS = NAMORANDO
+
+o Core deve novamente verificar a regra mínima do namoro.
+
+Como namoro exige:
+
+400 XP+
+
+se o XP já estiver abaixo de 400:
+
+CASE 4
+↓
+regra de namoro
+↓
+XP < 400
+↓
+ROMPER NAMORO
+↓
+STATUS = SOLTEIRO
+↓
+CASE calculado pelo XP
+
+Exemplo:
+
+CASE 5
+NOIVO
+XP = 349
+
+↓ perde noivado
+
+CASE 4
+NAMORANDO
+
+Porém:
+
+349 < 400
+
+↓ namoro também não pode ser sustentado
+
+Resultado final:
+
+CASE 3
+STATUS = SOLTEIRO
+
+Portanto, na prática:
+
+CASE 5
+NOIVO
+XP < 350
+
+pode gerar regressão em cascata:
+
+CASE 5
+↓
+CASE 4
+↓
+CASE calculado pelo XP
+
+==========================================================
+9. PRINCÍPIO DA REGRESSÃO EM CASCATA
+==========================================================
+
+A implementação não deve simplesmente:
+
+set CASE to 4
+
+e parar.
+
+Toda regressão especial deve terminar em uma validação
+da consistência entre:
+
+XP
+CASE
+STATUS
+
+Exemplo:
+
+CASE 5
+↓
+perde noivado
+↓
+CASE 4
+↓
+XP ainda suporta CASE 4?
+↓
+SIM → permanece NAMORANDO
+NÃO → rompe namoro
+↓
+recalcula CASE pelo XP
+
+==========================================================
+10. CASE 6 — CASADO
+==========================================================
+
+CASE 6 representa:
+
+STATUS = CASADO
+
+CASE 6 é completamente especial.
+
+Não depende mais de XP.
+
+É alcançado por:
+
+CASE 5
+STATUS NOIVO
++
+CERIMONIALISTA
++
+EVENTO DE CASAMENTO
++
+CONCLUSÃO DO EVENTO
+
+Resultado:
+
+CASE 6
+STATUS = CASADO
+
+==========================================================
+11. XP NO CASE 6
+==========================================================
+
+Ao chegar em CASE 6:
+
+XP deixa de ser utilizado como progressão da relação.
+
+Portanto:
+
+XP NÃO SOBE.
+
+XP NÃO DESCE.
+
+As funções que modificam XP devem bloquear mudanças quando:
+
+CASE = 6
+
+Isso significa:
+
+/RP
+/AB
+/BJ
+
+podem futuramente manter efeitos visuais, mensagens ou
+outras mecânicas, porém:
+
+NÃO devem alterar XP se a relação estiver CASADA.
+
+CASE 6 não depende mais do sistema numérico de progressão.
+
+==========================================================
+12. CASE 6 NÃO REGREDIRÁ POR XP
+==========================================================
+
+CASE 6 nunca deve regredir automaticamente.
+
+Não existe:
+
+CASE 6
+↓ XP negativo
+CASE 5
+
+ou:
+
+CASE 6
+↓ XP negativo
+CASE 4
+
+O casamento só termina através de:
+
+/DIVORCIO
+
+==========================================================
+13. DIVÓRCIO
+==========================================================
+
+/DIVORCIO será uma transição especial.
+
+Fluxo final:
+
+CASE 6
+STATUS CASADO
+↓
+DIVÓRCIO VALIDADO
+↓
+resetRelationship()
+↓
+XP = 0
+CASE = 0
+STATUS = SOLTEIRO
+
+RelationshipID permanece.
+
+A relação é resetada, não apagada.
+
+==========================================================
+14. PARTICIPAÇÃO DOS DOIS JOGADORES NO DIVÓRCIO
+==========================================================
+
+O divórcio normal deve envolver os dois participantes.
+
+Modelo:
+
+PLAYER1
+↓
+solicita divórcio
+↓
+PLAYER2 recebe solicitação
+↓
+PLAYER2 aceita
+↓
+DIVÓRCIO
+
+Essa será a rota normal.
+
+==========================================================
+15. DIVÓRCIO COM CERIMONIALISTA
+==========================================================
+
+Foi criada uma regra especial para evitar que um jogador
+fique preso permanentemente a um casamento.
+
+Se:
+
+- o outro jogador estiver offline;
+- o outro jogador não responder;
+- o outro jogador não quiser aceitar o divórcio;
+
+um CERIMONIALISTA poderá validar o pedido de divórcio.
+
+Modelo:
+
+PLAYER1
+↓
+pedido de divórcio
+↓
+PLAYER2 indisponível / recusa / não responde
+↓
+CERIMONIALISTA
+↓
+VALIDAÇÃO
+↓
+DIVÓRCIO
+↓
+XP 0
+CASE 0
+STATUS SOLTEIRO
+
+==========================================================
+16. CERIMONIALISTA E DIVÓRCIO
+==========================================================
+
+O Cerimonialista passa a possuir duas responsabilidades
+formais dentro do EtherLove:
+
+1. iniciar/conduzir casamento;
+2. validar determinados pedidos de divórcio.
+
+Permissão conceitual atual:
+
+etherlove.ceremonialist
+
+Essa permission pode ser revisada posteriormente.
+
+==========================================================
+17. REGRA AINDA NÃO FECHADA SOBRE DIVÓRCIO
+==========================================================
+
+Ainda NÃO está definido se o Cerimonialista poderá:
+
+- validar imediatamente um divórcio após recusa explícita;
+
+OU
+
+- deverá existir um prazo antes da homologação;
+
+OU
+
+- deverá existir outro requisito.
+
+Essa decisão será feita quando o módulo de divórcio for
+implementado.
+
+Ela NÃO bloqueia o Core atual.
+
+==========================================================
+18. MATRIZ CONSOLIDADA DE REGRESSÃO
+==========================================================
+
+CASE 0
+→ regressão/progressão normal por XP
+
+CASE 1
+→ regressão/progressão normal por XP
+
+CASE 2
+→ regressão/progressão normal por XP
+
+CASE 3
+→ regressão/progressão normal por XP
+
+
+CASE 4
+STATUS NAMORANDO
+
+XP >= 400
+→ permanece CASE 4
+
+XP < 400
+→ rompe namoro
+→ STATUS SOLTEIRO
+→ CASE recalculado pelo XP
+
+
+CASE 5
+STATUS NOIVO
+
+XP >= 350
+→ permanece CASE 5
+
+XP < 350
+→ rompe noivado
+→ tenta regressão para CASE 4 / NAMORANDO
+→ validar imediatamente regra mínima de namoro
+→ se XP < 400
+→ rompe namoro também
+→ STATUS SOLTEIRO
+→ CASE calculado pelo XP
+
+
+CASE 6
+STATUS CASADO
+
+XP congelado
+→ sem ganho
+→ sem perda
+
+CASE 6 não regride por XP.
+
+Somente:
+
+/DIVORCIO
+
+pode remover o estado CASADO.
+
+==========================================================
+19. IMPORTANTE — CASE 4 NÃO É CASE CALCULADO POR XP
+==========================================================
+
+Não implementar:
+
+XP >= 400
+→ CASE 4
+
+Isso continua ERRADO.
+
+400 XP apenas desbloqueia:
+
+/NAMORAR
+
+O CASE 4 exige:
+
+/NAMORAR
++
+ACEITAÇÃO
+
+Portanto:
+
+XP
+→ desbloqueia possibilidade
+
+REQUEST / EVENTO
+→ altera STATUS / CASE especial
+
+==========================================================
+20. IMPORTANTE — CASE 5 NÃO É CASE CALCULADO POR XP
+==========================================================
+
+Não implementar:
+
+XP >= 500
+→ CASE 5
+
+CASE 5 exige:
+
+CASE 4
++
+/NOIVAR
++
+REQUEST
++
+ACEITAÇÃO
+
+O XP é apenas parte da qualidade da relação.
+
+A transição afetiva continua dependendo de consentimento.
+
+==========================================================
+21. IMPORTANTE — CASE 6 NÃO É CASE DE XP
+==========================================================
+
+CASE 6 é completamente externo à progressão numérica.
+
+Não existe:
+
+XP = 600
+→ CASE 6
+
+XP máximo continua:
+
+500
+
+E quando CASE 6 é atingido:
+
+XP deixa de mudar.
+
+==========================================================
+22. AUDITORIA DA DOCUMENTAÇÃO SKRIPT
+==========================================================
+
+Foi conferida a pasta:
+
+memories/Skript_Doc/
+
+Conteúdo encontrado:
+
+SkBee_Config.md
+SkeiptLuckPerms.md
+Skript.config.md
+skript-variables.md
+
+A documentação/configuração local deve ser utilizada antes
+de introduzir sintaxes novas ou sensíveis.
+
+==========================================================
+23. CONFIGURAÇÕES SKRIPT CONFIRMADAS
+==========================================================
+
+Skript.config.md confirma, entre outros pontos:
+
+use player UUIDs in variable names: true
+
+Isso reforça a arquitetura baseada em UUIDs.
+
+Também foi confirmado:
+
+case-insensitive variables: true
+
+UTF-8 deve ser mantido para caracteres especiais.
+
+O loader atual está configurado com:
+
+script loader thread size: 0
+
+Portanto os scripts são carregados de forma síncrona.
+
+==========================================================
+24. NOVA AUDITORIA DO 01-ETHERLOVE-UTILS.SK
+==========================================================
+
+Foi identificada uma possível fragilidade no sistema
+atual de expiração de Requests.
+
+Código atual utiliza lógica equivalente a:
+
+difference between now and REQUEST_EXPIRES >= 0 seconds
+
+Esse padrão não deve ser considerado validado para determinar
+se uma data está antes ou depois da outra.
+
+Apenas calcular uma diferença de tempo não representa
+necessariamente de forma segura qual data é futura.
+
+==========================================================
+25. REQUEST EXPIRATION DEVE SER CORRIGIDO
+==========================================================
+
+Antes de implementar:
+
+/NAMORAR
+/NOIVAR
+/LS
+/LN
+
+o Request System deverá receber uma correção na lógica
+de expiração.
+
+Objetivo:
+
+garantir que:
+
+REQUEST CRIADO
+↓
+REQUEST AINDA DENTRO DO PRAZO
+→ válido
+
+REQUEST EXPIROU
+→ inválido
+→ remover Request
+
+Não carregar uma lógica temporal possivelmente incorreta
+para os módulos de Progression.
+
+==========================================================
+26. TEMPO DE REQUEST
+==========================================================
+
+O valor atual continua:
+
+10 minutos
+
+STATUS:
+
+PROVISÓRIO
+
+Esse valor não foi alterado neste update.
+
+Apenas a forma de calcular/validar expiração deverá ser
+corrigida.
+
+==========================================================
+27. IMPACTO NO 00-ETHERLOVE-CORE.SK
+==========================================================
+
+O Core atual ainda implementa apenas:
+
+regressão especial do CASE 4.
+
+Ele precisa ser revisado para suportar:
+
+CASE 0–3
+→ progressão/regressão XP
+
+CASE 4
+→ regra de 400 XP
+
+CASE 5
+→ regra de 350 XP
+→ regressão em cascata
+
+CASE 6
+→ bloquear mudança de XP
+
+Portanto:
+
+00-etherlove-core.sk
+
+precisa de um novo ajuste antes do 03.
+
+==========================================================
+28. IMPACTO EM addRelationshipPoints()
+==========================================================
+
+A função:
+
+addRelationshipPoints()
+
+deve respeitar:
+
+CASE 6 = XP congelado
+
+Portanto:
+
+se CASE = 6
+
+não deve modificar XP.
+
+O mesmo princípio precisa proteger:
+
+setRelationshipPoints()
+
+contra alterações normais em relações casadas.
+
+Se futuramente existir necessidade administrativa de alterar
+XP de CASE 6, deverá ser implementada através de função
+administrativa separada.
+
+==========================================================
+29. IMPACTO NO 02-ETHERLOVE-INTERACTIONS.SK
+==========================================================
+
+O 02 atualmente chama:
+
+addRelationshipPoints()
+
+para:
+
+/RP
+/AB
+/BJ
+
+Se o Core bloquear corretamente XP em CASE 6:
+
+02 NÃO precisará duplicar essa proteção.
+
+Isso mantém responsabilidade centralizada:
+
+02
+→ solicita alteração de XP
+
+CORE
+→ decide se alteração é permitida
+
+Essa é a arquitetura preferida.
+
+==========================================================
+30. PRINCÍPIO DE AUTORIDADE DO CORE
+==========================================================
+
+Módulos superiores não devem decidir regras internas
+de persistência/progressão.
+
+Exemplo correto:
+
+/BJ
+↓
+addRelationshipPoints(+15)
+↓
+CORE
+↓
+CASE 6?
+SIM → não altera XP
+NÃO → aplica XP
+
+Isso evita duplicar regras em vários scripts.
+
+==========================================================
+31. ORDEM DE DESENVOLVIMENTO ATUALIZADA
+==========================================================
+
+PRÓXIMO:
+
+1. corrigir 00-etherlove-core.sk
+
+Adicionar:
+
+- matriz completa de regressão;
+- CASE 5 com limite 350;
+- regressão em cascata;
+- congelamento de XP no CASE 6;
+- consistência XP / CASE / STATUS.
+
+Depois:
+
+2. corrigir 01-etherlove-utils.sk
+
+Adicionar/corrigir:
+
+- lógica segura de expiração dos Requests.
+
+Depois:
+
+3. reler 00 + 01 + 02.
+
+4. realizar auditoria cruzada.
+
+5. reconstruir 03-etherlove-progression.sk.
+
+==========================================================
+32. 03-ETHERLOVE-PROGRESSION.SK CONTINUA BLOQUEADO
+==========================================================
+
+NÃO reconstruir ainda.
+
+Motivo:
+
+O 03 dependerá diretamente de:
+
+- Core corrigido;
+- regressão correta;
+- Requests corretos;
+- expiração correta;
+- exclusividade;
+- STATUS;
+- CASE especiais.
+
+Implementar o 03 antes dessas correções poderia reproduzir
+o problema da versão antiga:
+
+arquivos que funcionam isoladamente, mas não conversam
+corretamente entre si.
+
+==========================================================
+33. ESTADO DO REBUILD
+==========================================================
+
+ETHERLOVE REBUILD 001
+
+00-etherlove-core.sk
+STATUS:
+🟡 IMPLEMENTADO
+🔧 NECESSITA AJUSTE DE REGRESSÃO
+
+01-etherlove-utils.sk
+STATUS:
+🟡 IMPLEMENTADO
+🔧 NECESSITA CORREÇÃO DE EXPIRAÇÃO
+
+02-etherlove-interactions.sk
+STATUS:
+🟢 IMPLEMENTADO
+⏳ AGUARDANDO NOVA AUDITORIA APÓS CORE/UTILS
+
+03-etherlove-progression.sk
+STATUS:
+🔴 VERSÃO ANTIGA
+⛔ REBUILD BLOQUEADO TEMPORARIAMENTE
+
+04-etherlove-interface.sk
+STATUS:
+🟡 PROTÓTIPO ANTIGO
+
+==========================================================
+34. PRÓXIMO PASSO OFICIAL
+==========================================================
+
+REBUILD 001 — CORREÇÃO DO CORE
+
+Arquivo:
+
+EtherLove/00-etherlove-core.sk
+
+Objetivo:
+
+implementar definitivamente:
+
+CASE 0–3
+→ XP dinâmico
+
+CASE 4
+→ NAMORANDO
+→ mínimo 400 XP
+
+CASE 5
+→ NOIVO
+→ mínimo 350 XP
+
+CASE 5 < 350
+→ regressão em cascata
+
+CASE 6
+→ CASADO
+→ XP congelado
+→ somente DIVÓRCIO encerra estado
+
+Depois do Core:
+
+corrigir 01-utils.
+
+==========================================================
+FIM DO UPDATE
+==========================================================
 
 UPDATE > 23/08/2026 - M007A
 ETHERLOVE REBUILD 001 — AUDITORIA PÓS-BLOCO 02
