@@ -1,28 +1,32 @@
 # ==========================================================
 # EtherLove
 # 01 - Utils
+# UTILS REVISION 002
 # Cooldowns + Request System
 # ==========================================================
 #
-# RESPONSABILIDADES DESTE ARQUIVO:
+# RESPONSABILIDADES:
 #
 # 1. Cooldowns das interações
 # 2. Criação de Requests
 # 3. Consulta de Requests
-# 4. Expiração de Requests
-# 5. Remoção de Requests
+# 4. Validação de Requests
+# 5. Expiração de Requests
+# 6. Remoção de Requests
 #
 # NÃO É RESPONSABILIDADE DESTE ARQUIVO:
 #
-# - Alterar CASE diretamente
-# - Alterar STATUS diretamente
+# - Alterar CASE
+# - Alterar STATUS
+# - Aplicar XP por aceite/recusa
 # - Executar /ls
 # - Executar /ln
 # - Executar /namorar
 # - Executar /noivar
 # - Executar casamento
+# - Executar divórcio
 #
-# Essas ações pertencem às camadas superiores.
+# Essas decisões pertencem às camadas superiores.
 #
 # ==========================================================
 
@@ -30,13 +34,12 @@
 # ==========================================================
 # CONFIGURAÇÃO
 # ==========================================================
-
-# Tempo que um Request permanece válido.
 #
 # VALOR PROVISÓRIO:
-# 10 minutos
 #
-# Pode ser alterado posteriormente sem modificar o sistema.
+# Um Request permanece válido por 10 minutos.
+#
+# ==========================================================
 
 options:
     etherlove-request-expiration: 10 minutes
@@ -47,11 +50,16 @@ options:
 # ==========================================================
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # /RP
-# ----------------------------------------------------------
+# ==========================================================
+#
+# Cooldown GLOBAL por jogador.
+#
+# ==========================================================
 
 function canUseRP(p: player) :: boolean:
+
     if {etherlove.cooldown.rp.%uuid of {_p}%} is not set:
         return true
 
@@ -62,14 +70,20 @@ function canUseRP(p: player) :: boolean:
 
 
 function startRPCooldown(p: player):
+
     set {etherlove.cooldown.rp.%uuid of {_p}%} to now
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # /AB
-# ----------------------------------------------------------
+# ==========================================================
+#
+# Cooldown GLOBAL por jogador.
+#
+# ==========================================================
 
 function canUseAB(p: player) :: boolean:
+
     if {etherlove.cooldown.ab.%uuid of {_p}%} is not set:
         return true
 
@@ -80,25 +94,28 @@ function canUseAB(p: player) :: boolean:
 
 
 function startABCooldown(p: player):
+
     set {etherlove.cooldown.ab.%uuid of {_p}%} to now
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # /BJ
+# ==========================================================
 #
-# IMPORTANTE:
-# /BJ possui cooldown POR RELACIONAMENTO.
+# Cooldown POR RELACIONAMENTO.
 #
-# Portanto:
+# Exemplo:
 #
-# P1 → P2
-# possui cooldown independente de:
+# P1 ↔ P2
 #
-# P1 → P3
+# não interfere em:
 #
-# ----------------------------------------------------------
+# P1 ↔ P3
+#
+# ==========================================================
 
 function canUseBJ(p1: player, p2: player) :: boolean:
+
     set {_relationshipID} to etherID({_p1}, {_p2})
 
     if {etherlove.cooldown.bj.%{_relationshipID}%} is not set:
@@ -111,6 +128,7 @@ function canUseBJ(p1: player, p2: player) :: boolean:
 
 
 function startBJCooldown(p1: player, p2: player):
+
     set {_relationshipID} to etherID({_p1}, {_p2})
 
     set {etherlove.cooldown.bj.%{_relationshipID}%} to now
@@ -123,7 +141,7 @@ function startBJCooldown(p1: player, p2: player):
 # Todo Request possui:
 #
 # Sender UUID
-# Target UUID
+# Receiver UUID
 # Type
 # RelationshipID
 # Created
@@ -131,26 +149,57 @@ function startBJCooldown(p1: player, p2: player):
 #
 # Estrutura:
 #
-# {etherlove.request.%senderUUID%::%targetUUID%.type}
-# {etherlove.request.%senderUUID%::%targetUUID%.relationship}
-# {etherlove.request.%senderUUID%::%targetUUID%.created}
-# {etherlove.request.%senderUUID%::%targetUUID%.expires}
+# {etherlove.request.%requestKey%.type}
+# {etherlove.request.%requestKey%.relationship}
+# {etherlove.request.%requestKey%.created}
+# {etherlove.request.%requestKey%.expires}
+#
+# requestKey:
+#
+# senderUUID::receiverUUID
+#
+# IMPORTANTE:
+#
+# Request é DIRECIONAL.
+#
+# P1 → P2
+#
+# NÃO É igual a:
+#
+# P2 → P1
+#
+# Diferente do RelationshipID.
 #
 # ==========================================================
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # REQUEST KEY
-# ----------------------------------------------------------
-#
-# Cria uma chave consistente para:
-#
-# sender → target
-#
-# ----------------------------------------------------------
+# ==========================================================
 
 function etherRequestKey(sender: player, receiver: player) :: text:
+
     return "%uuid of {_sender}%::%uuid of {_receiver}%"
+
+
+# ==========================================================
+# RAW REQUEST EXISTS
+# ==========================================================
+#
+# Apenas verifica se há dados armazenados.
+#
+# NÃO verifica expiração.
+#
+# ==========================================================
+
+function requestDataExists(sender: player, receiver: player) :: boolean:
+
+    set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+
+    if {etherlove.request.%{_requestKey}%.type} is set:
+        return true
+
+    return false
 
 
 # ==========================================================
@@ -158,27 +207,186 @@ function etherRequestKey(sender: player, receiver: player) :: text:
 # ==========================================================
 
 function createRequest(sender: player, receiver: player, type: text):
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+
     set {_relationshipID} to etherID({_sender}, {_receiver})
 
+    # ------------------------------------------------------
+    # Se já existir Request nesta mesma direção,
+    # substituímos por um novo Request limpo.
+    # ------------------------------------------------------
+
+    if requestDataExists({_sender}, {_receiver}) is true:
+        removeRequest({_sender}, {_receiver})
+
+    # ------------------------------------------------------
+    # TYPE
+    # ------------------------------------------------------
+
     set {etherlove.request.%{_requestKey}%.type} to {_type}
+
+    # ------------------------------------------------------
+    # RELATIONSHIP
+    # ------------------------------------------------------
+
     set {etherlove.request.%{_requestKey}%.relationship} to {_relationshipID}
+
+    # ------------------------------------------------------
+    # CREATED
+    # ------------------------------------------------------
+
     set {etherlove.request.%{_requestKey}%.created} to now
-    set {etherlove.request.%{_requestKey}%.expires} to now + {@etherlove-request-expiration}
+
+    # ------------------------------------------------------
+    # EXPIRES
+    # ------------------------------------------------------
+    #
+    # A documentação do Skript permite gerar uma Date
+    # usando um timespan após outra Date.
+    #
+    # ------------------------------------------------------
+
+    set {etherlove.request.%{_requestKey}%.expires} to {@etherlove-request-expiration} after now
 
 
 # ==========================================================
-# CHECK REQUEST
+# REQUEST EXPIRED
+# ==========================================================
+#
+# REGRA CORRIGIDA:
+#
+# Não usamos:
+#
+# difference between now and expires >= 0
+#
+# porque "difference" representa distância temporal,
+# não direção temporal.
+#
+# Usamos:
+#
+# expires has passed
+#
 # ==========================================================
 
-function hasPendingRequest(sender: player, receiver: player) :: boolean:
+function isRequestExpired(sender: player, receiver: player) :: boolean:
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+
+    # ------------------------------------------------------
+    # Não existe Request
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.type} is not set:
+        return true
+
+    # ------------------------------------------------------
+    # Request incompleto/corrompido
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.expires} is not set:
+        return true
+
+    # ------------------------------------------------------
+    # Expiração real
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.expires} has passed:
+        return true
+
+    return false
+
+
+# ==========================================================
+# REQUEST RELATIONSHIP INTEGRITY
+# ==========================================================
+#
+# Garante que o RelationshipID armazenado no Request
+# corresponde ao par atual.
+#
+# ==========================================================
+
+function requestRelationshipMatches(sender: player, receiver: player) :: boolean:
+
+    set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+
+    if {etherlove.request.%{_requestKey}%.relationship} is not set:
+        return false
+
+    set {_storedRelationship} to {etherlove.request.%{_requestKey}%.relationship}
+
+    set {_currentRelationship} to etherID({_sender}, {_receiver})
+
+    if {_storedRelationship} is {_currentRelationship}:
+        return true
+
+    return false
+
+
+# ==========================================================
+# REQUEST VALIDITY
+# ==========================================================
+#
+# Um Request válido precisa:
+#
+# - existir
+# - possuir TYPE
+# - possuir RelationshipID
+# - possuir CREATED
+# - possuir EXPIRES
+# - não estar expirado
+# - RelationshipID bater com sender/receiver
+#
+# ==========================================================
+
+function isRequestValid(sender: player, receiver: player) :: boolean:
+
+    set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+
+    # ------------------------------------------------------
+    # TYPE
+    # ------------------------------------------------------
 
     if {etherlove.request.%{_requestKey}%.type} is not set:
         return false
 
-    # Request expirado não é considerado pendente.
-    if difference between now and {etherlove.request.%{_requestKey}%.expires} >= 0 seconds:
+    # ------------------------------------------------------
+    # RELATIONSHIP
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.relationship} is not set:
+        removeRequest({_sender}, {_receiver})
+        return false
+
+    # ------------------------------------------------------
+    # CREATED
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.created} is not set:
+        removeRequest({_sender}, {_receiver})
+        return false
+
+    # ------------------------------------------------------
+    # EXPIRES
+    # ------------------------------------------------------
+
+    if {etherlove.request.%{_requestKey}%.expires} is not set:
+        removeRequest({_sender}, {_receiver})
+        return false
+
+    # ------------------------------------------------------
+    # RelationshipID integrity
+    # ------------------------------------------------------
+
+    if requestRelationshipMatches({_sender}, {_receiver}) is false:
+        removeRequest({_sender}, {_receiver})
+        return false
+
+    # ------------------------------------------------------
+    # Expiração
+    # ------------------------------------------------------
+
+    if isRequestExpired({_sender}, {_receiver}) is true:
         removeRequest({_sender}, {_receiver})
         return false
 
@@ -186,10 +394,30 @@ function hasPendingRequest(sender: player, receiver: player) :: boolean:
 
 
 # ==========================================================
+# HAS PENDING REQUEST
+# ==========================================================
+#
+# Mantemos esta função porque os módulos superiores
+# dependerão dela.
+#
+# Agora ela usa a validação central.
+#
+# ==========================================================
+
+function hasPendingRequest(sender: player, receiver: player) :: boolean:
+
+    if isRequestValid({_sender}, {_receiver}) is true:
+        return true
+
+    return false
+
+
+# ==========================================================
 # REQUEST TYPE
 # ==========================================================
 
 function getRequestType(sender: player, receiver: player) :: text:
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
 
     if hasPendingRequest({_sender}, {_receiver}) is false:
@@ -203,6 +431,7 @@ function getRequestType(sender: player, receiver: player) :: text:
 # ==========================================================
 
 function getRequestRelationshipID(sender: player, receiver: player) :: text:
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
 
     if hasPendingRequest({_sender}, {_receiver}) is false:
@@ -216,6 +445,7 @@ function getRequestRelationshipID(sender: player, receiver: player) :: text:
 # ==========================================================
 
 function getRequestCreated(sender: player, receiver: player) :: date:
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
 
     if hasPendingRequest({_sender}, {_receiver}) is false:
@@ -229,6 +459,7 @@ function getRequestCreated(sender: player, receiver: player) :: date:
 # ==========================================================
 
 function getRequestExpiration(sender: player, receiver: player) :: date:
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
 
     if hasPendingRequest({_sender}, {_receiver}) is false:
@@ -238,50 +469,58 @@ function getRequestExpiration(sender: player, receiver: player) :: date:
 
 
 # ==========================================================
-# CHECK EXPIRED REQUEST
-# ==========================================================
-
-function isRequestExpired(sender: player, receiver: player) :: boolean:
-    set {_requestKey} to etherRequestKey({_sender}, {_receiver})
-
-    if {etherlove.request.%{_requestKey}%.type} is not set:
-        return true
-
-    if difference between now and {etherlove.request.%{_requestKey}%.expires} >= 0 seconds:
-        return true
-
-    return false
-
-
-# ==========================================================
 # REMOVE REQUEST
 # ==========================================================
 
 function removeRequest(sender: player, receiver: player):
+
     set {_requestKey} to etherRequestKey({_sender}, {_receiver})
 
     delete {etherlove.request.%{_requestKey}%.type}
+
     delete {etherlove.request.%{_requestKey}%.relationship}
+
     delete {etherlove.request.%{_requestKey}%.created}
+
     delete {etherlove.request.%{_requestKey}%.expires}
 
 
 # ==========================================================
 # CLEANUP REQUEST
 # ==========================================================
+
+function cleanupRequest(sender: player, receiver: player):
+
+    if requestDataExists({_sender}, {_receiver}) is false:
+        return
+
+    if isRequestValid({_sender}, {_receiver}) is false:
+        removeRequest({_sender}, {_receiver})
+
+
+# ==========================================================
+# REQUEST TYPE CHECK
+# ==========================================================
 #
-# Remove um Request somente se ele existir e estiver expirado.
+# Helper para /LS e /LN.
+#
+# Exemplo:
+#
+# if requestIsType(sender, player, "NAMORAR") is true:
 #
 # ==========================================================
 
-function cleanupRequest(sender: player, receiver: player):
-    set {_requestKey} to etherRequestKey({_sender}, {_receiver})
+function requestIsType(sender: player, receiver: player, type: text) :: boolean:
 
-    if {etherlove.request.%{_requestKey}%.type} is not set:
-        return
+    if hasPendingRequest({_sender}, {_receiver}) is false:
+        return false
 
-    if difference between now and {etherlove.request.%{_requestKey}%.expires} >= 0 seconds:
-        removeRequest({_sender}, {_receiver})
+    set {_currentType} to getRequestType({_sender}, {_receiver})
+
+    if {_currentType} is {_type}:
+        return true
+
+    return false
 
 
 # ==========================================================
@@ -290,26 +529,46 @@ function cleanupRequest(sender: player, receiver: player):
 #
 # Função auxiliar para testes.
 #
-# Não altera Relationship.
+# NÃO altera:
+#
+# XP
+# CASE
+# STATUS
 #
 # ==========================================================
 
 function debugRequest(sender: player, receiver: player):
+
     if hasPendingRequest({_sender}, {_receiver}) is false:
-        send "&c[EtherLove] Nenhum Request pendente." to {_receiver}
+
+        send "&c[EtherLove] Nenhum Request válido pendente." to {_receiver}
+
         return
 
     set {_type} to getRequestType({_sender}, {_receiver})
+
     set {_relationshipID} to getRequestRelationshipID({_sender}, {_receiver})
+
     set {_created} to getRequestCreated({_sender}, {_receiver})
+
     set {_expires} to getRequestExpiration({_sender}, {_receiver})
 
     send "&8&m--------------------------------" to {_receiver}
+
     send "&d&lETHERLOVE &7- REQUEST DEBUG" to {_receiver}
+
     send "&7Sender: &f%name of {_sender}%" to {_receiver}
+
     send "&7Target: &f%name of {_receiver}%" to {_receiver}
+
     send "&7Type: &f%{_type}%" to {_receiver}
+
     send "&7RelationshipID: &f%{_relationshipID}%" to {_receiver}
+
     send "&7Created: &f%{_created}%" to {_receiver}
+
     send "&7Expires: &f%{_expires}%" to {_receiver}
+
+    send "&7Valid: &aSIM" to {_receiver}
+
     send "&8&m--------------------------------" to {_receiver}
