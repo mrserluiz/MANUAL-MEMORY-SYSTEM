@@ -1,7 +1,7 @@
 # ==========================================================
 # EtherLove
 # 03C - Relationship Events
-# EVENTS REBUILD 001 - DATE + PRESENTE
+# EVENTS REBUILD 002 - DATE + PRESENTE
 # ==========================================================
 # RESPONSABILIDADES:
 # - /DATE <player>
@@ -41,23 +41,18 @@ function isDateActiveFor(p: player) :: boolean:
 function clearDateState(id: text):
     set {_p1UUID} to {etherlove.date.%{_id}%.requester-uuid}
     set {_p2UUID} to {etherlove.date.%{_id}%.receiver-uuid}
-
     if {_p1UUID} is set:
         delete {etherlove.date.player.%{_p1UUID}%}
     if {_p2UUID} is set:
         delete {etherlove.date.player.%{_p2UUID}%}
-
     delete {etherlove.date.%{_id}%::*}
 
 function cancelDateNoXP(id: text, reason: text):
     set {_p1UUID} to {etherlove.date.%{_id}%.requester-uuid}
     set {_p2UUID} to {etherlove.date.%{_id}%.receiver-uuid}
-
     set {_p1} to etherOnlinePlayerByUUID({_p1UUID})
     set {_p2} to etherOnlinePlayerByUUID({_p2UUID})
-
     clearDateState({_id})
-
     if {_p1} is set:
         send "&d&lETHERLOVE &8» &7O encontro foi encerrado sem alteração de XP. &8(%{_reason}%)" to {_p1}
     if {_p2} is set:
@@ -66,14 +61,11 @@ function cancelDateNoXP(id: text, reason: text):
 function failDateByDistance(id: text):
     set {_p1UUID} to {etherlove.date.%{_id}%.requester-uuid}
     set {_p2UUID} to {etherlove.date.%{_id}%.receiver-uuid}
-
     set {_p1} to etherOnlinePlayerByUUID({_p1UUID})
     set {_p2} to etherOnlinePlayerByUUID({_p2UUID})
-
     set {_stage} to getRelationshipStageByUUIDs({_p1UUID}, {_p2UUID})
     addRelationshipPointsByUUIDs({_p1UUID}, {_p2UUID}, -10)
     clearDateState({_id})
-
     if {_p1} is set:
         send "&c&lETHERLOVE &8» &cO encontro falhou porque vocês ficaram separados por 60 segundos." to {_p1}
         if {_stage} is not 6:
@@ -87,20 +79,14 @@ function completeDate(id: text):
     set {_p1UUID} to {etherlove.date.%{_id}%.requester-uuid}
     set {_p2UUID} to {etherlove.date.%{_id}%.receiver-uuid}
     set {_p1Name} to {etherlove.date.%{_id}%.requester-name}
-
     set {_p1} to etherOnlinePlayerByUUID({_p1UUID})
     set {_p2} to etherOnlinePlayerByUUID({_p2UUID})
-
     clearDateState({_id})
-
     if {_p2} is not set:
         return
-
     setPendingAction({_p2}, "DATE_REVIEW", {_p1UUID}, {_p1Name}, {_id})
-
     if {_p1} is set:
         send "&d&lETHERLOVE &8» &aO encontro terminou. Aguardando a avaliação de &f%name of {_p2}%&a." to {_p1}
-
     send "&d&lETHERLOVE &8» &fO encontro terminou!" to {_p2}
     send "&fVocê gostou do encontro com &d%{_p1Name}%&f?" to {_p2}
     send "&7Use &a/LS &7para SIM ou &c/LN &7para NÃO." to {_p2}
@@ -109,15 +95,12 @@ function startDateEvent(sender: player, receiver: player):
     if relationshipExists({_sender}, {_receiver}) is false:
         send "&cEsta relação não existe mais." to {_receiver}
         return
-
     if getRelationshipStage({_sender}, {_receiver}) < 2:
         send "&cA relação não está mais no CASE 2 ou superior." to {_receiver}
         return
-
     if isDateActiveFor({_sender}) is true:
         send "&c%name of {_sender}% já está em um encontro." to {_receiver}
         return
-
     if isDateActiveFor({_receiver}) is true:
         send "&cVocê já está em um encontro." to {_receiver}
         return
@@ -130,7 +113,6 @@ function startDateEvent(sender: player, receiver: player):
     set {etherlove.date.%{_id}%.started-at} to now
     set {etherlove.date.%{_id}%.end-at} to {@etherlove-date-duration} after now
     delete {etherlove.date.%{_id}%.away-since}
-
     set {etherlove.date.player.%uuid of {_sender}%} to {_id}
     set {etherlove.date.player.%uuid of {_receiver}%} to {_id}
 
@@ -148,30 +130,24 @@ command /date <player>:
     permission message: &cVocê não possui permissão para usar este comando.
     trigger:
         set {_target} to arg-1
-
         if {_target} is player:
             send "&cVocê não pode convidar a si mesmo para um encontro."
             stop
-
         if isPlayerBusyForNewAction(player) is true:
             send "&cVocê já possui uma ação pendente ou está em um encontro."
             stop
-
         if isPlayerBusyForNewAction({_target}) is true:
             send "&c%name of {_target}% está ocupado com outra ação do EtherLove."
             stop
-
         if relationshipExists(player, {_target}) is false:
             send "&cVocê não possui uma relação registrada com &f%name of {_target}%&c."
             stop
-
         if getRelationshipStage(player, {_target}) < 2:
             send "&c/DATE é liberado a partir do CASE 2."
             stop
 
         createRequest(player, {_target}, "DATE")
         setIncomingRequestPointer(player, {_target})
-
         send "&d&lETHERLOVE &8» &fVocê chamou &d%name of {_target}% &fpara um encontro."
         send "&d&lETHERLOVE &8» &d%name of player% &fconvidou você para um encontro." to {_target}
         send "&7Use &a/LS &7para aceitar ou &c/LN &7para negar." to {_target}
@@ -180,25 +156,21 @@ command /date <player>:
 # DATE MONITOR
 # ==========================================================
 
- every 1 second:
+every 1 second:
     loop all players:
         set {_p1} to loop-player
         set {_p1UUID} to "%uuid of {_p1}%"
-
         if {etherlove.date.player.%{_p1UUID}%} is set:
             set {_id} to {etherlove.date.player.%{_p1UUID}%}
-
             if {etherlove.date.%{_id}%.requester-uuid} is {_p1UUID}:
                 set {_p2UUID} to {etherlove.date.%{_id}%.receiver-uuid}
                 set {_p2} to etherOnlinePlayerByUUID({_p2UUID})
-
                 if {_p2} is not set:
                     cancelDateNoXP({_id}, "jogador offline")
                 else if {etherlove.date.%{_id}%.end-at} has passed:
                     completeDate({_id})
                 else:
                     set {_far} to false
-
                     if world of {_p1} is not world of {_p2}:
                         set {_far} to true
                     else if distance between {_p1} and {_p2} > {@etherlove-date-max-distance}:
@@ -235,19 +207,15 @@ on join:
 function handleDateReviewPositive(receiver: player):
     if getPendingActionType({_receiver}) is not "DATE_REVIEW":
         return
-
     set {_sourceUUID} to getPendingSourceUUID({_receiver})
     set {_sourceName} to getPendingSourceName({_receiver})
     set {_receiverUUID} to "%uuid of {_receiver}%"
     set {_stage} to getRelationshipStageByUUIDs({_sourceUUID}, {_receiverUUID})
-
     addRelationshipPointsByUUIDs({_sourceUUID}, {_receiverUUID}, 25)
     clearPendingAction({_receiver})
-
     send "&aVocê avaliou positivamente o encontro com &f%{_sourceName}%&a." to {_receiver}
     if {_stage} is not 6:
         send "&7Relacionamento: &a+25 XP" to {_receiver}
-
     set {_source} to etherOnlinePlayerByUUID({_sourceUUID})
     if {_source} is set:
         send "&a%name of {_receiver}% gostou do encontro!" to {_source}
@@ -257,19 +225,15 @@ function handleDateReviewPositive(receiver: player):
 function handleDateReviewNegative(receiver: player):
     if getPendingActionType({_receiver}) is not "DATE_REVIEW":
         return
-
     set {_sourceUUID} to getPendingSourceUUID({_receiver})
     set {_sourceName} to getPendingSourceName({_receiver})
     set {_receiverUUID} to "%uuid of {_receiver}%"
     set {_stage} to getRelationshipStageByUUIDs({_sourceUUID}, {_receiverUUID})
-
     addRelationshipPointsByUUIDs({_sourceUUID}, {_receiverUUID}, -20)
     clearPendingAction({_receiver})
-
     send "&cVocê avaliou negativamente o encontro com &f%{_sourceName}%&c." to {_receiver}
     if {_stage} is not 6:
         send "&7Relacionamento: &c-20 XP" to {_receiver}
-
     set {_source} to etherOnlinePlayerByUUID({_sourceUUID})
     if {_source} is set:
         send "&c%name of {_receiver}% não gostou do encontro." to {_source}
@@ -290,7 +254,6 @@ function clearMailbox(uuidText: text):
 
 function openEtherLoveMailbox(p: player):
     set {_uuid} to "%uuid of {_p}%"
-
     if mailboxIsFull({_uuid}) is false:
         send "&7Sua caixa de correio está vazia." to {_p}
         return
@@ -298,12 +261,10 @@ function openEtherLoveMailbox(p: player):
     set {_gui} to a new chest inventory with 1 row named "{@etherlove-mailbox-name}"
     set {_display} to {etherlove.mailbox.%{_uuid}%.item}
     set {_senderName} to {etherlove.mailbox.%{_uuid}%.sender-name}
-
     set {_giftLore::*} to lore of {_display}
     add "" to {_giftLore::*}
     add "&7Enviado por &f%{_senderName}%" to {_giftLore::*}
     set lore of {_display} to {_giftLore::*}
-
     set slot 4 of {_gui} to {_display}
     open {_gui} to {_p}
 
@@ -315,7 +276,6 @@ command /presente [<player>]:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
     trigger:
-        # Sem alvo = abrir mailbox.
         if arg-1 is not set:
             if isPlayerBusyForNewAction(player) is true:
                 send "&cFinalize sua ação pendente ou encontro antes de abrir a caixa de correio."
@@ -324,19 +284,15 @@ command /presente [<player>]:
             stop
 
         set {_target} to arg-1
-
         if {_target} is player:
             send "&cVocê não pode enviar um presente para si mesmo."
             stop
-
         if isPlayerBusyForNewAction(player) is true:
             send "&cVocê já possui uma ação pendente ou está em um encontro."
             stop
-
         if relationshipExists(player, {_target}) is false:
             send "&cVocê não possui uma relação registrada com &f%name of {_target}%&c."
             stop
-
         if getRelationshipStage(player, {_target}) < 2:
             send "&c/PRESENTE é liberado a partir do CASE 2."
             stop
@@ -345,14 +301,12 @@ command /presente [<player>]:
         if mailboxIsFull({_targetUUID}) is true:
             send "&cDesculpe, esta caixa de correio está cheia. Tente novamente depois."
             stop
-
         if player's tool is air:
             send "&cVocê precisa segurar o presente na mão principal."
             stop
 
         set {_id} to etherID(player, {_target})
         setPendingAction(player, "GIFT_CONFIRM", {_targetUUID}, name of {_target}, {_id})
-
         set {etherlove.pending.%uuid of player%.gift-item} to player's tool
         set {etherlove.pending.%uuid of player%.gift-recipient-uuid} to {_targetUUID}
         set {etherlove.pending.%uuid of player%.gift-recipient-name} to name of {_target}
@@ -376,17 +330,17 @@ function confirmGiftSend(sender: player):
 
     if {_gift} is not set:
         clearPendingAction({_sender})
-        send "&cNão foi possível localizar o item do presente."
+        send "&cNão foi possível localizar o item do presente." to {_sender}
         return
 
-    if {_sender}'s tool is not {_gift}:
+    if tool of {_sender} is not {_gift}:
         clearPendingAction({_sender})
-        send "&cO item em sua mão mudou. Use /PRESENTE novamente."
+        send "&cO item em sua mão mudou. Use /PRESENTE novamente." to {_sender}
         return
 
     if mailboxIsFull({_targetUUID}) is true:
         clearPendingAction({_sender})
-        send "&cDesculpe, esta caixa de correio está cheia. Tente novamente depois."
+        send "&cDesculpe, esta caixa de correio está cheia. Tente novamente depois." to {_sender}
         return
 
     set {etherlove.mailbox.%{_targetUUID}%.item} to {_gift}
@@ -395,9 +349,8 @@ function confirmGiftSend(sender: player):
     set {etherlove.mailbox.%{_targetUUID}%.relationship} to {_relationship}
     set {etherlove.mailbox.%{_targetUUID}%.sent-at} to now
 
-    set {_sender}'s tool to air
+    set tool of {_sender} to air
     clearPendingAction({_sender})
-
     send "&aPresente enviado para &f%{_targetName}%&a." to {_sender}
 
     set {_target} to etherOnlinePlayerByUUID({_targetUUID})
@@ -418,7 +371,6 @@ function cancelGiftSend(sender: player):
 on inventory click:
     if name of event-inventory is "{@etherlove-mailbox-name}":
         cancel event
-
         if event-item is air:
             stop
 
@@ -428,7 +380,6 @@ on inventory click:
             stop
 
         set {_gift} to {etherlove.mailbox.%{_uuid}%.item}
-
         if player does not have enough space for {_gift}:
             send "&cSeu inventário está cheio. Libere espaço antes de retirar o presente."
             stop
@@ -440,7 +391,6 @@ on inventory click:
         clearMailbox({_uuid})
         give {_gift} to player
         close player's inventory
-
         setPendingAction(player, "GIFT_REVIEW", {_senderUUID}, {_senderName}, {_relationship})
 
         send "&aPresente retirado da caixa de correio."
@@ -454,19 +404,15 @@ on inventory click:
 function handleGiftReviewPositive(receiver: player):
     if getPendingActionType({_receiver}) is not "GIFT_REVIEW":
         return
-
     set {_sourceUUID} to getPendingSourceUUID({_receiver})
     set {_sourceName} to getPendingSourceName({_receiver})
     set {_receiverUUID} to "%uuid of {_receiver}%"
     set {_stage} to getRelationshipStageByUUIDs({_sourceUUID}, {_receiverUUID})
-
     addRelationshipPointsByUUIDs({_sourceUUID}, {_receiverUUID}, 20)
     clearPendingAction({_receiver})
-
     send "&aVocê gostou do presente de &f%{_sourceName}%&a." to {_receiver}
     if {_stage} is not 6:
         send "&7Relacionamento: &a+20 XP" to {_receiver}
-
     set {_source} to etherOnlinePlayerByUUID({_sourceUUID})
     if {_source} is set:
         send "&a%name of {_receiver}% gostou do seu presente!" to {_source}
@@ -476,19 +422,15 @@ function handleGiftReviewPositive(receiver: player):
 function handleGiftReviewNegative(receiver: player):
     if getPendingActionType({_receiver}) is not "GIFT_REVIEW":
         return
-
     set {_sourceUUID} to getPendingSourceUUID({_receiver})
     set {_sourceName} to getPendingSourceName({_receiver})
     set {_receiverUUID} to "%uuid of {_receiver}%"
     set {_stage} to getRelationshipStageByUUIDs({_sourceUUID}, {_receiverUUID})
-
     addRelationshipPointsByUUIDs({_sourceUUID}, {_receiverUUID}, -10)
     clearPendingAction({_receiver})
-
     send "&cVocê não gostou do presente de &f%{_sourceName}%&c." to {_receiver}
     if {_stage} is not 6:
         send "&7Relacionamento: &c-10 XP" to {_receiver}
-
     set {_source} to etherOnlinePlayerByUUID({_sourceUUID})
     if {_source} is set:
         send "&c%name of {_receiver}% não gostou do seu presente." to {_source}
