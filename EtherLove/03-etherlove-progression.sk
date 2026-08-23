@@ -1,72 +1,112 @@
 # ==========================================================
 # EtherLove
 # 03 - Progression
-# PROGRESSION REBUILD 003 - DIVORCE REQUEST INTEGRATION
+# PROGRESSION REBUILD 004 - GENERIC PENDING ACTIONS
 # ==========================================================
-#
 # RESPONSABILIDADES:
 # - /NAMORAR
 # - /NOIVAR
 # - /LS
 # - /LN
-# - exclusividade de relacionamento
-# - aceite de Requests
-# - recusa de Requests
-# - penalidade de XP por recusa
-# - integração de Requests de DIVORCIO
-#
+# - exclusividade
+# - Request routing
+# - Generic Pending Action System
+# - integração com DIVORCIO / DATE / PRESENTE
 # ==========================================================
 
+options:
+    etherlove-pending-expiration: 10 minutes
+
 # ==========================================================
-# INCOMING REQUEST POINTER
+# GENERIC PENDING ACTION SYSTEM
+# ==========================================================
+# Cada jogador pode possuir UMA ação que usa /LS ou /LN.
+# Types atuais:
+# REQUEST      -> NAMORAR / NOIVAR / DIVORCIO / DATE
+# DATE_REVIEW
+# GIFT_CONFIRM
+# GIFT_REVIEW
+# ==========================================================
+
+function setPendingAction(receiver: player, type: text, sourceUUID: text, sourceName: text, relationship: text):
+    set {_uuid} to "%uuid of {_receiver}%"
+    set {etherlove.pending.%{_uuid}%.type} to {_type}
+    set {etherlove.pending.%{_uuid}%.source-uuid} to {_sourceUUID}
+    set {etherlove.pending.%{_uuid}%.source-name} to {_sourceName}
+    set {etherlove.pending.%{_uuid}%.relationship} to {_relationship}
+    set {etherlove.pending.%{_uuid}%.expires} to {@etherlove-pending-expiration} after now
+
+function clearPendingAction(receiver: player):
+    set {_uuid} to "%uuid of {_receiver}%"
+    delete {etherlove.pending.%{_uuid}%::*}
+
+function hasPendingAction(receiver: player) :: boolean:
+    set {_uuid} to "%uuid of {_receiver}%"
+    if {etherlove.pending.%{_uuid}%.type} is not set:
+        return false
+    if {etherlove.pending.%{_uuid}%.expires} is not set:
+        clearPendingAction({_receiver})
+        return false
+    if {etherlove.pending.%{_uuid}%.expires} has passed:
+        clearPendingAction({_receiver})
+        return false
+    return true
+
+function getPendingActionType(receiver: player) :: text:
+    if hasPendingAction({_receiver}) is false:
+        return ""
+    return {etherlove.pending.%uuid of {_receiver}%.type}
+
+function getPendingSourceUUID(receiver: player) :: text:
+    if hasPendingAction({_receiver}) is false:
+        return ""
+    return {etherlove.pending.%uuid of {_receiver}%.source-uuid}
+
+function getPendingSourceName(receiver: player) :: text:
+    if hasPendingAction({_receiver}) is false:
+        return ""
+    return {etherlove.pending.%uuid of {_receiver}%.source-name}
+
+function getPendingRelationshipID(receiver: player) :: text:
+    if hasPendingAction({_receiver}) is false:
+        return ""
+    return {etherlove.pending.%uuid of {_receiver}%.relationship}
+
+# Bloqueia novas ações que exigiriam /LS ou /LN durante DATE ativo.
+function isPlayerBusyForNewAction(p: player) :: boolean:
+    if hasPendingAction({_p}) is true:
+        return true
+    if {etherlove.date.player.%uuid of {_p}%} is set:
+        return true
+    return false
+
+# ==========================================================
+# COMPATIBILITY WRAPPERS FOR REQUEST SYSTEM / 03B
 # ==========================================================
 
 function setIncomingRequestPointer(sender: player, receiver: player):
-    set {_receiverUUID} to "%uuid of {_receiver}%"
-    set {etherlove.incoming.%{_receiverUUID}%.sender} to "%uuid of {_sender}%"
-    set {etherlove.incoming.%{_receiverUUID}%.sender-name} to name of {_sender}
-    set {etherlove.incoming.%{_receiverUUID}%.expires} to 10 minutes after now
-
+    setPendingAction({_receiver}, "REQUEST", "%uuid of {_sender}%", name of {_sender}, etherID({_sender}, {_receiver}))
 
 function clearIncomingRequestPointer(receiver: player):
-    set {_receiverUUID} to "%uuid of {_receiver}%"
-    delete {etherlove.incoming.%{_receiverUUID}%.sender}
-    delete {etherlove.incoming.%{_receiverUUID}%.sender-name}
-    delete {etherlove.incoming.%{_receiverUUID}%.expires}
-
+    if getPendingActionType({_receiver}) is "REQUEST":
+        clearPendingAction({_receiver})
 
 function hasIncomingRequestPointer(receiver: player) :: boolean:
-    set {_receiverUUID} to "%uuid of {_receiver}%"
-
-    if {etherlove.incoming.%{_receiverUUID}%.sender} is not set:
+    if hasPendingAction({_receiver}) is false:
         return false
-
-    if {etherlove.incoming.%{_receiverUUID}%.expires} is not set:
-        clearIncomingRequestPointer({_receiver})
-        return false
-
-    if {etherlove.incoming.%{_receiverUUID}%.expires} has passed:
-        clearIncomingRequestPointer({_receiver})
-        return false
-
-    return true
-
+    if getPendingActionType({_receiver}) is "REQUEST":
+        return true
+    return false
 
 function getIncomingSenderUUID(receiver: player) :: text:
     if hasIncomingRequestPointer({_receiver}) is false:
         return ""
-
-    set {_receiverUUID} to "%uuid of {_receiver}%"
-    return {etherlove.incoming.%{_receiverUUID}%.sender}
-
+    return getPendingSourceUUID({_receiver})
 
 function getIncomingSenderName(receiver: player) :: text:
     if hasIncomingRequestPointer({_receiver}) is false:
         return ""
-
-    set {_receiverUUID} to "%uuid of {_receiver}%"
-    return {etherlove.incoming.%{_receiverUUID}%.sender-name}
-
+    return getPendingSourceName({_receiver})
 
 # ==========================================================
 # /NAMORAR
@@ -75,12 +115,19 @@ function getIncomingSenderName(receiver: player) :: text:
 command /namorar <player>:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
-
     trigger:
         set {_target} to arg-1
 
         if {_target} is player:
-            send "&cVocê não pode namorar consigo mesmo." to player
+            send "&cVocê não pode namorar consigo mesmo."
+            stop
+
+        if isPlayerBusyForNewAction(player) is true:
+            send "&cVocê já possui uma ação do EtherLove pendente ou está em um encontro."
+            stop
+
+        if isPlayerBusyForNewAction({_target}) is true:
+            send "&c%name of {_target}% está ocupado com outra ação do EtherLove."
             stop
 
         if relationshipExists(player, {_target}) is false:
@@ -103,20 +150,13 @@ command /namorar <player>:
             send "&c%name of {_target}% já possui um relacionamento comprometido."
             stop
 
-        if hasIncomingRequestPointer({_target}) is true:
-            send "&c%name of {_target}% já possui um pedido de relacionamento pendente."
-            stop
-
         createRequest(player, {_target}, "NAMORAR")
         setIncomingRequestPointer(player, {_target})
 
-        send "&d&lETHERLOVE &8» &fPedido de namoro enviado para &d%name of {_target}%&f." to player
-        send "&7O pedido expira em aproximadamente &f10 minutos&7." to player
-
+        send "&d&lETHERLOVE &8» &fPedido de namoro enviado para &d%name of {_target}%&f."
+        send "&7O pedido expira em aproximadamente &f10 minutos&7."
         send "&d&lETHERLOVE &8» &d%name of player% &fquer começar um namoro com você!" to {_target}
         send "&7Use &a/LS &7para aceitar ou &c/LN &7para recusar." to {_target}
-        send "&7O pedido expira em aproximadamente &f10 minutos&7." to {_target}
-
 
 # ==========================================================
 # /NOIVAR
@@ -125,12 +165,19 @@ command /namorar <player>:
 command /noivar <player>:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
-
     trigger:
         set {_target} to arg-1
 
         if {_target} is player:
-            send "&cVocê não pode noivar consigo mesmo." to player
+            send "&cVocê não pode noivar consigo mesmo."
+            stop
+
+        if isPlayerBusyForNewAction(player) is true:
+            send "&cVocê já possui uma ação do EtherLove pendente ou está em um encontro."
+            stop
+
+        if isPlayerBusyForNewAction({_target}) is true:
+            send "&c%name of {_target}% está ocupado com outra ação do EtherLove."
             stop
 
         if canStartEngagementRequest(player, {_target}) is false:
@@ -144,233 +191,243 @@ command /noivar <player>:
 
         if hasActivePartner(player) is false:
             send "&cSeu vínculo de relacionamento ativo não foi encontrado."
-            send "&7Use &f/eldebug &7ou informe a administração se isso ocorrer."
             stop
 
         if hasActivePartner({_target}) is false:
             send "&cO vínculo ativo de &f%name of {_target}% &cnão foi encontrado."
             stop
 
-        set {_playerPartner} to getActivePartnerUUID(player)
-        set {_targetPartner} to getActivePartnerUUID({_target})
-
-        if {_playerPartner} is not "%uuid of {_target}%":
+        if getActivePartnerUUID(player) is not "%uuid of {_target}%":
             send "&c%name of {_target}% não é seu parceiro ativo."
             stop
 
-        if {_targetPartner} is not "%uuid of player%":
+        if getActivePartnerUUID({_target}) is not "%uuid of player%":
             send "&cO vínculo de relacionamento não está consistente."
-            stop
-
-        if hasIncomingRequestPointer({_target}) is true:
-            send "&c%name of {_target}% já possui um pedido pendente."
             stop
 
         createRequest(player, {_target}, "NOIVAR")
         setIncomingRequestPointer(player, {_target})
 
-        send "&d&lETHERLOVE &8» &fPedido de noivado enviado para &d%name of {_target}%&f." to player
-        send "&7O pedido expira em aproximadamente &f10 minutos&7." to player
-
+        send "&d&lETHERLOVE &8» &fPedido de noivado enviado para &d%name of {_target}%&f."
         send "&d&lETHERLOVE &8» &d%name of player% &fquer ficar noivo de você!" to {_target}
         send "&7Use &a/LS &7para aceitar ou &c/LN &7para recusar." to {_target}
-        send "&7O pedido expira em aproximadamente &f10 minutos&7." to {_target}
-
 
 # ==========================================================
-# /LS — ACEITAR
+# /LS — GENERIC ACCEPT
 # ==========================================================
 
 command /ls:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
-
     trigger:
-        if hasIncomingRequestPointer(player) is false:
-            send "&cVocê não possui nenhum pedido de relacionamento pendente."
+        if hasPendingAction(player) is false:
+            send "&cVocê não possui nenhuma ação pendente do EtherLove."
             stop
 
-        set {_senderUUID} to getIncomingSenderUUID(player)
-        set {_senderName} to getIncomingSenderName(player)
+        set {_pendingType} to getPendingActionType(player)
 
-        delete {_sender}
-        loop all players:
-            if "%uuid of loop-player%" is {_senderUUID}:
-                set {_sender} to loop-player
-                stop loop
+        # --------------------------------------------------
+        # REQUESTS
+        # --------------------------------------------------
+        if {_pendingType} is "REQUEST":
+            set {_senderUUID} to getPendingSourceUUID(player)
+            set {_senderName} to getPendingSourceName(player)
 
-        if {_sender} is not set:
-            send "&c%{_senderName}% precisa estar online para concluir este pedido."
-            send "&7O pedido continuará disponível até expirar."
-            stop
+            delete {_sender}
+            loop all players:
+                if "%uuid of loop-player%" is {_senderUUID}:
+                    set {_sender} to loop-player
+                    stop loop
 
-        if hasPendingRequest({_sender}, player) is false:
-            clearIncomingRequestPointer(player)
-            send "&cEsse pedido não existe mais ou expirou."
-            stop
-
-        set {_type} to getRequestType({_sender}, player)
-
-        if {_type} is "NAMORAR":
-            if canStartDatingRequest({_sender}, player) is false:
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cO relacionamento não atende mais aos requisitos para namoro."
+            if {_sender} is not set:
+                send "&c%{_senderName}% precisa estar online para concluir este pedido."
                 stop
 
-            if hasActivePartner({_sender}) is true:
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&c%name of {_sender}% já possui outro relacionamento ativo."
+            if hasPendingRequest({_sender}, player) is false:
+                clearPendingAction(player)
+                send "&cEsse pedido não existe mais ou expirou."
                 stop
 
-            if hasActivePartner(player) is true:
+            set {_type} to getRequestType({_sender}, player)
+
+            if {_type} is "NAMORAR":
+                if canStartDatingRequest({_sender}, player) is false:
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cO relacionamento não atende mais aos requisitos para namoro."
+                    stop
+                if hasActivePartner({_sender}) is true:
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&c%name of {_sender}% já possui outro relacionamento ativo."
+                    stop
+                if hasActivePartner(player) is true:
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cVocê já possui outro relacionamento ativo."
+                    stop
+
+                setDatingRelationship({_sender}, player)
                 removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cVocê já possui outro relacionamento ativo."
+                clearPendingAction(player)
+                send "&d&lETHERLOVE &8» &aPedido aceito!"
+                send "&fVocê agora está namorando &d%name of {_sender}%&f."
+                send "&d&lETHERLOVE &8» &a%name of player% aceitou seu pedido de namoro!" to {_sender}
                 stop
 
-            setDatingRelationship({_sender}, player)
+            if {_type} is "NOIVAR":
+                if canStartEngagementRequest({_sender}, player) is false:
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cA relação não atende mais aos requisitos para noivado."
+                    stop
+                if hasActivePartner({_sender}) is false or hasActivePartner(player) is false:
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cO vínculo do relacionamento não está mais ativo."
+                    stop
+                if getActivePartnerUUID({_sender}) is not "%uuid of player%":
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cO vínculo do relacionamento mudou antes da resposta."
+                    stop
+                if getActivePartnerUUID(player) is not "%uuid of {_sender}%":
+                    removeRequest({_sender}, player)
+                    clearPendingAction(player)
+                    send "&cO vínculo do relacionamento mudou antes da resposta."
+                    stop
+
+                setEngagedRelationship({_sender}, player)
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                send "&d&lETHERLOVE &8» &aPedido aceito!"
+                send "&fVocê agora está noivo de &d%name of {_sender}%&f."
+                send "&d&lETHERLOVE &8» &a%name of player% aceitou seu pedido de noivado!" to {_sender}
+                stop
+
+            if {_type} is "DIVORCIO":
+                acceptDivorce({_sender}, player)
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                send "&7Você aceitou o divórcio."
+                stop
+
+            if {_type} is "DATE":
+                startDateEvent({_sender}, player)
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                stop
+
             removeRequest({_sender}, player)
-            clearIncomingRequestPointer(player)
-
-            send "&d&lETHERLOVE &8» &aPedido aceito!"
-            send "&fVocê agora está namorando &d%name of {_sender}%&f."
-            send "&d&lETHERLOVE &8» &a%name of player% aceitou seu pedido de namoro!" to {_sender}
-            send "&fVocês agora estão &dNAMORANDO&f." to {_sender}
+            clearPendingAction(player)
+            send "&cO tipo deste pedido não é reconhecido pelo EtherLove."
             stop
 
-        if {_type} is "NOIVAR":
-            if canStartEngagementRequest({_sender}, player) is false:
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cA relação não atende mais aos requisitos para noivado."
-                stop
-
-            if hasActivePartner({_sender}) is false:
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cO vínculo do relacionamento não está mais ativo."
-                stop
-
-            if hasActivePartner(player) is false:
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cO vínculo do relacionamento não está mais ativo."
-                stop
-
-            if getActivePartnerUUID({_sender}) is not "%uuid of player%":
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cO vínculo do relacionamento mudou antes da resposta."
-                stop
-
-            if getActivePartnerUUID(player) is not "%uuid of {_sender}%":
-                removeRequest({_sender}, player)
-                clearIncomingRequestPointer(player)
-                send "&cO vínculo do relacionamento mudou antes da resposta."
-                stop
-
-            setEngagedRelationship({_sender}, player)
-            removeRequest({_sender}, player)
-            clearIncomingRequestPointer(player)
-
-            send "&d&lETHERLOVE &8» &aPedido aceito!"
-            send "&fVocê agora está noivo de &d%name of {_sender}%&f."
-            send "&d&lETHERLOVE &8» &a%name of player% aceitou seu pedido de noivado!" to {_sender}
-            send "&fVocês agora estão &dNOIVOS&f." to {_sender}
+        # --------------------------------------------------
+        # LOCAL / EVENT ACTIONS
+        # --------------------------------------------------
+        if {_pendingType} is "DATE_REVIEW":
+            handleDateReviewPositive(player)
             stop
 
-        if {_type} is "DIVORCIO":
-            acceptDivorce({_sender}, player)
-            removeRequest({_sender}, player)
-            clearIncomingRequestPointer(player)
-            send "&7Você aceitou o divórcio."
+        if {_pendingType} is "GIFT_CONFIRM":
+            confirmGiftSend(player)
             stop
 
-        removeRequest({_sender}, player)
-        clearIncomingRequestPointer(player)
-        send "&cO tipo deste pedido não é reconhecido pelo EtherLove."
+        if {_pendingType} is "GIFT_REVIEW":
+            handleGiftReviewPositive(player)
+            stop
 
+        clearPendingAction(player)
+        send "&cA ação pendente não é reconhecida pelo EtherLove."
 
 # ==========================================================
-# /LN — RECUSAR
+# /LN — GENERIC REJECT
 # ==========================================================
 
 command /ln:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
-
     trigger:
-        if hasIncomingRequestPointer(player) is false:
-            send "&cVocê não possui nenhum pedido de relacionamento pendente."
+        if hasPendingAction(player) is false:
+            send "&cVocê não possui nenhuma ação pendente do EtherLove."
             stop
 
-        set {_senderUUID} to getIncomingSenderUUID(player)
-        set {_senderName} to getIncomingSenderName(player)
+        set {_pendingType} to getPendingActionType(player)
 
-        delete {_sender}
-        loop all players:
-            if "%uuid of loop-player%" is {_senderUUID}:
-                set {_sender} to loop-player
-                stop loop
+        if {_pendingType} is "REQUEST":
+            set {_senderUUID} to getPendingSourceUUID(player)
+            set {_senderName} to getPendingSourceName(player)
 
-        if {_sender} is not set:
-            send "&c%{_senderName}% precisa estar online para processarmos a recusa."
-            send "&7O pedido continuará disponível até expirar."
-            stop
+            delete {_sender}
+            loop all players:
+                if "%uuid of loop-player%" is {_senderUUID}:
+                    set {_sender} to loop-player
+                    stop loop
 
-        if hasPendingRequest({_sender}, player) is false:
-            clearIncomingRequestPointer(player)
-            send "&cEsse pedido não existe mais ou expirou."
-            stop
+            if {_sender} is not set:
+                send "&c%{_senderName}% precisa estar online para processarmos esta resposta."
+                stop
 
-        set {_type} to getRequestType({_sender}, player)
+            if hasPendingRequest({_sender}, player) is false:
+                clearPendingAction(player)
+                send "&cEsse pedido não existe mais ou expirou."
+                stop
 
-        if {_type} is "NAMORAR":
-            addRelationshipPoints({_sender}, player, -50)
+            set {_type} to getRequestType({_sender}, player)
+
+            if {_type} is "NAMORAR":
+                addRelationshipPoints({_sender}, player, -50)
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                send "&cVocê recusou o pedido de namoro de &f%name of {_sender}%&c."
+                send "&7Relacionamento: &c-50 XP"
+                send "&d&lETHERLOVE &8» &c%name of player% recusou seu pedido de namoro." to {_sender}
+                stop
+
+            if {_type} is "NOIVAR":
+                addRelationshipPoints({_sender}, player, -50)
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                send "&cVocê recusou o pedido de noivado de &f%name of {_sender}%&c."
+                send "&7Relacionamento: &c-50 XP"
+                send "&d&lETHERLOVE &8» &c%name of player% recusou seu pedido de noivado." to {_sender}
+                stop
+
+            if {_type} is "DIVORCIO":
+                refuseDivorce({_sender}, player)
+                stop
+
+            if {_type} is "DATE":
+                removeRequest({_sender}, player)
+                clearPendingAction(player)
+                send "&7Você recusou o convite para encontro."
+                send "&7%name of player% recusou seu convite para encontro." to {_sender}
+                stop
+
             removeRequest({_sender}, player)
-            clearIncomingRequestPointer(player)
-
-            set {_xp} to getRelationshipPoints({_sender}, player)
-            set {_case} to getRelationshipStage({_sender}, player)
-
-            send "&cVocê recusou o pedido de namoro de &f%name of {_sender}%&c."
-            send "&7Relacionamento: &c-50 XP"
-            send "&d&lETHERLOVE &8» &c%name of player% recusou seu pedido de namoro." to {_sender}
-            send "&7Relacionamento: &c-50 XP" to {_sender}
-            send "&7XP atual: &f%{_xp}% &8| &7CASE: &f%{_case}%" to {_sender}
+            clearPendingAction(player)
+            send "&cO tipo deste pedido não é reconhecido pelo EtherLove."
             stop
 
-        if {_type} is "NOIVAR":
-            addRelationshipPoints({_sender}, player, -50)
-            removeRequest({_sender}, player)
-            clearIncomingRequestPointer(player)
-
-            set {_xp} to getRelationshipPoints({_sender}, player)
-            set {_case} to getRelationshipStage({_sender}, player)
-            set {_status} to getRelationshipStatus({_sender}, player)
-
-            send "&cVocê recusou o pedido de noivado de &f%name of {_sender}%&c."
-            send "&7Relacionamento: &c-50 XP"
-            send "&d&lETHERLOVE &8» &c%name of player% recusou seu pedido de noivado." to {_sender}
-            send "&7Relacionamento: &c-50 XP" to {_sender}
-            send "&7Atual: &f%{_xp}% XP &8| &fCASE %{_case}% &8| &f%{_status}%" to {_sender}
+        if {_pendingType} is "DATE_REVIEW":
+            handleDateReviewNegative(player)
             stop
 
-        if {_type} is "DIVORCIO":
-            refuseDivorce({_sender}, player)
+        if {_pendingType} is "GIFT_CONFIRM":
+            cancelGiftSend(player)
             stop
 
-        removeRequest({_sender}, player)
-        clearIncomingRequestPointer(player)
-        send "&cO tipo deste pedido não é reconhecido pelo EtherLove."
+        if {_pendingType} is "GIFT_REVIEW":
+            handleGiftReviewNegative(player)
+            stop
 
+        clearPendingAction(player)
+        send "&cA ação pendente não é reconhecida pelo EtherLove."
 
 # ==========================================================
-# MARRIAGE / DIVORCE IMPLEMENTATION
+# MARRIAGE / EVENTS IMPLEMENTATIONS
 # ==========================================================
-#
-# Implementação principal em:
 # 03b-etherlove-marriage-divorce.sk
+# 03c-etherlove-events.sk
 # ==========================================================
