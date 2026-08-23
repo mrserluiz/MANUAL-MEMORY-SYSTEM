@@ -1,43 +1,393 @@
 # ==========================================================
-# EtherLove Interactions
+# EtherLove
+# 02 - Interactions
 # ==========================================================
 #
-command /rp:
+# RESPONSABILIDADES:
+#
+# /RP
+# /AB
+# /BJ
+#
+# Este arquivo trabalha SOMENTE com a relação entre:
+#
+# PLAYER 1 + PLAYER 2
+#
+# Nunca modifica outras relações do jogador.
+#
+# ==========================================================
+#
+# FLUXO PADRÃO:
+#
+# PLAYER 1
+#    +
+# PLAYER 2
+#    ↓
+# RelationshipID
+#    ↓
+# Relationship exists?
+#    ↓
+# CASE permitido?
+#    ↓
+# Cooldown disponível?
+#    ↓
+# Executar interação
+#    ↓
+# Adicionar XP
+#    ↓
+# Atualizar last-interaction
+#    ↓
+# Atualizar CASE
+#
+# ==========================================================
+
+
+# ==========================================================
+# /RP
+# ==========================================================
+#
+# CASE 0+
+#
+# XP:
+# +10
+#
+# COOLDOWN:
+# 12 horas
+#
+# /RP é uma interação positiva básica.
+#
+# Uso:
+#
+# /rp <player>
+#
+# ==========================================================
+
+command /rp <player>:
+    permission: etherlove.use
+    permission message: &cVocê não possui permissão para usar este comando.
     trigger:
-        if canUseRP(player) is true:
-            startRPCooldown(player)
-            loop all players:
-                if loop-player is not player:
-                    if relationshipExists(player, loop-player) is true:
-                        addRelationshipPoints(player, loop-player, 10)
-            send "&dRelacionamentos fortalecidos!"
-        else:
-            send "&cEm cooldown."
+
+        set {_target} to arg-1
+
+        # --------------------------------------------------
+        # Não permitir interação consigo mesmo
+        # --------------------------------------------------
+
+        if {_target} is player:
+            send "&cVocê não pode usar uma interação consigo mesmo." to player
+            stop
+
+        # --------------------------------------------------
+        # RelationshipID
+        # --------------------------------------------------
+
+        set {_relationshipID} to etherID(player, {_target})
+
+        # --------------------------------------------------
+        # Criar relacionamento caso ainda não exista
+        #
+        # CASE 0 começa em 0 XP.
+        #
+        # --------------------------------------------------
+
+        if relationshipExists(player, {_target}) is false:
+            createRelationship(player, {_target})
+
+        # --------------------------------------------------
+        # Cooldown
+        # --------------------------------------------------
+
+        if canUseRP(player) is false:
+            send "&cVocê ainda está no cooldown do &d/RP&c." to player
+            stop
+
+        # --------------------------------------------------
+        # XP
+        # --------------------------------------------------
+
+        addRelationshipPoints(player, {_target}, 10)
+
+        # --------------------------------------------------
+        # Last Interaction
+        # --------------------------------------------------
+
+        set {etherlove.couple.%{_relationshipID}%.last-interaction} to now
+
+        # --------------------------------------------------
+        # Cooldown
+        # --------------------------------------------------
+
+        startRPCooldown(player)
+
+        # --------------------------------------------------
+        # Feedback
+        # --------------------------------------------------
+
+        set {_xp} to getRelationshipPoints(player, {_target})
+        set {_case} to getRelationshipStage(player, {_target})
+
+        send "&d&lETHERLOVE &8» &fVocê demonstrou carinho por &d%name of {_target}%&f." to player
+        send "&7Relacionamento: &f+10 XP" to player
+        send "&7XP atual: &d%{_xp}%&7/500" to player
+        send "&7CASE atual: &d%{_case}%" to player
+
+
+# ==========================================================
+# /AB
+# ==========================================================
+#
+# Disponível:
+#
+# CASE 1+
+#
+# XP:
+# +10
+#
+# COOLDOWN:
+# 50 segundos
+#
+# Uso:
+#
+# /ab <player>
+#
+# ==========================================================
 
 command /ab <player>:
+    permission: etherlove.use
+    permission message: &cVocê não possui permissão para usar este comando.
     trigger:
-        set {_t} to arg-1
-        if canUseAB(player) is true:
-            if hasStage(player, {_t}, 1) is true:
-                startABCooldown(player)
-                addRelationshipPoints(player, {_t}, 5)
-                play 15 of heart at location 1.5 meters above {_t} with offset 0.5, 0.5, 0.5 with extra 0.1
-                send "&fVocê abraçou &e%name of {_t}%"
-            else:
-                send "&cRequer estágio AMIGO."
-        else:
-            send "&cEm cooldown."
+
+        set {_target} to arg-1
+
+        # --------------------------------------------------
+        # Não permitir interação consigo mesmo
+        # --------------------------------------------------
+
+        if {_target} is player:
+            send "&cVocê não pode usar uma interação consigo mesmo." to player
+            stop
+
+        # --------------------------------------------------
+        # RelationshipID
+        # --------------------------------------------------
+
+        set {_relationshipID} to etherID(player, {_target})
+
+        # --------------------------------------------------
+        # Relationship obrigatório
+        # --------------------------------------------------
+
+        if relationshipExists(player, {_target}) is false:
+            send "&cVocê ainda não possui uma relação registrada com &f%name of {_target}%&c." to player
+            send "&7Use &f/RP %name of {_target}% &7para iniciar a relação." to player
+            stop
+
+        # --------------------------------------------------
+        # CASE
+        #
+        # /AB começa no CASE 1.
+        # --------------------------------------------------
+
+        set {_case} to getRelationshipStage(player, {_target})
+
+        if {_case} < 1:
+            send "&cO relacionamento ainda não alcançou o CASE necessário para usar &f/AB&c." to player
+            send "&7CASE necessário: &f1" to player
+            stop
+
+        # --------------------------------------------------
+        # Cooldown
+        # --------------------------------------------------
+
+        if canUseAB(player) is false:
+            send "&cVocê ainda está no cooldown do &d/AB&c." to player
+            stop
+
+        # --------------------------------------------------
+        # XP
+        # --------------------------------------------------
+
+        addRelationshipPoints(player, {_target}, 10)
+
+        # --------------------------------------------------
+        # Last Interaction
+        # --------------------------------------------------
+
+        set {etherlove.couple.%{_relationshipID}%.last-interaction} to now
+
+        # --------------------------------------------------
+        # Cooldown
+        # --------------------------------------------------
+
+        startABCooldown(player)
+
+        # --------------------------------------------------
+        # Feedback
+        # --------------------------------------------------
+
+        set {_xp} to getRelationshipPoints(player, {_target})
+        set {_newCase} to getRelationshipStage(player, {_target})
+
+        send "&d&lETHERLOVE &8» &fVocê teve uma interação especial com &d%name of {_target}%&f." to player
+        send "&7Relacionamento: &f+10 XP" to player
+        send "&7XP atual: &d%{_xp}%&7/500" to player
+        send "&7CASE atual: &d%{_newCase}%" to player
+
+
+# ==========================================================
+# /BJ
+# ==========================================================
+#
+# Disponível:
+#
+# CASE 3+
+#
+# XP:
+# +15
+#
+# COOLDOWN:
+# 80 segundos
+#
+# IMPORTANTE:
+#
+# O cooldown é POR RELACIONAMENTO.
+#
+# P1 → P2
+#
+# não interfere em:
+#
+# P1 → P3
+#
+# Uso:
+#
+# /bj <player>
+#
+# ==========================================================
 
 command /bj <player>:
+    permission: etherlove.use
+    permission message: &cVocê não possui permissão para usar este comando.
     trigger:
-        set {_t} to arg-1
-        if canUseBJ(player, {_t}) is true:
-            if hasStage(player, {_t}, 3) is true:
-                startBJCooldown(player, {_t})
-                addRelationshipPoints(player, {_t}, 15)
-                play 20 of heart at location 1.5 meters above {_t} with offset 0.3, 0.3, 0.3 with extra 0.2
-                send "&fVocê beijou &e%name of {_t}%"
-            else:
-                send "&cRequer estágio PAIXAO."
-        else:
-            send "&cEm cooldown."
+
+        set {_target} to arg-1
+
+        # --------------------------------------------------
+        # Não permitir interação consigo mesmo
+        # --------------------------------------------------
+
+        if {_target} is player:
+            send "&cVocê não pode usar uma interação consigo mesmo." to player
+            stop
+
+        # --------------------------------------------------
+        # RelationshipID
+        # --------------------------------------------------
+
+        set {_relationshipID} to etherID(player, {_target})
+
+        # --------------------------------------------------
+        # Relationship obrigatório
+        # --------------------------------------------------
+
+        if relationshipExists(player, {_target}) is false:
+            send "&cVocê ainda não possui uma relação registrada com &f%name of {_target}%&c." to player
+            stop
+
+        # --------------------------------------------------
+        # CASE
+        #
+        # /BJ começa no CASE 3.
+        # --------------------------------------------------
+
+        set {_case} to getRelationshipStage(player, {_target})
+
+        if {_case} < 3:
+            send "&cO relacionamento ainda não alcançou o CASE necessário para usar &f/BJ&c." to player
+            send "&7CASE necessário: &f3" to player
+            stop
+
+        # --------------------------------------------------
+        # Cooldown POR RELACIONAMENTO
+        # --------------------------------------------------
+
+        if canUseBJ(player, {_target}) is false:
+            send "&cVocê ainda está no cooldown do &d/BJ&c com &f%name of {_target}%&c." to player
+            stop
+
+        # --------------------------------------------------
+        # XP
+        # --------------------------------------------------
+
+        addRelationshipPoints(player, {_target}, 15)
+
+        # --------------------------------------------------
+        # Last Interaction
+        # --------------------------------------------------
+
+        set {etherlove.couple.%{_relationshipID}%.last-interaction} to now
+
+        # --------------------------------------------------
+        # Cooldown
+        # --------------------------------------------------
+
+        startBJCooldown(player, {_target})
+
+        # --------------------------------------------------
+        # Feedback
+        # --------------------------------------------------
+
+        set {_xp} to getRelationshipPoints(player, {_target})
+        set {_newCase} to getRelationshipStage(player, {_target})
+
+        send "&d&lETHERLOVE &8» &fVocê realizou uma interação íntima com &d%name of {_target}%&f." to player
+        send "&7Relacionamento: &f+15 XP" to player
+        send "&7XP atual: &d%{_xp}%&7/500" to player
+        send "&7CASE atual: &d%{_newCase}%" to player
+
+
+# ==========================================================
+# /DATE
+# ==========================================================
+#
+# NÃO IMPLEMENTADO NESTE BLOCO.
+#
+# Motivo:
+#
+# /DATE não é simplesmente +XP.
+#
+# O evento deverá possuir avaliação do desempenho:
+#
+# PLAYER 1
+#     ↓
+# inicia DATE
+#     ↓
+# PLAYER 2 participa
+#     ↓
+# avaliação
+#     ↓
+# XP positivo OU negativo
+#
+# As condições ainda serão implementadas em uma camada
+# própria de eventos.
+#
+# ==========================================================
+
+
+# ==========================================================
+# /PRESENTE
+# ==========================================================
+#
+# NÃO IMPLEMENTADO NESTE BLOCO.
+#
+# Assim como /DATE, PRESENTE deverá possuir avaliação
+# específica e poderá resultar em:
+#
+# XP positivo
+# OU
+# XP negativo
+#
+# Não devemos transformar essa mecânica em um simples
+# addRelationshipPoints() até que suas regras estejam
+# definidas.
+#
+# ==========================================================
