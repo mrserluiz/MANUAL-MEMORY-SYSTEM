@@ -1,411 +1,184 @@
 # ==========================================================
 # EtherLove
 # 03B - Marriage & Divorce
-# MARRIAGE / DIVORCE REBUILD 001
+# MARRIAGE / DIVORCE REBUILD 002
 # ==========================================================
-#
 # RESPONSABILIDADES:
-#
 # - Cerimonialista
 # - Evento de casamento
 # - CASE 5 -> CASE 6
 # - /DIVORCIO
 # - divórcio consensual
-# - preparação para homologação
-#
+# - homologação de divórcio por Cerimonialista
+# - /CDIVORCIO para cancelar processo
 # ==========================================================
 
-
 options:
-
-    # Tempo provisório para resposta ao divórcio.
     etherlove-divorce-request-time: 10 minutes
-
 
 # ==========================================================
 # MARRIAGE
 # ==========================================================
-#
-# CERIMONIALISTA
-# +
-# PLAYER 1
-# +
-# PLAYER 2
-#
-# REQUISITOS:
-#
-# CASE 5
-# STATUS NOIVO
-# vínculo ativo entre os dois
-#
-# ==========================================================
 
 command /casar <player> <player>:
-
     permission: etherlove.ceremonialist
-
     permission message: &cVocê não possui permissão de Cerimonialista.
-
     trigger:
-
         set {_p1} to arg-1
         set {_p2} to arg-2
 
-
-        # --------------------------------------------------
-        # Não permitir mesma pessoa
-        # --------------------------------------------------
-
         if {_p1} is {_p2}:
-
             send "&cVocê precisa informar dois jogadores diferentes."
-
             stop
-
-
-        # --------------------------------------------------
-        # Cerimonialista deve ser terceiro participante
-        # --------------------------------------------------
 
         if {_p1} is player:
-
             send "&cO Cerimonialista não pode ser um dos noivos."
-
             stop
-
 
         if {_p2} is player:
-
             send "&cO Cerimonialista não pode ser um dos noivos."
-
             stop
-
-
-        # --------------------------------------------------
-        # Relationship
-        # --------------------------------------------------
 
         if relationshipExists({_p1}, {_p2}) is false:
-
             send "&cEsses jogadores não possuem uma relação válida."
-
             stop
-
 
         set {_id} to etherID({_p1}, {_p2})
-
         set {_stage} to getRelationshipStage({_p1}, {_p2})
-
         set {_status} to getRelationshipStatus({_p1}, {_p2})
 
-
-        # --------------------------------------------------
-        # CASE 5 / NOIVO
-        # --------------------------------------------------
-
         if {_stage} is not 5:
-
             send "&cO casal precisa estar no CASE 5."
-
             stop
-
 
         if {_status} is not "NOIVO":
-
             send "&cO casal precisa possuir STATUS NOIVO."
-
             stop
-
-
-        # --------------------------------------------------
-        # Active Partner Index
-        # --------------------------------------------------
 
         if hasActivePartner({_p1}) is false:
-
             send "&c%name of {_p1}% não possui parceiro ativo registrado."
-
             stop
-
 
         if hasActivePartner({_p2}) is false:
-
             send "&c%name of {_p2}% não possui parceiro ativo registrado."
-
             stop
-
 
         if getActivePartnerUUID({_p1}) is not "%uuid of {_p2}%":
-
             send "&cO vínculo de %name of {_p1}% não corresponde ao casal."
-
             stop
-
 
         if getActivePartnerUUID({_p2}) is not "%uuid of {_p1}%":
-
             send "&cO vínculo de %name of {_p2}% não corresponde ao casal."
-
             stop
-
-
-        # ==================================================
-        # CEREMONIAL EVENT
-        # ==================================================
-        #
-        # Ambos já aceitaram o noivado anteriormente.
-        #
-        # O Cerimonialista conduz a transição formal.
-        #
-        # ==================================================
 
         setMarriedRelationship({_p1}, {_p2})
 
-
-        # --------------------------------------------------
-        # Marriage metadata
-        # --------------------------------------------------
-
         set {etherlove.couple.%{_id}%.married-at} to now
-
         set {etherlove.couple.%{_id}%.ceremonialist} to "%uuid of player%"
 
-
-        # --------------------------------------------------
-        # Feedback
-        # --------------------------------------------------
-
         broadcast "&d&l❤ ETHERLOVE ❤"
-
         broadcast "&f%name of {_p1}% &de &f%name of {_p2}% &dagora estão CASADOS!"
-
         broadcast "&7Cerimônia realizada por &f%name of player%&7."
-
 
 # ==========================================================
 # DIVORCE CASE DATA
 # ==========================================================
-#
-# Estrutura:
-#
-# {etherlove.divorce.%relationshipID%.requested-by}
-# {etherlove.divorce.%relationshipID%.requested-at}
-# {etherlove.divorce.%relationshipID%.status}
-#
-# STATUS:
-#
-# PENDING
-# REFUSED
-#
-# ==========================================================
-
 
 function createDivorceCase(requester: player):
-
     set {_partnerUUID} to getActivePartnerUUID({_requester})
-
     set {_id} to etherIDFromUUIDs("%uuid of {_requester}%", {_partnerUUID})
 
     set {etherlove.divorce.%{_id}%.requested-by} to "%uuid of {_requester}%"
-
     set {etherlove.divorce.%{_id}%.requested-at} to now
-
     set {etherlove.divorce.%{_id}%.review-after} to {@etherlove-divorce-request-time} after now
-
     set {etherlove.divorce.%{_id}%.status} to "PENDING"
 
-
 function removeDivorceCaseByID(id: text):
-
     delete {etherlove.divorce.%{_id}%.requested-by}
-
     delete {etherlove.divorce.%{_id}%.requested-at}
-
     delete {etherlove.divorce.%{_id}%.review-after}
-
     delete {etherlove.divorce.%{_id}%.status}
-
 
 # ==========================================================
 # /DIVORCIO
 # ==========================================================
 
 command /divorcio:
-
     permission: etherlove.use
-
     permission message: &cVocê não possui permissão para usar este comando.
-
     trigger:
-
-
-        # --------------------------------------------------
-        # Active partner
-        # --------------------------------------------------
-
         if hasActivePartner(player) is false:
-
             send "&cVocê não possui um relacionamento comprometido ativo."
-
             stop
-
 
         set {_partnerUUID} to getActivePartnerUUID(player)
-
         set {_id} to etherIDFromUUIDs("%uuid of player%", {_partnerUUID})
 
-
-        # --------------------------------------------------
-        # Marriage validation using persistent data
-        # --------------------------------------------------
-
         if {etherlove.couple.%{_id}%.stage} is not 6:
-
             send "&cO comando /DIVORCIO é exclusivo para relacionamentos CASADOS."
-
             stop
-
 
         if {etherlove.couple.%{_id}%.status} is not "CASADO":
-
             send "&cO STATUS deste relacionamento não é CASADO."
-
             stop
-
-
-        # --------------------------------------------------
-        # Existing divorce case
-        # --------------------------------------------------
 
         if {etherlove.divorce.%{_id}%.status} is set:
-
             send "&cJá existe um processo de divórcio aberto para este casamento."
-
             stop
-
 
         createDivorceCase(player)
 
-
-        # --------------------------------------------------
-        # Find partner online
-        # --------------------------------------------------
-
         delete {_partner}
-
         loop all players:
-
             if "%uuid of loop-player%" is {_partnerUUID}:
-
                 set {_partner} to loop-player
-
                 stop loop
 
-
-        # ==================================================
-        # PARTNER ONLINE
-        # ==================================================
-
         if {_partner} is set:
-
-            # Usa o Request System oficial do 01.
-
             createRequest(player, {_partner}, "DIVORCIO")
-
             setIncomingRequestPointer(player, {_partner})
 
-
             send "&d&lETHERLOVE &8» &fPedido de divórcio enviado para &d%name of {_partner}%&f."
-
             send "&7O outro jogador poderá aceitar ou recusar."
-
-
             send "&c&lETHERLOVE &8» &f%name of player% solicitou o divórcio." to {_partner}
-
             send "&7Use &a/LS &7para aceitar ou &c/LN &7para recusar." to {_partner}
-
             stop
 
-
-        # ==================================================
-        # PARTNER OFFLINE
-        # ==================================================
-        #
-        # O processo permanece registrado.
-        #
-        # Um Cerimonialista poderá futuramente homologar.
-        #
-        # ==================================================
-
         send "&d&lETHERLOVE &8» &fPedido de divórcio registrado."
-
         send "&7Seu parceiro está offline."
-
-        send "&7O processo poderá ser analisado por um Cerimonialista."
-
+        send "&7Após o prazo de revisão, um Cerimonialista poderá homologar o processo."
 
 # ==========================================================
 # CONSENSUAL DIVORCE
 # ==========================================================
-#
-# Esta função será chamada pelo /LS após identificar
-# TYPE = DIVORCIO.
-#
-# ==========================================================
 
 function acceptDivorce(requester: player, receiver: player):
-
     set {_id} to etherID({_requester}, {_receiver})
-
     set {_uuid1} to "%uuid of {_requester}%"
-
     set {_uuid2} to "%uuid of {_receiver}%"
-
-
-    # ------------------------------------------------------
-    # Validate marriage
-    # ------------------------------------------------------
 
     if {etherlove.couple.%{_id}%.stage} is not 6:
         return
 
-
     if {etherlove.couple.%{_id}%.status} is not "CASADO":
         return
 
-
-    # ------------------------------------------------------
-    # Reset
-    # ------------------------------------------------------
-
     resetRelationshipByUUIDs({_uuid1}, {_uuid2})
 
-
-    # ------------------------------------------------------
-    # Divorce metadata
-    # ------------------------------------------------------
-
     set {etherlove.couple.%{_id}%.divorced-at} to now
-
     delete {etherlove.couple.%{_id}%.married-at}
-
     delete {etherlove.couple.%{_id}%.ceremonialist}
-
 
     removeDivorceCaseByID({_id})
 
-
     send "&7O casamento foi encerrado por acordo entre os dois jogadores." to {_requester}
-
     send "&7O casamento foi encerrado por acordo entre os dois jogadores." to {_receiver}
-
 
 # ==========================================================
 # DIVORCE REFUSAL
 # ==========================================================
 
 function refuseDivorce(requester: player, receiver: player):
-
     set {_id} to etherID({_requester}, {_receiver})
 
     if {etherlove.divorce.%{_id}%.status} is not set:
@@ -414,92 +187,175 @@ function refuseDivorce(requester: player, receiver: player):
     set {etherlove.divorce.%{_id}%.status} to "REFUSED"
 
     removeRequest({_requester}, {_receiver})
-
     clearIncomingRequestPointer({_receiver})
 
-
     send "&cVocê recusou o pedido de divórcio." to {_receiver}
-
     send "&cSeu pedido de divórcio foi recusado." to {_requester}
-
-    send "&7O processo permanece registrado para possível análise de um Cerimonialista." to {_requester}
-
+    send "&7O processo permanece aberto e poderá ser homologado por um Cerimonialista após o prazo de revisão." to {_requester}
 
 # ==========================================================
-# CEREMONIALIST DIVORCE REVIEW
-# ==========================================================
-#
-# REGRA PROVISÓRIA:
-#
-# O comando abaixo NÃO conclui o divórcio ainda.
-#
-# Motivo:
-#
-# ainda não fechamos definitivamente quando o
-# Cerimonialista poderá substituir o consentimento
-# do outro jogador:
-#
-# - imediatamente após recusa?
-# - após determinado prazo?
-# - quando parceiro estiver offline?
-#
-# Portanto a fundação está pronta, mas a homologação
-# unilateral fica BLOQUEADA até definição oficial.
-#
+# CEREMONIALIST FINALIZATION
 # ==========================================================
 
+function homologateDivorceByUUIDs(uuid1: text, uuid2: text, ceremonialistUUID: text):
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
 
-command /divorciostatus <player>:
+    if {etherlove.couple.%{_id}%.stage} is not 6:
+        return
 
+    if {etherlove.couple.%{_id}%.status} is not "CASADO":
+        return
+
+    resetRelationshipByUUIDs({_uuid1}, {_uuid2})
+
+    set {etherlove.couple.%{_id}%.divorced-at} to now
+    set {etherlove.couple.%{_id}%.divorce-approved-by} to {_ceremonialistUUID}
+
+    delete {etherlove.couple.%{_id}%.married-at}
+    delete {etherlove.couple.%{_id}%.ceremonialist}
+
+    removeDivorceCaseByID({_id})
+
+# ==========================================================
+# /HOMOLOGARDIVORCIO
+# ==========================================================
+
+command /homologardivorcio <player>:
     permission: etherlove.ceremonialist
-
     permission message: &cVocê não possui permissão de Cerimonialista.
-
     trigger:
-
         set {_requester} to arg-1
 
+        if {_requester} is player:
+            send "&cVocê não pode homologar seu próprio divórcio."
+            stop
 
         if hasActivePartner({_requester}) is false:
-
-            send "&cEsse jogador não possui parceiro ativo."
-
+            send "&cO solicitante não possui parceiro ativo."
             stop
 
-
+        set {_requesterUUID} to "%uuid of {_requester}%"
         set {_partnerUUID} to getActivePartnerUUID({_requester})
+        set {_ceremonialistUUID} to "%uuid of player%"
+        set {_id} to etherIDFromUUIDs({_requesterUUID}, {_partnerUUID})
 
-        set {_id} to etherIDFromUUIDs("%uuid of {_requester}%", {_partnerUUID})
-
+        if {_ceremonialistUUID} is {_partnerUUID}:
+            send "&cVocê não pode homologar o divórcio do seu próprio casamento."
+            stop
 
         if {etherlove.divorce.%{_id}%.status} is not set:
-
-            send "&cNão existe processo de divórcio aberto."
-
+            send "&cNão existe processo de divórcio aberto para este casal."
             stop
 
+        if {etherlove.divorce.%{_id}%.requested-by} is not {_requesterUUID}:
+            send "&cO jogador informado não é o solicitante deste processo."
+            stop
+
+        if {etherlove.couple.%{_id}%.stage} is not 6:
+            send "&cEsta relação não está mais no CASE 6."
+            stop
+
+        if {etherlove.couple.%{_id}%.status} is not "CASADO":
+            send "&cEsta relação não possui mais STATUS CASADO."
+            stop
+
+        if {etherlove.divorce.%{_id}%.review-after} is not set:
+            send "&cO processo está sem data válida de revisão."
+            stop
+
+        if {etherlove.divorce.%{_id}%.review-after} has not passed:
+            send "&cEste processo ainda está dentro do período de resposta."
+            send "&7Aguarde até: &f%{etherlove.divorce.%{_id}%.review-after}%"
+            stop
+
+        set {_processStatus} to {etherlove.divorce.%{_id}%.status}
+
+        if {_processStatus} is not "PENDING":
+            if {_processStatus} is not "REFUSED":
+                send "&cEste processo não pode ser homologado."
+                stop
+
+        homologateDivorceByUUIDs({_requesterUUID}, {_partnerUUID}, {_ceremonialistUUID})
+
+        broadcast "&d&lETHERLOVE &8» &fUm casamento foi oficialmente encerrado."
+        send "&aDivórcio homologado com sucesso." to player
+        send "&7O seu processo de divórcio foi homologado por &f%name of player%&7." to {_requester}
+
+# ==========================================================
+# /CDIVORCIO
+# ==========================================================
+# Cancela o processo antes da homologação.
+# Somente quem iniciou pode cancelar.
+# ==========================================================
+
+command /cdivorcio:
+    permission: etherlove.use
+    permission message: &cVocê não possui permissão para usar este comando.
+    trigger:
+        if hasActivePartner(player) is false:
+            send "&cVocê não possui casamento ativo."
+            stop
+
+        set {_requesterUUID} to "%uuid of player%"
+        set {_partnerUUID} to getActivePartnerUUID(player)
+        set {_id} to etherIDFromUUIDs({_requesterUUID}, {_partnerUUID})
+
+        if {etherlove.divorce.%{_id}%.status} is not set:
+            send "&cNão existe processo de divórcio aberto."
+            stop
+
+        if {etherlove.divorce.%{_id}%.requested-by} is not {_requesterUUID}:
+            send "&cSomente quem iniciou o processo pode cancelá-lo."
+            stop
+
+        delete {_partner}
+        loop all players:
+            if "%uuid of loop-player%" is {_partnerUUID}:
+                set {_partner} to loop-player
+                stop loop
+
+        if {_partner} is set:
+            removeRequest(player, {_partner})
+            clearIncomingRequestPointer({_partner})
+
+        removeDivorceCaseByID({_id})
+
+        send "&aSeu pedido de divórcio foi cancelado."
+
+        if {_partner} is set:
+            send "&7%name of player% cancelou o pedido de divórcio." to {_partner}
+
+# ==========================================================
+# /DIVORCIOSTATUS
+# ==========================================================
+
+command /divorciostatus <player>:
+    permission: etherlove.ceremonialist
+    permission message: &cVocê não possui permissão de Cerimonialista.
+    trigger:
+        set {_requester} to arg-1
+
+        if hasActivePartner({_requester}) is false:
+            send "&cEsse jogador não possui parceiro ativo."
+            stop
+
+        set {_partnerUUID} to getActivePartnerUUID({_requester})
+        set {_id} to etherIDFromUUIDs("%uuid of {_requester}%", {_partnerUUID})
+
+        if {etherlove.divorce.%{_id}%.status} is not set:
+            send "&cNão existe processo de divórcio aberto."
+            stop
 
         set {_status} to {etherlove.divorce.%{_id}%.status}
-
         set {_requestedAt} to {etherlove.divorce.%{_id}%.requested-at}
-
         set {_reviewAfter} to {etherlove.divorce.%{_id}%.review-after}
 
-
         send "&8&m--------------------------------"
-
         send "&d&lETHERLOVE &7- DIVÓRCIO"
-
         send "&7RelationshipID: &f%{_id}%"
-
         send "&7Solicitante: &f%name of {_requester}%"
-
         send "&7Partner UUID: &f%{_partnerUUID}%"
-
         send "&7Status: &f%{_status}%"
-
         send "&7Criado: &f%{_requestedAt}%"
-
         send "&7Revisão após: &f%{_reviewAfter}%"
-
         send "&8&m--------------------------------"
