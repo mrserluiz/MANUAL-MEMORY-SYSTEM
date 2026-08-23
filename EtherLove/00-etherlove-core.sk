@@ -1,21 +1,17 @@
 # ==========================================================
 # EtherLove Core - REBUILD 001
-# CORE REVISION 004 - UUID DIVORCE HELPERS
+# CORE REVISION 005 - OFFLINE UUID RELATIONSHIP API
 # ==========================================================
-#
-# RESPONSABILIDADE DESTE ARQUIVO:
+# RESPONSABILIDADES:
 # - RelationshipID
 # - criação e existência de relacionamentos
 # - armazenamento de XP
 # - cálculo de CASE
 # - STATUS
-# - progressão
-# - regressão
-# - transições fundamentais
+# - progressão / regressão
 # - exclusividade via Active Partner Index
+# - operações por UUID para eventos offline-safe
 # - reset da relação
-# - helpers utilizados pelos demais módulos
-#
 # ==========================================================
 
 options:
@@ -28,7 +24,6 @@ options:
     engaged-min-xp: 350
     engagement-request-xp: 500
 
-
 # ==========================================================
 # RELATIONSHIP ID
 # ==========================================================
@@ -36,43 +31,34 @@ options:
 function etherID(p1: player, p2: player) :: text:
     set {_u1} to "%uuid of {_p1}%"
     set {_u2} to "%uuid of {_p2}%"
-
-    if {_u1} is less than {_u2}:
-        return "%{_u1}%::%{_u2}%"
-
-    return "%{_u2}%::%{_u1}%"
-
+    return etherIDFromUUIDs({_u1}, {_u2})
 
 function etherIDFromUUIDs(uuid1: text, uuid2: text) :: text:
     if {_uuid1} is less than {_uuid2}:
         return "%{_uuid1}%::%{_uuid2}%"
-
     return "%{_uuid2}%::%{_uuid1}%"
-
 
 # ==========================================================
 # RELATIONSHIP EXISTENCE / CREATION
 # ==========================================================
 
 function relationshipExists(p1: player, p2: player) :: boolean:
-    set {_id} to etherID({_p1}, {_p2})
+    return relationshipExistsByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
+function relationshipExistsByUUIDs(uuid1: text, uuid2: text) :: boolean:
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
     if {etherlove.couple.%{_id}%.created} is set:
         return true
-
     return false
-
 
 function createRelationship(p1: player, p2: player):
     set {_id} to etherID({_p1}, {_p2})
-
     if {etherlove.couple.%{_id}%.created} is not set:
         set {etherlove.couple.%{_id}%.created} to now
         set {etherlove.couple.%{_id}%.points} to 0
         set {etherlove.couple.%{_id}%.stage} to 0
         set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
         set {etherlove.couple.%{_id}%.last-interaction} to now
-
 
 # ==========================================================
 # XP STAGE CALCULATOR
@@ -87,21 +73,54 @@ function calculateXPStage(points: number) :: number:
         return 1
     return 0
 
-
 # ==========================================================
-# XP
+# PLAYER XP API
 # ==========================================================
 
 function getRelationshipPoints(p1: player, p2: player) :: number:
     createRelationship({_p1}, {_p2})
-    set {_id} to etherID({_p1}, {_p2})
-    return {etherlove.couple.%{_id}%.points}
-
+    return getRelationshipPointsByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
 function setRelationshipPoints(p1: player, p2: player, points: number):
     createRelationship({_p1}, {_p2})
-    set {_id} to etherID({_p1}, {_p2})
-    set {_stage} to getRelationshipStage({_p1}, {_p2})
+    setRelationshipPointsByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%", {_points})
+
+function addRelationshipPoints(p1: player, p2: player, amount: number):
+    createRelationship({_p1}, {_p2})
+    addRelationshipPointsByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%", {_amount})
+
+# ==========================================================
+# UUID / OFFLINE-SAFE XP API
+# ==========================================================
+# Esta camada permite que MAILBOX, avaliações e divórcio
+# alterem uma relação mesmo quando um participante estiver
+# offline. CASE 6 continua com XP congelado.
+# ==========================================================
+
+function getRelationshipPointsByUUIDs(uuid1: text, uuid2: text) :: number:
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
+    if {etherlove.couple.%{_id}%.points} is not set:
+        return 0
+    return {etherlove.couple.%{_id}%.points}
+
+function getRelationshipStageByUUIDs(uuid1: text, uuid2: text) :: number:
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
+    if {etherlove.couple.%{_id}%.stage} is not set:
+        return 0
+    return {etherlove.couple.%{_id}%.stage}
+
+function getRelationshipStatusByUUIDs(uuid1: text, uuid2: text) :: text:
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
+    if {etherlove.couple.%{_id}%.status} is not set:
+        return "SOLTEIRO"
+    return {etherlove.couple.%{_id}%.status}
+
+function setRelationshipPointsByUUIDs(uuid1: text, uuid2: text, points: number):
+    if relationshipExistsByUUIDs({_uuid1}, {_uuid2}) is false:
+        return
+
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
+    set {_stage} to getRelationshipStageByUUIDs({_uuid1}, {_uuid2})
 
     if {_stage} is 6:
         return
@@ -113,56 +132,43 @@ function setRelationshipPoints(p1: player, p2: player, points: number):
 
     set {etherlove.couple.%{_id}%.points} to {_points}
     set {etherlove.couple.%{_id}%.last-interaction} to now
-    updateRelationshipStage({_p1}, {_p2})
+    updateRelationshipStageByUUIDs({_uuid1}, {_uuid2})
 
-
-function addRelationshipPoints(p1: player, p2: player, amount: number):
-    createRelationship({_p1}, {_p2})
-    if getRelationshipStage({_p1}, {_p2}) is 6:
+function addRelationshipPointsByUUIDs(uuid1: text, uuid2: text, amount: number):
+    if relationshipExistsByUUIDs({_uuid1}, {_uuid2}) is false:
+        return
+    if getRelationshipStageByUUIDs({_uuid1}, {_uuid2}) is 6:
         return
 
-    set {_current} to getRelationshipPoints({_p1}, {_p2})
+    set {_current} to getRelationshipPointsByUUIDs({_uuid1}, {_uuid2})
     add {_amount} to {_current}
-    setRelationshipPoints({_p1}, {_p2}, {_current})
-
+    setRelationshipPointsByUUIDs({_uuid1}, {_uuid2}, {_current})
 
 # ==========================================================
-# CASE
+# CASE / STATUS PLAYER API
 # ==========================================================
 
 function getRelationshipStage(p1: player, p2: player) :: number:
     createRelationship({_p1}, {_p2})
-    set {_id} to etherID({_p1}, {_p2})
-    return {etherlove.couple.%{_id}%.stage}
-
+    return getRelationshipStageByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
 function setRelationshipStage(p1: player, p2: player, stage: number):
     createRelationship({_p1}, {_p2})
     set {_id} to etherID({_p1}, {_p2})
-
     if {_stage} < 0:
         set {_stage} to 0
     if {_stage} > 6:
         set {_stage} to 6
-
     set {etherlove.couple.%{_id}%.stage} to {_stage}
-
-
-# ==========================================================
-# STATUS
-# ==========================================================
 
 function getRelationshipStatus(p1: player, p2: player) :: text:
     createRelationship({_p1}, {_p2})
-    set {_id} to etherID({_p1}, {_p2})
-    return {etherlove.couple.%{_id}%.status}
-
+    return getRelationshipStatusByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
 function setRelationshipStatus(p1: player, p2: player, status: text):
     createRelationship({_p1}, {_p2})
     set {_id} to etherID({_p1}, {_p2})
     set {etherlove.couple.%{_id}%.status} to {_status}
-
 
 # ==========================================================
 # ACTIVE PARTNER INDEX
@@ -173,30 +179,27 @@ function hasActivePartner(p: player) :: boolean:
         return true
     return false
 
-
 function getActivePartnerUUID(p: player) :: text:
     if {etherlove.player.%uuid of {_p}%.partner} is set:
         return {etherlove.player.%uuid of {_p}%.partner}
     return ""
 
-
 function getActiveRelationshipID(p: player) :: text:
     if hasActivePartner({_p}) is false:
         return ""
-
     set {_partnerUUID} to getActivePartnerUUID({_p})
     return etherIDFromUUIDs("%uuid of {_p}%", {_partnerUUID})
-
 
 function bindActivePartners(p1: player, p2: player):
     set {etherlove.player.%uuid of {_p1}%.partner} to "%uuid of {_p2}%"
     set {etherlove.player.%uuid of {_p2}%.partner} to "%uuid of {_p1}%"
 
-
 function clearActivePartners(p1: player, p2: player):
-    delete {etherlove.player.%uuid of {_p1}%.partner}
-    delete {etherlove.player.%uuid of {_p2}%.partner}
+    clearActivePartnersByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
+function clearActivePartnersByUUIDs(uuid1: text, uuid2: text):
+    delete {etherlove.player.%{_uuid1}%.partner}
+    delete {etherlove.player.%{_uuid2}%.partner}
 
 # ==========================================================
 # UPDATE RELATIONSHIP CASE / STATUS
@@ -204,43 +207,53 @@ function clearActivePartners(p1: player, p2: player):
 
 function updateRelationshipStage(p1: player, p2: player):
     createRelationship({_p1}, {_p2})
-    set {_points} to getRelationshipPoints({_p1}, {_p2})
-    set {_stage} to getRelationshipStage({_p1}, {_p2})
+    updateRelationshipStageByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
-    if {_stage} is 6:
-        setRelationshipStatus({_p1}, {_p2}, "CASADO")
+function updateRelationshipStageByUUIDs(uuid1: text, uuid2: text):
+    if relationshipExistsByUUIDs({_uuid1}, {_uuid2}) is false:
         return
 
+    set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
+    set {_points} to getRelationshipPointsByUUIDs({_uuid1}, {_uuid2})
+    set {_stage} to getRelationshipStageByUUIDs({_uuid1}, {_uuid2})
+
+    # CASE 6 — CASADO / XP congelado
+    if {_stage} is 6:
+        set {etherlove.couple.%{_id}%.status} to "CASADO"
+        return
+
+    # CASE 5 — NOIVO
     if {_stage} is 5:
         if {_points} >= {@engaged-min-xp}:
-            setRelationshipStatus({_p1}, {_p2}, "NOIVO")
+            set {etherlove.couple.%{_id}%.status} to "NOIVO"
             return
 
-        setRelationshipStage({_p1}, {_p2}, 4)
-        setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+        set {etherlove.couple.%{_id}%.stage} to 4
+        set {etherlove.couple.%{_id}%.status} to "NAMORANDO"
 
         if {_points} < {@dating-min-xp}:
             set {_xpStage} to calculateXPStage({_points})
-            setRelationshipStage({_p1}, {_p2}, {_xpStage})
-            setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
-            clearActivePartners({_p1}, {_p2})
+            set {etherlove.couple.%{_id}%.stage} to {_xpStage}
+            set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
+            clearActivePartnersByUUIDs({_uuid1}, {_uuid2})
         return
 
+    # CASE 4 — NAMORANDO
     if {_stage} is 4:
         if {_points} >= {@dating-min-xp}:
-            setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+            set {etherlove.couple.%{_id}%.status} to "NAMORANDO"
             return
 
         set {_xpStage} to calculateXPStage({_points})
-        setRelationshipStage({_p1}, {_p2}, {_xpStage})
-        setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
-        clearActivePartners({_p1}, {_p2})
+        set {etherlove.couple.%{_id}%.stage} to {_xpStage}
+        set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
+        clearActivePartnersByUUIDs({_uuid1}, {_uuid2})
         return
 
+    # CASE 0-3 — XP driven
     set {_xpStage} to calculateXPStage({_points})
-    setRelationshipStage({_p1}, {_p2}, {_xpStage})
-    setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
-
+    set {etherlove.couple.%{_id}%.stage} to {_xpStage}
+    set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
 
 # ==========================================================
 # RELATIONSHIP STATE TRANSITIONS
@@ -252,18 +265,15 @@ function setDatingRelationship(p1: player, p2: player):
     setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
     bindActivePartners({_p1}, {_p2})
 
-
 function setEngagedRelationship(p1: player, p2: player):
     createRelationship({_p1}, {_p2})
     setRelationshipStage({_p1}, {_p2}, 5)
     setRelationshipStatus({_p1}, {_p2}, "NOIVO")
 
-
 function setMarriedRelationship(p1: player, p2: player):
     createRelationship({_p1}, {_p2})
     setRelationshipStage({_p1}, {_p2}, 6)
     setRelationshipStatus({_p1}, {_p2}, "CASADO")
-
 
 # ==========================================================
 # RESET RELATIONSHIP
@@ -271,27 +281,15 @@ function setMarriedRelationship(p1: player, p2: player):
 
 function resetRelationship(p1: player, p2: player):
     createRelationship({_p1}, {_p2})
-    set {_id} to etherID({_p1}, {_p2})
-
-    set {etherlove.couple.%{_id}%.points} to 0
-    set {etherlove.couple.%{_id}%.stage} to 0
-    set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
-    set {etherlove.couple.%{_id}%.last-interaction} to now
-
-    clearActivePartners({_p1}, {_p2})
-
+    resetRelationshipByUUIDs("%uuid of {_p1}%", "%uuid of {_p2}%")
 
 function resetRelationshipByUUIDs(uuid1: text, uuid2: text):
     set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
-
     set {etherlove.couple.%{_id}%.points} to 0
     set {etherlove.couple.%{_id}%.stage} to 0
     set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
     set {etherlove.couple.%{_id}%.last-interaction} to now
-
-    delete {etherlove.player.%{_uuid1}%.partner}
-    delete {etherlove.player.%{_uuid2}%.partner}
-
+    clearActivePartnersByUUIDs({_uuid1}, {_uuid2})
 
 # ==========================================================
 # HELPERS
@@ -314,13 +312,10 @@ function getStageName(stage: number) :: text:
         return "CASADO"
     return "DESCONHECIDO"
 
-
 function hasStage(p1: player, p2: player, minimum: number) :: boolean:
-    set {_current} to getRelationshipStage({_p1}, {_p2})
-    if {_current} >= {_minimum}:
+    if getRelationshipStage({_p1}, {_p2}) >= {_minimum}:
         return true
     return false
-
 
 function canStartDatingRequest(p1: player, p2: player) :: boolean:
     if relationshipExists({_p1}, {_p2}) is false:
@@ -333,7 +328,6 @@ function canStartDatingRequest(p1: player, p2: player) :: boolean:
         return false
     return true
 
-
 function canStartEngagementRequest(p1: player, p2: player) :: boolean:
     if relationshipExists({_p1}, {_p2}) is false:
         return false
@@ -345,13 +339,10 @@ function canStartEngagementRequest(p1: player, p2: player) :: boolean:
         return false
     return true
 
-
 function isCommittedRelationship(p1: player, p2: player) :: boolean:
-    set {_stage} to getRelationshipStage({_p1}, {_p2})
-    if {_stage} >= 4:
+    if getRelationshipStage({_p1}, {_p2}) >= 4:
         return true
     return false
-
 
 function isDatingRelationship(p1: player, p2: player) :: boolean:
     if getRelationshipStage({_p1}, {_p2}) is 4:
@@ -359,20 +350,17 @@ function isDatingRelationship(p1: player, p2: player) :: boolean:
             return true
     return false
 
-
 function isEngagedRelationship(p1: player, p2: player) :: boolean:
     if getRelationshipStage({_p1}, {_p2}) is 5:
         if getRelationshipStatus({_p1}, {_p2}) is "NOIVO":
             return true
     return false
 
-
 function isMarriedRelationship(p1: player, p2: player) :: boolean:
     if getRelationshipStage({_p1}, {_p2}) is 6:
         if getRelationshipStatus({_p1}, {_p2}) is "CASADO":
             return true
     return false
-
 
 # ==========================================================
 # DEBUG
@@ -382,7 +370,6 @@ command /eldebug <player>:
     permission: etherlove.admin
     trigger:
         set {_target} to arg-1
-
         loop all players:
             if loop-player is not {_target}:
                 if relationshipExists({_target}, loop-player) is true:
@@ -391,16 +378,12 @@ command /eldebug <player>:
                     set {_status} to getRelationshipStatus({_target}, loop-player)
                     send "&dDebug: %name of {_target}% + %name of loop-player% | CASE: %{_stage}% (%getStageName({_stage})%) | XP: %{_points}% | STATUS: %{_status}%"
 
-
 # ==========================================================
 # FUTURE DATA STORAGE LAYER
 # SQL / SQLITE / MYSQL / MARIADB
 # ==========================================================
 # STATUS: PLANNED / NOT IMPLEMENTED
-#
-# EtherLove atualmente utiliza variáveis persistentes nativas
-# do Skript como armazenamento oficial.
-#
-# Future storage must stay behind Core functions.
+# All modules must continue using Core APIs so the storage
+# backend can later migrate from Skript Variables to SQL.
 # RelationshipID remains the logical primary key.
 # ==========================================================
