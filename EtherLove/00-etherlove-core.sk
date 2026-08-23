@@ -1,3 +1,700 @@
+
+# ==========================================================
+# EtherLove Core - REBUILD 001
+# CORE REVISION 002
+# ==========================================================
+#
+# CORE RULES
+#
+# - Relationship data belongs to a pair of players.
+# - XP, CASE and STATUS are relationship-specific.
+# - UUID order makes A+B equal to B+A.
+# - Normal XP is clamped between 0 and 500.
+# - CASE 0-3 are XP progression stages.
+# - CASE 4+ are relationship states and are not created by XP alone.
+#
+# CASE / XP PROGRESSION
+# CASE 0 = 0+ XP
+# CASE 1 = 100+ XP
+# CASE 2 = 200+ XP
+# CASE 3 = 300+ XP
+# CASE 4 = NAMORANDO (requires accepted dating request; 400 XP is the
+#          minimum XP required to send /namorar)
+# CASE 5 = NOIVO (requires accepted engagement transition)
+# CASE 6 = CASADO (requires ceremonial marriage event)
+#
+# STATUS
+# - CASE 0-3 are XP-driven progression stages.
+#
+# - CASE 4 = NAMORANDO
+#   Requires accepted /NAMORAR request.
+#   Minimum stability: 400 XP.
+#
+# - CASE 5 = NOIVO
+#   Requires accepted /NOIVAR request.
+#   Minimum stability: 350 XP.
+#
+# - CASE 6 = CASADO
+#   Requires ceremonial marriage event.
+#   XP is frozen while CASE 6 is active.
+#   CASE 6 only ends through DIVORCIO/resetRelationship().
+#
+# STATUS:
+#
+# SOLTEIRO -> NAMORANDO -> NOIVO -> CASADO
+#
+# ==========================================================
+
+
+options:
+
+    # XP NORMAL
+    max-xp: 500
+
+    # XP CASES
+    case-0: 0
+    case-1: 100
+    case-2: 200
+    case-3: 300
+
+    # SPECIAL RELATIONSHIP LIMITS
+    dating-min-xp: 400
+    engaged-min-xp: 350
+
+
+# ==========================================================
+# RELATIONSHIP ID
+# ==========================================================
+#
+# PLAYER A + PLAYER B
+#
+# deve gerar a mesma ID que:
+#
+# PLAYER B + PLAYER A
+#
+# ==========================================================
+
+function etherID(p1: player, p2: player) :: text:
+
+    set {_u1} to "%uuid of {_p1}%"
+    set {_u2} to "%uuid of {_p2}%"
+
+    if {_u1} is less than {_u2}:
+        return "%{_u1}%::%{_u2}%"
+
+    return "%{_u2}%::%{_u1}%"
+
+
+# ==========================================================
+# RELATIONSHIP CREATION / EXISTENCE
+# ==========================================================
+
+function relationshipExists(p1: player, p2: player) :: boolean:
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    if {etherlove.couple.%{_id}%.created} is set:
+        return true
+
+    return false
+
+
+function createRelationship(p1: player, p2: player):
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    if {etherlove.couple.%{_id}%.created} is not set:
+
+        set {etherlove.couple.%{_id}%.created} to now
+
+        set {etherlove.couple.%{_id}%.points} to 0
+
+        set {etherlove.couple.%{_id}%.stage} to 0
+
+        set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
+
+        set {etherlove.couple.%{_id}%.last-interaction} to now
+
+
+# ==========================================================
+# XP STAGE CALCULATOR
+# ==========================================================
+#
+# Calcula SOMENTE CASES baseados diretamente em XP.
+#
+# CASE 4, 5 e 6 nunca são gerados por esta função.
+#
+# ==========================================================
+
+function calculateXPStage(points: number) :: number:
+
+    if {_points} >= {@case-3}:
+        return 3
+
+    if {_points} >= {@case-2}:
+        return 2
+
+    if {_points} >= {@case-1}:
+        return 1
+
+    return 0
+
+
+# ==========================================================
+# XP
+# ==========================================================
+
+function getRelationshipPoints(p1: player, p2: player) :: number:
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    return {etherlove.couple.%{_id}%.points}
+
+
+# ==========================================================
+# SET XP
+# ==========================================================
+#
+# CASE 6:
+#
+# XP CONGELADO.
+#
+# Alterações normais de XP são ignoradas enquanto
+# o relacionamento estiver CASADO.
+#
+# resetRelationship() modifica os valores diretamente
+# justamente para permitir DIVORCIO.
+#
+# ==========================================================
+
+function setRelationshipPoints(p1: player, p2: player, points: number):
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    set {_stage} to getRelationshipStage({_p1}, {_p2})
+
+    # ------------------------------------------------------
+    # CASE 6 = XP congelado
+    # ------------------------------------------------------
+
+    if {_stage} is 6:
+        return
+
+    # ------------------------------------------------------
+    # XP mínimo
+    # ------------------------------------------------------
+
+    if {_points} < 0:
+        set {_points} to 0
+
+    # ------------------------------------------------------
+    # XP máximo
+    # ------------------------------------------------------
+
+    if {_points} > {@max-xp}:
+        set {_points} to {@max-xp}
+
+    # ------------------------------------------------------
+    # Persistência
+    # ------------------------------------------------------
+
+    set {etherlove.couple.%{_id}%.points} to {_points}
+
+    set {etherlove.couple.%{_id}%.last-interaction} to now
+
+    # ------------------------------------------------------
+    # Recalcular CASE / STATUS
+    # ------------------------------------------------------
+
+    updateRelationshipStage({_p1}, {_p2})
+
+
+# ==========================================================
+# ADD XP
+# ==========================================================
+
+function addRelationshipPoints(p1: player, p2: player, amount: number):
+
+    createRelationship({_p1}, {_p2})
+
+    # ------------------------------------------------------
+    # CASE 6 = XP congelado
+    # ------------------------------------------------------
+
+    if getRelationshipStage({_p1}, {_p2}) is 6:
+        return
+
+    set {_current} to getRelationshipPoints({_p1}, {_p2})
+
+    add {_amount} to {_current}
+
+    setRelationshipPoints({_p1}, {_p2}, {_current})
+
+
+# ==========================================================
+# CASE
+# ==========================================================
+
+function getRelationshipStage(p1: player, p2: player) :: number:
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    return {etherlove.couple.%{_id}%.stage}
+
+
+function setRelationshipStage(p1: player, p2: player, stage: number):
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    if {_stage} < 0:
+        set {_stage} to 0
+
+    if {_stage} > 6:
+        set {_stage} to 6
+
+    set {etherlove.couple.%{_id}%.stage} to {_stage}
+
+# Automatically calculates only XP-driven CASE 0-3.
+# CASE 4-6 are state/event driven. CASE 4 can regress if XP drops below 400.
+
+# ==========================================================
+# UPDATE RELATIONSHIP CASE
+# ==========================================================
+#
+# MATRIZ OFICIAL:
+#
+# CASE 0-3
+# → completamente dependentes de XP
+#
+# CASE 4 / NAMORANDO
+# → permanece enquanto XP >= 400
+# → abaixo de 400 rompe namoro
+#
+# CASE 5 / NOIVO
+# → permanece enquanto XP >= 350
+# → abaixo de 350 perde noivado
+# → tenta regressão para namoro
+# → como XP também está abaixo de 400,
+#   namoro não pode ser sustentado
+# → regressão continua até CASE calculado pelo XP
+#
+# CASE 6 / CASADO
+# → nunca regressa por XP
+# → XP está congelado
+#
+# ==========================================================
+
+function updateRelationshipStage(p1: player, p2: player):
+
+    createRelationship({_p1}, {_p2})
+
+    set {_points} to getRelationshipPoints({_p1}, {_p2})
+
+    set {_stage} to getRelationshipStage({_p1}, {_p2})
+
+    if {_stage} >= 4:
+        if {_stage} is 4:
+            if {_points} < {@dating-min-xp}:
+                setRelationshipStage({_p1}, {_p2}, 3)
+                setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+        stop
+
+    if {_points} >= {@case-3}:
+        setRelationshipStage({_p1}, {_p2}, 3)
+    else if {_points} >= {@case-2}:
+        setRelationshipStage({_p1}, {_p2}, 2)
+    else if {_points} >= {@case-1}:
+        setRelationshipStage({_p1}, {_p2}, 1)
+    else:
+        setRelationshipStage({_p1}, {_p2}, 0)
+    # ======================================================
+    # CASE 6 — CASADO
+    # ======================================================
+    #
+    # Casamento não depende mais de XP.
+    #
+    # Nenhuma regressão automática.
+    #
+    # ======================================================
+
+    if {_stage} is 6:
+        setRelationshipStatus({_p1}, {_p2}, "CASADO")
+        return
+
+
+    # ======================================================
+    # CASE 5 — NOIVO
+    # ======================================================
+
+    if {_stage} is 5:
+
+        # --------------------------------------------------
+        # XP suficiente para manter NOIVADO
+        # --------------------------------------------------
+
+        if {_points} >= {@engaged-min-xp}:
+
+            setRelationshipStatus({_p1}, {_p2}, "NOIVO")
+
+            return
+
+
+        # --------------------------------------------------
+        # XP < 350
+        #
+        # NOIVADO É ROMPIDO.
+        #
+        # Conceitualmente:
+        #
+        # CASE 5
+        # ↓
+        # CASE 4 / NAMORANDO
+        #
+        # Mas como XP < 350 também significa XP < 400,
+        # o namoro também não pode ser sustentado.
+        #
+        # Portanto ocorre regressão em cascata.
+        #
+        # --------------------------------------------------
+
+        setRelationshipStage({_p1}, {_p2}, 4)
+
+        setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+
+        # --------------------------------------------------
+        # Validar imediatamente CASE 4
+        # --------------------------------------------------
+
+        if {_points} < {@dating-min-xp}:
+
+            set {_xpStage} to calculateXPStage({_points})
+
+            setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+            setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+
+        return
+
+
+    # ======================================================
+    # CASE 4 — NAMORANDO
+    # ======================================================
+
+    if {_stage} is 4:
+
+        # --------------------------------------------------
+        # XP suficiente para sustentar namoro
+        # --------------------------------------------------
+
+        if {_points} >= {@dating-min-xp}:
+
+            setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+
+            return
+
+
+        # --------------------------------------------------
+        # XP < 400
+        #
+        # NAMORO TERMINA.
+        # --------------------------------------------------
+
+        set {_xpStage} to calculateXPStage({_points})
+
+        setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+        setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+
+        return
+
+
+    # ======================================================
+    # CASE 0–3
+    # ======================================================
+    #
+    # Progressão e regressão totalmente baseadas em XP.
+    #
+    # ======================================================
+
+    set {_xpStage} to calculateXPStage({_points})
+
+    setRelationshipStage({_p1}, {_p2}, {_xpStage})
+
+    # CASE 0-3 sempre representam relação sem
+    # compromisso formal.
+
+    setRelationshipStatus({_p1}, {_p2}, "SOLTEIRO")
+
+
+# ==========================================================
+# STATUS
+# ==========================================================
+
+function getRelationshipStatus(p1: player, p2: player) :: text:
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    return {etherlove.couple.%{_id}%.status}
+
+
+function setRelationshipStatus(p1: player, p2: player, status: text):
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    set {etherlove.couple.%{_id}%.status} to {_status}
+
+
+# ==========================================================
+# RELATIONSHIP STATE TRANSITIONS
+# ==========================================================
+#
+# Essas funções NÃO decidem consentimento.
+#
+# Elas só aplicam uma transição já validada
+# por módulos superiores.
+#
+# Exemplo:
+#
+# /NAMORAR
+# ↓
+# REQUEST
+# ↓
+# /LS
+# ↓
+# validação
+# ↓
+# setDatingRelationship()
+#
+# ==========================================================
+
+
+# ==========================================================
+# SET DATING
+# ==========================================================
+
+function setDatingRelationship(p1: player, p2: player):
+
+    createRelationship({_p1}, {_p2})
+
+    setRelationshipStage({_p1}, {_p2}, 4)
+
+    setRelationshipStatus({_p1}, {_p2}, "NAMORANDO")
+
+
+# ==========================================================
+# SET ENGAGED
+# ==========================================================
+
+function setEngagedRelationship(p1: player, p2: player):
+
+    createRelationship({_p1}, {_p2})
+
+    setRelationshipStage({_p1}, {_p2}, 5)
+
+    setRelationshipStatus({_p1}, {_p2}, "NOIVO")
+
+
+# ==========================================================
+# SET MARRIED
+# ==========================================================
+
+function setMarriedRelationship(p1: player, p2: player):
+
+    createRelationship({_p1}, {_p2})
+
+    setRelationshipStage({_p1}, {_p2}, 6)
+
+    setRelationshipStatus({_p1}, {_p2}, "CASADO")
+
+
+# ==========================================================
+# RESET / DIVORCE FOUNDATION
+# ==========================================================
+#
+# RelationshipID permanece.
+#
+# Dados de progresso são resetados.
+#
+# ==========================================================
+
+function resetRelationship(p1: player, p2: player):
+
+    createRelationship({_p1}, {_p2})
+
+    set {_id} to etherID({_p1}, {_p2})
+
+    set {etherlove.couple.%{_id}%.points} to 0
+
+    set {etherlove.couple.%{_id}%.stage} to 0
+
+    set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
+
+    set {etherlove.couple.%{_id}%.last-interaction} to now
+
+
+# ==========================================================
+# HELPERS
+# ==========================================================
+
+
+# ==========================================================
+# STAGE NAME
+# ==========================================================
+
+function getStageName(stage: number) :: text:
+
+    if {_stage} is 0:
+        return "NEUTRO"
+
+    if {_stage} is 1:
+        return "AMIGO"
+
+    if {_stage} is 2:
+        return "MELHORES AMIGOS"
+
+    if {_stage} is 3:
+        return "PAIXAO"
+
+    if {_stage} is 4:
+        return "NAMORANDO"
+
+    if {_stage} is 5:
+        return "NOIVO"
+
+    if {_stage} is 6:
+        return "CASADO"
+
+    return "DESCONHECIDO"
+
+
+# ==========================================================
+# MINIMUM CASE CHECK
+# ==========================================================
+
+function hasStage(p1: player, p2: player, minimum: number) :: boolean:
+
+    set {_current} to getRelationshipStage({_p1}, {_p2})
+
+    if {_current} >= {_minimum}:
+        return true
+
+    return false
+
+
+# ==========================================================
+# CAN START DATING REQUEST
+# ==========================================================
+#
+# Esta função verifica apenas a relação P1 ↔ P2.
+#
+# A verificação GLOBAL:
+#
+# "P1 já namora alguém?"
+# "P2 já namora alguém?"
+#
+# será implementada no módulo de Progression.
+#
+# ==========================================================
+
+function canStartDatingRequest(p1: player, p2: player) :: boolean:
+
+    if relationshipExists({_p1}, {_p2}) is false:
+        return false
+
+    if getRelationshipPoints({_p1}, {_p2}) < {@dating-min-xp}:
+        return false
+
+    if getRelationshipStage({_p1}, {_p2}) is not 3:
+        return false
+
+    if getRelationshipStatus({_p1}, {_p2}) is not "SOLTEIRO":
+        return false
+
+    return true
+
+
+# ==========================================================
+# CAN START ENGAGEMENT REQUEST
+# ==========================================================
+#
+# /NOIVAR pertence exclusivamente ao CASE 4.
+#
+# ==========================================================
+
+function canStartEngagementRequest(p1: player, p2: player) :: boolean:
+
+    if relationshipExists({_p1}, {_p2}) is false:
+        return false
+
+    if getRelationshipStage({_p1}, {_p2}) is not 4:
+        return false
+
+    if getRelationshipStatus({_p1}, {_p2}) is not "NAMORANDO":
+        return false
+
+    return true
+
+
+# ==========================================================
+# IS COMMITTED RELATIONSHIP
+# ==========================================================
+#
+# Auxiliar para módulos futuros.
+#
+# CASE 4 = NAMORANDO
+# CASE 5 = NOIVO
+# CASE 6 = CASADO
+#
+# ==========================================================
+
+function isCommittedRelationship(p1: player, p2: player) :: boolean:
+
+    set {_stage} to getRelationshipStage({_p1}, {_p2})
+
+    if {_stage} >= 4:
+        return true
+
+    return false
+
+
+# ==========================================================
+# DEBUG
+# ==========================================================
+
+command /eldebug <player>:
+
+    permission: etherlove.admin
+
+    trigger:
+
+        set {_target} to arg-1
+
+        loop all players:
+
+            if loop-player is not {_target}:
+
+                if relationshipExists({_target}, loop-player) is true:
+
+                    set {_points} to getRelationshipPoints({_target}, loop-player)
+
+                    set {_stage} to getRelationshipStage({_target}, loop-player)
+
+                    set {_status} to getRelationshipStatus({_target}, loop-player)
+
+                    send "&dDebug: %name of {_target}% + %name of loop-player% | CASE: %{_stage}% (%getStageName({_stage})%) | XP: %{_points}% | STATUS: %{_status}%"
+
 # ==========================================================
 # FUTURE DATA STORAGE LAYER
 # SQL / SQLITE / MYSQL / MARIADB
