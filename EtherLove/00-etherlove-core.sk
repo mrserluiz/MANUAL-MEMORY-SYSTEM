@@ -1,6 +1,6 @@
 # ==========================================================
 # EtherLove Core - REBUILD 001
-# CORE REVISION 005 - OFFLINE UUID RELATIONSHIP API
+# CORE REVISION 006 - CANONICAL RELATIONSHIP ID
 # ==========================================================
 # RESPONSABILIDADES:
 # - RelationshipID
@@ -27,6 +27,10 @@ options:
 # ==========================================================
 # RELATIONSHIP ID
 # ==========================================================
+# REGRA CRÍTICA:
+# UUID_A + UUID_B deve produzir exatamente a mesma chave que
+# UUID_B + UUID_A. A ordenação é alfabética/canônica.
+# ==========================================================
 
 function etherID(p1: player, p2: player) :: text:
     set {_u1} to "%uuid of {_p1}%"
@@ -34,9 +38,9 @@ function etherID(p1: player, p2: player) :: text:
     return etherIDFromUUIDs({_u1}, {_u2})
 
 function etherIDFromUUIDs(uuid1: text, uuid2: text) :: text:
-    if {_uuid1} is less than {_uuid2}:
-        return "%{_uuid1}%::%{_uuid2}%"
-    return "%{_uuid2}%::%{_uuid1}%"
+    set {_uuids::*} to {_uuid1} and {_uuid2}
+    set {_sorted::*} to alphabetically sorted {_uuids::*}
+    return "%{_sorted::1}%::%{_sorted::2}%"
 
 # ==========================================================
 # RELATIONSHIP EXISTENCE / CREATION
@@ -92,10 +96,6 @@ function addRelationshipPoints(p1: player, p2: player, amount: number):
 # ==========================================================
 # UUID / OFFLINE-SAFE XP API
 # ==========================================================
-# Esta camada permite que MAILBOX, avaliações e divórcio
-# alterem uma relação mesmo quando um participante estiver
-# offline. CASE 6 continua com XP congelado.
-# ==========================================================
 
 function getRelationshipPointsByUUIDs(uuid1: text, uuid2: text) :: number:
     set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
@@ -118,18 +118,14 @@ function getRelationshipStatusByUUIDs(uuid1: text, uuid2: text) :: text:
 function setRelationshipPointsByUUIDs(uuid1: text, uuid2: text, points: number):
     if relationshipExistsByUUIDs({_uuid1}, {_uuid2}) is false:
         return
-
     set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
     set {_stage} to getRelationshipStageByUUIDs({_uuid1}, {_uuid2})
-
     if {_stage} is 6:
         return
-
     if {_points} < 0:
         set {_points} to 0
     if {_points} > {@max-xp}:
         set {_points} to {@max-xp}
-
     set {etherlove.couple.%{_id}%.points} to {_points}
     set {etherlove.couple.%{_id}%.last-interaction} to now
     updateRelationshipStageByUUIDs({_uuid1}, {_uuid2})
@@ -139,7 +135,6 @@ function addRelationshipPointsByUUIDs(uuid1: text, uuid2: text, amount: number):
         return
     if getRelationshipStageByUUIDs({_uuid1}, {_uuid2}) is 6:
         return
-
     set {_current} to getRelationshipPointsByUUIDs({_uuid1}, {_uuid2})
     add {_amount} to {_current}
     setRelationshipPointsByUUIDs({_uuid1}, {_uuid2}, {_current})
@@ -212,25 +207,20 @@ function updateRelationshipStage(p1: player, p2: player):
 function updateRelationshipStageByUUIDs(uuid1: text, uuid2: text):
     if relationshipExistsByUUIDs({_uuid1}, {_uuid2}) is false:
         return
-
     set {_id} to etherIDFromUUIDs({_uuid1}, {_uuid2})
     set {_points} to getRelationshipPointsByUUIDs({_uuid1}, {_uuid2})
     set {_stage} to getRelationshipStageByUUIDs({_uuid1}, {_uuid2})
 
-    # CASE 6 — CASADO / XP congelado
     if {_stage} is 6:
         set {etherlove.couple.%{_id}%.status} to "CASADO"
         return
 
-    # CASE 5 — NOIVO
     if {_stage} is 5:
         if {_points} >= {@engaged-min-xp}:
             set {etherlove.couple.%{_id}%.status} to "NOIVO"
             return
-
         set {etherlove.couple.%{_id}%.stage} to 4
         set {etherlove.couple.%{_id}%.status} to "NAMORANDO"
-
         if {_points} < {@dating-min-xp}:
             set {_xpStage} to calculateXPStage({_points})
             set {etherlove.couple.%{_id}%.stage} to {_xpStage}
@@ -238,19 +228,16 @@ function updateRelationshipStageByUUIDs(uuid1: text, uuid2: text):
             clearActivePartnersByUUIDs({_uuid1}, {_uuid2})
         return
 
-    # CASE 4 — NAMORANDO
     if {_stage} is 4:
         if {_points} >= {@dating-min-xp}:
             set {etherlove.couple.%{_id}%.status} to "NAMORANDO"
             return
-
         set {_xpStage} to calculateXPStage({_points})
         set {etherlove.couple.%{_id}%.stage} to {_xpStage}
         set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
         clearActivePartnersByUUIDs({_uuid1}, {_uuid2})
         return
 
-    # CASE 0-3 — XP driven
     set {_xpStage} to calculateXPStage({_points})
     set {etherlove.couple.%{_id}%.stage} to {_xpStage}
     set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
