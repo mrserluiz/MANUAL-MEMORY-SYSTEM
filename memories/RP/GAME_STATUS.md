@@ -11,9 +11,9 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 17h40  
+**Hora:** Aproximadamente 17h41  
 **Local:** Ponto de ônibus próximo ao trabalho de Marina, em São Bernardo do Campo/SP  
-**Situação:** Marina acabou de sair do trabalho e aguarda um ônibus atrasado. Sergio está no mesmo ponto.  
+**Situação:** Marina e Sergio conversam enquanto aguardam o ônibus.  
 **Próximo compromisso conhecido de Marina:** Reunião no trabalho amanhã às 08h30.
 
 ---
@@ -27,13 +27,16 @@
 - Precisa comprar ração para Pipoca.
 - A mãe pediu que compre pão.
 - Estado civil: solteira.
+- Espera o ônibus que segue em direção ao centro.
 - Relação atual com Sergio: desconhecidos; primeiro contato em andamento.
+- Ainda não sabe o nome de Sergio dentro da história.
 
 ---
 
 ## 👤 SERGIO — JOGADOR
 
 **Nome conhecido pelo sistema:** Sergio Luiz  
+**Nome conhecido por Marina:** Ainda não informado  
 **Relação com Marina:** Desconhecidos  
 **Local atual:** Mesmo ponto de ônibus que Marina  
 **Inventário relevante:** Ainda não estabelecido  
@@ -57,12 +60,14 @@
 1. A campanha foi inicializada em 25/08/2026 no ponto canônico definido pela ficha de Marina.
 2. Marina e Sergio estão no mesmo ponto de ônibus após o expediente.
 3. Marina iniciou o primeiro contato dizendo: “Esse ônibus tá demorando pra você também ou eu que perdi a noção do tempo?”
+4. Sergio respondeu: “Oi, bom dia, qual ônibus você pega?”
+5. Marina brincou com o cumprimento por já ser fim de tarde e informou que pega o ônibus que vai para o centro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Aguardar a resposta de Sergio à primeira fala de Marina no ponto de ônibus.
+Marina acaba de perguntar se Sergio também pega o ônibus que segue para o centro. Aguardar a resposta dele.
 
 ---
 
