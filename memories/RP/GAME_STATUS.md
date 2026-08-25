@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h15  
+**Hora:** Aproximadamente 06h17  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** A corrida começou. Jonas comenta que Marina e Sérgio parecem combinar; os dois reagem à brincadeira no banco traseiro.  
+**Situação:** Durante a corrida, as mãos de Marina e Sérgio se encostaram acidentalmente no meio do banco traseiro.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -126,12 +126,14 @@
 42. Jonas iniciou a corrida, pediu desculpas e afirmou que os dois parecem combinar.
 43. Sérgio olhou discretamente para Marina e respondeu: “É, não nesta ocasião... quem sabe outra”, dizendo em seguida que era brincadeira.
 44. Marina percebeu o olhar e respondeu em tom bem-humorado que eles mal aprenderam os nomes um do outro e Jonas já estava planejando o casamento.
+45. Sem perceber onde Marina havia apoiado a mão, Sérgio colocou a própria mão no meio do banco e as mãos dos dois se encostaram.
+46. Marina percebeu o contato, recolheu a mão instintivamente e reagiu apenas com um “Opa”, sem transformar o acidente em conflito.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está em andamento. Marina brinca com Sérgio e Jonas sobre o motorista já estar planejando um casamento entre duas pessoas que acabaram de aprender os nomes uma da outra.
+A corrida está em andamento. Após um contato acidental entre as mãos, Marina recolheu a dela e reagiu de forma leve. Sérgio pode perceber que ela notou o toque.
 
 ---
 
