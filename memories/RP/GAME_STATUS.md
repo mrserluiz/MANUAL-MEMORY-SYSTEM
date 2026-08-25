@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** 06h05  
+**Hora:** Aproximadamente 06h06  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Após uma longa espera, o Uber encontrou um motorista a aproximadamente seis minutos do ponto. Sérgio precisa confirmar rapidamente.  
+**Situação:** Sérgio confirmou a corrida. O motorista está a aproximadamente seis minutos do ponto; os dois aguardam a chegada.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -55,7 +55,7 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Um motorista de Uber foi localizado a seis minutos; corrida aguardando confirmação  
+**Situação de transporte:** Corrida de Uber confirmada; motorista a aproximadamente seis minutos  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; blusa vermelha de lã e quente guardada na mochila  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
@@ -73,7 +73,8 @@
 - Uber e 99 apresentaram baixa disponibilidade durante a espera.
 - O frio aumentou, com vento e garoa fria.
 - Às 06h05, o Uber localizou um motorista a seis minutos do ponto.
-- A corrida ainda precisa ser confirmada.
+- A corrida foi confirmada e o motorista está a aproximadamente seis minutos.
+- Há poucas pessoas na rua neste horário.
 
 ---
 
@@ -107,12 +108,14 @@
 26. Marina apresentou-se e recebeu o elogio com um sorriso sem graça e uma brincadeira.
 27. Sérgio afirmou que, quando um acessório realça a beleza de alguém, essa verdade deve ser dita.
 28. Às 06h05, após a espera, o Uber localizou um motorista a seis minutos do ponto.
+29. Sérgio confirmou a corrida e informou que agora precisam aguardar a chegada do motorista.
+30. Sérgio observou que quase não há ninguém na rua, atribuindo isso ao horário.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber localizou um motorista a seis minutos do ponto. Marina pede que Sérgio confirme imediatamente antes que a oportunidade desapareça. Sérgio ainda precisa chegar ao centro e depois ao trabalho entre 06h45 e 07h00.
+A corrida está confirmada. Marina e Sérgio aguardam o motorista, ainda a aproximadamente seis minutos, sob frio e garoa. A rua está quase vazia.
 
 ---
 
