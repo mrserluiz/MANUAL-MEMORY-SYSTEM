@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h49  
+**Hora:** Aproximadamente 07h50  
 **Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Sérgio está no balcão da recepção confirmando o atendimento agendado para as 08h00.  
+**Situação:** O agendamento de Sérgio foi localizado. Ele deve aguardar ser chamado para o atendimento das 08h00.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -75,7 +75,7 @@
 **Destino posterior:** Clínica onde trabalha  
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
 **Situação de transporte:** Corrida concluída para Sérgio; ele chegou ao compromisso antes das 08h00  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; CNH; Marina permanece com a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga após contato pelo Instagram  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
@@ -299,12 +299,14 @@
 177. Marina não está presente na cena atual; o contato futuro permanece possível pelo Instagram.
 178. Na recepção, Sérgio informou possuir atendimento agendado para as 08h00 e perguntou se precisava retirar senha.
 179. A recepcionista explicou que atendimentos agendados não precisam de senha e solicitou o nome completo e um documento com foto.
+180. Sérgio apresentou sua CNH.
+181. A recepcionista conferiu o documento, localizou o agendamento em nome de Sérgio Luiz e orientou que ele aguardasse ser chamado.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio está no balcão da recepção. Para confirmar o agendamento, precisa informar seu nome completo e apresentar um documento com foto.
+O agendamento de Sérgio Luiz foi confirmado. Ele deve aguardar na recepção até ser chamado para o atendimento das 08h00.
 
 ---
 
