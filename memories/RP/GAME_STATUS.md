@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h27  
+**Hora:** Aproximadamente 07h28  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -44,6 +44,8 @@
 - Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
 - Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
 - Tomou seu próprio antialérgico com um gole do suco durante a corrida.
+- Mora em São Bernardo do Campo com os pais, a irmã Luísa e a cachorra Pipoca.
+- Gosta de praia e prefere períodos ou locais mais tranquilos, sem excesso de lotação.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: recém-apresentados; não são um casal.
@@ -261,12 +263,16 @@
 154. Marina demonstrou surpresa com a estrutura já disponível e perguntou qual é o principal obstáculo para desenvolver o projeto: capital para obra, projeto, documentação ou falta de tempo.
 155. Sérgio explicou que faltam dinheiro para construir as kitnets e tempo para administrar o negócio.
 156. Marina identificou a possibilidade de começar por um imóvel já construído, gerar experiência e reserva antes das kitnets, e perguntou se a casa de Itanhaém fica vazia ou é utilizada por alguém.
+157. Sérgio confirmou que a casa de Itanhaém está vazia e considerou válida a ideia de começar por ela.
+158. Sérgio perguntou onde Marina mora e se ela gosta de praia.
+159. Marina informou que mora em São Bernardo do Campo com os pais, a irmã Luísa e a cachorra Pipoca.
+160. Marina disse gostar de praia, especialmente quando o local não está excessivamente cheio.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Os principais obstáculos de Sérgio para o projeto de hospedagem são capital e tempo de gestão. Marina pergunta se a casa de Itanhaém está vazia, avaliando a possibilidade de começar por um imóvel já pronto.
+A casa de Itanhaém está vazia e Sérgio considerou começar o projeto por ela. A conversa passou para Marina: ela contou que mora com a família em São Bernardo e que gosta de praias mais tranquilas.
 
 ---
 
