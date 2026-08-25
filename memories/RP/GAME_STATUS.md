@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** 07h00  
+**Hora:** Aproximadamente 07h01  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -176,12 +176,14 @@
 88. O tempo avançou até 07h00 e o Uber ainda estava em deslocamento.
 89. Sérgio informou o horário a Marina; ele já havia atingido o limite de seu horário de entrada no trabalho.
 90. Marina demonstrou surpresa com a demora e perguntou se a clínica havia respondido à mensagem de aviso.
+91. Sérgio informou que a clínica respondeu apenas com um emoji de polegar para cima.
+92. Marina observou que a resposta poderia significar tanto compreensão quanto uma conversa futura, mas considerou positivo que o aviso tivesse sido recebido.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-São 07h00 e o Uber ainda está em deslocamento. Sérgio já chegou ao limite de seu horário de entrada; Marina pergunta se a clínica respondeu à mensagem dele.
+A clínica confirmou o recebimento do aviso de Sérgio com um emoji de polegar para cima. O significado exato da resposta permanece ambíguo, mas o atraso foi comunicado.
 
 ---
 
