@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h48  
+**Hora:** Aproximadamente 07h49  
 **Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina desembarcou minutos antes. Jonas levou Sérgio até seu destino, e Sérgio acaba de entrar no local do compromisso agendado para as 08h00.  
+**Situação:** Sérgio está no balcão da recepção confirmando o atendimento agendado para as 08h00.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -297,12 +297,14 @@
 175. Jonas prosseguiu com a corrida levando Sérgio ao local do compromisso.
 176. Por volta das 07h48, Sérgio chegou ao destino no centro e entrou na recepção para o atendimento agendado das 08h00.
 177. Marina não está presente na cena atual; o contato futuro permanece possível pelo Instagram.
+178. Na recepção, Sérgio informou possuir atendimento agendado para as 08h00 e perguntou se precisava retirar senha.
+179. A recepcionista explicou que atendimentos agendados não precisam de senha e solicitou o nome completo e um documento com foto.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio acaba de entrar na recepção do local do compromisso, antes do horário agendado das 08h00. Marina já desembarcou e segue separadamente para o trabalho. Aguardar o atendimento de Sérgio.
+Sérgio está no balcão da recepção. Para confirmar o agendamento, precisa informar seu nome completo e apresentar um documento com foto.
 
 ---
 
