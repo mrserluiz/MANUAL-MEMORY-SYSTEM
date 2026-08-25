@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h35  
+**Hora:** 07h00  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -58,7 +58,7 @@
 **Destino imediato:** Centro, para cumprir um atendimento agendado que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Dentro do Uber, em deslocamento para o centro  
+**Situação de transporte:** Dentro do Uber, ainda em deslocamento para o centro às 07h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
@@ -78,6 +78,7 @@
 - Às 06h05, o Uber localizou um motorista a seis minutos do ponto.
 - A corrida foi confirmada, o motorista chegou e o deslocamento começou.
 - O Uber encontrou uma fila de carros e ficou praticamente parado no congestionamento.
+- Às 07h00, a corrida ainda não havia chegado ao destino.
 - Jonas identificou um acidente no centro; a estimativa atual é de aproximadamente vinte minutos.
 - Há poucas pessoas na rua neste horário.
 
@@ -172,12 +173,15 @@
 85. Marina recolheu a mão, pediu desculpas pelo toque acidental e brincou que a blusa aquece o corpo, mas não faz milagre nas mãos.
 86. Sérgio ofereceu colocar a mão sobre a de Marina para aquecê-la.
 87. Marina recusou o contato de forma leve, lembrando que eles ainda acabaram de se conhecer, e colocou as mãos dentro das mangas da blusa.
+88. O tempo avançou até 07h00 e o Uber ainda estava em deslocamento.
+89. Sérgio informou o horário a Marina; ele já havia atingido o limite de seu horário de entrada no trabalho.
+90. Marina demonstrou surpresa com a demora e perguntou se a clínica havia respondido à mensagem de aviso.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida continua no trânsito. Sérgio ofereceu aquecer a mão de Marina com a própria mão; ela recusou de forma leve e aqueceu as mãos dentro das mangas da blusa.
+São 07h00 e o Uber ainda está em deslocamento. Sérgio já chegou ao limite de seu horário de entrada; Marina pergunta se a clínica respondeu à mensagem dele.
 
 ---
 
