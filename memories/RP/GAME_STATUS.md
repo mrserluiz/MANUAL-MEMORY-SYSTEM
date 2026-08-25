@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h16  
+**Hora:** Aproximadamente 07h17  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -224,12 +224,15 @@
 125. Sérgio confirmou que realiza esses materiais e também atende pessoas físicas com convites de aniversário, cartões de visita e outros projetos.
 126. Sérgio informou que mantém um perfil no Instagram dedicado aos trabalhos.
 127. Marina demonstrou interesse profissional e pediu para ver o perfil no celular de Sérgio, já que o aparelho dela está descarregado.
+128. Sérgio brincou perguntando se Marina queria ver apenas os trabalhos e entregou o celular com o Instagram do portfólio aberto.
+129. Marina respondeu “por enquanto, os do trabalho”, chamou-o de engraçadinho e começou a observar o perfil.
+130. Sem presumir detalhes ainda não apresentados dos projetos, Marina perguntou qual trabalho Sérgio mais gostou de realizar.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio revelou possuir um Instagram de portfólio com projetos para empresas e pessoas físicas. Marina pede para ver o perfil pelo celular dele.
+Marina está com o celular de Sérgio nas mãos, observando o Instagram de portfólio. Ela pergunta qual projeto ele mais gostou de realizar.
 
 ---
 
