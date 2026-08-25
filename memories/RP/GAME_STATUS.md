@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h03  
+**Hora:** Aproximadamente 07h04  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -79,7 +79,8 @@
 - A corrida foi confirmada, o motorista chegou e o deslocamento começou.
 - O Uber encontrou uma fila de carros e ficou praticamente parado no congestionamento.
 - Às 07h00, a corrida ainda não havia chegado ao destino.
-- Pouco depois, a passagem à frente foi identificada como bloqueada; a causa e a existência de desvio ainda não foram confirmadas.
+- Pouco depois, a passagem à frente foi identificada como bloqueada.
+- Jonas encontrou um desvio com duração estimada de aproximadamente vinte e cinco minutos.
 - Jonas identificou um acidente no centro; a estimativa atual é de aproximadamente vinte minutos.
 - Há poucas pessoas na rua neste horário.
 
@@ -181,12 +182,15 @@
 92. Marina observou que a resposta poderia significar tanto compreensão quanto uma conversa futura, mas considerou positivo que o aviso tivesse sido recebido.
 93. Sérgio percebeu que a passagem à frente estava bloqueada.
 94. Marina perguntou ao motorista Jonas se havia alguma rota de desvio disponível.
+95. Jonas encontrou uma rota alternativa com estimativa de aproximadamente vinte e cinco minutos e comentou que o dia não estava bom.
+96. Sérgio concordou com a avaliação do motorista.
+97. Marina calculou que ainda deve chegar antes das 08h00 e perguntou a Sérgio qual é o horário exato do compromisso agendado no centro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A passagem à frente está bloqueada. Marina pergunta a Jonas se existe algum desvio disponível para seguir ao centro.
+Jonas iniciou ou prepara o desvio de aproximadamente vinte e cinco minutos. Marina ainda deve chegar antes das 08h00 e pergunta qual é o horário exato do compromisso de Sérgio no centro.
 
 ---
 
