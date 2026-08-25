@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h07  
+**Hora:** Aproximadamente 07h08  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -62,7 +62,8 @@
 **Destino posterior:** Clínica onde trabalha  
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
 **Situação de transporte:** Dentro do Uber, ainda em deslocamento para o centro às 07h00  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada  
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
+**Rotina de alimentação conhecida:** Tenta levar comida para o trabalho, mas nem sempre consegue almoçar  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -195,12 +196,14 @@
 102. Sérgio comentou que gastar R$ 40–45 por dia em restaurante comprometeria bastante o orçamento mensal.
 103. Marina explicou que o restaurante simples que frequenta custa aproximadamente R$ 25 e brincou que, se pagasse R$ 45 todos os dias, levaria marmita mesmo que fosse pão com ovo.
 104. Marina perguntou se Sérgio costuma levar marmita para o trabalho.
+105. Sérgio informou que tenta levar comida, mas nem sempre consegue almoçar.
+106. Marina demonstrou preocupação prática, observando que ele realiza várias tarefas e ainda pula o almoço, e perguntou se isso acontece por falta de tempo ou de fome.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Marina explicou que paga cerca de R$ 25 numa refeição simples perto do trabalho e pergunta se Sérgio costuma levar marmita.
+O Uber segue pela rota alternativa. Sérgio contou que nem sempre consegue almoçar; Marina pergunta se isso ocorre por falta de tempo ou de fome.
 
 ---
 
