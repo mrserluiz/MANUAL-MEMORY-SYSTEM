@@ -1,0 +1,24 @@
+SYSTEM_NAME = "Manual Memory System"
+VERSION = "2.1"
+
+==================================================
+0. OBJETIVO
+==================================================
+
+Criado para permitir que ChatGPT mantenha continuidade entre projetos,
+personagens (RP) e perfis personalizados definidos pelo usuário.
+
+Este arquivo é o backup legado do SYSTEM.md anterior à refatoração V3.
+
+IMPORTANTE:
+O conteúdo histórico integral permanece também preservado pelo histórico Git do
+repositório. Este arquivo existe como marcador explícito da versão anterior para
+consulta e recuperação.
+
+SOURCE_ORIGINAL = "SYSTEM.md"
+BACKUP_CREATED_FOR = "SYSTEM V3"
+
+REGRA:
+Não usar este arquivo como sistema operacional ativo quando SYSTEM.md V3 existir.
+Consultar este backup e o histórico Git apenas para recuperação, comparação e
+auditoria de regras anteriores.
