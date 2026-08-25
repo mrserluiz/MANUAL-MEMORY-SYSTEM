@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h23  
+**Hora:** Aproximadamente 06h24  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Durante a corrida, Sérgio oferece uma garrafa lacrada de suco de maracujá para Marina tomar seu antialérgico.  
+**Situação:** O Uber está parado em uma fila de carros. O trânsito está congestionado e eles ainda não chegaram ao destino.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -77,6 +77,7 @@
 - O frio aumentou, com vento e garoa fria.
 - Às 06h05, o Uber localizou um motorista a seis minutos do ponto.
 - A corrida foi confirmada, o motorista chegou e o deslocamento começou.
+- O Uber encontrou uma fila de carros e ficou praticamente parado no congestionamento.
 - Há poucas pessoas na rua neste horário.
 
 ---
@@ -141,12 +142,15 @@
 56. Sérgio afirmou que o elogio era sério e demonstrou decepção com a reação dela.
 57. Marina percebeu a mudança de tom, esclareceu que estava apenas brincando e agradeceu novamente com sinceridade.
 58. O carro começou a reduzir a velocidade; o motivo ainda não foi confirmado.
+59. Sérgio explicou que eles ainda não estavam chegando: a rua estava parada, com os carros formando uma fila.
+60. Sérgio esclareceu que não havia ficado chateado com a brincadeira de Marina.
+61. Marina disse que havia pensado tê-lo chateado e perguntou ao motorista quanto tempo o aplicativo estimava até o terminal.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O carro começou a reduzir a velocidade. Marina esclareceu a Sérgio que estava apenas brincando e que compreendeu a sinceridade do elogio; em seguida, observa a rua para saber se estão chegando.
+O Uber está parado no congestionamento. Sérgio esclareceu que não ficou chateado. Marina pergunta a Jonas qual é a estimativa do aplicativo até o terminal.
 
 ---
 
