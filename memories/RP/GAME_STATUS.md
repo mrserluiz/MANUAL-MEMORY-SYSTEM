@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h20  
+**Hora:** Aproximadamente 07h21  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -235,12 +235,14 @@
 135. Sérgio sugeriu que Marina procurasse o próprio @ usando o perfil profissional dele, permitindo que ele enviasse o portfólio depois.
 136. Marina brincou que a proposta parecia uma desculpa para conseguir o Instagram dela, mas aceitou.
 137. Marina usou o celular de Sérgio para localizar seu próprio perfil e conectá-lo ao perfil profissional dele, sem registrar no SAVE o identificador privado.
+138. Sérgio perguntou se poderia ver o perfil pessoal de Marina.
+139. Marina autorizou de forma descontraída, brincando para ele não investigar fotos antigas nem curti-las acidentalmente.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina aceitou conectar seu Instagram ao perfil profissional de Sérgio para receber o portfólio depois. Ela usa o celular dele para localizar seu perfil e então devolve o aparelho.
+Os perfis de Marina e Sérgio estão conectados no Instagram. Marina autorizou Sérgio a ver o perfil dela, com uma brincadeira sobre não investigar ou curtir fotos antigas.
 
 ---
 
