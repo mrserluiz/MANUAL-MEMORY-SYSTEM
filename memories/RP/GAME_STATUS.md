@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h24  
+**Hora:** Aproximadamente 05h25  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; o ônibus continua atrasado.  
-**Situação:** Marina e Sergio conversam no ponto. Sergio considera chamar um Uber para não se atrasar.  
+**Situação:** Marina e Sergio decidiram continuar aguardando o ônibus.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
 ---
@@ -23,15 +23,16 @@
 
 - 28 anos.
 - Está a caminho do trabalho.
+- Trabalha como analista administrativa em uma empresa da região, perto do centro.
+- Do ponto final até o trabalho, caminha aproximadamente dez minutos.
 - Carrega uma sacola de farmácia.
 - Celular com 23% de bateria.
 - Estado civil: solteira.
 - Espera o ônibus que segue em direção ao centro.
-- Relação atual com Sergio: desconhecidos; primeiro contato cordial em andamento.
+- Relação atual com Sergio: desconhecidos; conversa cordial em andamento.
 - Ainda não sabe o nome de Sergio dentro da história.
 - Entendeu que a oferta de Sergio foi uma tentativa genuína de ajudá-la.
 - Manteve a decisão de não dividir o Uber por cautela com alguém que acabou de conhecer.
-- Pretende esperar mais dez minutos e chamar seu próprio carro se o ônibus não chegar.
 
 ---
 
@@ -44,7 +45,8 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Trabalho  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** O ônibus está demorando; considera chamar um Uber  
+**Situação de transporte:** Decidiu aguardar o ônibus após encontrar uma tarifa de Uber de R$ 55,90  
+**Profissão:** Ainda não informada a Marina  
 **Inventário relevante:** Ainda não estabelecido  
 **Finanças da campanha:** Ainda não estabelecidas  
 **Objetivos pessoais na campanha:** Ainda não estabelecidos
@@ -74,13 +76,16 @@
 9. Como o ônibus não chegou, Sergio cogitou chamar um Uber e ofereceu a Marina uma carona gratuita até o centro.
 10. Marina agradeceu, mas recusou educadamente porque os dois acabaram de se conhecer.
 11. Sergio pediu desculpas, explicou que percebeu a pressa e o frio e ofereceu mostrar a solicitação e o trajeto do Uber pelo GPS.
-12. Marina afirmou que compreendeu a boa intenção, mas manteve a recusa por cautela. Disse que aguardará mais dez minutos antes de chamar seu próprio carro.
+12. Marina afirmou que compreendeu a boa intenção, mas manteve a recusa por cautela.
+13. Sergio verificou uma tarifa de Uber de R$ 55,90 e decidiu continuar aguardando o ônibus.
+14. Sergio perguntou se Marina trabalha no centro.
+15. Marina explicou que trabalha perto do centro, no setor administrativo de uma empresa da região, a cerca de dez minutos a pé do ponto final.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina tranquilizou Sergio, agradeceu a gentileza e disse que ele deveria seguir para não se atrasar. O ônibus ainda não chegou.
+Marina acaba de perguntar a Sergio com o que ele trabalha. Os dois continuam aguardando o ônibus.
 
 ---
 
