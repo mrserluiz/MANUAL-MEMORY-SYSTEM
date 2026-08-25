@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h14  
+**Hora:** Aproximadamente 07h15  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -67,7 +67,7 @@
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
-**Trabalho autônomo:** Após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
+**Trabalho autônomo:** Serviços de TI e principalmente design para empresas de bairro; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Objetivos profissionais conhecidos:** Busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -218,12 +218,14 @@
 120. Sérgio informou que inclui no currículo os trabalhos autônomos realizados fora do expediente.
 121. Sérgio trabalha de forma autônoma das 19h30 às 22h após a clínica e, aos sábados e domingos, das 14h às 17h.
 122. Marina observou que a rotina ocupa dias, noites e fins de semana, perguntou quando Sérgio descansa e quis saber quais serviços presta nos trabalhos autônomos.
+123. Sérgio informou que presta serviços de TI e, principalmente, design para empresas de bairro.
+124. Marina observou que ele já atua na área, embora fora do emprego formal, e perguntou se possui um portfólio com trabalhos como logotipos, cardápios, fachadas ou peças para redes sociais.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio explicou como apresenta sua experiência no currículo e revelou uma rotina extensa de trabalhos autônomos após a clínica e nos fins de semana. Marina pergunta quando ele descansa e quais serviços presta nesses trabalhos.
+O Uber segue pela rota alternativa. Sérgio explicou que presta serviços de TI e design para empresas de bairro. Marina pergunta se ele possui um portfólio dos trabalhos realizados.
 
 ---
 
