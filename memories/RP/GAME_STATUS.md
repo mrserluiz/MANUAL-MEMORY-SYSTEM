@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h42  
+**Hora:** Aproximadamente 05h43  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Uber e 99 apresentam baixa disponibilidade. Marina está exposta ao frio e pede emprestada a blusa extra de Sergio.  
+**Situação:** Uber e 99 apresentam baixa disponibilidade. Marina veste a blusa vermelha de lã emprestada por Sergio.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -28,7 +28,10 @@
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
-- Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio e pretende devolvê-la ao chegarem.
+- Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio.
+- Está usando a blusa vermelha de lã de Sergio; ficou justa, confortável e a aqueceu.
+- Percebeu que a blusa está limpa e possui perfume cítrico.
+- Pretende devolver a blusa quando chegarem ao destino.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
@@ -96,12 +99,14 @@
 19. O tempo piorou: começou a ventar e cair uma garoa fria.
 20. Sergio informou que usa duas blusas e possui na mochila uma terceira blusa vermelha de lã, bem quente.
 21. Marina decidiu engolir o orgulho e pediu a blusa extra emprestada, prometendo devolvê-la quando chegassem.
+22. Sergio encontrou a blusa na mochila e a entregou a Marina.
+23. Marina vestiu a blusa vermelha de lã. Ela ficou justa, confortável e quente; estava limpa e com perfume cítrico.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina acaba de pedir emprestada a blusa vermelha de lã que Sergio guarda na mochila. Aguardar a resposta dele, enquanto os aplicativos continuam procurando motorista.
+Marina está usando a blusa emprestada e agradece a Sergio. Ao perceber que ainda não sabe o nome dele, pergunta como ele se chama. Os aplicativos continuam procurando motorista.
 
 ---
 
