@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h40  
+**Hora:** Aproximadamente 05h42  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
-**Condição:** Manhã fria; os ônibus estão em greve.  
-**Situação:** Uber e 99 apresentam baixa disponibilidade de motoristas. Sergio e Marina continuam no ponto.  
+**Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
+**Situação:** Uber e 99 apresentam baixa disponibilidade. Marina está exposta ao frio e pede emprestada a blusa extra de Sergio.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -28,6 +28,7 @@
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
+- Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio e pretende devolvê-la ao chegarem.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
@@ -52,7 +53,7 @@
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
 **Situação de transporte:** Uber e 99 apresentam a mesma baixa disponibilidade; mantém a busca ativa  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte  
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; blusa vermelha de lã e quente guardada na mochila  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
 
@@ -67,6 +68,7 @@
 - O celular de Marina ficou sem bateria e desligou.
 - Há poucos motoristas de aplicativo disponíveis na região.
 - Uber e 99 apresentam baixa disponibilidade.
+- O frio aumentou, com vento e garoa fria.
 - Nenhuma corrida foi aceita até o momento.
 
 ---
@@ -91,12 +93,15 @@
 16. Marina sugeriu verificar outro aplicativo de transporte enquanto a primeira busca continua.
 17. Sergio começou a verificar a disponibilidade de motoristas pelo aplicativo 99.
 18. Sergio constatou que a situação no 99 era igual à do Uber, sem motorista disponível de imediato.
+19. O tempo piorou: começou a ventar e cair uma garoa fria.
+20. Sergio informou que usa duas blusas e possui na mochila uma terceira blusa vermelha de lã, bem quente.
+21. Marina decidiu engolir o orgulho e pediu a blusa extra emprestada, prometendo devolvê-la quando chegassem.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Uber e 99 apresentam baixa disponibilidade. Marina sugere manter a busca ativa e continuar atualizando o segundo aplicativo até aparecer algum motorista.
+Marina acaba de pedir emprestada a blusa vermelha de lã que Sergio guarda na mochila. Aguardar a resposta dele, enquanto os aplicativos continuam procurando motorista.
 
 ---
 
