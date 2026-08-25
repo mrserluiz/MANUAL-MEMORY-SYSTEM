@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h14  
+**Hora:** Aproximadamente 06h15  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina e Sérgio estão no banco traseiro do Uber dirigido por Jonas. O motorista acaba de confundi-los com um casal.  
+**Situação:** A corrida começou. Jonas comenta que Marina e Sérgio parecem combinar; os dois reagem à brincadeira no banco traseiro.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -123,12 +123,15 @@
 39. Sérgio sentou-se no banco traseiro direito e confirmou que o motorista se chama Jonas.
 40. Jonas perguntou para onde iria o “casal”, confundindo Marina e Sérgio com parceiros.
 41. Marina corrigiu imediatamente que eles não são um casal e confirmou o destino na região do terminal do centro.
+42. Jonas iniciou a corrida, pediu desculpas e afirmou que os dois parecem combinar.
+43. Sérgio olhou discretamente para Marina e respondeu: “É, não nesta ocasião... quem sabe outra”, dizendo em seguida que era brincadeira.
+44. Marina percebeu o olhar e respondeu em tom bem-humorado que eles mal aprenderam os nomes um do outro e Jonas já estava planejando o casamento.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina acaba de esclarecer ao motorista Jonas que ela e Sérgio não são um casal e confirma o destino próximo ao terminal do centro.
+A corrida está em andamento. Marina brinca com Sérgio e Jonas sobre o motorista já estar planejando um casamento entre duas pessoas que acabaram de aprender os nomes uma da outra.
 
 ---
 
