@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h30  
+**Hora:** Aproximadamente 07h31  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -275,12 +275,14 @@
 163. Sérgio explicou que suspeitou do condomínio porque também mora lá, no bloco 16A; o ponto de ônibus fica em frente ao complexo, que possui vários blocos, do 1A ao 17B.
 164. Como os dois já haviam confirmado residência no mesmo condomínio e a informação do bloco não revela o apartamento, Marina informou morar no bloco 12B, mantendo privado o número da unidade.
 165. Marina percebeu que a coincidência explica por que os dois estavam no mesmo ponto naquela manhã.
+166. Sérgio observou que o Uber estava quase chegando ao centro.
+167. Marina demonstrou alívio e reafirmou que enviará por Pix metade da corrida quando conseguir carregar o celular.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina e Sérgio descobriram que moram no mesmo grande condomínio: ele no bloco 16A e ela no 12B. Marina não revelou o número do apartamento.
+O Uber está próximo do centro. Marina pretende enviar por Pix a metade da corrida quando seu celular estiver carregado; Sérgio ainda precisa localizar o atendimento das 08h00, e Marina caminhará cerca de dez minutos até o trabalho.
 
 ---
 
