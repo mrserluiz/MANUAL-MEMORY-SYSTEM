@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h38  
+**Hora:** Aproximadamente 05h39  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; os ônibus estão em greve.  
-**Situação:** O aplicativo procura um motorista, mas há poucos disponíveis na região.  
+**Situação:** O Uber continua procurando motorista, enquanto Sergio verifica disponibilidade no aplicativo 99.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -51,7 +51,7 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Aguarda o aplicativo localizar um motorista; há baixa disponibilidade na região  
+**Situação de transporte:** Verifica uma corrida no aplicativo 99 enquanto o Uber continua procurando motorista  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
@@ -88,12 +88,13 @@
 14. O aplicativo informou haver poucos motoristas disponíveis e continuou procurando uma corrida.
 15. Preocupado com seu horário de entrada, Sergio demonstrou pressa.
 16. Marina sugeriu verificar outro aplicativo de transporte enquanto a primeira busca continua.
+17. Sergio começou a verificar a disponibilidade de motoristas pelo aplicativo 99.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O primeiro aplicativo continua procurando motorista. Marina pergunta se Sergio possui outro aplicativo, como o 99, para tentar uma busca simultânea.
+O Uber continua procurando motorista. Sergio verifica a disponibilidade e o preço de uma corrida pelo aplicativo 99, enquanto Marina aguarda.
 
 ---
 
