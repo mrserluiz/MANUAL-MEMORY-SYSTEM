@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h35  
+**Hora:** Aproximadamente 05h36  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; os ônibus estão em greve.  
-**Situação:** Sergio prepara a solicitação de uma corrida por aplicativo para os dois.  
+**Situação:** Sergio finaliza a solicitação da corrida compartilhada enquanto conversa com Marina.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -27,6 +27,7 @@
 - Trabalha como analista administrativa em uma empresa da região, perto do centro.
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
+- Está sem blusa de frio porque subestimou a temperatura e ignorou o conselho da mãe para levar uma.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
 - Está bem; não há doença ou emergência atual.
 - Celular descarregado e desligado.
@@ -51,7 +52,7 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Solicita uma corrida por aplicativo para dividir com Marina  
+**Situação de transporte:** Finaliza uma corrida por aplicativo para dividir com Marina  
 **Inventário relevante:** Celular com acesso ao aplicativo de transporte  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Chegar ao centro e depois seguir para o trabalho
@@ -83,14 +84,15 @@
 10. Sergio encontrou a informação de que os ônibus estão em greve.
 11. O celular de Marina descarregou e desligou.
 12. Marina reconsiderou a oferta, aceitando dividir a corrida e pagar metade.
-13. Sergio concordou com a divisão do valor e perguntou qual endereço deveria colocar para Marina.
-14. Marina indicou a região do terminal no centro como destino, de onde seguirá a pé até o trabalho, sem fornecer o endereço exato da empresa.
+13. Marina indicou a região do terminal no centro como destino, sem fornecer o endereço exato da empresa.
+14. Sergio aceitou o destino e percebeu que Marina estava sem blusa de frio.
+15. Marina admitiu que subestimou o frio e ignorou o conselho da mãe para levar uma blusa.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sergio está prestes a confirmar a corrida com destino à região do terminal no centro.
+Sergio finaliza a solicitação da corrida. Marina aguarda sem blusa de frio e brinca sobre ter ignorado o conselho da mãe.
 
 ---
 
