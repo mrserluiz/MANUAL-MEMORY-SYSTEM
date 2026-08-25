@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h18  
+**Hora:** Aproximadamente 06h20  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Durante a corrida, as mãos de Marina e Sérgio se encostaram acidentalmente no meio do banco traseiro.  
+**Situação:** Durante a corrida, Sérgio oferece uma garrafa lacrada de suco de maracujá para Marina tomar seu antialérgico.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -33,8 +33,9 @@
 - Percebeu que a blusa está limpa e possui perfume cítrico.
 - Pretende devolver a blusa quando chegarem ao destino.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
-- Não possui água consigo; pretende tomar o antialérgico ao chegar ao trabalho.
-- Sérgio informou possuir suco de maracujá, mas Marina preferiu aguardar até chegar para tomar o remédio.
+- Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
+- Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
+- Tomou seu próprio antialérgico com um gole do suco durante a corrida.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: recém-apresentados; não são um casal.
@@ -58,7 +59,7 @@
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
 **Situação de transporte:** Dentro do Uber, em deslocamento para o centro  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; suco de maracujá; Marina usa a blusa vermelha de lã emprestada  
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
 
@@ -130,12 +131,15 @@
 46. Marina percebeu o contato, recolheu a mão instintivamente e reagiu apenas com um “Opa”, sem transformar o acidente em conflito.
 47. Sérgio perguntou o que havia acontecido.
 48. Marina explicou que as mãos deles apenas se encostaram e deixou claro que entendeu ter sido sem querer.
+49. Sérgio ofereceu a Marina uma garrafa ainda lacrada de suco de maracujá.
+50. Sérgio comentou que o nariz dela estava muito vermelho e que ela o coçava bastante desde o ponto.
+51. Marina conferiu o lacre, aceitou o suco e tomou seu próprio antialérgico com um gole.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está em andamento. Marina acaba de explicar a Sérgio que as mãos deles se encostaram e que percebeu ter sido um acidente.
+A corrida está em andamento. Marina acaba de tomar o antialérgico com o suco lacrado oferecido por Sérgio e agradece a preocupação dele.
 
 ---
 
