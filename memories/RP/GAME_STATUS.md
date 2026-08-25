@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h13  
+**Hora:** Aproximadamente 06h14  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** O Uber chegou. Após conferir o carro, Marina entrou pela porta aberta por Sérgio; os dois seguem para o centro.  
+**Situação:** Marina e Sérgio estão no banco traseiro do Uber dirigido por Jonas. O motorista acaba de confundi-los com um casal.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -37,7 +37,7 @@
 - Sérgio informou possuir suco de maracujá, mas Marina preferiu aguardar até chegar para tomar o remédio.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
-- Relação atual com Sergio: recém-apresentados; conversa cordial e descontraída em andamento.
+- Relação atual com Sergio: recém-apresentados; não são um casal.
 - Aprendeu que o homem no ponto se chama Sérgio e apresentou-se como Marina.
 - Aceitou dividir uma corrida com Sergio devido à greve e pagará metade.
 - Sugeriu procurar simultaneamente em outro aplicativo de transporte, pois Sergio precisa chegar ao trabalho mais cedo.
@@ -53,7 +53,7 @@
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
-**Local atual:** Dentro do Uber com Marina  
+**Local atual:** Banco traseiro direito do Uber, ao lado de Marina  
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
@@ -120,12 +120,15 @@
 36. Sérgio abriu a porta para Marina e disse: “Primeiro a linda dama”.
 37. Marina conferiu o carro antes de entrar, agradeceu a gentileza e preferiu deixar para tomar o remédio quando chegasse ao trabalho.
 38. Marina e Sérgio entraram no Uber e iniciaram o deslocamento para o centro.
+39. Sérgio sentou-se no banco traseiro direito e confirmou que o motorista se chama Jonas.
+40. Jonas perguntou para onde iria o “casal”, confundindo Marina e Sérgio com parceiros.
+41. Marina corrigiu imediatamente que eles não são um casal e confirmou o destino na região do terminal do centro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina e Sérgio estão dentro do Uber, a caminho do centro. Marina usa a blusa vermelha emprestada e ainda não tomou o antialérgico.
+Marina acaba de esclarecer ao motorista Jonas que ela e Sérgio não são um casal e confirma o destino próximo ao terminal do centro.
 
 ---
 
