@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h13  
+**Hora:** Aproximadamente 07h14  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -66,6 +66,8 @@
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
+**Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
+**Trabalho autônomo:** Após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Objetivos profissionais conhecidos:** Busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -212,12 +214,16 @@
 116. Sérgio contou que é formado em Jogos Digitais pela FMU, na área de TI.
 117. Sérgio informou que já procurou outras oportunidades e enviou currículos, mas ainda não recebeu retorno satisfatório; demonstrou certo constrangimento ao falar.
 118. Marina deixou claro que ele não precisava sentir vergonha por estar tentando e perguntou se o currículo descreve todas as funções técnicas que realiza ou apenas o cargo formal de maqueiro.
+119. Sérgio explicou que o currículo informa apenas o cargo formal de maqueiro, pois listar as funções extras da clínica poderia gerar uma repercussão relacionada à Justiça do Trabalho.
+120. Sérgio informou que inclui no currículo os trabalhos autônomos realizados fora do expediente.
+121. Sérgio trabalha de forma autônoma das 19h30 às 22h após a clínica e, aos sábados e domingos, das 14h às 17h.
+122. Marina observou que a rotina ocupa dias, noites e fins de semana, perguntou quando Sérgio descansa e quis saber quais serviços presta nos trabalhos autônomos.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio revelou sua formação em Jogos Digitais pela FMU e a busca frustrada por outra oportunidade. Marina pergunta como ele apresenta no currículo as atividades técnicas que exerce na clínica.
+O Uber segue pela rota alternativa. Sérgio explicou como apresenta sua experiência no currículo e revelou uma rotina extensa de trabalhos autônomos após a clínica e nos fins de semana. Marina pergunta quando ele descansa e quais serviços presta nesses trabalhos.
 
 ---
 
