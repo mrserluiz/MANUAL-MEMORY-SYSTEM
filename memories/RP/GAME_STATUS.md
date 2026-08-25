@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h11  
+**Hora:** Aproximadamente 07h12  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -53,7 +53,7 @@
 **Nome conhecido pelo sistema:** Sergio Luiz  
 **Nome conhecido por Marina:** Sérgio  
 **Relação com Marina:** Recém-apresentados  
-**Profissão registrada:** Maqueiro em uma clínica próxima da região  
+**Profissão registrada:** Maqueiro em uma clínica próxima da região há seis anos  
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
@@ -205,12 +205,14 @@
 111. Sérgio contou que, quando falta, as pessoas da clínica fecham a cara, demonstram raiva e passam a vê-lo de forma negativa.
 112. Marina brincou que o polegar para cima recebido poderia ser uma ameaça e afirmou que é injusto responsabilizar Sérgio por uma falha de organização da clínica.
 113. Marina perguntou há quanto tempo Sérgio trabalha no local.
+114. Sérgio informou que trabalha na clínica há seis anos.
+115. Marina observou que a clínica teve tempo suficiente para treinar alguém e dividir as responsabilidades, questionou o contraste entre todas as funções desempenhadas e o registro formal de maqueiro e perguntou se Sérgio já pensou em procurar outro emprego.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio contou que é malvisto quando falta; Marina considera injusta a dependência da clínica e pergunta há quanto tempo ele trabalha lá.
+O Uber segue pela rota alternativa. Sérgio revelou trabalhar na clínica há seis anos; Marina pergunta se ele já considerou procurar outro lugar que reconheça melhor suas funções.
 
 ---
 
