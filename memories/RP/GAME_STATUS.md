@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h07  
+**Hora:** Aproximadamente 06h08  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Marina e Sérgio aguardam o Uber. O frio e a garoa provocaram um espirro em Marina.  
@@ -33,6 +33,7 @@
 - Percebeu que a blusa está limpa e possui perfume cítrico.
 - Pretende devolver a blusa quando chegarem ao destino.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
+- Não possui água consigo; pretendia tomar o antialérgico ao chegar ao trabalho.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: recém-apresentados; conversa cordial e descontraída em andamento.
@@ -111,12 +112,14 @@
 29. Sérgio confirmou a corrida e informou que agora precisam aguardar a chegada do motorista.
 30. Sérgio observou que quase não há ninguém na rua, atribuindo isso ao horário.
 31. Marina espirrou durante a espera e Sérgio respondeu “Saúde”.
+32. Sérgio perguntou se Marina possuía água para tomar o antialérgico.
+33. Marina informou que está sem água e pretendia tomar o remédio ao chegar ao trabalho.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina acaba de agradecer a Sérgio por desejar-lhe saúde e brinca que bastou falarem de rinite para ela espirrar. Os dois continuam aguardando o Uber.
+Marina explicou que está sem água e pretendia tomar o antialérgico ao chegar ao trabalho. Os dois continuam aguardando o Uber.
 
 ---
 
