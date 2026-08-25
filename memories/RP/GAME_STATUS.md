@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h10  
+**Hora:** Aproximadamente 07h11  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -202,12 +202,15 @@
 108. Marina observou que, na prática, o intervalo dele estava sendo transformado em horário de trabalho e perguntou se ninguém poderia cobri-lo nem por meia hora.
 109. Sérgio explicou que trabalha sozinho em sua função e que ninguém realiza as mesmas atividades.
 110. Marina observou que a clínica construiu uma dependência arriscada em uma única pessoa e perguntou o que acontece quando Sérgio falta, destacando que ser indispensável deixa de ser elogio quando ele não consegue nem parar para comer.
+111. Sérgio contou que, quando falta, as pessoas da clínica fecham a cara, demonstram raiva e passam a vê-lo de forma negativa.
+112. Marina brincou que o polegar para cima recebido poderia ser uma ameaça e afirmou que é injusto responsabilizar Sérgio por uma falha de organização da clínica.
+113. Marina perguntou há quanto tempo Sérgio trabalha no local.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio revelou ser a única pessoa que desempenha sua função; Marina questiona como a clínica funciona quando ele precisa faltar.
+O Uber segue pela rota alternativa. Sérgio contou que é malvisto quando falta; Marina considera injusta a dependência da clínica e pergunta há quanto tempo ele trabalha lá.
 
 ---
 
