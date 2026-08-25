@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h33  
+**Hora:** Aproximadamente 07h34  
 **Local:** Região do terminal no centro, ainda dentro do Uber parado para desembarque  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -36,7 +36,8 @@
 - Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio.
 - Está usando a blusa vermelha de lã de Sergio; ficou justa, confortável e a aqueceu.
 - Percebeu que a blusa está limpa e possui perfume cítrico.
-- Pretende devolver a blusa quando chegarem ao destino.
+- Sérgio permitiu que Marina continue usando a blusa durante a caminhada até o trabalho.
+- Marina aceitou ficar temporariamente com a blusa e pretende devolvê-la limpa depois, pois os dois moram no mesmo condomínio.
 - Carrega apenas uma sacola de farmácia com antialérgico para sua rinite.
 - Não levou marmita nesta manhã.
 - Costuma almoçar em um restaurante próximo ao trabalho, frequentemente acompanhada de Renata, colega do financeiro.
@@ -280,12 +281,15 @@
 168. Jonas parou o carro próximo ao terminal e perguntou se era ali que Marina desceria.
 169. Sérgio confirmou com Marina se aquele era o local correto.
 170. Marina confirmou o ponto, agradeceu ao motorista e retirou a blusa vermelha de lã para devolvê-la a Sérgio, conforme havia prometido.
+171. Sérgio pediu que Marina permanecesse com a blusa devido ao frio, lembrando que os dois moram perto e poderiam combinar a devolução depois.
+172. Sérgio afirmou que quase não usa a blusa e voltou a elogiar como ela ficou em Marina.
+173. Marina aceitou continuar com a blusa, prometeu devolvê-la limpa e observou que agora deve a Sérgio tanto o Pix da corrida quanto a devolução da peça.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber chegou ao ponto de desembarque de Marina, próximo ao terminal. Ela confirma o local, agradece a Jonas e oferece de volta a blusa vermelha emprestada. O pagamento de metade da corrida permanece pendente até seu celular carregar.
+O Uber está parado no ponto de desembarque de Marina. Ela aceitou continuar usando a blusa durante a caminhada e a devolverá depois. Permanecem pendentes o Pix de metade da corrida e a devolução da blusa.
 
 ---
 
