@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h26  
+**Hora:** Aproximadamente 07h27  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -76,6 +76,7 @@
 **Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
 **Patrimônio informado:** Imóveis no litoral em Peruíbe com área disponível para construir quartos ou kitnets, garagem e área de lazer; uma casa em Itanhaém; um salão comercial
+**Obstáculos ao projeto de hospedagem:** Falta de capital para construir as kitnets e falta de tempo para administrar os imóveis
 **Objetivos profissionais conhecidos:** Gostaria de viver principalmente de design e criação; pesquisou o mercado de hospedagem e possui imóveis com potencial para aluguel de curta duração; busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -258,12 +259,14 @@
 152. Em Peruíbe, Sérgio possui área com potencial para construir quartos ou kitnets, além de garagem e área de lazer.
 153. Sérgio também informou possuir uma casa em Itanhaém e um salão comercial.
 154. Marina demonstrou surpresa com a estrutura já disponível e perguntou qual é o principal obstáculo para desenvolver o projeto: capital para obra, projeto, documentação ou falta de tempo.
+155. Sérgio explicou que faltam dinheiro para construir as kitnets e tempo para administrar o negócio.
+156. Marina identificou a possibilidade de começar por um imóvel já construído, gerar experiência e reserva antes das kitnets, e perguntou se a casa de Itanhaém fica vazia ou é utilizada por alguém.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio revelou possuir imóveis em Peruíbe e Itanhaém, além de um salão comercial, e ter pesquisado hospedagem. Marina pergunta o que impede o desenvolvimento do projeto.
+Os principais obstáculos de Sérgio para o projeto de hospedagem são capital e tempo de gestão. Marina pergunta se a casa de Itanhaém está vazia, avaliando a possibilidade de começar por um imóvel já pronto.
 
 ---
 
