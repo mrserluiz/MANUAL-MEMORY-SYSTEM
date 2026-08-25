@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h22  
+**Hora:** Aproximadamente 06h23  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Durante a corrida, Sérgio oferece uma garrafa lacrada de suco de maracujá para Marina tomar seu antialérgico.  
@@ -138,12 +138,15 @@
 53. Marina riu e provocou Sérgio, dizendo que ele emprestou a blusa e ofereceu suco, mas isso não lhe dava o direito de chamá-la de rena.
 54. Sérgio respondeu que as renas são bonitas como Marina.
 55. Marina classificou a frase como uma tentativa ruim de salvar a brincadeira, mas aceitou o elogio e agradeceu.
+56. Sérgio afirmou que o elogio era sério e demonstrou decepção com a reação dela.
+57. Marina percebeu a mudança de tom, esclareceu que estava apenas brincando e agradeceu novamente com sinceridade.
+58. O carro começou a reduzir a velocidade; o motivo ainda não foi confirmado.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está em andamento. Sérgio transformou a brincadeira da rena em outro elogio; Marina respondeu com humor e agradeceu.
+O carro começou a reduzir a velocidade. Marina esclareceu a Sérgio que estava apenas brincando e que compreendeu a sinceridade do elogio; em seguida, observa a rua para saber se estão chegando.
 
 ---
 
