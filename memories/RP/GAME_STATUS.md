@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h17  
+**Hora:** Aproximadamente 06h18  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Durante a corrida, as mãos de Marina e Sérgio se encostaram acidentalmente no meio do banco traseiro.  
@@ -128,12 +128,14 @@
 44. Marina percebeu o olhar e respondeu em tom bem-humorado que eles mal aprenderam os nomes um do outro e Jonas já estava planejando o casamento.
 45. Sem perceber onde Marina havia apoiado a mão, Sérgio colocou a própria mão no meio do banco e as mãos dos dois se encostaram.
 46. Marina percebeu o contato, recolheu a mão instintivamente e reagiu apenas com um “Opa”, sem transformar o acidente em conflito.
+47. Sérgio perguntou o que havia acontecido.
+48. Marina explicou que as mãos deles apenas se encostaram e deixou claro que entendeu ter sido sem querer.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está em andamento. Após um contato acidental entre as mãos, Marina recolheu a dela e reagiu de forma leve. Sérgio pode perceber que ela notou o toque.
+A corrida está em andamento. Marina acaba de explicar a Sérgio que as mãos deles se encostaram e que percebeu ter sido um acidente.
 
 ---
 
