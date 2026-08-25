@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h12  
+**Hora:** Aproximadamente 07h13  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -54,6 +54,7 @@
 **Nome conhecido por Marina:** Sérgio  
 **Relação com Marina:** Recém-apresentados  
 **Profissão registrada:** Maqueiro em uma clínica próxima da região há seis anos  
+**Formação:** Jogos Digitais pela FMU, com atuação/interesse na área de TI
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
@@ -65,6 +66,7 @@
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
+**Objetivos profissionais conhecidos:** Busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
 ---
@@ -207,12 +209,15 @@
 113. Marina perguntou há quanto tempo Sérgio trabalha no local.
 114. Sérgio informou que trabalha na clínica há seis anos.
 115. Marina observou que a clínica teve tempo suficiente para treinar alguém e dividir as responsabilidades, questionou o contraste entre todas as funções desempenhadas e o registro formal de maqueiro e perguntou se Sérgio já pensou em procurar outro emprego.
+116. Sérgio contou que é formado em Jogos Digitais pela FMU, na área de TI.
+117. Sérgio informou que já procurou outras oportunidades e enviou currículos, mas ainda não recebeu retorno satisfatório; demonstrou certo constrangimento ao falar.
+118. Marina deixou claro que ele não precisava sentir vergonha por estar tentando e perguntou se o currículo descreve todas as funções técnicas que realiza ou apenas o cargo formal de maqueiro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio revelou trabalhar na clínica há seis anos; Marina pergunta se ele já considerou procurar outro lugar que reconheça melhor suas funções.
+O Uber segue pela rota alternativa. Sérgio revelou sua formação em Jogos Digitais pela FMU e a busca frustrada por outra oportunidade. Marina pergunta como ele apresenta no currículo as atividades técnicas que exerce na clínica.
 
 ---
 
