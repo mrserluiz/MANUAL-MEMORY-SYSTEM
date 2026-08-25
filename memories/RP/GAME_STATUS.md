@@ -30,7 +30,7 @@
 - Gostaria de abrir um pequeno negócio no futuro, mas ainda não decidiu qual seria a atividade.
 - Sérgio sugeriu que ela investigasse hotelaria e administração de aluguéis de fim de semana.
 - Marina não possui imóvel próprio nem capital suficiente para investir diretamente, mas considerou a possibilidade de administrar imóveis para proprietários.
-- Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
+- Da região do terminal até o trabalho, segue a pé.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
 - Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio.
@@ -77,7 +77,7 @@
 **Situação de transporte:** Uber chegou ao ponto de desembarque de Marina; Sérgio seguirá para seu compromisso às 07h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
-**Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga por Pix  
+**Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga após contato pelo Instagram  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
 **Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
@@ -226,9 +226,13 @@
 113. Marina perguntou há quanto tempo Sérgio trabalha no local.
 114. A conversa desviou antes de Sérgio responder há quanto tempo trabalha na clínica.
 115. Por volta das 07h30, o Uber chegou ao ponto de desembarque de Marina, próximo ao terminal do centro.
-116. Marina percebeu que havia chegado e que ainda precisava caminhar aproximadamente dez minutos até o trabalho.
-117. Como o frio e a garoa continuam, Marina pediu autorização para permanecer com a blusa vermelha durante a caminhada e devolvê-la depois.
-118. Com o celular descarregado, Marina pediu o número e a chave Pix de Sérgio para pagar sua metade da corrida quando pudesse carregar o aparelho.
+116. Marina percebeu que havia chegado e ainda precisava seguir a pé até o trabalho.
+117. Como o frio e a garoa continuam, Marina permaneceu com a blusa vermelha para devolvê-la depois.
+118. Com o celular descarregado, Marina pediu uma forma de contato para pagar sua metade da corrida.
+119. Sérgio disse que enviaria os dados pelo Instagram.
+120. Outros carros começaram a buzinar porque o Uber estava parado em uma área movimentada.
+121. Marina informou seu perfil como @marina.amoreira, pediu que Sérgio enviasse o Pix por lá e combinou a devolução da blusa.
+122. Marina desejou boa sorte a Sérgio com o compromisso, saiu do Uber e fechou a porta para Jonas liberar a passagem.
 114. Sérgio informou que trabalha na clínica há seis anos.
 115. Marina observou que a clínica teve tempo suficiente para treinar alguém e dividir as responsabilidades, questionou o contraste entre todas as funções desempenhadas e o registro formal de maqueiro e perguntou se Sérgio já pensou em procurar outro emprego.
 116. Sérgio contou que é formado em Jogos Digitais pela FMU, na área de TI.
