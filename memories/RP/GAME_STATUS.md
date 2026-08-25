@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h15  
+**Hora:** Aproximadamente 07h16  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -67,7 +67,8 @@
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
-**Trabalho autônomo:** Serviços de TI e principalmente design para empresas de bairro; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
+**Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
+**Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
 **Objetivos profissionais conhecidos:** Busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -220,12 +221,15 @@
 122. Marina observou que a rotina ocupa dias, noites e fins de semana, perguntou quando Sérgio descansa e quis saber quais serviços presta nos trabalhos autônomos.
 123. Sérgio informou que presta serviços de TI e, principalmente, design para empresas de bairro.
 124. Marina observou que ele já atua na área, embora fora do emprego formal, e perguntou se possui um portfólio com trabalhos como logotipos, cardápios, fachadas ou peças para redes sociais.
+125. Sérgio confirmou que realiza esses materiais e também atende pessoas físicas com convites de aniversário, cartões de visita e outros projetos.
+126. Sérgio informou que mantém um perfil no Instagram dedicado aos trabalhos.
+127. Marina demonstrou interesse profissional e pediu para ver o perfil no celular de Sérgio, já que o aparelho dela está descarregado.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio explicou que presta serviços de TI e design para empresas de bairro. Marina pergunta se ele possui um portfólio dos trabalhos realizados.
+O Uber segue pela rota alternativa. Sérgio revelou possuir um Instagram de portfólio com projetos para empresas e pessoas físicas. Marina pede para ver o perfil pelo celular dele.
 
 ---
 
