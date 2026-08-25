@@ -11,8 +11,8 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h31  
-**Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
+**Hora:** Aproximadamente 07h33  
+**Local:** Região do terminal no centro, ainda dentro do Uber parado para desembarque  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
@@ -277,12 +277,15 @@
 165. Marina percebeu que a coincidência explica por que os dois estavam no mesmo ponto naquela manhã.
 166. Sérgio observou que o Uber estava quase chegando ao centro.
 167. Marina demonstrou alívio e reafirmou que enviará por Pix metade da corrida quando conseguir carregar o celular.
+168. Jonas parou o carro próximo ao terminal e perguntou se era ali que Marina desceria.
+169. Sérgio confirmou com Marina se aquele era o local correto.
+170. Marina confirmou o ponto, agradeceu ao motorista e retirou a blusa vermelha de lã para devolvê-la a Sérgio, conforme havia prometido.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber está próximo do centro. Marina pretende enviar por Pix a metade da corrida quando seu celular estiver carregado; Sérgio ainda precisa localizar o atendimento das 08h00, e Marina caminhará cerca de dez minutos até o trabalho.
+O Uber chegou ao ponto de desembarque de Marina, próximo ao terminal. Ela confirma o local, agradece a Jonas e oferece de volta a blusa vermelha emprestada. O pagamento de metade da corrida permanece pendente até seu celular carregar.
 
 ---
 
