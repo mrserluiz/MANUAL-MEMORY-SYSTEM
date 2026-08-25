@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h23  
+**Hora:** Aproximadamente 07h24  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -26,6 +26,8 @@
 - Está a caminho do trabalho.
 - Trabalha há quase quatro anos em uma empresa da região, perto do centro.
 - Entrou como assistente administrativa e foi promovida ao cargo atual de analista administrativa.
+- Gosta de organização, planejamento e de transformar processos desorganizados em algo funcional.
+- Gostaria de abrir um pequeno negócio no futuro, mas ainda não decidiu qual seria a atividade.
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
@@ -243,12 +245,15 @@
 142. Sérgio chamou Marina de bonita e humilde e perguntou há quanto tempo ela trabalha na empresa.
 143. Marina informou que trabalha lá há quase quatro anos, que entrou como assistente administrativa e foi promovida a analista.
 144. Marina explicou que não odeia o emprego, mas também não pretende permanecer nele para sempre.
+145. Sérgio perguntou o que Marina gosta ou gostaria de fazer profissionalmente.
+146. Marina explicou que gosta de organização, planejamento e de resolver processos confusos.
+147. Marina revelou que gostaria de ter um pequeno negócio próprio no futuro, embora ainda não saiba exatamente qual, descrevendo-se como alguém que já sabe o que não quer, mas ainda descobre o que quer.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A conversa mudou para o trabalho de Marina. Ela contou que está na empresa há quase quatro anos, tendo começado como assistente antes de ser promovida a analista.
+Marina contou que gosta de organização e planejamento e que deseja abrir um pequeno negócio no futuro, embora ainda não tenha decidido a área.
 
 ---
 
