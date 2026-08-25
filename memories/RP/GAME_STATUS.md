@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h25  
+**Hora:** Aproximadamente 05h27  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; o ônibus continua atrasado.  
-**Situação:** Marina e Sergio decidiram continuar aguardando o ônibus.  
+**Situação:** Marina e Sergio conversam enquanto aguardam o ônibus.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
 ---
@@ -25,10 +25,10 @@
 - Está a caminho do trabalho.
 - Trabalha como analista administrativa em uma empresa da região, perto do centro.
 - Do ponto final até o trabalho, caminha aproximadamente dez minutos.
-- Carrega uma sacola de farmácia.
+- Carrega uma sacola de farmácia com antialérgico para sua rinite.
+- Está bem; não há doença ou emergência atual.
 - Celular com 23% de bateria.
 - Estado civil: solteira.
-- Espera o ônibus que segue em direção ao centro.
 - Relação atual com Sergio: desconhecidos; conversa cordial em andamento.
 - Ainda não sabe o nome de Sergio dentro da história.
 - Entendeu que a oferta de Sergio foi uma tentativa genuína de ajudá-la.
@@ -41,12 +41,12 @@
 **Nome conhecido pelo sistema:** Sergio Luiz  
 **Nome conhecido por Marina:** Ainda não informado  
 **Relação com Marina:** Desconhecidos  
+**Profissão:** Maqueiro em uma clínica próxima da região  
 **Local atual:** Mesmo ponto de ônibus que Marina  
 **Destino imediato:** Centro, para resolver algumas coisas  
-**Destino posterior:** Trabalho  
+**Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
 **Situação de transporte:** Decidiu aguardar o ônibus após encontrar uma tarifa de Uber de R$ 55,90  
-**Profissão:** Ainda não informada a Marina  
 **Inventário relevante:** Ainda não estabelecido  
 **Finanças da campanha:** Ainda não estabelecidas  
 **Objetivos pessoais na campanha:** Ainda não estabelecidos
@@ -80,12 +80,15 @@
 13. Sergio verificou uma tarifa de Uber de R$ 55,90 e decidiu continuar aguardando o ônibus.
 14. Sergio perguntou se Marina trabalha no centro.
 15. Marina explicou que trabalha perto do centro, no setor administrativo de uma empresa da região, a cerca de dez minutos a pé do ponto final.
+16. Sergio informou que trabalha como maqueiro em uma clínica próxima.
+17. Ao notar a sacola de farmácia, Sergio perguntou se Marina estava bem.
+18. Marina explicou que está bem e que comprou apenas antialérgico para sua rinite.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina acaba de perguntar a Sergio com o que ele trabalha. Os dois continuam aguardando o ônibus.
+Marina acaba de comentar que o frio e a poeira atacam sua rinite e pergunta se o trabalho de Sergio como maqueiro é muito puxado.
 
 ---
 
