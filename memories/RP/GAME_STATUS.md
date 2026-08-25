@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h24  
+**Hora:** Aproximadamente 07h25  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -28,6 +28,8 @@
 - Entrou como assistente administrativa e foi promovida ao cargo atual de analista administrativa.
 - Gosta de organização, planejamento e de transformar processos desorganizados em algo funcional.
 - Gostaria de abrir um pequeno negócio no futuro, mas ainda não decidiu qual seria a atividade.
+- Sérgio sugeriu que ela investigasse hotelaria e administração de aluguéis de fim de semana.
+- Marina não possui imóvel próprio nem capital suficiente para investir diretamente, mas considerou a possibilidade de administrar imóveis para proprietários.
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
@@ -248,12 +250,15 @@
 145. Sérgio perguntou o que Marina gosta ou gostaria de fazer profissionalmente.
 146. Marina explicou que gosta de organização, planejamento e de resolver processos confusos.
 147. Marina revelou que gostaria de ter um pequeno negócio próprio no futuro, embora ainda não saiba exatamente qual, descrevendo-se como alguém que já sabe o que não quer, mas ainda descobre o que quer.
+148. Sérgio sugeriu que Marina conhecesse o mercado de hotelaria e aluguel de fim de semana.
+149. Marina interpretou a sugestão como administração de casas ou apartamentos para hospedagem curta, reconheceu não possuir imóvel ou capital para investir diretamente e considerou que poderia administrar propriedades de terceiros.
+150. Marina perguntou se Sérgio já trabalhou ou pesquisou esse mercado.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina contou que gosta de organização e planejamento e que deseja abrir um pequeno negócio no futuro, embora ainda não tenha decidido a área.
+Sérgio sugeriu hotelaria e aluguéis de fim de semana. Marina considerou a possibilidade de administrar imóveis de terceiros e pergunta se ele conhece esse mercado por experiência própria.
 
 ---
 
