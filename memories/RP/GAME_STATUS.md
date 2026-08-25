@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h18  
+**Hora:** Aproximadamente 07h19  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -69,7 +69,7 @@
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
 **Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
-**Objetivos profissionais conhecidos:** Busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
+**Objetivos profissionais conhecidos:** Gostaria de viver principalmente de design e criação; busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
 ---
@@ -229,12 +229,14 @@
 130. Sem presumir detalhes ainda não apresentados dos projetos, Marina perguntou qual trabalho Sérgio mais gostou de realizar.
 131. Sérgio explicou que não possui um projeto favorito; para ele, o próprio ato de criar funciona como terapia.
 132. Marina compreendeu que o valor está mais no processo criativo do que em um trabalho específico e perguntou se Sérgio gostaria de transformar o design em sua ocupação principal ou se teme perder esse aspecto terapêutico.
+133. Sérgio afirmou que gostaria de viver do trabalho criativo e não acredita que ele perderia o aspecto terapêutico, porque cada projeto traz algo diferente, ao contrário da rotina massiva da clínica.
+134. Marina observou que Sérgio fala de forma diferente quando o assunto é criação e pediu o perfil do Instagram para poder observar o portfólio com calma quando seu celular voltar a funcionar.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua observando o portfólio no celular de Sérgio. Ele contou que criar funciona como terapia; ela pergunta se gostaria de viver principalmente do design ou se isso poderia mudar sua relação com a atividade.
+Marina continua observando o portfólio no celular de Sérgio. Ele revelou que gostaria de viver de design por apreciar a variedade do processo criativo. Marina pede o @ do portfólio para consultá-lo novamente quando seu celular funcionar.
 
 ---
 
