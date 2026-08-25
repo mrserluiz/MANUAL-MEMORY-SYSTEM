@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h34  
-**Local:** Região do terminal no centro; Uber parado para o desembarque de Marina  
+**Hora:** Aproximadamente 07h48  
+**Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Jonas chegou ao ponto de desembarque. Marina aceitou continuar usando a blusa vermelha durante a caminhada até o trabalho e está prestes a sair do carro.  
+**Situação:** Marina desembarcou minutos antes. Jonas levou Sérgio até seu destino, e Sérgio acaba de entrar no local do compromisso agendado para as 08h00.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -70,11 +70,11 @@
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
 **Residência:** Mesmo condomínio de Marina, bloco 16A
-**Local atual:** Banco traseiro direito do Uber, ao lado de Marina  
+**Local atual:** Recepção do local do compromisso, no centro  
 **Destino imediato:** Centro, para cumprir um atendimento agendado às 08h00 que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
-**Situação de transporte:** Uber chegou ao ponto de desembarque de Marina; Sérgio seguirá para seu compromisso às 07h00  
+**Situação de transporte:** Corrida concluída para Sérgio; ele chegou ao compromisso antes das 08h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga após contato pelo Instagram  
@@ -293,12 +293,16 @@
 171. Sérgio pediu que Marina permanecesse com a blusa devido ao frio, lembrando que os dois moram perto e poderiam combinar a devolução depois.
 172. Sérgio afirmou que quase não usa a blusa e voltou a elogiar como ela ficou em Marina.
 173. Marina aceitou continuar com a blusa, prometeu devolvê-la limpa e observou que agora deve a Sérgio tanto o Pix da corrida quanto a devolução da peça.
+174. Marina se despediu e desembarcou próxima ao terminal, seguindo a pé em direção ao trabalho.
+175. Jonas prosseguiu com a corrida levando Sérgio ao local do compromisso.
+176. Por volta das 07h48, Sérgio chegou ao destino no centro e entrou na recepção para o atendimento agendado das 08h00.
+177. Marina não está presente na cena atual; o contato futuro permanece possível pelo Instagram.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber está parado no ponto de desembarque de Marina. Ela aceitou continuar usando a blusa durante a caminhada e a devolverá depois. Permanecem pendentes o Pix de metade da corrida e a devolução da blusa.
+Sérgio acaba de entrar na recepção do local do compromisso, antes do horário agendado das 08h00. Marina já desembarcou e segue separadamente para o trabalho. Aguardar o atendimento de Sérgio.
 
 ---
 
