@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h22  
+**Hora:** Aproximadamente 07h23  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -24,7 +24,8 @@
 
 - 28 anos.
 - Está a caminho do trabalho.
-- Trabalha como analista administrativa em uma empresa da região, perto do centro.
+- Trabalha há quase quatro anos em uma empresa da região, perto do centro.
+- Entrou como assistente administrativa e foi promovida ao cargo atual de analista administrativa.
 - Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
@@ -239,12 +240,15 @@
 139. Marina autorizou de forma descontraída, brincando para ele não investigar fotos antigas nem curti-las acidentalmente.
 140. Sérgio chamou o Instagram de Marina de “portfólio de uma modelo”.
 141. Marina rejeitou a descrição exagerada, explicando com humor que as pessoas simplesmente escolhem as melhores fotos para publicar, mas agradeceu o elogio.
+142. Sérgio chamou Marina de bonita e humilde e perguntou há quanto tempo ela trabalha na empresa.
+143. Marina informou que trabalha lá há quase quatro anos, que entrou como assistente administrativa e foi promovida a analista.
+144. Marina explicou que não odeia o emprego, mas também não pretende permanecer nele para sempre.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio começou a observar o perfil de Marina e a chamou de modelo. Ela reagiu com humor, rejeitou o exagero e agradeceu.
+A conversa mudou para o trabalho de Marina. Ela contou que está na empresa há quase quatro anos, tendo começado como assistente antes de ser promovida a analista.
 
 ---
 
