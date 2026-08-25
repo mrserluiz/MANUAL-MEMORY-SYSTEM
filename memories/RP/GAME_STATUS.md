@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h31  
+**Hora:** Aproximadamente 06h32  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -161,12 +161,15 @@
 74. Marina explicou que ainda possui margem até as 08h00 e não precisa avisar neste momento. Caso o atraso aumente, pretende pedir o celular de Sérgio emprestado para fazer uma ligação.
 75. Sérgio lembrou que Marina está sem celular.
 76. Marina brincou que, naquela manhã, Sérgio havia se tornado seu aplicativo, relógio e central de emergência.
+77. Sérgio sugeriu que isso não precisaria acontecer apenas naquele dia, recuou chamando a frase de brincadeira e elogiou os olhos de Marina.
+78. Marina identificou o comentário como uma cantada, agradeceu o elogio e brincou que Sérgio costuma lançar a frase e se esconder atrás de “brincadeira”.
+79. Marina manteve o ritmo gradual da interação, dizendo que primeiro os dois precisavam sobreviver à corrida e ao trânsito.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio já avisou a clínica. Marina ainda possui margem até as 08h00 e brinca sobre estar temporariamente dependente do celular dele para informações e eventual contato.
+A corrida continua no trânsito. Sérgio flertou novamente e elogiou os olhos de Marina; ela respondeu com humor, agradeceu e manteve a aproximação em ritmo gradual.
 
 ---
 
