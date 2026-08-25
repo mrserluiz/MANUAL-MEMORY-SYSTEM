@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h26  
+**Hora:** Aproximadamente 06h27  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -55,13 +55,13 @@
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
 **Local atual:** Banco traseiro direito do Uber, ao lado de Marina  
-**Destino imediato:** Centro, para resolver algumas coisas  
+**Destino imediato:** Centro, para cumprir um atendimento agendado que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
 **Situação de transporte:** Dentro do Uber, em deslocamento para o centro  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
-**Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
+**Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
 ---
 
@@ -152,12 +152,14 @@
 65. Sérgio lembrou que Marina também precisava chegar ao trabalho e agradeceu a atenção dela.
 66. Jonas informou que ocorreu um acidente no centro e que a estimativa atual era de aproximadamente vinte minutos.
 67. Marina explicou que entra às 08h00 e ainda possui margem, demonstrou preocupação com possíveis feridos no acidente e perguntou se Sérgio poderia deixar para depois o compromisso que resolveria no centro.
+68. Sérgio explicou que o compromisso é agendado; se faltar, poderá esperar um mês ou mais por outra oportunidade e perder ainda mais tempo.
+69. Marina sugeriu que Sérgio mantivesse o compromisso e avisasse imediatamente a clínica sobre o possível atraso, enviando uma captura do trânsito para registrar a justificativa.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A estimativa até o terminal subiu para cerca de vinte minutos devido a um acidente no centro. Marina ainda possui margem até as 08h00, mas pergunta se Sérgio pode adiar o que resolveria no centro para seguir diretamente ao trabalho.
+O compromisso de Sérgio no centro não pode ser adiado sem uma espera de pelo menos um mês. Marina sugere que ele mantenha o agendamento e avise imediatamente a clínica sobre o atraso, documentando a greve e o trânsito.
 
 ---
 
