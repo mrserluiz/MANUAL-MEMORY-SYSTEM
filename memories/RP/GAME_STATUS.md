@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h21  
+**Hora:** Aproximadamente 07h22  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -237,12 +237,14 @@
 137. Marina usou o celular de Sérgio para localizar seu próprio perfil e conectá-lo ao perfil profissional dele, sem registrar no SAVE o identificador privado.
 138. Sérgio perguntou se poderia ver o perfil pessoal de Marina.
 139. Marina autorizou de forma descontraída, brincando para ele não investigar fotos antigas nem curti-las acidentalmente.
+140. Sérgio chamou o Instagram de Marina de “portfólio de uma modelo”.
+141. Marina rejeitou a descrição exagerada, explicando com humor que as pessoas simplesmente escolhem as melhores fotos para publicar, mas agradeceu o elogio.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Os perfis de Marina e Sérgio estão conectados no Instagram. Marina autorizou Sérgio a ver o perfil dela, com uma brincadeira sobre não investigar ou curtir fotos antigas.
+Sérgio começou a observar o perfil de Marina e a chamou de modelo. Ela reagiu com humor, rejeitou o exagero e agradeceu.
 
 ---
 
