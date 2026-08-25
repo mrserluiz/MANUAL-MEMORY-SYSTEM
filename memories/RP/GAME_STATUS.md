@@ -74,10 +74,10 @@
 **Destino imediato:** Centro, para cumprir um atendimento agendado às 08h00 que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
-**Situação de transporte:** Dentro do Uber, ainda em deslocamento para o centro às 07h00  
+**Situação de transporte:** Uber chegou ao ponto de desembarque de Marina; Sérgio seguirá para seu compromisso às 07h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
-**Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
+**Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga por Pix  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
 **Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
@@ -224,6 +224,11 @@
 111. Sérgio contou que, quando falta, as pessoas da clínica fecham a cara, demonstram raiva e passam a vê-lo de forma negativa.
 112. Marina brincou que o polegar para cima recebido poderia ser uma ameaça e afirmou que é injusto responsabilizar Sérgio por uma falha de organização da clínica.
 113. Marina perguntou há quanto tempo Sérgio trabalha no local.
+114. A conversa desviou antes de Sérgio responder há quanto tempo trabalha na clínica.
+115. Por volta das 07h30, o Uber chegou ao ponto de desembarque de Marina, próximo ao terminal do centro.
+116. Marina percebeu que havia chegado e que ainda precisava caminhar aproximadamente dez minutos até o trabalho.
+117. Como o frio e a garoa continuam, Marina pediu autorização para permanecer com a blusa vermelha durante a caminhada e devolvê-la depois.
+118. Com o celular descarregado, Marina pediu o número e a chave Pix de Sérgio para pagar sua metade da corrida quando pudesse carregar o aparelho.
 114. Sérgio informou que trabalha na clínica há seis anos.
 115. Marina observou que a clínica teve tempo suficiente para treinar alguém e dividir as responsabilidades, questionou o contraste entre todas as funções desempenhadas e o registro formal de maqueiro e perguntou se Sérgio já pensou em procurar outro emprego.
 116. Sérgio contou que é formado em Jogos Digitais pela FMU, na área de TI.
