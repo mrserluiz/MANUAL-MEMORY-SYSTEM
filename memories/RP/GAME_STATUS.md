@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h19  
+**Hora:** Aproximadamente 07h20  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -42,6 +42,7 @@
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: recém-apresentados; não são um casal.
+- Marina aceitou conectar seu perfil do Instagram ao perfil profissional de Sérgio para receber o portfólio depois.
 - Aprendeu que o homem no ponto se chama Sérgio e apresentou-se como Marina.
 - Aceitou dividir uma corrida com Sergio devido à greve e pagará metade.
 - Sugeriu procurar simultaneamente em outro aplicativo de transporte, pois Sergio precisa chegar ao trabalho mais cedo.
@@ -231,12 +232,15 @@
 132. Marina compreendeu que o valor está mais no processo criativo do que em um trabalho específico e perguntou se Sérgio gostaria de transformar o design em sua ocupação principal ou se teme perder esse aspecto terapêutico.
 133. Sérgio afirmou que gostaria de viver do trabalho criativo e não acredita que ele perderia o aspecto terapêutico, porque cada projeto traz algo diferente, ao contrário da rotina massiva da clínica.
 134. Marina observou que Sérgio fala de forma diferente quando o assunto é criação e pediu o perfil do Instagram para poder observar o portfólio com calma quando seu celular voltar a funcionar.
+135. Sérgio sugeriu que Marina procurasse o próprio @ usando o perfil profissional dele, permitindo que ele enviasse o portfólio depois.
+136. Marina brincou que a proposta parecia uma desculpa para conseguir o Instagram dela, mas aceitou.
+137. Marina usou o celular de Sérgio para localizar seu próprio perfil e conectá-lo ao perfil profissional dele, sem registrar no SAVE o identificador privado.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua observando o portfólio no celular de Sérgio. Ele revelou que gostaria de viver de design por apreciar a variedade do processo criativo. Marina pede o @ do portfólio para consultá-lo novamente quando seu celular funcionar.
+Marina aceitou conectar seu Instagram ao perfil profissional de Sérgio para receber o portfólio depois. Ela usa o celular dele para localizar seu perfil e então devolve o aparelho.
 
 ---
 
