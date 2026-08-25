@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h08  
-**Local:** Ponto de ônibus em São Bernardo do Campo/SP  
+**Hora:** Aproximadamente 06h13  
+**Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina e Sérgio aguardam o Uber. O frio e a garoa provocaram um espirro em Marina.  
+**Situação:** O Uber chegou. Após conferir o carro, Marina entrou pela porta aberta por Sérgio; os dois seguem para o centro.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -33,7 +33,8 @@
 - Percebeu que a blusa está limpa e possui perfume cítrico.
 - Pretende devolver a blusa quando chegarem ao destino.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
-- Não possui água consigo; pretendia tomar o antialérgico ao chegar ao trabalho.
+- Não possui água consigo; pretende tomar o antialérgico ao chegar ao trabalho.
+- Sérgio informou possuir suco de maracujá, mas Marina preferiu aguardar até chegar para tomar o remédio.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: recém-apresentados; conversa cordial e descontraída em andamento.
@@ -52,12 +53,12 @@
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
-**Local atual:** Mesmo ponto de ônibus que Marina  
+**Local atual:** Dentro do Uber com Marina  
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Corrida de Uber confirmada; motorista a aproximadamente seis minutos  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; blusa vermelha de lã e quente guardada na mochila  
+**Situação de transporte:** Dentro do Uber, em deslocamento para o centro  
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; suco de maracujá; Marina usa a blusa vermelha de lã emprestada  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
 
@@ -74,7 +75,7 @@
 - Uber e 99 apresentaram baixa disponibilidade durante a espera.
 - O frio aumentou, com vento e garoa fria.
 - Às 06h05, o Uber localizou um motorista a seis minutos do ponto.
-- A corrida foi confirmada e o motorista está a aproximadamente seis minutos.
+- A corrida foi confirmada, o motorista chegou e o deslocamento começou.
 - Há poucas pessoas na rua neste horário.
 
 ---
@@ -114,12 +115,17 @@
 31. Marina espirrou durante a espera e Sérgio respondeu “Saúde”.
 32. Sérgio perguntou se Marina possuía água para tomar o antialérgico.
 33. Marina informou que está sem água e pretendia tomar o remédio ao chegar ao trabalho.
+34. Sérgio informou possuir suco de maracujá na mochila.
+35. O Uber chegou ao ponto.
+36. Sérgio abriu a porta para Marina e disse: “Primeiro a linda dama”.
+37. Marina conferiu o carro antes de entrar, agradeceu a gentileza e preferiu deixar para tomar o remédio quando chegasse ao trabalho.
+38. Marina e Sérgio entraram no Uber e iniciaram o deslocamento para o centro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina explicou que está sem água e pretendia tomar o antialérgico ao chegar ao trabalho. Os dois continuam aguardando o Uber.
+Marina e Sérgio estão dentro do Uber, a caminho do centro. Marina usa a blusa vermelha emprestada e ainda não tomou o antialérgico.
 
 ---
 
