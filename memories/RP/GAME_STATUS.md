@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h25  
+**Hora:** Aproximadamente 06h26  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** O Uber enfrenta uma fila de carros. Jonas verifica no Waze uma estimativa mais precisa para o terminal.  
+**Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -78,6 +78,7 @@
 - Às 06h05, o Uber localizou um motorista a seis minutos do ponto.
 - A corrida foi confirmada, o motorista chegou e o deslocamento começou.
 - O Uber encontrou uma fila de carros e ficou praticamente parado no congestionamento.
+- Jonas identificou um acidente no centro; a estimativa atual é de aproximadamente vinte minutos.
 - Há poucas pessoas na rua neste horário.
 
 ---
@@ -148,12 +149,15 @@
 62. Jonas informou que o aplicativo indicava sete minutos em condições normais, sem considerar adequadamente o congestionamento.
 63. Jonas começou a consultar o Waze para obter uma estimativa mais precisa.
 64. Diante do horário de entrada de Sérgio, Marina sugeriu que ele avisasse a clínica sobre a possibilidade de atraso.
+65. Sérgio lembrou que Marina também precisava chegar ao trabalho e agradeceu a atenção dela.
+66. Jonas informou que ocorreu um acidente no centro e que a estimativa atual era de aproximadamente vinte minutos.
+67. Marina explicou que entra às 08h00 e ainda possui margem, demonstrou preocupação com possíveis feridos no acidente e perguntou se Sérgio poderia deixar para depois o compromisso que resolveria no centro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Jonas verifica no Waze uma estimativa mais precisa. Marina sugere que Sérgio avise a clínica sobre a possibilidade de atraso, pois ele ainda precisa resolver algo no centro antes de trabalhar.
+A estimativa até o terminal subiu para cerca de vinte minutos devido a um acidente no centro. Marina ainda possui margem até as 08h00, mas pergunta se Sérgio pode adiar o que resolveria no centro para seguir diretamente ao trabalho.
 
 ---
 
