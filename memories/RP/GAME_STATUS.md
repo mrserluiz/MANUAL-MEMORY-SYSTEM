@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h34  
+**Hora:** Aproximadamente 06h35  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -170,12 +170,14 @@
 83. Marina tocou acidentalmente Sérgio novamente durante a corrida.
 84. Sérgio percebeu que a mão dela estava muito gelada.
 85. Marina recolheu a mão, pediu desculpas pelo toque acidental e brincou que a blusa aquece o corpo, mas não faz milagre nas mãos.
+86. Sérgio ofereceu colocar a mão sobre a de Marina para aquecê-la.
+87. Marina recusou o contato de forma leve, lembrando que eles ainda acabaram de se conhecer, e colocou as mãos dentro das mangas da blusa.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida continua no trânsito. Marina tocou Sérgio acidentalmente outra vez; ele notou que a mão dela estava gelada. Ela recolheu a mão e reagiu com humor.
+A corrida continua no trânsito. Sérgio ofereceu aquecer a mão de Marina com a própria mão; ela recusou de forma leve e aqueceu as mãos dentro das mangas da blusa.
 
 ---
 
