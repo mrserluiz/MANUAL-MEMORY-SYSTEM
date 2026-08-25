@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h29  
+**Hora:** Aproximadamente 06h30  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -157,12 +157,14 @@
 70. Sérgio afirmou que seria criticado pela clínica mesmo apresentando a justificativa.
 71. Marina respondeu que ele deveria avisar de qualquer maneira, para deixar o imprevisto documentado, e lembrou em tom bem-humorado que nem alguém que faz tudo consegue se teletransportar.
 72. Sérgio concordou em avisar a clínica sobre o possível atraso.
+73. Sérgio enviou a mensagem para a clínica e perguntou se Marina também havia avisado seu trabalho.
+74. Marina explicou que ainda possui margem até as 08h00 e não precisa avisar neste momento. Caso o atraso aumente, pretende pedir o celular de Sérgio emprestado para fazer uma ligação.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio concordou em avisar a clínica. Marina permanece em silêncio por alguns instantes para que ele possa escrever a mensagem.
+Sérgio já avisou a clínica. Marina ainda possui margem até as 08h00 e não avisará o trabalho por enquanto; se o atraso aumentar, poderá pedir o celular de Sérgio emprestado para ligar.
 
 ---
 
