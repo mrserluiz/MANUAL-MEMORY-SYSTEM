@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h24  
+**Hora:** Aproximadamente 06h25  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** O Uber está parado em uma fila de carros. O trânsito está congestionado e eles ainda não chegaram ao destino.  
+**Situação:** O Uber enfrenta uma fila de carros. Jonas verifica no Waze uma estimativa mais precisa para o terminal.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -145,12 +145,15 @@
 59. Sérgio explicou que eles ainda não estavam chegando: a rua estava parada, com os carros formando uma fila.
 60. Sérgio esclareceu que não havia ficado chateado com a brincadeira de Marina.
 61. Marina disse que havia pensado tê-lo chateado e perguntou ao motorista quanto tempo o aplicativo estimava até o terminal.
+62. Jonas informou que o aplicativo indicava sete minutos em condições normais, sem considerar adequadamente o congestionamento.
+63. Jonas começou a consultar o Waze para obter uma estimativa mais precisa.
+64. Diante do horário de entrada de Sérgio, Marina sugeriu que ele avisasse a clínica sobre a possibilidade de atraso.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber está parado no congestionamento. Sérgio esclareceu que não ficou chateado. Marina pergunta a Jonas qual é a estimativa do aplicativo até o terminal.
+Jonas verifica no Waze uma estimativa mais precisa. Marina sugere que Sérgio avise a clínica sobre a possibilidade de atraso, pois ele ainda precisa resolver algo no centro antes de trabalhar.
 
 ---
 
