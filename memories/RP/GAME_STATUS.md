@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h20  
+**Hora:** Aproximadamente 06h21  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Durante a corrida, Sérgio oferece uma garrafa lacrada de suco de maracujá para Marina tomar seu antialérgico.  
@@ -134,12 +134,14 @@
 49. Sérgio ofereceu a Marina uma garrafa ainda lacrada de suco de maracujá.
 50. Sérgio comentou que o nariz dela estava muito vermelho e que ela o coçava bastante desde o ponto.
 51. Marina conferiu o lacre, aceitou o suco e tomou seu próprio antialérgico com um gole.
+52. Sérgio brincou chamando Marina de “Rodolfo” e dizendo que o Papai Noel precisava do nariz vermelho dela.
+53. Marina riu e provocou Sérgio, dizendo que ele emprestou a blusa e ofereceu suco, mas isso não lhe dava o direito de chamá-la de rena.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está em andamento. Marina acaba de tomar o antialérgico com o suco lacrado oferecido por Sérgio e agradece a preocupação dele.
+A corrida está em andamento. Sérgio brincou com o nariz vermelho de Marina; ela respondeu no mesmo tom, mantendo a conversa descontraída.
 
 ---
 
