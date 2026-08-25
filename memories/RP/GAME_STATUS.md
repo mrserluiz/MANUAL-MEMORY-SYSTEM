@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h33  
+**Hora:** Aproximadamente 06h34  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -166,12 +166,16 @@
 79. Marina manteve o ritmo gradual da interação, dizendo que primeiro os dois precisavam sobreviver à corrida e ao trânsito.
 80. Sérgio disse que poderia retirar a parte de “brincadeira” e voltou a comparar Marina a uma rena de nariz vermelho, chamando-a de linda e meiga.
 81. Marina aceitou que o interesse pudesse ser sincero, mas observou que Sérgio ainda não a conhece o suficiente para saber se ela é meiga. Ela manteve o tom brincalhão e a aproximação gradual.
+82. Sérgio disse ter sentido uma qualidade meiga vindo de Marina.
+83. Marina tocou acidentalmente Sérgio novamente durante a corrida.
+84. Sérgio percebeu que a mão dela estava muito gelada.
+85. Marina recolheu a mão, pediu desculpas pelo toque acidental e brincou que a blusa aquece o corpo, mas não faz milagre nas mãos.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida continua no trânsito. Sérgio deixou mais claro que os elogios não são apenas brincadeira. Marina respondeu com humor, mas lembrou que eles ainda se conhecem há pouco tempo.
+A corrida continua no trânsito. Marina tocou Sérgio acidentalmente outra vez; ele notou que a mão dela estava gelada. Ela recolheu a mão e reagiu com humor.
 
 ---
 
