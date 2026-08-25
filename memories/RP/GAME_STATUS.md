@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h27  
+**Hora:** Aproximadamente 05h29  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; o ônibus continua atrasado.  
 **Situação:** Marina e Sergio conversam enquanto aguardam o ônibus.  
@@ -29,7 +29,7 @@
 - Está bem; não há doença ou emergência atual.
 - Celular com 23% de bateria.
 - Estado civil: solteira.
-- Relação atual com Sergio: desconhecidos; conversa cordial em andamento.
+- Relação atual com Sergio: desconhecidos; conversa cordial e descontraída em andamento.
 - Ainda não sabe o nome de Sergio dentro da história.
 - Entendeu que a oferta de Sergio foi uma tentativa genuína de ajudá-la.
 - Manteve a decisão de não dividir o Uber por cautela com alguém que acabou de conhecer.
@@ -41,7 +41,9 @@
 **Nome conhecido pelo sistema:** Sergio Luiz  
 **Nome conhecido por Marina:** Ainda não informado  
 **Relação com Marina:** Desconhecidos  
-**Profissão:** Maqueiro em uma clínica próxima da região  
+**Profissão registrada:** Maqueiro em uma clínica próxima da região  
+**Função cotidiana descrita:** Atua como “faz tudo”; maqueiro é principalmente o cargo formal na carteira de trabalho  
+**Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo, reduzindo a frequência das crises, mas ainda sofre quando elas aparecem  
 **Local atual:** Mesmo ponto de ônibus que Marina  
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
@@ -67,28 +69,22 @@
 
 1. A campanha foi inicializada em 25/08/2026 em um ponto de ônibus de São Bernardo do Campo.
 2. Marina iniciou o primeiro contato dizendo: “Esse ônibus tá demorando pra você também ou eu que perdi a noção do tempo?”
-3. Sergio cumprimentou Marina e perguntou qual ônibus ela pega.
-4. Marina disse que pega o ônibus que vai para o centro, mas confundiu o horário como se fosse fim de tarde.
-5. Sergio corrigiu que eram 05h20 e perguntou se Marina trabalhava à noite.
-6. Sergio informou que também vai ao centro, onde resolverá algumas coisas antes de seguir para o trabalho.
-7. Marina reconheceu a confusão. Ela trabalha durante o dia e está a caminho do trabalho.
-8. Sergio informou que começa a trabalhar entre 06h45 e 07h00.
-9. Como o ônibus não chegou, Sergio cogitou chamar um Uber e ofereceu a Marina uma carona gratuita até o centro.
-10. Marina agradeceu, mas recusou educadamente porque os dois acabaram de se conhecer.
-11. Sergio pediu desculpas, explicou que percebeu a pressa e o frio e ofereceu mostrar a solicitação e o trajeto do Uber pelo GPS.
-12. Marina afirmou que compreendeu a boa intenção, mas manteve a recusa por cautela.
-13. Sergio verificou uma tarifa de Uber de R$ 55,90 e decidiu continuar aguardando o ônibus.
-14. Sergio perguntou se Marina trabalha no centro.
-15. Marina explicou que trabalha perto do centro, no setor administrativo de uma empresa da região, a cerca de dez minutos a pé do ponto final.
-16. Sergio informou que trabalha como maqueiro em uma clínica próxima.
-17. Ao notar a sacola de farmácia, Sergio perguntou se Marina estava bem.
-18. Marina explicou que está bem e que comprou apenas antialérgico para sua rinite.
+3. Sergio e Marina descobriram que ambos seguem em direção ao centro.
+4. Sergio informou que começa a trabalhar entre 06h45 e 07h00.
+5. Diante do atraso, Sergio cogitou chamar um Uber e ofereceu uma carona gratuita a Marina.
+6. Marina agradeceu, mas recusou educadamente porque os dois acabaram de se conhecer.
+7. Sergio encontrou uma tarifa de Uber de R$ 55,90 e decidiu continuar aguardando o ônibus.
+8. Marina contou que trabalha no setor administrativo de uma empresa perto do centro.
+9. Sergio informou que trabalha como maqueiro em uma clínica próxima.
+10. Marina explicou que a sacola de farmácia contém antialérgico para sua rinite.
+11. Sergio contou que também possui rinite e fez um tratamento quando era mais novo, o que reduziu suas crises.
+12. Sergio explicou que, embora esteja registrado como maqueiro, na prática atua como um “faz tudo” dentro da clínica.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina acaba de comentar que o frio e a poeira atacam sua rinite e pergunta se o trabalho de Sergio como maqueiro é muito puxado.
+Marina se identificou com o relato sobre as crises de rinite e pergunta, em tom bem-humorado, quais tarefas Sergio realiza além da função de maqueiro.
 
 ---
 
