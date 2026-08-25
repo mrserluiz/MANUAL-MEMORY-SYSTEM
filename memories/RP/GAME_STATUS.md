@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h17  
+**Hora:** Aproximadamente 07h18  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -227,12 +227,14 @@
 128. Sérgio brincou perguntando se Marina queria ver apenas os trabalhos e entregou o celular com o Instagram do portfólio aberto.
 129. Marina respondeu “por enquanto, os do trabalho”, chamou-o de engraçadinho e começou a observar o perfil.
 130. Sem presumir detalhes ainda não apresentados dos projetos, Marina perguntou qual trabalho Sérgio mais gostou de realizar.
+131. Sérgio explicou que não possui um projeto favorito; para ele, o próprio ato de criar funciona como terapia.
+132. Marina compreendeu que o valor está mais no processo criativo do que em um trabalho específico e perguntou se Sérgio gostaria de transformar o design em sua ocupação principal ou se teme perder esse aspecto terapêutico.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina está com o celular de Sérgio nas mãos, observando o Instagram de portfólio. Ela pergunta qual projeto ele mais gostou de realizar.
+Marina continua observando o portfólio no celular de Sérgio. Ele contou que criar funciona como terapia; ela pergunta se gostaria de viver principalmente do design ou se isso poderia mudar sua relação com a atividade.
 
 ---
 
