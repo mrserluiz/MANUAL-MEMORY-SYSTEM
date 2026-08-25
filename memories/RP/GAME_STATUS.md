@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h05  
+**Hora:** Aproximadamente 07h06  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -32,7 +32,9 @@
 - Está usando a blusa vermelha de lã de Sergio; ficou justa, confortável e a aqueceu.
 - Percebeu que a blusa está limpa e possui perfume cítrico.
 - Pretende devolver a blusa quando chegarem ao destino.
-- Carrega uma sacola de farmácia com antialérgico para sua rinite.
+- Carrega apenas uma sacola de farmácia com antialérgico para sua rinite.
+- Não levou marmita nesta manhã.
+- Costuma almoçar em um restaurante próximo ao trabalho, frequentemente acompanhada de Renata, colega do financeiro.
 - Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
 - Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
 - Tomou seu próprio antialérgico com um gole do suco durante a corrida.
@@ -187,12 +189,14 @@
 97. Marina calculou que ainda deve chegar antes das 08h00 e perguntou a Sérgio qual é o horário exato do compromisso agendado no centro.
 98. Sérgio explicou que o atendimento é às 08h00; ele pretendia chegar às 07h00 para ter margem, tentar ser atendido antes e localizar o endereço.
 99. Marina tranquilizou Sérgio ao perceber que o compromisso ainda não foi perdido: com a rota estimada, ele deve chegar por volta de 07h30 e ainda terá alguma margem para encontrar o local.
+100. Sérgio percebeu que Marina carregava apenas a sacola de remédios e perguntou se ela não levava marmita.
+101. Marina explicou que não levou marmita naquele dia e que normalmente almoça em um restaurante próximo ao trabalho, muitas vezes com Renata, amiga e colega do setor financeiro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O atendimento de Sérgio é às 08h00. A estimativa atual pode levá-los ao centro por volta de 07h30, ainda com alguma margem para ele localizar o endereço. Marina também precisa caminhar cerca de dez minutos até o trabalho, onde entra às 08h00.
+O Uber segue pela rota alternativa. Marina explicou que não levou marmita e costuma almoçar perto do trabalho, muitas vezes com Renata.
 
 ---
 
