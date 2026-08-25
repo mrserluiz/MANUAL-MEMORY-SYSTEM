@@ -11,9 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h22  
+**Hora:** Aproximadamente 05h24  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
-**Situação:** Marina e Sergio conversam enquanto o ônibus não chega. Sergio considera chamar um Uber para ir ao centro.  
+**Condição:** Manhã fria; o ônibus continua atrasado.  
+**Situação:** Marina e Sergio conversam no ponto. Sergio considera chamar um Uber para não se atrasar.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
 ---
@@ -26,10 +27,11 @@
 - Celular com 23% de bateria.
 - Estado civil: solteira.
 - Espera o ônibus que segue em direção ao centro.
-- Relação atual com Sergio: desconhecidos; primeiro contato em andamento.
+- Relação atual com Sergio: desconhecidos; primeiro contato cordial em andamento.
 - Ainda não sabe o nome de Sergio dentro da história.
-- Confundiu o horário durante a conversa e foi corrigida por Sergio.
-- Recusou educadamente dividir um Uber com Sergio porque os dois acabaram de se conhecer.
+- Entendeu que a oferta de Sergio foi uma tentativa genuína de ajudá-la.
+- Manteve a decisão de não dividir o Uber por cautela com alguém que acabou de conhecer.
+- Pretende esperar mais dez minutos e chamar seu próprio carro se o ônibus não chegar.
 
 ---
 
@@ -71,12 +73,14 @@
 8. Sergio informou que começa a trabalhar entre 06h45 e 07h00.
 9. Como o ônibus não chegou, Sergio cogitou chamar um Uber e ofereceu a Marina uma carona gratuita até o centro.
 10. Marina agradeceu, mas recusou educadamente porque os dois acabaram de se conhecer.
+11. Sergio pediu desculpas, explicou que percebeu a pressa e o frio e ofereceu mostrar a solicitação e o trajeto do Uber pelo GPS.
+12. Marina afirmou que compreendeu a boa intenção, mas manteve a recusa por cautela. Disse que aguardará mais dez minutos antes de chamar seu próprio carro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sergio pode chamar o Uber e seguir para o centro ou continuar aguardando o ônibus. Marina permanece no ponto.
+Marina tranquilizou Sergio, agradeceu a gentileza e disse que ele deveria seguir para não se atrasar. O ônibus ainda não chegou.
 
 ---
 
