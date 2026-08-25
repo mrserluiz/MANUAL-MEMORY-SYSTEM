@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h08  
+**Hora:** Aproximadamente 07h09  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -63,7 +63,7 @@
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
 **Situação de transporte:** Dentro do Uber, ainda em deslocamento para o centro às 07h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada
-**Rotina de alimentação conhecida:** Tenta levar comida para o trabalho, mas nem sempre consegue almoçar  
+**Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
@@ -198,12 +198,14 @@
 104. Marina perguntou se Sérgio costuma levar marmita para o trabalho.
 105. Sérgio informou que tenta levar comida, mas nem sempre consegue almoçar.
 106. Marina demonstrou preocupação prática, observando que ele realiza várias tarefas e ainda pula o almoço, e perguntou se isso acontece por falta de tempo ou de fome.
+107. Sérgio explicou que a rotina da clínica não para e que frequentemente utiliza o horário de almoço para realizar tarefas que não cabem no restante do expediente.
+108. Marina observou que, na prática, o intervalo dele estava sendo transformado em horário de trabalho e perguntou se ninguém poderia cobri-lo nem por meia hora.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Sérgio contou que nem sempre consegue almoçar; Marina pergunta se isso ocorre por falta de tempo ou de fome.
+O Uber segue pela rota alternativa. Sérgio explicou que trabalha durante o próprio horário de almoço; Marina pergunta se alguém pode cobri-lo por pelo menos meia hora.
 
 ---
 
