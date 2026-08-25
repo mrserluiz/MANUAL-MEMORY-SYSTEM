@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h39  
+**Hora:** Aproximadamente 05h40  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; os ônibus estão em greve.  
-**Situação:** O Uber continua procurando motorista, enquanto Sergio verifica disponibilidade no aplicativo 99.  
+**Situação:** Uber e 99 apresentam baixa disponibilidade de motoristas. Sergio e Marina continuam no ponto.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -51,7 +51,7 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Verifica uma corrida no aplicativo 99 enquanto o Uber continua procurando motorista  
+**Situação de transporte:** Uber e 99 apresentam a mesma baixa disponibilidade; mantém a busca ativa  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Encontrar transporte rapidamente, chegar ao centro e seguir para o trabalho
@@ -66,6 +66,7 @@
 - Os ônibus estão em greve nesta manhã.
 - O celular de Marina ficou sem bateria e desligou.
 - Há poucos motoristas de aplicativo disponíveis na região.
+- Uber e 99 apresentam baixa disponibilidade.
 - Nenhuma corrida foi aceita até o momento.
 
 ---
@@ -89,12 +90,13 @@
 15. Preocupado com seu horário de entrada, Sergio demonstrou pressa.
 16. Marina sugeriu verificar outro aplicativo de transporte enquanto a primeira busca continua.
 17. Sergio começou a verificar a disponibilidade de motoristas pelo aplicativo 99.
+18. Sergio constatou que a situação no 99 era igual à do Uber, sem motorista disponível de imediato.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber continua procurando motorista. Sergio verifica a disponibilidade e o preço de uma corrida pelo aplicativo 99, enquanto Marina aguarda.
+Uber e 99 apresentam baixa disponibilidade. Marina sugere manter a busca ativa e continuar atualizando o segundo aplicativo até aparecer algum motorista.
 
 ---
 
