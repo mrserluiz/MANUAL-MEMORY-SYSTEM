@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h43  
+**Hora:** Aproximadamente 05h45  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Uber e 99 apresentam baixa disponibilidade. Marina veste a blusa vermelha de lã emprestada por Sergio.  
@@ -35,8 +35,8 @@
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
-- Relação atual com Sergio: desconhecidos; conversa cordial e descontraída em andamento.
-- Ainda não sabe o nome de Sergio dentro da história.
+- Relação atual com Sergio: recém-apresentados; conversa cordial e descontraída em andamento.
+- Aprendeu que o homem no ponto se chama Sérgio e apresentou-se como Marina.
 - Aceitou dividir uma corrida com Sergio devido à greve e pagará metade.
 - Sugeriu procurar simultaneamente em outro aplicativo de transporte, pois Sergio precisa chegar ao trabalho mais cedo.
 
@@ -45,8 +45,8 @@
 ## 👤 SERGIO — JOGADOR
 
 **Nome conhecido pelo sistema:** Sergio Luiz  
-**Nome conhecido por Marina:** Ainda não informado  
-**Relação com Marina:** Desconhecidos  
+**Nome conhecido por Marina:** Sérgio  
+**Relação com Marina:** Recém-apresentados  
 **Profissão registrada:** Maqueiro em uma clínica próxima da região  
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
@@ -101,12 +101,15 @@
 21. Marina decidiu engolir o orgulho e pediu a blusa extra emprestada, prometendo devolvê-la quando chegassem.
 22. Sergio encontrou a blusa na mochila e a entregou a Marina.
 23. Marina vestiu a blusa vermelha de lã. Ela ficou justa, confortável e quente; estava limpa e com perfume cítrico.
+24. Sérgio apresentou-se pelo nome.
+25. Sérgio elogiou Marina, dizendo que ela ficou bonita de vermelho e que a cor combina com o cabelo dela, que também chamou de charmoso.
+26. Marina apresentou-se e recebeu o elogio com um sorriso sem graça e uma brincadeira.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina está usando a blusa emprestada e agradece a Sergio. Ao perceber que ainda não sabe o nome dele, pergunta como ele se chama. Os aplicativos continuam procurando motorista.
+Sérgio e Marina agora sabem os nomes um do outro. Marina acaba de brincar que a blusa é dele, mas foi ela quem ganhou o elogio. Os aplicativos continuam procurando motorista.
 
 ---
 
