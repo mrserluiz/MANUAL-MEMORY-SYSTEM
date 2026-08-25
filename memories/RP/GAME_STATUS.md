@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 06h06  
+**Hora:** Aproximadamente 06h07  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Sérgio confirmou a corrida. O motorista está a aproximadamente seis minutos do ponto; os dois aguardam a chegada.  
+**Situação:** Marina e Sérgio aguardam o Uber. O frio e a garoa provocaram um espirro em Marina.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -110,12 +110,13 @@
 28. Às 06h05, após a espera, o Uber localizou um motorista a seis minutos do ponto.
 29. Sérgio confirmou a corrida e informou que agora precisam aguardar a chegada do motorista.
 30. Sérgio observou que quase não há ninguém na rua, atribuindo isso ao horário.
+31. Marina espirrou durante a espera e Sérgio respondeu “Saúde”.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A corrida está confirmada. Marina e Sérgio aguardam o motorista, ainda a aproximadamente seis minutos, sob frio e garoa. A rua está quase vazia.
+Marina acaba de agradecer a Sérgio por desejar-lhe saúde e brinca que bastou falarem de rinite para ela espirrar. Os dois continuam aguardando o Uber.
 
 ---
 
