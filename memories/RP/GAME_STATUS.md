@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h25  
+**Hora:** Aproximadamente 07h26  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -75,7 +75,8 @@
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
 **Trabalho autônomo:** Serviços de TI e design para empresas de bairro e pessoas físicas; cria logotipos, cardápios, fachadas, peças para redes sociais, convites de aniversário, cartões de visita e outros materiais; após o expediente da clínica, das 19h30 às 22h; aos sábados e domingos, das 14h às 17h
 **Portfólio:** Mantém um perfil no Instagram dedicado aos projetos
-**Objetivos profissionais conhecidos:** Gostaria de viver principalmente de design e criação; busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia; já enviou currículos, sem retorno satisfatório
+**Patrimônio informado:** Imóveis no litoral em Peruíbe com área disponível para construir quartos ou kitnets, garagem e área de lazer; uma casa em Itanhaém; um salão comercial
+**Objetivos profissionais conhecidos:** Gostaria de viver principalmente de design e criação; pesquisou o mercado de hospedagem e possui imóveis com potencial para aluguel de curta duração; busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia
 **Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
 
 ---
@@ -253,12 +254,16 @@
 148. Sérgio sugeriu que Marina conhecesse o mercado de hotelaria e aluguel de fim de semana.
 149. Marina interpretou a sugestão como administração de casas ou apartamentos para hospedagem curta, reconheceu não possuir imóvel ou capital para investir diretamente e considerou que poderia administrar propriedades de terceiros.
 150. Marina perguntou se Sérgio já trabalhou ou pesquisou esse mercado.
+151. Sérgio informou que já pesquisou o setor e possui imóveis no litoral.
+152. Em Peruíbe, Sérgio possui área com potencial para construir quartos ou kitnets, além de garagem e área de lazer.
+153. Sérgio também informou possuir uma casa em Itanhaém e um salão comercial.
+154. Marina demonstrou surpresa com a estrutura já disponível e perguntou qual é o principal obstáculo para desenvolver o projeto: capital para obra, projeto, documentação ou falta de tempo.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio sugeriu hotelaria e aluguéis de fim de semana. Marina considerou a possibilidade de administrar imóveis de terceiros e pergunta se ele conhece esse mercado por experiência própria.
+Sérgio revelou possuir imóveis em Peruíbe e Itanhaém, além de um salão comercial, e ter pesquisado hospedagem. Marina pergunta o que impede o desenvolvimento do projeto.
 
 ---
 
