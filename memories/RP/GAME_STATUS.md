@@ -11,10 +11,11 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 05h34  
+**Hora:** Aproximadamente 05h35  
 **Local:** Ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** Manhã fria; os ônibus estão em greve.  
-**Situação:** Marina e Sergio precisam encontrar outro transporte para o centro.  
+**Situação:** Sergio prepara a solicitação de uma corrida por aplicativo para os dois.  
+**Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
 ---
@@ -24,16 +25,16 @@
 - 28 anos.
 - Está a caminho do trabalho.
 - Trabalha como analista administrativa em uma empresa da região, perto do centro.
-- Do centro até o trabalho, caminha aproximadamente dez minutos.
+- Da região do terminal até o trabalho, caminha aproximadamente dez minutos.
+- Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Carrega uma sacola de farmácia com antialérgico para sua rinite.
 - Está bem; não há doença ou emergência atual.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
 - Relação atual com Sergio: desconhecidos; conversa cordial e descontraída em andamento.
 - Ainda não sabe o nome de Sergio dentro da história.
-- Inicialmente recusou dividir um Uber por cautela.
-- Após descobrir a greve e ficar sem celular, reconsiderou e aceitou dividir uma corrida com Sergio.
-- Condição apresentada por Marina: pagar metade da viagem.
+- Aceitou dividir uma corrida com Sergio devido à greve.
+- Pagará metade do valor da viagem.
 
 ---
 
@@ -50,9 +51,9 @@
 **Destino imediato:** Centro, para resolver algumas coisas  
 **Destino posterior:** Clínica onde trabalha  
 **Horário de entrada no trabalho:** Entre 06h45 e 07h00  
-**Situação de transporte:** Precisa solicitar transporte por aplicativo devido à greve  
+**Situação de transporte:** Solicita uma corrida por aplicativo para dividir com Marina  
 **Inventário relevante:** Celular com acesso ao aplicativo de transporte  
-**Finanças da campanha:** Última tarifa de Uber consultada: R$ 55,90  
+**Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
 **Objetivos imediatos:** Chegar ao centro e depois seguir para o trabalho
 
 ---
@@ -64,7 +65,7 @@
 - As rotinas e lores paralelas iniciais permanecem ativas nos bastidores.
 - Os ônibus estão em greve nesta manhã.
 - O celular de Marina ficou sem bateria e desligou.
-- O transporte por aplicativo tornou-se a alternativa imediata disponível.
+- Sergio possui o celular disponível para solicitar a corrida.
 
 ---
 
@@ -79,17 +80,17 @@
 7. Marina contou que trabalha no setor administrativo de uma empresa perto do centro.
 8. Sergio informou que trabalha formalmente como maqueiro, mas desempenha diversas outras funções em uma clínica próxima.
 9. Marina e Sergio descobriram que ambos têm rinite.
-10. Sergio começou a pesquisar o motivo da demora dos ônibus.
-11. Sergio encontrou a informação de que os ônibus estão em greve.
-12. Sergio percebeu que o celular de Marina havia descarregado e desligado.
-13. Sem ônibus e sem celular para solicitar uma corrida própria, Marina reconsiderou a oferta anterior.
-14. Marina aceitou dividir um Uber com Sergio, mas insistiu em pagar metade da corrida.
+10. Sergio encontrou a informação de que os ônibus estão em greve.
+11. O celular de Marina descarregou e desligou.
+12. Marina reconsiderou a oferta, aceitando dividir a corrida e pagar metade.
+13. Sergio concordou com a divisão do valor e perguntou qual endereço deveria colocar para Marina.
+14. Marina indicou a região do terminal no centro como destino, de onde seguirá a pé até o trabalho, sem fornecer o endereço exato da empresa.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina perguntou se a oferta de dividir o Uber ainda está de pé e estabeleceu que pagará metade. Aguardar a resposta de Sergio e a solicitação da corrida.
+Sergio está prestes a confirmar a corrida com destino à região do terminal no centro.
 
 ---
 
