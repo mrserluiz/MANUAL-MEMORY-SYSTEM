@@ -12,9 +12,9 @@
 
 **Data:** Terça-feira, 25/08/2026  
 **Hora:** Aproximadamente 07h34  
-**Local:** Região do terminal no centro, ainda dentro do Uber parado para desembarque  
+**Local:** Região do terminal no centro; Uber parado para o desembarque de Marina  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
+**Situação:** Jonas chegou ao ponto de desembarque. Marina aceitou continuar usando a blusa vermelha durante a caminhada até o trabalho e está prestes a sair do carro.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -299,6 +299,82 @@
 ## ▶️ PONTO DE CONTINUIDADE
 
 O Uber está parado no ponto de desembarque de Marina. Ela aceitou continuar usando a blusa durante a caminhada e a devolverá depois. Permanecem pendentes o Pix de metade da corrida e a devolução da blusa.
+
+---
+
+## 💾 SAVE CHECKPOINT — S001
+
+**SAVE_ID:** MARINA-20260825-0734-S001  
+**Data da campanha:** Terça-feira, 25/08/2026  
+**Hora da campanha:** Aproximadamente 07h34  
+**Modo:** Campanha oficial  
+**Testes ativos:** Nenhum  
+**Local:** Uber de Jonas parado próximo ao terminal no centro
+
+### Estado de Marina
+
+- Está prestes a desembarcar e seguir a pé até o trabalho.
+- Entra no trabalho às 08h00 e possui reunião às 08h30.
+- Celular descarregado.
+- Tomou seu próprio antialérgico durante a corrida.
+- Continua usando a blusa vermelha de lã emprestada por Sérgio devido ao frio e à garoa.
+- Levará a blusa e pretende devolvê-la limpa posteriormente.
+- Mora no mesmo condomínio que Sérgio, no bloco 12B; apartamento não revelado.
+- Instagram conectado ao perfil profissional de Sérgio.
+- Não levou marmita.
+
+### Estado de Sérgio
+
+- Permanece no banco traseiro direito do Uber.
+- Possui atendimento agendado no centro às 08h00.
+- Seguirá para a clínica após o atendimento.
+- A clínica foi avisada do atraso e respondeu com 👍.
+- Mora no mesmo condomínio que Marina, no bloco 16A.
+- Trabalha formalmente como maqueiro há seis anos e exerce várias funções extras.
+- Mantém trabalhos autônomos de TI e design e um portfólio no Instagram.
+- Possui projetos e imóveis com potencial para hospedagem, ainda limitados por capital e tempo.
+
+### Relação conhecida
+
+- Sérgio e Marina se conheceram nesta manhã.
+- Relação atual: recém-apresentados; não são um casal.
+- Conversa cordial, descontraída e com flerte leve de Sérgio.
+- Marina recebeu os elogios com humor, preservando aproximação gradual e limites físicos.
+- Os dois descobriram que moram no mesmo condomínio.
+- Existe contato possível pelo Instagram.
+
+### Mundo e transporte
+
+- Ônibus em greve.
+- Manhã fria, com vento e garoa.
+- Houve acidente e bloqueio no centro, causando congestionamento e desvio.
+- Corrida compartilhada conduzida por Jonas.
+- Uber atualmente parado no ponto de desembarque de Marina.
+
+### Inventário e pendências
+
+**Com Marina:**
+- Sacola de farmácia.
+- Antialérgico.
+- Celular descarregado.
+- Blusa vermelha de lã pertencente a Sérgio.
+
+**Com Sérgio:**
+- Celular.
+- Mochila.
+- Acesso ao Instagram e aos aplicativos de transporte.
+
+**Pendências oficiais:**
+1. Marina pagar por Pix metade da corrida.
+2. Marina devolver limpa a blusa vermelha.
+3. Sérgio comparecer ao atendimento das 08h00.
+4. Marina caminhar até o trabalho e chegar para o expediente das 08h00.
+5. Sérgio seguir para a clínica depois do atendimento.
+6. Retomar o contato entre os dois pelo Instagram quando plausível.
+
+### Próximo ponto
+
+Marina está prestes a se despedir, desembarcar próxima ao terminal e seguir a pé até o trabalho usando a blusa emprestada. Sérgio continuará no Uber para cumprir o atendimento das 08h00.
 
 ---
 
