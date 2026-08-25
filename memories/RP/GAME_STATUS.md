@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h04  
+**Hora:** Aproximadamente 07h05  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -55,9 +55,9 @@
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
 **Local atual:** Banco traseiro direito do Uber, ao lado de Marina  
-**Destino imediato:** Centro, para cumprir um atendimento agendado que não pode ser remarcado facilmente  
+**Destino imediato:** Centro, para cumprir um atendimento agendado às 08h00 que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
-**Horário de entrada no trabalho:** Entre 06h45 e 07h00  
+**Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
 **Situação de transporte:** Dentro do Uber, ainda em deslocamento para o centro às 07h00  
 **Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; Marina usa a blusa vermelha de lã emprestada  
 **Finanças da campanha:** Última tarifa consultada: R$ 55,90; Marina pagará metade da corrida aceita  
@@ -185,12 +185,14 @@
 95. Jonas encontrou uma rota alternativa com estimativa de aproximadamente vinte e cinco minutos e comentou que o dia não estava bom.
 96. Sérgio concordou com a avaliação do motorista.
 97. Marina calculou que ainda deve chegar antes das 08h00 e perguntou a Sérgio qual é o horário exato do compromisso agendado no centro.
+98. Sérgio explicou que o atendimento é às 08h00; ele pretendia chegar às 07h00 para ter margem, tentar ser atendido antes e localizar o endereço.
+99. Marina tranquilizou Sérgio ao perceber que o compromisso ainda não foi perdido: com a rota estimada, ele deve chegar por volta de 07h30 e ainda terá alguma margem para encontrar o local.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Jonas iniciou ou prepara o desvio de aproximadamente vinte e cinco minutos. Marina ainda deve chegar antes das 08h00 e pergunta qual é o horário exato do compromisso de Sérgio no centro.
+O atendimento de Sérgio é às 08h00. A estimativa atual pode levá-los ao centro por volta de 07h30, ainda com alguma margem para ele localizar o endereço. Marina também precisa caminhar cerca de dez minutos até o trabalho, onde entra às 08h00.
 
 ---
 
