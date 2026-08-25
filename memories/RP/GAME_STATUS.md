@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h29  
+**Hora:** Aproximadamente 07h30  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -44,8 +44,9 @@
 - Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
 - Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
 - Tomou seu próprio antialérgico com um gole do suco durante a corrida.
-- Mora com os pais, a irmã Luísa e a cachorra Pipoca na região próxima ao ponto onde encontrou Sérgio, em São Bernardo do Campo.
-- Não revelou o condomínio nem o endereço exato a Sérgio.
+- Mora com os pais, a irmã Luísa e a cachorra Pipoca no mesmo grande condomínio que Sérgio, em São Bernardo do Campo.
+- Bloco informado a Sérgio: 12B.
+- Não revelou o número do apartamento.
 - Gosta de praia e prefere períodos ou locais mais tranquilos, sem excesso de lotação.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
@@ -67,6 +68,7 @@
 **Função cotidiana:** Atua como profissional multifuncional na clínica  
 **Atividades informadas:** Recepção, manutenção, TI, relações e reclamações, pequenos consertos e reparos, marketing e design  
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
+**Residência:** Mesmo condomínio de Marina, bloco 16A
 **Local atual:** Banco traseiro direito do Uber, ao lado de Marina  
 **Destino imediato:** Centro, para cumprir um atendimento agendado às 08h00 que não pode ser remarcado facilmente  
 **Destino posterior:** Clínica onde trabalha  
@@ -270,12 +272,15 @@
 160. Marina disse gostar de praia, especialmente quando o local não está excessivamente cheio.
 161. Sérgio perguntou em qual região de São Bernardo Marina mora e tentou confirmar se ela vive em um condomínio próximo ao ponto.
 162. Marina confirmou apenas que mora naquela região, mas recusou informar o condomínio ou endereço exato por terem acabado de se conhecer.
+163. Sérgio explicou que suspeitou do condomínio porque também mora lá, no bloco 16A; o ponto de ônibus fica em frente ao complexo, que possui vários blocos, do 1A ao 17B.
+164. Como os dois já haviam confirmado residência no mesmo condomínio e a informação do bloco não revela o apartamento, Marina informou morar no bloco 12B, mantendo privado o número da unidade.
+165. Marina percebeu que a coincidência explica por que os dois estavam no mesmo ponto naquela manhã.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina confirmou morar na região próxima ao ponto onde encontrou Sérgio, mas manteve privado o condomínio e o endereço exato.
+Marina e Sérgio descobriram que moram no mesmo grande condomínio: ele no bloco 16A e ela no 12B. Marina não revelou o número do apartamento.
 
 ---
 
