@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h06  
+**Hora:** Aproximadamente 07h07  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -35,6 +35,7 @@
 - Carrega apenas uma sacola de farmácia com antialérgico para sua rinite.
 - Não levou marmita nesta manhã.
 - Costuma almoçar em um restaurante próximo ao trabalho, frequentemente acompanhada de Renata, colega do financeiro.
+- A refeição simples no local que frequenta custa aproximadamente R$ 25; ela não pagaria R$ 40–45 diariamente.
 - Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
 - Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
 - Tomou seu próprio antialérgico com um gole do suco durante a corrida.
@@ -191,12 +192,15 @@
 99. Marina tranquilizou Sérgio ao perceber que o compromisso ainda não foi perdido: com a rota estimada, ele deve chegar por volta de 07h30 e ainda terá alguma margem para encontrar o local.
 100. Sérgio percebeu que Marina carregava apenas a sacola de remédios e perguntou se ela não levava marmita.
 101. Marina explicou que não levou marmita naquele dia e que normalmente almoça em um restaurante próximo ao trabalho, muitas vezes com Renata, amiga e colega do setor financeiro.
+102. Sérgio comentou que gastar R$ 40–45 por dia em restaurante comprometeria bastante o orçamento mensal.
+103. Marina explicou que o restaurante simples que frequenta custa aproximadamente R$ 25 e brincou que, se pagasse R$ 45 todos os dias, levaria marmita mesmo que fosse pão com ovo.
+104. Marina perguntou se Sérgio costuma levar marmita para o trabalho.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O Uber segue pela rota alternativa. Marina explicou que não levou marmita e costuma almoçar perto do trabalho, muitas vezes com Renata.
+O Uber segue pela rota alternativa. Marina explicou que paga cerca de R$ 25 numa refeição simples perto do trabalho e pergunta se Sérgio costuma levar marmita.
 
 ---
 
