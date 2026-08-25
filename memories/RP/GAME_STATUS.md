@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h28  
+**Hora:** Aproximadamente 07h29  
 **Local:** Dentro do Uber, saindo do ponto de ônibus em São Bernardo do Campo/SP  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Jonas identificou um acidente no centro. A estimativa atual até o terminal é de aproximadamente vinte minutos.  
@@ -44,7 +44,8 @@
 - Sérgio notou que seu nariz estava vermelho e que ela o coçava desde o ponto.
 - Aceitou a garrafa lacrada de suco de maracujá oferecida por Sérgio.
 - Tomou seu próprio antialérgico com um gole do suco durante a corrida.
-- Mora em São Bernardo do Campo com os pais, a irmã Luísa e a cachorra Pipoca.
+- Mora com os pais, a irmã Luísa e a cachorra Pipoca na região próxima ao ponto onde encontrou Sérgio, em São Bernardo do Campo.
+- Não revelou o condomínio nem o endereço exato a Sérgio.
 - Gosta de praia e prefere períodos ou locais mais tranquilos, sem excesso de lotação.
 - Celular descarregado e desligado.
 - Estado civil: solteira.
@@ -267,12 +268,14 @@
 158. Sérgio perguntou onde Marina mora e se ela gosta de praia.
 159. Marina informou que mora em São Bernardo do Campo com os pais, a irmã Luísa e a cachorra Pipoca.
 160. Marina disse gostar de praia, especialmente quando o local não está excessivamente cheio.
+161. Sérgio perguntou em qual região de São Bernardo Marina mora e tentou confirmar se ela vive em um condomínio próximo ao ponto.
+162. Marina confirmou apenas que mora naquela região, mas recusou informar o condomínio ou endereço exato por terem acabado de se conhecer.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A casa de Itanhaém está vazia e Sérgio considerou começar o projeto por ela. A conversa passou para Marina: ela contou que mora com a família em São Bernardo e que gosta de praias mais tranquilas.
+Marina confirmou morar na região próxima ao ponto onde encontrou Sérgio, mas manteve privado o condomínio e o endereço exato.
 
 ---
 
