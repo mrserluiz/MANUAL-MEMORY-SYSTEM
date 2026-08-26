@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h17  
+**Hora:** Aproximadamente 08h18  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -349,12 +349,16 @@
 225. Durante a madrugada, Sérgio tentou distrair-se com TikTok e conteúdos de ASMR, mas o sono só reapareceu quando já precisava sair.
 226. Sérgio informou que por volta das 05h30 já estava seguindo para o ponto de ônibus.
 227. Marina reconheceu que o pesadelo pode ter deixado Sérgio alerta, brincou que o TikTok provavelmente não ajudou e perguntou, sem pressioná-lo, se ele gostaria de contar o conteúdo do sonho.
+228. Sérgio preferiu não falar sobre o pesadelo naquele momento e afirmou não se lembrar dele com clareza.
+229. Sérgio perguntou se o restaurante do almoço oferece café da manhã ou se Marina conhece algum lugar próximo para tomar café.
+230. Marina respeitou a decisão de não falar sobre o sonho e explicou que o restaurante funciona para o almoço.
+231. Marina indicou uma padaria próxima ao cartório, a cerca de duas ruas, onde Sérgio poderá tomar café e comer pão na chapa após o atendimento.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua avaliando os documentos. Sérgio contou que um pesadelo provocou insônia e que TikTok e ASMR não ajudaram. Ela pergunta, sem pressionar, se ele quer contar o sonho. O almoço das 12h15 permanece combinado se ele conseguir sair.
+Marina continua avaliando os documentos. Sérgio preferiu não falar do pesadelo. Após o atendimento, ele pretende ir a uma padaria a duas ruas do cartório para tomar café e comer alguma coisa. O almoço das 12h15 permanece combinado se ele conseguir sair.
 
 ---
 
