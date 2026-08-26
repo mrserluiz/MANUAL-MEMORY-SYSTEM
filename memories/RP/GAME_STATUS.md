@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h18  
+**Hora:** Aproximadamente 08h19  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -352,13 +352,15 @@
 228. Sérgio preferiu não falar sobre o pesadelo naquele momento e afirmou não se lembrar dele com clareza.
 229. Sérgio perguntou se o restaurante do almoço oferece café da manhã ou se Marina conhece algum lugar próximo para tomar café.
 230. Marina respeitou a decisão de não falar sobre o sonho e explicou que o restaurante funciona para o almoço.
-231. Marina indicou uma padaria próxima ao cartório, a cerca de duas ruas, onde Sérgio poderá tomar café e comer pão na chapa após o atendimento.
+231. Marina indicou uma padaria próxima ao cartório, a cerca de duas ruas, onde Sérgio poderia tomar café e comer pão na chapa após o atendimento.
+232. Sérgio concluiu que não terá tempo de passar na padaria e decidiu seguir diretamente do cartório para a clínica.
+233. Marina ofereceu trazer um café da copa enquanto as cópias são preparadas, para que ele não saia completamente sem nada.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua avaliando os documentos. Sérgio preferiu não falar do pesadelo. Após o atendimento, ele pretende ir a uma padaria a duas ruas do cartório para tomar café e comer alguma coisa. O almoço das 12h15 permanece combinado se ele conseguir sair.
+Marina continua processando os documentos. Sérgio decidiu seguir diretamente para a clínica e não irá à padaria. Marina oferece trazer café da copa enquanto as cópias são preparadas. O almoço das 12h15 permanece combinado se ele conseguir sair.
 
 ---
 
