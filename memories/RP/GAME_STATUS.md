@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h10  
+**Hora:** Aproximadamente 08h11  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -35,10 +35,11 @@
 - Preferiu não informar o endereço exato do trabalho a alguém que acabou de conhecer.
 - Está sem blusa de frio porque subestimou a temperatura.
 - Com o início do vento e da garoa, pediu emprestada a blusa extra de Sergio.
-- Está usando a blusa vermelha de lã de Sergio; ficou justa, confortável e a aqueceu.
+- Usou a blusa vermelha de lã de Sérgio no trajeto até o trabalho; ela ficou justa, confortável e a aqueceu.
 - Percebeu que a blusa está limpa e possui perfume cítrico.
-- Sérgio permitiu que Marina continue usando a blusa durante a caminhada até o trabalho.
-- Marina aceitou ficar temporariamente com a blusa e pretende devolvê-la limpa depois, pois os dois moram no mesmo condomínio.
+- Sérgio permitiu que Marina usasse a blusa durante a caminhada até o trabalho.
+- Ao chegar, Marina trocou de roupa no pequeno vestiário do cartório, vestiu o uniforme e guardou a blusa vermelha no armário.
+- Marina pretende devolver a blusa limpa depois, pois os dois moram no mesmo condomínio.
 - Carrega apenas uma sacola de farmácia com antialérgico para sua rinite.
 - Não levou marmita nesta manhã.
 - Costuma almoçar em um restaurante próximo ao trabalho, frequentemente acompanhada de Renata, colega do financeiro.
@@ -329,12 +330,14 @@
 206. Marina esclareceu que o atendimento não é um transtorno e que esse é o trabalho dela.
 207. Marina explicou que documentos completos e legíveis podem ser copiados com cuidado e autenticados sem serem “passados a limpo”; documentos com partes perdidas ou ilegíveis exigirão segunda via.
 208. Marina começou a separar e verificar os documentos um por um.
+209. Sérgio percebeu que Marina estava uniformizada e presumiu que o cartório possui um vestiário.
+210. Marina confirmou que existe um pequeno vestiário, explicou que se trocou ao chegar e informou que guardou a blusa vermelha de Sérgio em seu armário.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina avalia todos os documentos frágeis individualmente. Os que estiverem completos e legíveis poderão ser copiados e autenticados; qualquer documento com informação perdida ou ilegível exigirá segunda via.
+Marina, já uniformizada, avalia os documentos frágeis. A blusa vermelha de Sérgio está guardada no armário do pequeno vestiário do cartório.
 
 ---
 
