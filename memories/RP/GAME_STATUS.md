@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h13  
+**Hora:** Aproximadamente 08h14  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -339,12 +339,14 @@
 215. Sérgio respondeu que poderia ser as duas coisas.
 216. Marina lembrou que Sérgio havia contado que frequentemente não consegue almoçar, mas aceitou o convite de forma condicionada.
 217. Ficou combinado que, se Sérgio realmente conseguir sair da clínica, os dois se encontrarão às 12h15 em frente ao cartório para almoçar em um local público próximo.
+218. Sérgio confirmou o combinado e demonstrou estar com bastante sono.
+219. Marina percebeu o cansaço demonstrado por Sérgio e perguntou quantas horas ele havia dormido.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua avaliando os documentos. Sérgio convidou-a para almoçar; ela aceitou se ele realmente conseguir sair da clínica. Encontro provisório marcado para 12h15 em frente ao cartório.
+Marina continua avaliando os documentos. O almoço permanece combinado para 12h15 caso Sérgio consiga sair da clínica. Ele demonstrou bastante sono, e Marina perguntou quantas horas havia dormido.
 
 ---
 
