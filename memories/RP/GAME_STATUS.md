@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h05  
+**Hora:** Aproximadamente 08h07  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Sérgio e Marina estão sozinhos em uma sala de atendimento para conferir os documentos da firma.  
+**Situação:** Marina confere documentos desgastados relacionados ao CNPJ da firma de Sérgio e identifica uma informação que precisa ser esclarecida antes de prosseguir.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -85,7 +85,7 @@
 **Patrimônio informado:** Imóveis no litoral em Peruíbe com área disponível para construir quartos ou kitnets, garagem e área de lazer; uma casa em Itanhaém; um salão comercial
 **Obstáculos ao projeto de hospedagem:** Falta de capital para construir as kitnets e falta de tempo para administrar os imóveis
 **Objetivos profissionais conhecidos:** Gostaria de viver principalmente de design e criação; pesquisou o mercado de hospedagem e possui imóveis com potencial para aluguel de curta duração; busca uma oportunidade mais alinhada à formação e às atividades de TI, design e tecnologia
-**Objetivos imediatos:** Comparecer ao atendimento agendado no centro e depois seguir para o trabalho
+**Objetivos imediatos:** Regularizar o CNPJ da firma, obter uma versão legível dos documentos e providenciar cópia autenticada; depois seguir para o trabalho
 
 ---
 
@@ -315,12 +315,17 @@
 192. Sérgio sentiu-se nervoso, mas tentou não demonstrar; esse nervosismo não é conhecido por Marina.
 193. Sérgio sentou-se diante da mesa.
 194. Marina manteve postura profissional, pediu que ele ficasse à vontade e solicitou os documentos levados para registro.
+195. Sérgio entregou documentos desgastados e quase rasgando.
+196. Sérgio explicou que deseja regularizar o CNPJ de uma firma mantida em sociedade com o padrasto.
+197. Sérgio descreveu a firma como MEI e pediu que os documentos fossem passados a limpo para gerar uma cópia autenticada.
+198. Marina identificou uma inconsistência objetiva: MEI é modalidade individual e não admite sócio. Ela perguntou se o CNPJ está somente no nome de Sérgio, se o padrasto participa informalmente ou se a empresa mudou de natureza jurídica.
+199. Marina explicou que também precisa verificar a legibilidade e a origem dos documentos, pois, se o original estiver ilegível, poderá ser necessário obter uma segunda via emitida pelo órgão responsável antes da autenticação.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Sérgio e Marina estão sozinhos na sala de atendimento. Ele está sentado diante da mesa e deve entregar a documentação da firma para conferência. Marina não sabe que ele está nervoso.
+Marina está examinando os documentos desgastados. Antes de prosseguir, Sérgio precisa esclarecer como existe sociedade com o padrasto se o CNPJ é MEI e confirmar se os originais ainda estão legíveis.
 
 ---
 
