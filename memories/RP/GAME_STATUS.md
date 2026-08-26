@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h15  
+**Hora:** Aproximadamente 08h16  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -343,12 +343,14 @@
 219. Marina percebeu o cansaço demonstrado por Sérgio e perguntou quantas horas ele havia dormido.
 220. Sérgio respondeu que dormiu muito pouco e que conseguiu fazer muito pouco antes de sair.
 221. Marina perguntou quantas horas ele efetivamente dormiu e sugeriu que, após concluir o atendimento, ele tomasse um café e comesse alguma coisa antes de seguir para a clínica.
+222. Sérgio informou que dormiu aproximadamente três horas, acordou e depois não conseguiu voltar a dormir direito.
+223. Marina considerou o descanso insuficiente e perguntou se ele acordou preocupado com algo ou simplesmente despertou sem motivo aparente.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua avaliando os documentos. Sérgio informou ter dormido muito pouco. Ela pergunta quantas horas ele dormiu e sugere que coma alguma coisa antes de seguir para a clínica. O almoço das 12h15 permanece combinado se ele conseguir sair.
+Marina continua avaliando os documentos. Sérgio informou ter dormido cerca de três horas e não ter conseguido voltar a dormir. Ela pergunta se havia alguma preocupação ou se ele apenas despertou sem motivo. O almoço das 12h15 permanece combinado se ele conseguir sair.
 
 ---
 
