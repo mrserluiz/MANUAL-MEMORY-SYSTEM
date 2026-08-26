@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h07  
+**Hora:** Aproximadamente 08h09  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina confere documentos desgastados relacionados ao CNPJ da firma de Sérgio e identifica uma informação que precisa ser esclarecida antes de prosseguir.  
+**Situação:** Marina confirmou que o negócio de Sérgio é um MEI individual e que a relação com as firmas do padrasto é uma parceria comercial, não sociedade jurídica. Ela delimita o serviço possível no cartório.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -316,16 +316,20 @@
 193. Sérgio sentou-se diante da mesa.
 194. Marina manteve postura profissional, pediu que ele ficasse à vontade e solicitou os documentos levados para registro.
 195. Sérgio entregou documentos desgastados e quase rasgando.
-196. Sérgio explicou que deseja regularizar o CNPJ de uma firma mantida em sociedade com o padrasto.
-197. Sérgio descreveu a firma como MEI e pediu que os documentos fossem passados a limpo para gerar uma cópia autenticada.
+196. Sérgio explicou que deseja regularizar documentos relacionados ao CNPJ de sua firma e mencionou uma “sociedade” com o padrasto.
+197. Sérgio descreveu sua firma como MEI e pediu que os documentos fossem passados a limpo para gerar uma cópia autenticada.
 198. Marina identificou uma inconsistência objetiva: MEI é modalidade individual e não admite sócio. Ela perguntou se o CNPJ está somente no nome de Sérgio, se o padrasto participa informalmente ou se a empresa mudou de natureza jurídica.
 199. Marina explicou que também precisa verificar a legibilidade e a origem dos documentos, pois, se o original estiver ilegível, poderá ser necessário obter uma segunda via emitida pelo órgão responsável antes da autenticação.
+200. Sérgio esclareceu que não existe sociedade jurídica: seu MEI e as firmas do padrasto são empresas independentes que prestam serviços complementares e se ajudam comercialmente.
+201. Marina compreendeu que se trata de parceria comercial, mantendo o MEI somente em nome de Sérgio.
+202. Marina esclareceu que o cartório pode autenticar cópias de originais legíveis, mas alterações ou regularização cadastral do CNPJ precisam ser tratadas no canal ou órgão responsável pelo registro empresarial.
+203. Marina perguntou qual documento específico Sérgio deseja autenticar.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina está examinando os documentos desgastados. Antes de prosseguir, Sérgio precisa esclarecer como existe sociedade com o padrasto se o CNPJ é MEI e confirmar se os originais ainda estão legíveis.
+Marina entendeu que as firmas apenas cooperam comercialmente. Ela confere a legibilidade dos originais e pergunta qual documento específico Sérgio deseja autenticar; eventual regularização cadastral do CNPJ não é realizada pelo cartório.
 
 ---
 
