@@ -14,7 +14,7 @@
 **Hora:** Aproximadamente 08h03  
 **Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** A funcionária que chamou Sérgio se chama Mariana. Sérgio parece tê-la reconhecido, mas a relação entre os dois ainda não foi estabelecida.  
+**Situação:** A funcionária que chamou Sérgio é Marina, a mesma mulher que dividiu o Uber com ele naquela manhã. O compromisso de Sérgio acontece no local onde ela trabalha.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -303,14 +303,16 @@
 181. A recepcionista conferiu o documento, localizou o agendamento em nome de Sérgio Luiz e orientou que ele aguardasse ser chamado.
 182. Sérgio sentou-se na área indicada e aguardou.
 183. Por volta das 08h02, uma funcionária apareceu na porta interna e chamou “Sérgio Luiz”.
-184. Sérgio cumprimentou a funcionária, pediu que ela esperasse e perguntou se ela era Mariana.
-185. A funcionária confirmou chamar-se Mariana e perguntou se os dois se conheciam.
+184. Sérgio cumprimentou a funcionária e inicialmente chamou-a de “Mariana”.
+185. Ficou estabelecido que a funcionária é Marina, a mesma mulher que dividiu o Uber com Sérgio naquela manhã; não existe uma nova personagem chamada Mariana nesta cena.
+186. Sérgio lembrou que os dois haviam pegado um Uber juntos pouco antes e perguntou, surpreso, se Marina trabalhava naquele local.
+187. Marina reconheceu Sérgio, corrigiu seu nome para “Marina” e confirmou que trabalha ali, também surpresa por descobrir que o compromisso dele acontece em sua empresa.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-A funcionária confirmou chamar-se Mariana e perguntou se ela e Sérgio se conhecem. A relação anterior entre os dois ainda precisa ser estabelecida pela resposta de Sérgio.
+Marina e Sérgio acabam de se reconhecer no local do atendimento. Marina trabalha ali e não sabia que o compromisso agendado de Sérgio aconteceria em sua empresa.
 
 ---
 
