@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h09  
+**Hora:** Aproximadamente 08h10  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina confirmou que o negócio de Sérgio é um MEI individual e que a relação com as firmas do padrasto é uma parceria comercial, não sociedade jurídica. Ela delimita o serviço possível no cartório.  
+**Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -324,12 +324,17 @@
 201. Marina compreendeu que se trata de parceria comercial, mantendo o MEI somente em nome de Sérgio.
 202. Marina esclareceu que o cartório pode autenticar cópias de originais legíveis, mas alterações ou regularização cadastral do CNPJ precisam ser tratadas no canal ou órgão responsável pelo registro empresarial.
 203. Marina perguntou qual documento específico Sérgio deseja autenticar.
+204. Sérgio informou que deseja autenticar todos, pois todos estão muito desgastados e quase rasgando.
+205. Sérgio pediu desculpas pelo transtorno.
+206. Marina esclareceu que o atendimento não é um transtorno e que esse é o trabalho dela.
+207. Marina explicou que documentos completos e legíveis podem ser copiados com cuidado e autenticados sem serem “passados a limpo”; documentos com partes perdidas ou ilegíveis exigirão segunda via.
+208. Marina começou a separar e verificar os documentos um por um.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina entendeu que as firmas apenas cooperam comercialmente. Ela confere a legibilidade dos originais e pergunta qual documento específico Sérgio deseja autenticar; eventual regularização cadastral do CNPJ não é realizada pelo cartório.
+Marina avalia todos os documentos frágeis individualmente. Os que estiverem completos e legíveis poderão ser copiados e autenticados; qualquer documento com informação perdida ou ilegível exigirá segunda via.
 
 ---
 
