@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h11  
+**Hora:** Aproximadamente 08h12  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -332,12 +332,16 @@
 208. Marina começou a separar e verificar os documentos um por um.
 209. Sérgio percebeu que Marina estava uniformizada e presumiu que o cartório possui um vestiário.
 210. Marina confirmou que existe um pequeno vestiário, explicou que se trocou ao chegar e informou que guardou a blusa vermelha de Sérgio em seu armário.
+211. Sérgio esclareceu que observou o uniforme porque achou que Marina ficou bonita usando-o.
+212. Sérgio perguntou qual é o horário de almoço de Marina.
+213. Marina agradeceu o elogio e informou que normalmente almoça entre 12h00 e 13h00.
+214. Marina perguntou, em tom bem-humorado, se a pergunta era apenas curiosidade ou um convite.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina, já uniformizada, avalia os documentos frágeis. A blusa vermelha de Sérgio está guardada no armário do pequeno vestiário do cartório.
+Marina avalia os documentos frágeis durante o atendimento. Após elogiar o uniforme dela, Sérgio perguntou sobre o almoço; Marina informou que costuma almoçar entre 12h00 e 13h00 e perguntou se ele pretende convidá-la.
 
 ---
 
