@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h04  
-**Local:** Recepção de um cartório no centro  
+**Hora:** Aproximadamente 08h05  
+**Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Marina trabalha no setor administrativo do cartório e está apoiando os atendimentos agendados. Sérgio veio registrar documentos de sua firma.  
+**Situação:** Sérgio e Marina estão sozinhos em uma sala de atendimento para conferir os documentos da firma.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -311,12 +311,16 @@
 188. Sérgio explicou que não sabia que Marina trabalhava no cartório e revelou que veio registrar documentos de sua firma.
 189. Ficou estabelecido que Marina trabalha no setor administrativo do cartório e, nesta manhã, está apoiando os atendimentos agendados.
 190. Marina convidou Sérgio a acompanhá-la para conferir a documentação antes do atendimento.
+191. Sérgio entrou na sala de atendimento e percebeu que ficaria sozinho com Marina.
+192. Sérgio sentiu-se nervoso, mas tentou não demonstrar; esse nervosismo não é conhecido por Marina.
+193. Sérgio sentou-se diante da mesa.
+194. Marina manteve postura profissional, pediu que ele ficasse à vontade e solicitou os documentos levados para registro.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina trabalha no administrativo do cartório e está apoiando os agendamentos. Sérgio veio registrar documentos de sua firma. Ela o convida a acompanhá-la para conferir a documentação.
+Sérgio e Marina estão sozinhos na sala de atendimento. Ele está sentado diante da mesa e deve entregar a documentação da firma para conferência. Marina não sabe que ele está nervoso.
 
 ---
 
