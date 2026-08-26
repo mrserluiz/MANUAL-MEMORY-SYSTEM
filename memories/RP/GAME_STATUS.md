@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 07h50  
+**Hora:** Aproximadamente 08h02  
 **Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** O agendamento de Sérgio foi localizado. Ele deve aguardar ser chamado para o atendimento das 08h00.  
+**Situação:** Depois de aguardar na recepção, Sérgio acaba de ser chamado para o atendimento agendado.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -301,12 +301,14 @@
 179. A recepcionista explicou que atendimentos agendados não precisam de senha e solicitou o nome completo e um documento com foto.
 180. Sérgio apresentou sua CNH.
 181. A recepcionista conferiu o documento, localizou o agendamento em nome de Sérgio Luiz e orientou que ele aguardasse ser chamado.
+182. Sérgio sentou-se na área indicada e aguardou.
+183. Por volta das 08h02, uma funcionária apareceu na porta interna e chamou “Sérgio Luiz”.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-O agendamento de Sérgio Luiz foi confirmado. Ele deve aguardar na recepção até ser chamado para o atendimento das 08h00.
+Uma funcionária acaba de chamar “Sérgio Luiz” na porta de acesso à área interna. Aguardar Sérgio se apresentar e acompanhá-la.
 
 ---
 
