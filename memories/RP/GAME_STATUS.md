@@ -11,7 +11,7 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h16  
+**Hora:** Aproximadamente 08h17  
 **Local:** Sala de atendimento do cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
 **Situação:** Todos os documentos apresentados estão muito desgastados e frágeis. Marina começa a avaliá-los individualmente para verificar quais ainda podem ser copiados e autenticados.  
@@ -345,12 +345,16 @@
 221. Marina perguntou quantas horas ele efetivamente dormiu e sugeriu que, após concluir o atendimento, ele tomasse um café e comesse alguma coisa antes de seguir para a clínica.
 222. Sérgio informou que dormiu aproximadamente três horas, acordou e depois não conseguiu voltar a dormir direito.
 223. Marina considerou o descanso insuficiente e perguntou se ele acordou preocupado com algo ou simplesmente despertou sem motivo aparente.
+224. Sérgio explicou que acordou após um pesadelo e teve insônia.
+225. Durante a madrugada, Sérgio tentou distrair-se com TikTok e conteúdos de ASMR, mas o sono só reapareceu quando já precisava sair.
+226. Sérgio informou que por volta das 05h30 já estava seguindo para o ponto de ônibus.
+227. Marina reconheceu que o pesadelo pode ter deixado Sérgio alerta, brincou que o TikTok provavelmente não ajudou e perguntou, sem pressioná-lo, se ele gostaria de contar o conteúdo do sonho.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina continua avaliando os documentos. Sérgio informou ter dormido cerca de três horas e não ter conseguido voltar a dormir. Ela pergunta se havia alguma preocupação ou se ele apenas despertou sem motivo. O almoço das 12h15 permanece combinado se ele conseguir sair.
+Marina continua avaliando os documentos. Sérgio contou que um pesadelo provocou insônia e que TikTok e ASMR não ajudaram. Ela pergunta, sem pressionar, se ele quer contar o sonho. O almoço das 12h15 permanece combinado se ele conseguir sair.
 
 ---
 
