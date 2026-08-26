@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h03  
-**Local:** Recepção do local do compromisso de Sérgio, no centro  
+**Hora:** Aproximadamente 08h04  
+**Local:** Recepção de um cartório no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** A funcionária que chamou Sérgio é Marina, a mesma mulher que dividiu o Uber com ele naquela manhã. O compromisso de Sérgio acontece no local onde ela trabalha.  
+**Situação:** Marina trabalha no setor administrativo do cartório e está apoiando os atendimentos agendados. Sérgio veio registrar documentos de sua firma.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -24,8 +24,9 @@
 
 - 28 anos.
 - Está a caminho do trabalho.
-- Trabalha há quase quatro anos em uma empresa da região, perto do centro.
+- Trabalha há quase quatro anos no setor administrativo de um cartório da região central.
 - Entrou como assistente administrativa e foi promovida ao cargo atual de analista administrativa.
+- Nesta manhã, está apoiando os atendimentos agendados do cartório.
 - Gosta de organização, planejamento e de transformar processos desorganizados em algo funcional.
 - Gostaria de abrir um pequeno negócio no futuro, mas ainda não decidiu qual seria a atividade.
 - Sérgio sugeriu que ela investigasse hotelaria e administração de aluguéis de fim de semana.
@@ -71,11 +72,11 @@
 **Saúde conhecida:** Tem rinite; realizou tratamento quando era mais novo  
 **Residência:** Mesmo condomínio de Marina, bloco 16A
 **Local atual:** Recepção do local do compromisso, no centro  
-**Destino imediato:** Centro, para cumprir um atendimento agendado às 08h00 que não pode ser remarcado facilmente  
+**Destino imediato:** Cartório no centro, para registrar documentos de sua firma em atendimento agendado às 08h00  
 **Destino posterior:** Clínica onde trabalha  
 **Horário habitual de entrada no trabalho:** Entre 06h45 e 07h00; nesta manhã seguirá ao trabalho somente após o atendimento das 08h00  
 **Situação de transporte:** Corrida concluída para Sérgio; ele chegou ao compromisso antes das 08h00  
-**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; CNH; Marina permanece com a blusa vermelha de lã emprestada
+**Inventário relevante:** Celular com acesso a aplicativos de transporte; mochila; CNH; documentos da firma para registro; Marina permanece com a blusa vermelha de lã emprestada
 **Rotina de alimentação conhecida:** Tenta levar comida, mas frequentemente usa o horário de almoço para concluir tarefas da clínica e acaba sem comer  
 **Finanças da campanha:** Corrida compartilhada; metade de Marina ainda precisa ser paga após contato pelo Instagram  
 **Currículo:** Informa formalmente o cargo de maqueiro e inclui trabalhos autônomos; evita listar como experiência formal as funções extras da clínica por possível repercussão trabalhista
@@ -307,12 +308,15 @@
 185. Ficou estabelecido que a funcionária é Marina, a mesma mulher que dividiu o Uber com Sérgio naquela manhã; não existe uma nova personagem chamada Mariana nesta cena.
 186. Sérgio lembrou que os dois haviam pegado um Uber juntos pouco antes e perguntou, surpreso, se Marina trabalhava naquele local.
 187. Marina reconheceu Sérgio, corrigiu seu nome para “Marina” e confirmou que trabalha ali, também surpresa por descobrir que o compromisso dele acontece em sua empresa.
+188. Sérgio explicou que não sabia que Marina trabalhava no cartório e revelou que veio registrar documentos de sua firma.
+189. Ficou estabelecido que Marina trabalha no setor administrativo do cartório e, nesta manhã, está apoiando os atendimentos agendados.
+190. Marina convidou Sérgio a acompanhá-la para conferir a documentação antes do atendimento.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Marina e Sérgio acabam de se reconhecer no local do atendimento. Marina trabalha ali e não sabia que o compromisso agendado de Sérgio aconteceria em sua empresa.
+Marina trabalha no administrativo do cartório e está apoiando os agendamentos. Sérgio veio registrar documentos de sua firma. Ela o convida a acompanhá-la para conferir a documentação.
 
 ---
 
