@@ -11,10 +11,10 @@
 ## 📍 CENA ATUAL
 
 **Data:** Terça-feira, 25/08/2026  
-**Hora:** Aproximadamente 08h02  
+**Hora:** Aproximadamente 08h03  
 **Local:** Recepção do local do compromisso de Sérgio, no centro  
 **Condição:** O frio se intensificou; começou a ventar e cair uma garoa fria. Os ônibus estão em greve.  
-**Situação:** Depois de aguardar na recepção, Sérgio acaba de ser chamado para o atendimento agendado.  
+**Situação:** A funcionária que chamou Sérgio se chama Mariana. Sérgio parece tê-la reconhecido, mas a relação entre os dois ainda não foi estabelecida.  
 **Destino combinado:** Região do terminal no centro; Marina seguirá a pé até o trabalho.  
 **Próximo compromisso conhecido de Marina:** Trabalho às 08h00 e reunião às 08h30.
 
@@ -303,12 +303,14 @@
 181. A recepcionista conferiu o documento, localizou o agendamento em nome de Sérgio Luiz e orientou que ele aguardasse ser chamado.
 182. Sérgio sentou-se na área indicada e aguardou.
 183. Por volta das 08h02, uma funcionária apareceu na porta interna e chamou “Sérgio Luiz”.
+184. Sérgio cumprimentou a funcionária, pediu que ela esperasse e perguntou se ela era Mariana.
+185. A funcionária confirmou chamar-se Mariana e perguntou se os dois se conheciam.
 
 ---
 
 ## ▶️ PONTO DE CONTINUIDADE
 
-Uma funcionária acaba de chamar “Sérgio Luiz” na porta de acesso à área interna. Aguardar Sérgio se apresentar e acompanhá-la.
+A funcionária confirmou chamar-se Mariana e perguntou se ela e Sérgio se conhecem. A relação anterior entre os dois ainda precisa ser estabelecida pela resposta de Sérgio.
 
 ---
 
