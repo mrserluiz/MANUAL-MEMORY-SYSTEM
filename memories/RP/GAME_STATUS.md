@@ -1,3 +1,161 @@
+# GAME STATUS — RP Marina
+
+## Save atual
+
+- **ID:** `MARINA-20260825-1530-S004`
+- **Data do RP:** terça-feira, 25/08/2026
+- **Hora aproximada:** 15h30
+- **Local:** suíte no segundo piso do prédio do restaurante, usada como abrigo durante a enchente
+- **Estado:** campanha pausada
+
+## Ponto exato de retorno
+
+Sérgio e Marina estão abrigados em uma antiga suíte mobiliada no segundo piso do prédio do restaurante. A rua e o térreo permanecem alagados; a Defesa Civil orientou todos a ficarem no local. A água parou de subir, mas não existe previsão segura de saída.
+
+Dentro do quarto, os dois assistiam a `Encontro Marcado` e trocavam beijos e carinhos consentidos. Marina havia autorizado especificamente mãos na cintura e na parte externa da coxa, sempre por cima da roupa. Sérgio mudou a posição, colocou uma perna entre as dela e ficou sobre seu corpo sem perguntar antes. Marina interrompeu o beijo, apoiou as mãos no peito dele e pediu que voltasse para o lado dela.
+
+Ao receber `#retorno`, continuar exatamente com Sérgio respondendo ao pedido de Marina e retornando para o lado dela. A mudança de posição não foi autorizada; reações físicas não ampliam consentimento. Os dois podem continuar com beijos, abraço e os toques específicos já combinados se ambos ainda quiserem.
+
+## Resumo cronológico consolidado
+
+### Manhã — greve, Uber e cartório
+
+- Sérgio e Marina se conheceram no ponto de ônibus durante uma greve.
+- Dividiram um Uber conduzido por Jonas até o centro.
+- Sérgio emprestou a Marina uma blusa vermelha de lã por causa do frio.
+- Descobriram que moram no mesmo condomínio: Sérgio no bloco 16A e Marina no bloco 12B.
+- Marina desembarcou perto do terminal e Sérgio seguiu ao compromisso das 08h00.
+- No cartório, Sérgio descobriu que Marina trabalha no administrativo e seria justamente a funcionária que o atenderia.
+- Os documentos desgastados da firma estavam completos e legíveis; cópias foram autenticadas.
+- Marina preparou para Sérgio um café com três colheres de chá de açúcar.
+- Sérgio pagou **R$ 42,80** pelas autenticações no débito.
+- A blusa vermelha foi posteriormente confirmada como presente para Marina.
+
+### Instagram e preparação para o almoço
+
+- Contatos: portfólio de Sérgio `@SC.studios.sp`; perfil pessoal `@mrserluiz`; Marina `@marina.amoreira`.
+- Marina aceitou a solicitação do perfil pessoal de Sérgio.
+- Os dois conversaram sobre fotos antigas, Pipoca, música, idades e signos.
+- Sérgio tem 30 anos e faz aniversário em 21/04.
+- Marina tem 28 anos e faz aniversário em 12/09.
+- Sérgio gosta de muitos estilos musicais: funk, eletrônica, pop, MPB, clássica, sertanejo, city pop e flashbacks.
+- Marina gosta de Paramore, samba e pagode; foram citadas `Still Into You`, Exaltasamba, Alceu Valença e `Take On Me`.
+- Sérgio chegou ao cartório pouco antes das 12h15 e Marina saiu pontualmente, usando a blusa vermelha.
+
+### Primeiro almoço
+
+- Caminharam sob garoa forte até um restaurante próximo ao cartório.
+- Ao atravessar a rua, Sérgio segurou a mão de Marina por impulso; ela não se incomodou, mas reforçou a importância de consentimento e calma.
+- Pedido de Sérgio: frango grelhado, arroz branco, batata frita e salada sem cebola e sem feijão.
+- Pedido de Marina: frango grelhado completo, com arroz, feijão, batata frita e salada.
+- Bebida: Coca-Cola Zero com gelo e limão; a apresentação em garrafa KS foi elogiada.
+- A conta total ficou em **R$ 62,00**.
+- Sérgio criou a brincadeira do plano romântico `Plus++`: viagens, cinema, shows, companhia, lasanha, abraços, fidelidade e uma mensalidade exagerada de beijinhos.
+- Marina aceitou que o plano permaneça em período de teste e reforçou que carinho nunca é dívida ou pagamento.
+- Apelidos usados: `benzinho`, `bebezinha`, `amor` e `bb`; `mãos delicadas` virou apelido provocativo de Marina para Sérgio.
+- Marina mudou de lugar e sentou-se ao lado de Sérgio.
+- Os dois trocaram um abraço demorado e acolhedor.
+- Sérgio pediu verbalmente permissão para beijar Marina; ela consentiu.
+- Aconteceu o primeiro beijo, delicado e breve. Depois houve outro beijo iniciado por Marina.
+- Relação atual: atração e interesse mútuos confirmados; continuam se conhecendo e não oficializaram namoro.
+
+### Temporal, enchente e abrigo
+
+- Depois do pagamento do almoço, um temporal extremo impediu o retorno ao trabalho.
+- O aplicativo de transporte suspendeu corridas por causa do mau tempo e do alerta da Defesa Civil.
+- O toldo do restaurante desabou e foi levado pela correnteza.
+- A água invadiu rapidamente o salão; o disjuntor do térreo e o gás foram desligados.
+- O proprietário conduziu todos por uma escada na cozinha até o segundo piso.
+- Grupo abrigado: três funcionários, o proprietário e sete clientes, totalizando onze pessoas.
+- O segundo piso pertence a um antigo motel desativado; as suítes continuam mobiliadas.
+- O proprietário e os funcionários ficaram nos quartos 08 e 09; Sérgio e Marina receberam outra suíte.
+- Defesa Civil informou não haver previsão de resgate e orientou paciência e permanência no local.
+- Telejornal mostrou enchentes graves em São Bernardo do Campo e previsão de chuva até as 23h, com possibilidade de intensificação.
+- Um helicóptero de televisão sobrevoou a região; não era resgate.
+- O condomínio onde os dois moram ficou sem energia, mas as famílias de Sérgio e Marina confirmaram estar seguras nos apartamentos.
+- Sérgio avisou Luciana, da clínica, que estava ilhado; Marina avisou o cartório e a família.
+- O proprietário forneceu água, alimentos, cobertores e roupas de cama. O circuito elétrico superior foi confirmado como isolado do térreo.
+- A água posteriormente parou de subir, mas o térreo continuou completamente alagado.
+
+### Convivência na suíte
+
+- Sérgio e Marina organizaram uma cama com roupa de cama limpa e lacrada.
+- A televisão ligou inicialmente em um canal adulto por acidente; o controle caiu, as pilhas saíram e Marina mudou rapidamente para o telejornal. O episódio foi apenas cômico e não autorizou intimidade.
+- Depois, assistiram ao filme `Encontro Marcado` (1998), iniciado aproximadamente aos 46 minutos.
+- Consumiram pipoca, batatinhas e refrigerante do frigobar; as embalagens foram guardadas e os itens anotados para pagamento posterior.
+- Marina retirou a blusa vermelha apenas para receber massagem e permaneceu de camiseta e calça.
+- Massagem autorizada: ombros, nuca e meio das costas, por cima da camiseta. Mais tarde Marina voltou a usar/guardar cuidadosamente a blusa conforme a situação.
+- Beijos autorizados na nuca e nos ombros ocorreram junto à massagem. Toques íntimos não foram autorizados.
+- Marina confirmou que existe desejo mútuo, mas decidiu não avançar sexualmente no primeiro encontro e durante a emergência.
+- Os dois ficaram abraçados sob uma coberta branca, assistindo ao filme, usando os apelidos `amor` e `benzinho`.
+- Beijos mais intensos ocorreram com consentimento e checagens verbais.
+- Marina tocou as nádegas de Sérgio por cima da roupa, percebeu o gesto e pediu confirmação. Sérgio consentiu especificamente com o toque.
+- Sérgio pediu e recebeu autorização específica para tocar a cintura e a parte externa da coxa de Marina, por cima da roupa. Peito, parte interna das coxas, nádegas e outras regiões permanecem fora dos limites até nova autorização clara.
+- O último movimento de Sérgio para ficar entre as pernas e sobre Marina não estava incluído nas permissões anteriores. Marina interrompeu e pediu retorno à posição ao lado.
+
+## Segundo encontro confirmado
+
+- **Dia:** sábado seguinte ao dia do RP.
+- **Encontro:** 17h40 na portaria do condomínio.
+- **Sessão:** 18h30.
+- **Filme escolhido:** `Sobrenatural: Agora Entre Nós`.
+- Marina comprará a pipoca.
+- Depois do filme, Sérgio deverá acompanhar Marina até o bloco 12B devido ao medo provocado pelo terror.
+
+## Informações pessoais de Sérgio
+
+- Trabalha há seis anos na clínica, formalmente como maqueiro, mas realiza várias outras funções.
+- Clínica fica a menos de cinco minutos a pé do condomínio.
+- É formado em Jogos Digitais pela FMU e possui experiência com TI e design.
+- Trabalha como autônomo com design após o expediente e nos fins de semana.
+- Cozinha tortas, salgados, macarrão, lasanha, bolos confeitados e doces; considera a lasanha sua especialidade.
+- Doces preferidos: quindim, torta de limão e chocolate com menta.
+- Mora com o avô e o irmão.
+- Cuida do avô com apoio de cuidadoras em certos dias e de um serviço diurno em casa de repouso.
+- O irmão também auxilia com o avô, mas não trabalha, come porções reservadas e apresenta comportamento agressivo e violento.
+- Sérgio evita confrontá-lo para preservar a integridade física e seus objetos pessoais.
+- Marina levou a situação a sério, apoiou a decisão de evitar confronto e recomendou priorizar a segurança.
+- A alimentação de Sérgio é irregular devido à falta de tempo e ao desaparecimento das porções em casa; Marina demonstrou preocupação.
+
+## Informações pessoais de Marina
+
+- Tem 28 anos; aniversário em 12/09; signo de Virgem.
+- Mora com os pais, a irmã Luísa e a cachorrinha Pipoca.
+- Mudou-se para o condomínio por volta dos quinze anos.
+- Fez o ensino médio na região e cursou Administração.
+- Trabalha há quase quatro anos; entrou como assistente administrativa e foi promovida a analista.
+- Gosta de organização e planejamento e pensa em ter um negócio próprio.
+- Gosta de chocolate, pudim, praia tranquila, filmes, séries, suspense, romance, comédia e terror.
+- Trabalha em alguns sábados pela manhã, por escala; está livre no sábado do cinema.
+- A blusa vermelha foi aceita como presente e permanece com Marina.
+
+## Pendências imediatas
+
+- Sérgio retornar para o lado de Marina após o pedido claro dela.
+- Permanecer no segundo piso até liberação da Defesa Civil ou do proprietário.
+- Acompanhar o nível da água e os alertas sem gastar desnecessariamente as baterias dos celulares.
+- Pagar ao proprietário os itens consumidos do frigobar quando a emergência terminar.
+- Retornar para casa ou ao trabalho apenas quando houver rota segura.
+- Manter contato pelo Instagram depois do trabalho.
+- Segundo encontro no cinema no sábado.
+- Marina pagar a pipoca.
+
+## Regras de continuidade
+
+- Sérgio e Marina não são oficialmente namorados.
+- Existe interesse romântico mútuo, primeiro beijo confirmado e intenção de continuar os encontros.
+- Marina é receptiva e carinhosa, mas valoriza consentimento, reciprocidade, limites e desenvolvimento gradual.
+- Consentimento para uma região, toque ou posição não autoriza automaticamente outra. Reações físicas não substituem confirmação.
+- Conteúdos marcados como `#teste` não integram o cânone, salvo adaptação explicitamente declarada como oficial; a versão sexual explícita do teste permaneceu excluída.
+- Não transformar presentes, pagamentos ou gentilezas em dívida afetiva.
+- Preservar o tom natural, romântico, brincalhão e respeitoso.
+
+---
+
+# 📚 HISTÓRICO ANTERIOR PRESERVADO
+
+> O conteúdo abaixo pertence aos checkpoints anteriores e não representa a cena atual. Foi mantido para preservar integralmente o histórico da campanha.
+
 # 🎮 GAME STATUS — MARINA
 
 **Campanha:** RPG Vida Cotidiana  
