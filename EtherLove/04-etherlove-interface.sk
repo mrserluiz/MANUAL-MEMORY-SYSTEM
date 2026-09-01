@@ -1,22 +1,85 @@
 # ==========================================================
 # EtherLove Interface
+# INTERFACE REBUILD 002 - /LOVE
 # ==========================================================
-#
-command /el [<text>]:
+# CASE é interno. O jogador vê o nome do estado.
+# CMD reservado para futuro resource pack:
+# 8100 NEUTRO
+# 8101 AMIGO
+# 8102 MELHORES AMIGOS
+# 8103 PAIXAO
+# 8104 NAMORANDO
+# 8105 NOIVOS
+# 8106 CASADOS
+# ==========================================================
+
+function loveStageIcon(stage: number) :: item:
+    if {_stage} is 0:
+        set {_icon} to white wool
+        set custom model data of {_icon} to 8100
+        return {_icon}
+    if {_stage} is 1:
+        set {_icon} to light blue wool
+        set custom model data of {_icon} to 8101
+        return {_icon}
+    if {_stage} is 2:
+        set {_icon} to blue wool
+        set custom model data of {_icon} to 8102
+        return {_icon}
+    if {_stage} is 3:
+        set {_icon} to pink wool
+        set custom model data of {_icon} to 8103
+        return {_icon}
+    if {_stage} is 4:
+        set {_icon} to magenta wool
+        set custom model data of {_icon} to 8104
+        return {_icon}
+    if {_stage} is 5:
+        set {_icon} to red wool
+        set custom model data of {_icon} to 8105
+        return {_icon}
+    set {_icon} to gold ore
+    set custom model data of {_icon} to 8106
+    return {_icon}
+
+function formatLoveXP(points: number) :: text:
+    if {_points} < 10:
+        return "00%{_points}%"
+    if {_points} < 100:
+        return "0%{_points}%"
+    return "%{_points}%"
+
+command /love:
+    permission: etherlove.use
+    permission message: &cVocê não possui permissão para usar este comando.
     trigger:
-        if arg-1 is "menu" or not set:
-            set {_gui} to a new chest inventory with 6 rows named "&d❤ Seus Relacionamentos"
-            set {_slot} to 0
-            loop all players:
-                if loop-player is not player:
-                    if relationshipExists(player, loop-player) is true:
-                        set {_s} to getRelationshipStage(player, loop-player)
-                        set {_p} to getRelationshipPoints(player, loop-player)
-                        set slot {_slot} of {_gui} to player head named "&e%name of loop-player%" with lore "&7Estágio: &f%getStageName({_s})%", "&7Pontos: &a%{_p}%"
+        set {_gui} to a new chest inventory with 6 rows named "&d❤ Seus Relacionamentos"
+        set {_slot} to 0
+
+        loop all players:
+            if loop-player is not player:
+                if relationshipExists(player, loop-player) is true:
+                    if {_slot} < 54:
+                        set {_stage} to getRelationshipStage(player, loop-player)
+                        set {_xp} to getRelationshipPoints(player, loop-player)
+                        set {_state} to getStageName({_stage})
+                        set {_xpText} to formatLoveXP({_xp})
+                        set {_icon} to loveStageIcon({_stage})
+                        set name of {_icon} to "&d%name of player% &f& &d%name of loop-player%"
+                        set lore of {_icon} to "&7Estado: &f%{_state}%" and "&7XP: &d%{_xpText}%&7/500"
+                        set slot {_slot} of {_gui} to {_icon}
                         add 1 to {_slot}
-            open {_gui} to player
-        else if arg-1 is "debug":
-            make player execute command "/eldebug %player%"
+
+        if {_slot} is 0:
+            set slot 22 of {_gui} to barrier named "&cNenhum relacionamento" with lore "&7Use /RP <player> para iniciar uma relação."
+
+        open {_gui} to player
+
+# Alias legado temporário.
+command /el:
+    permission: etherlove.use
+    trigger:
+        make player execute command "/love"
 
 on inventory click:
     if name of event-inventory is "&d❤ Seus Relacionamentos":
@@ -29,7 +92,8 @@ every 5 seconds:
             set {_p2} to loop-player-2
             if {_p1} is not {_p2}:
                 if relationshipExists({_p1}, {_p2}) is true:
-                    set {_s} to getRelationshipStage({_p1}, {_p2})
-                    if {_s} >= 1:
-                        set {_pts} to getRelationshipPoints({_p1}, {_p2})
-                        send action bar "&d❤ %name of {_p2}% &7- &f%getStageName({_s})% &7(&a%{_pts}% pts&7)" to {_p1}
+                    set {_stage} to getRelationshipStage({_p1}, {_p2})
+                    if {_stage} >= 1:
+                        set {_xp} to getRelationshipPoints({_p1}, {_p2})
+                        set {_state} to getStageName({_stage})
+                        send action bar "&d❤ %name of {_p2}% &7- &f%{_state}% &7(&a%{_xp}% XP&7)" to {_p1}
