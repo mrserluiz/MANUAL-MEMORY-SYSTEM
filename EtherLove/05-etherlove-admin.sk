@@ -1,0 +1,174 @@
+# ==========================================================
+# EtherLove
+# 05 - Admin Tools
+# ADMIN TOOLS REBUILD 001
+# ==========================================================
+# /LADD <player1> <player2> <valor>
+# /LADD <player> C
+# /LDEBUG <player1> <player2>
+# /LRESET <player1> <player2>
+# ==========================================================
+
+command /ladd <player> <text> [<number>]:
+    permission: etherlove.admin
+    permission message: &cVocê não possui permissão administrativa do EtherLove.
+    trigger:
+        set {_p1} to arg-1
+        set {_mode} to arg-2
+
+        # /LADD <player> C
+        if {_mode} is "C":
+            execute console command "lp user %name of {_p1}% permission set etherlove.ceremonialist true"
+            send "&d&lETHERLOVE ADMIN &8» &f%name of {_p1}% &aagora é Cerimonialista."
+            send "&7Permissão concedida: &fetherlove.ceremonialist"
+            stop
+
+        # /LADD <player1> <player2> <valor>
+        if arg-3 is not set:
+            send "&cUso: /ladd <player1> <player2> <valor>"
+            send "&cOu: /ladd <player> C"
+            stop
+
+        delete {_p2}
+        loop all players:
+            if name of loop-player is {_mode}:
+                set {_p2} to loop-player
+                stop loop
+
+        if {_p2} is not set:
+            send "&cO segundo jogador precisa estar online e o nome precisa estar correto."
+            stop
+
+        if {_p1} is {_p2}:
+            send "&cEscolha dois jogadores diferentes."
+            stop
+
+        if relationshipExists({_p1}, {_p2}) is false:
+            createRelationship({_p1}, {_p2})
+
+        set {_before} to getRelationshipPoints({_p1}, {_p2})
+        addRelationshipPoints({_p1}, {_p2}, arg-3)
+        set {_after} to getRelationshipPoints({_p1}, {_p2})
+        set {_stage} to getRelationshipStage({_p1}, {_p2})
+        set {_state} to getStageName({_stage})
+
+        send "&d&lETHERLOVE ADMIN"
+        send "&7Relação: &f%name of {_p1}% &8+ &f%name of {_p2}%"
+        send "&7XP: &f%{_before}% &8→ &d%{_after}%&7/500"
+        send "&7Estado: &f%{_state}%"
+        if {_stage} is 6:
+            send "&eObservação: CASE 6 mantém XP congelado."
+
+command /ldebug <player> <player>:
+    permission: etherlove.admin
+    permission message: &cVocê não possui permissão administrativa do EtherLove.
+    trigger:
+        set {_p1} to arg-1
+        set {_p2} to arg-2
+        set {_id} to etherID({_p1}, {_p2})
+
+        send "&8&m------------------------------------------------"
+        send "&d&lETHERLOVE DEBUG"
+        send "&7Player 1: &f%name of {_p1}%"
+        send "&7UUID 1: &f%uuid of {_p1}%"
+        send "&7Player 2: &f%name of {_p2}%"
+        send "&7UUID 2: &f%uuid of {_p2}%"
+        send "&7RelationshipID: &f%{_id}%"
+
+        if relationshipExists({_p1}, {_p2}) is false:
+            send "&cRelacionamento inexistente."
+            send "&8&m------------------------------------------------"
+            stop
+
+        set {_xp} to getRelationshipPoints({_p1}, {_p2})
+        set {_stage} to getRelationshipStage({_p1}, {_p2})
+        set {_state} to getStageName({_stage})
+        set {_status} to getRelationshipStatus({_p1}, {_p2})
+
+        send "&7XP: &f%{_xp}%/500"
+        send "&7CASE RAW: &f%{_stage}%"
+        send "&7Estado: &f%{_state}%"
+        send "&7STATUS: &f%{_status}%"
+        send "&7Created: &f%{etherlove.couple.%{_id}%.created}%"
+        send "&7Last Interaction: &f%{etherlove.couple.%{_id}%.last-interaction}%"
+
+        if hasActivePartner({_p1}) is true:
+            send "&7Active Partner P1: &f%getActivePartnerUUID({_p1})%"
+        else:
+            send "&7Active Partner P1: &8NONE"
+        if hasActivePartner({_p2}) is true:
+            send "&7Active Partner P2: &f%getActivePartnerUUID({_p2})%"
+        else:
+            send "&7Active Partner P2: &8NONE"
+
+        if hasPendingAction({_p1}) is true:
+            send "&7Pending P1: &f%getPendingActionType({_p1})%"
+        else:
+            send "&7Pending P1: &8NONE"
+        if hasPendingAction({_p2}) is true:
+            send "&7Pending P2: &f%getPendingActionType({_p2})%"
+        else:
+            send "&7Pending P2: &8NONE"
+
+        if {etherlove.date.player.%uuid of {_p1}%} is set:
+            send "&7DATE P1: &aACTIVE"
+        else:
+            send "&7DATE P1: &8NONE"
+        if {etherlove.date.player.%uuid of {_p2}%} is set:
+            send "&7DATE P2: &aACTIVE"
+        else:
+            send "&7DATE P2: &8NONE"
+
+        if {etherlove.mailbox.%uuid of {_p1}%.item} is set:
+            send "&7Mailbox P1: &eOCUPADA"
+        else:
+            send "&7Mailbox P1: &8VAZIA"
+        if {etherlove.mailbox.%uuid of {_p2}%.item} is set:
+            send "&7Mailbox P2: &eOCUPADA"
+        else:
+            send "&7Mailbox P2: &8VAZIA"
+
+        send "&8&m------------------------------------------------"
+
+# Limpeza de teste e recuperação do bug antigo de RelationshipID.
+# Remove tanto UUID1::UUID2 quanto UUID2::UUID1 e recria uma relação limpa.
+command /lreset <player> <player>:
+    permission: etherlove.admin
+    permission message: &cVocê não possui permissão administrativa do EtherLove.
+    trigger:
+        set {_p1} to arg-1
+        set {_p2} to arg-2
+        set {_u1} to "%uuid of {_p1}%"
+        set {_u2} to "%uuid of {_p2}%"
+        set {_id1} to "%{_u1}%::%{_u2}%"
+        set {_id2} to "%{_u2}%::%{_u1}%"
+
+        delete {etherlove.couple.%{_id1}%.created}
+        delete {etherlove.couple.%{_id1}%.points}
+        delete {etherlove.couple.%{_id1}%.stage}
+        delete {etherlove.couple.%{_id1}%.status}
+        delete {etherlove.couple.%{_id1}%.last-interaction}
+        delete {etherlove.couple.%{_id1}%.married-at}
+        delete {etherlove.couple.%{_id1}%.ceremonialist}
+        delete {etherlove.couple.%{_id1}%.divorced-at}
+        delete {etherlove.couple.%{_id1}%.divorce-approved-by}
+
+        delete {etherlove.couple.%{_id2}%.created}
+        delete {etherlove.couple.%{_id2}%.points}
+        delete {etherlove.couple.%{_id2}%.stage}
+        delete {etherlove.couple.%{_id2}%.status}
+        delete {etherlove.couple.%{_id2}%.last-interaction}
+        delete {etherlove.couple.%{_id2}%.married-at}
+        delete {etherlove.couple.%{_id2}%.ceremonialist}
+        delete {etherlove.couple.%{_id2}%.divorced-at}
+        delete {etherlove.couple.%{_id2}%.divorce-approved-by}
+
+        delete {etherlove.divorce.%{_id1}%::*}
+        delete {etherlove.divorce.%{_id2}%::*}
+        clearActivePartners({_p1}, {_p2})
+        clearPendingAction({_p1})
+        clearPendingAction({_p2})
+
+        createRelationship({_p1}, {_p2})
+        send "&d&lETHERLOVE ADMIN &8» &aRelação de %name of {_p1}% e %name of {_p2}% limpa."
+        send "&7XP: &f0/500 &8| &7Estado: &fNEUTRO"
