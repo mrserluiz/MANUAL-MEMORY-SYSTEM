@@ -1,10 +1,11 @@
 # ==========================================================
 # EtherLove
 # 03D - Married Actions
-# MARRIED ACTIONS REBUILD 001
+# MARRIED ACTIONS REBUILD 002
 # ==========================================================
 # /TPC
 # /OBAOBA <player>
+# OBAOBA usa o Pending Action System e intercepta /LS /LN.
 # ==========================================================
 
 options:
@@ -20,7 +21,6 @@ function isNearEtherLoveBed(p: player) :: boolean:
 function acceptObaOba(receiver: player):
     set {_sourceUUID} to getPendingSourceUUID({_receiver})
     set {_relationshipID} to getPendingRelationshipID({_receiver})
-
     delete {_source}
     loop all players:
         if "%uuid of loop-player%" is {_sourceUUID}:
@@ -31,23 +31,19 @@ function acceptObaOba(receiver: player):
         clearPendingAction({_receiver})
         send "&cSeu cônjuge precisa estar online para concluir esta ação." to {_receiver}
         return
-
     if etherID({_source}, {_receiver}) is not {_relationshipID}:
         clearPendingAction({_receiver})
         send "&cO vínculo deste pedido não é mais válido." to {_receiver}
         return
-
     if isMarriedRelationship({_source}, {_receiver}) is false:
         clearPendingAction({_receiver})
         send "&cVocês não estão mais casados." to {_receiver}
         return
-
     if isNearEtherLoveBed({_source}) is false:
         clearPendingAction({_receiver})
         send "&c%name of {_source}% não está mais perto de uma cama." to {_receiver}
         send "&cA ação foi cancelada porque você saiu de perto da cama." to {_source}
         return
-
     if isNearEtherLoveBed({_receiver}) is false:
         clearPendingAction({_receiver})
         send "&cVocê não está mais perto de uma cama." to {_receiver}
@@ -72,6 +68,18 @@ function refuseObaOba(receiver: player):
     if {_source} is set:
         send "&7%name of {_receiver}% recusou seu convite." to {_source}
 
+# Intercepta somente quando a Pending Action é OBAOBA_REQUEST.
+# Para qualquer outro tipo, o /LS e /LN normais do 03 continuam.
+on command "/ls":
+    if getPendingActionType(player) is "OBAOBA_REQUEST":
+        cancel event
+        acceptObaOba(player)
+
+on command "/ln":
+    if getPendingActionType(player) is "OBAOBA_REQUEST":
+        cancel event
+        refuseObaOba(player)
+
 command /tpc:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
@@ -79,22 +87,18 @@ command /tpc:
         if hasActivePartner(player) is false:
             send "&cVocê não possui um cônjuge ativo."
             stop
-
         set {_partnerUUID} to getActivePartnerUUID(player)
         delete {_partner}
         loop all players:
             if "%uuid of loop-player%" is {_partnerUUID}:
                 set {_partner} to loop-player
                 stop loop
-
         if {_partner} is not set:
             send "&cSeu cônjuge precisa estar online para usar /TPC."
             stop
-
         if isMarriedRelationship(player, {_partner}) is false:
             send "&c/TPC é exclusivo para jogadores CASADOS."
             stop
-
         teleport {_partner} to player
         send "&d&lETHERLOVE &8» &fSeu cônjuge foi teleportado até você."
         send "&d&lETHERLOVE &8» &fVocê foi teleportado até &d%name of player%&f." to {_partner}
@@ -104,41 +108,32 @@ command /obaoba <player>:
     permission message: &cVocê não possui permissão para usar este comando.
     trigger:
         set {_target} to arg-1
-
         if {_target} is player:
             send "&cVocê não pode usar esta ação consigo mesmo."
             stop
-
         if isMarriedRelationship(player, {_target}) is false:
             send "&c/OBAOBA é exclusivo para o seu cônjuge."
             stop
-
         if hasActivePartner(player) is false:
             send "&cSeu vínculo matrimonial não foi encontrado."
             stop
-
         if getActivePartnerUUID(player) is not "%uuid of {_target}%":
             send "&c%name of {_target}% não é seu cônjuge ativo."
             stop
-
         if isPlayerBusyForNewAction(player) is true:
             send "&cVocê já possui outra ação do EtherLove pendente ou está em um encontro."
             stop
-
         if isPlayerBusyForNewAction({_target}) is true:
             send "&c%name of {_target}% está ocupado com outra ação do EtherLove."
             stop
-
         if isNearEtherLoveBed(player) is false:
             send "&cVocê precisa estar a até {@obaoba-bed-radius} blocos de uma cama."
             stop
-
         if isNearEtherLoveBed({_target}) is false:
             send "&c%name of {_target}% também precisa estar perto de uma cama."
             stop
 
         setPendingAction({_target}, "OBAOBA_REQUEST", "%uuid of player%", name of player, etherID(player, {_target}))
-
         send "&d&lETHERLOVE &8» &fConvite enviado para &d%name of {_target}%&f."
         send "&d&lETHERLOVE &8» &d%name of player% &fconvidou você para um momento especial." to {_target}
         send "&7Use &a/LS &7para aceitar ou &c/LN &7para recusar." to {_target}
