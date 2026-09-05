@@ -1,8 +1,11 @@
 # ==========================================================
 # EtherLove Interface
-# INTERFACE REBUILD 002 - /LOVE
+# INTERFACE REBUILD 003 - OFFLINE RELATIONSHIP INDEX
 # ==========================================================
 # CASE é interno. O jogador vê o nome do estado.
+# /LOVE consulta o índice persistente do Core e funciona
+# mesmo quando o outro participante está offline.
+#
 # CMD reservado para futuro resource pack:
 # 8100 NEUTRO
 # 8101 AMIGO
@@ -53,20 +56,32 @@ command /love:
     permission: etherlove.use
     permission message: &cVocê não possui permissão para usar este comando.
     trigger:
+        # Migra relações antigas que puderem ser identificadas agora.
+        backfillOnlineRelationships(player)
+        refreshRelationshipNames(player)
+
         set {_gui} to a new chest inventory with 6 rows named "&d❤ Seus Relacionamentos"
         set {_slot} to 0
+        set {_viewerUUID} to "%uuid of player%"
 
-        loop all players:
-            if loop-player is not player:
-                if relationshipExists(player, loop-player) is true:
-                    if {_slot} < 54:
-                        set {_stage} to getRelationshipStage(player, loop-player)
-                        set {_xp} to getRelationshipPoints(player, loop-player)
+        loop {etherlove.player.%{_viewerUUID}%.relationships::*}:
+            if {_slot} < 54:
+                set {_id} to loop-value
+
+                if relationshipIDExists({_id}) is true:
+                    set {_partnerUUID} to getRelationshipPartnerUUIDByID({_id}, {_viewerUUID})
+                    set {_partnerName} to getRelationshipPartnerNameByID({_id}, {_viewerUUID})
+
+                    if {_partnerUUID} is not "":
+                        set {_stage} to getRelationshipStageByID({_id})
+                        set {_xp} to getRelationshipPointsByID({_id})
                         set {_state} to getStageName({_stage})
                         set {_xpText} to formatLoveXP({_xp})
                         set {_icon} to loveStageIcon({_stage})
-                        set name of {_icon} to "&d%name of player% &f& &d%name of loop-player%"
+
+                        set name of {_icon} to "&d%name of player% &f& &d%{_partnerName}%"
                         set lore of {_icon} to "&7Estado: &f%{_state}%" and "&7XP: &d%{_xpText}%&7/500"
+
                         set slot {_slot} of {_gui} to {_icon}
                         add 1 to {_slot}
 
