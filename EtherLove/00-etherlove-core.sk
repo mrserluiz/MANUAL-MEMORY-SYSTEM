@@ -1,10 +1,12 @@
 # ==========================================================
 # EtherLove Core - REBUILD 001
-# CORE REVISION 006 - CANONICAL RELATIONSHIP ID
+# CORE REVISION 007 - PERSISTENT RELATIONSHIP INDEX
 # ==========================================================
 # RESPONSABILIDADES:
 # - RelationshipID
 # - criação e existência de relacionamentos
+# - índice persistente de relacionamentos por jogador
+# - armazenamento de participantes / nomes
 # - armazenamento de XP
 # - cálculo de CASE
 # - STATUS
@@ -43,6 +45,95 @@ function etherIDFromUUIDs(uuid1: text, uuid2: text) :: text:
     return "%{_sorted::1}%::%{_sorted::2}%"
 
 # ==========================================================
+# PERSISTENT RELATIONSHIP INDEX
+# ==========================================================
+# Cada jogador mantém um mapa persistente das RelationshipIDs
+# em que participa. A própria relação mantém os UUIDs e os
+# últimos nomes conhecidos dos dois participantes.
+#
+# Isso permite que interfaces consultem relações mesmo quando
+# o outro participante estiver offline.
+# ==========================================================
+
+function indexRelationship(p1: player, p2: player):
+    set {_id} to etherID({_p1}, {_p2})
+    set {_u1} to "%uuid of {_p1}%"
+    set {_u2} to "%uuid of {_p2}%"
+
+    set {etherlove.player.%{_u1}%.relationships::%{_id}%} to {_id}
+    set {etherlove.player.%{_u2}%.relationships::%{_id}%} to {_id}
+    set {etherlove.relationships::%{_id}%} to {_id}
+
+    set {_uuids::*} to {_u1} and {_u2}
+    set {_sorted::*} to alphabetically sorted {_uuids::*}
+
+    if {_sorted::1} is {_u1}:
+        set {etherlove.couple.%{_id}%.uuid-a} to {_u1}
+        set {etherlove.couple.%{_id}%.name-a} to name of {_p1}
+        set {etherlove.couple.%{_id}%.uuid-b} to {_u2}
+        set {etherlove.couple.%{_id}%.name-b} to name of {_p2}
+    else:
+        set {etherlove.couple.%{_id}%.uuid-a} to {_u2}
+        set {etherlove.couple.%{_id}%.name-a} to name of {_p2}
+        set {etherlove.couple.%{_id}%.uuid-b} to {_u1}
+        set {etherlove.couple.%{_id}%.name-b} to name of {_p1}
+
+function backfillOnlineRelationships(p: player):
+    loop all players:
+        if loop-player is not {_p}:
+            if relationshipExists({_p}, loop-player) is true:
+                indexRelationship({_p}, loop-player)
+
+function refreshRelationshipNames(p: player):
+    set {_uuid} to "%uuid of {_p}%"
+    loop {etherlove.player.%{_uuid}%.relationships::*}:
+        set {_id} to loop-value
+        if {etherlove.couple.%{_id}%.uuid-a} is {_uuid}:
+            set {etherlove.couple.%{_id}%.name-a} to name of {_p}
+        if {etherlove.couple.%{_id}%.uuid-b} is {_uuid}:
+            set {etherlove.couple.%{_id}%.name-b} to name of {_p}
+
+function relationshipIDExists(id: text) :: boolean:
+    if {etherlove.couple.%{_id}%.created} is set:
+        return true
+    return false
+
+function getRelationshipPointsByID(id: text) :: number:
+    if {etherlove.couple.%{_id}%.points} is not set:
+        return 0
+    return {etherlove.couple.%{_id}%.points}
+
+function getRelationshipStageByID(id: text) :: number:
+    if {etherlove.couple.%{_id}%.stage} is not set:
+        return 0
+    return {etherlove.couple.%{_id}%.stage}
+
+function getRelationshipStatusByID(id: text) :: text:
+    if {etherlove.couple.%{_id}%.status} is not set:
+        return "SOLTEIRO"
+    return {etherlove.couple.%{_id}%.status}
+
+function getRelationshipPartnerUUIDByID(id: text, viewerUUID: text) :: text:
+    set {_a} to {etherlove.couple.%{_id}%.uuid-a}
+    set {_b} to {etherlove.couple.%{_id}%.uuid-b}
+    if {_a} is {_viewerUUID}:
+        return {_b}
+    if {_b} is {_viewerUUID}:
+        return {_a}
+    return ""
+
+function getRelationshipPartnerNameByID(id: text, viewerUUID: text) :: text:
+    set {_a} to {etherlove.couple.%{_id}%.uuid-a}
+    set {_b} to {etherlove.couple.%{_id}%.uuid-b}
+    if {_a} is {_viewerUUID}:
+        if {etherlove.couple.%{_id}%.name-b} is set:
+            return {etherlove.couple.%{_id}%.name-b}
+    if {_b} is {_viewerUUID}:
+        if {etherlove.couple.%{_id}%.name-a} is set:
+            return {etherlove.couple.%{_id}%.name-a}
+    return "DESCONHECIDO"
+
+# ==========================================================
 # RELATIONSHIP EXISTENCE / CREATION
 # ==========================================================
 
@@ -63,6 +154,9 @@ function createRelationship(p1: player, p2: player):
         set {etherlove.couple.%{_id}%.stage} to 0
         set {etherlove.couple.%{_id}%.status} to "SOLTEIRO"
         set {etherlove.couple.%{_id}%.last-interaction} to now
+
+    # Sempre reindexa para migrar relações antigas e atualizar nomes.
+    indexRelationship({_p1}, {_p2})
 
 # ==========================================================
 # XP STAGE CALCULATOR
@@ -350,6 +444,14 @@ function isMarriedRelationship(p1: player, p2: player) :: boolean:
     return false
 
 # ==========================================================
+# INDEX MIGRATION / NAME REFRESH
+# ==========================================================
+
+on join:
+    refreshRelationshipNames(player)
+    backfillOnlineRelationships(player)
+
+# ==========================================================
 # DEBUG
 # ==========================================================
 
@@ -357,13 +459,15 @@ command /eldebug <player>:
     permission: etherlove.admin
     trigger:
         set {_target} to arg-1
-        loop all players:
-            if loop-player is not {_target}:
-                if relationshipExists({_target}, loop-player) is true:
-                    set {_points} to getRelationshipPoints({_target}, loop-player)
-                    set {_stage} to getRelationshipStage({_target}, loop-player)
-                    set {_status} to getRelationshipStatus({_target}, loop-player)
-                    send "&dDebug: %name of {_target}% + %name of loop-player% | CASE: %{_stage}% (%getStageName({_stage})%) | XP: %{_points}% | STATUS: %{_status}%"
+        backfillOnlineRelationships({_target})
+        loop {etherlove.player.%uuid of {_target}%.relationships::*}:
+            set {_id} to loop-value
+            if relationshipIDExists({_id}) is true:
+                set {_points} to getRelationshipPointsByID({_id})
+                set {_stage} to getRelationshipStageByID({_id})
+                set {_status} to getRelationshipStatusByID({_id})
+                set {_otherName} to getRelationshipPartnerNameByID({_id}, "%uuid of {_target}%")
+                send "&dDebug: %name of {_target}% + %{_otherName}% | CASE: %{_stage}% (%getStageName({_stage})%) | XP: %{_points}% | STATUS: %{_status}%"
 
 # ==========================================================
 # FUTURE DATA STORAGE LAYER
