@@ -536,3 +536,163 @@ Home-page/
 └── js/
     └── main.js
 ```
+
+
+---
+
+# UPDATE — 06/09/2026 — Fluxo com Repositório Duplo
+
+## OBJETIVO
+
+Permitir que a IA desenvolva e atualize o site diretamente na conta conectada `mrserluiz`, enquanto o usuário replica manualmente os mesmos arquivos no repositório oficial da EXBR.
+
+## DECISÃO CONFIRMADA
+
+O projeto passa a trabalhar com dois repositórios espelhados:
+
+### Desenvolvimento e atualizações pela IA
+
+```text
+https://github.com/mrserluiz/Home-page
+```
+
+### Repositório oficial da EXBR
+
+```text
+https://github.com/EXBRClub/Home-page
+```
+
+O usuário fará manualmente a transferência das atualizações do repositório de desenvolvimento para o repositório oficial.
+
+## REGRA DE COMPATIBILIDADE DUPLA
+
+Os dois repositórios devem manter exatamente a mesma estrutura interna.
+
+Exemplo:
+
+```text
+mrserluiz/Home-page/index.html
+=
+EXBRClub/Home-page/index.html
+```
+
+Todos os caminhos funcionais do HTML, CSS e JavaScript devem ser relativos.
+
+Exemplos aprovados:
+
+```text
+css/base.css
+css/pages/home.css
+js/main.js
+pages/sobre.html
+../assets/images/
+```
+
+Não utilizar caminhos internos iniciados somente por `/`, porque eles podem ignorar o diretório `/Home-page/` no GitHub Pages.
+
+URLs externas absolutas são permitidas quando necessárias.
+
+A URL canônica e os metadados públicos devem apontar para o endereço oficial:
+
+```text
+https://exbrclub.github.io/Home-page/
+```
+
+## BLOQUEIO ANTERIOR
+
+**STATUS:** RESOLVIDO POR NOVO FLUXO
+
+A integração não conseguia gravar diretamente em `EXBRClub/Home-page`, mesmo com `mrserluiz` como colaborador.
+
+A solução adotada foi criar o repositório de desenvolvimento `mrserluiz/Home-page` e manter a atualização do repositório oficial sob responsabilidade manual do usuário.
+
+## IMPLEMENTADO
+
+A primeira versão funcional do site foi criada em:
+
+```text
+https://github.com/mrserluiz/Home-page
+```
+
+Commit principal:
+
+```text
+54bd3bf1572d36b0f50c7617e5e21244d128ec9a
+```
+
+## CONTEÚDO IMPLEMENTADO
+
+- Home responsiva de página única.
+- Identidade visual militar futurista espacial.
+- Interface inspirada em painel tático.
+- Menus e painéis semitransparentes.
+- Navegação fixa e responsiva.
+- Menu mobile acessível.
+- Seções Início, Sobre, Operações, Recrutamento e Comunidade.
+- Navegação ativa conforme a rolagem.
+- Animações discretas de entrada.
+- Respeito a `prefers-reduced-motion`.
+- SEO básico.
+- URL canônica oficial da EXBR.
+- Caminhos relativos compatíveis com os dois repositórios.
+- README com instruções do fluxo duplo.
+- Mapa estrutural do site.
+
+## NÃO IMPLEMENTADO
+
+- logotipo oficial;
+- imagens oficiais;
+- facção e servidor;
+- plataforma;
+- Discord;
+- redes sociais;
+- conteúdo histórico definitivo;
+- agenda real de operações;
+- formulário ou canal definitivo de recrutamento;
+- páginas internas independentes;
+- banco de dados;
+- autenticação;
+- integrações externas.
+
+Essas informações não devem ser inventadas.
+
+## PRÓXIMO PASSO
+
+O usuário deve copiar a estrutura de `mrserluiz/Home-page` para `EXBRClub/Home-page`.
+
+Depois, confirmar os dados oficiais da Outfit para substituir os conteúdos provisórios e expandir o portal.
+
+## MAPA ATUAL DO REPOSITÓRIO DE DESENVOLVIMENTO
+
+```text
+Home-page/
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       └── home.css
+└── js/
+    └── main.js
+```
+
+## MAPA ESPERADO NO REPOSITÓRIO OFICIAL
+
+```text
+Home-page/
+├── LICENSE
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       └── home.css
+└── js/
+    └── main.js
+```
