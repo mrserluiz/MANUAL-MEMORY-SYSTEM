@@ -696,3 +696,73 @@ Home-page/
 └── js/
     └── main.js
 ```
+
+
+---
+
+# UPDATE — 06/09/2026 — Página de Login
+
+## DECISÃO CONFIRMADA
+
+Ao clicar em `LOGIN`, o visitante deve acessar uma página própria de login.
+
+## IMPLEMENTADO NO REPOSITÓRIO DE DESENVOLVIMENTO
+
+Repositório:
+
+```text
+https://github.com/mrserluiz/Home-page
+```
+
+Commit:
+
+```text
+9ca7ebd7ff796be690e1e272ef20b0300b4f9837
+```
+
+Alterações realizadas:
+
+- identidade do cabeçalho atualizada para `EXÉRCITO BRASILEIRO`;
+- link verde `LOGIN` posicionado abaixo de `COMUNIDADE`;
+- página `pages/login.html` criada;
+- estilo modular `css/pages/login.css` criado;
+- navegação e caminhos mantidos relativos para funcionar nos dois repositórios;
+- README e mapa do site atualizados.
+
+## ESTADO DA AUTENTICAÇÃO
+
+**INTERFACE IMPLEMENTADA / AUTENTICAÇÃO NÃO IMPLEMENTADA**
+
+A página possui formulário visual com campos bloqueados e informa que o acesso está em configuração. Nenhuma credencial é enviada ou armazenada.
+
+A autenticação real dependerá da definição de um serviço seguro, regras de cadastro e fonte autorizada de membros.
+
+## FLUXO DUPLO MANTIDO
+
+O usuário deve copiar manualmente as mesmas alterações para:
+
+```text
+https://github.com/EXBRClub/Home-page
+```
+
+A estrutura e os caminhos internos são compatíveis com ambos os repositórios.
+
+## MAPA ATUAL DO REPOSITÓRIO DE DESENVOLVIMENTO
+
+```text
+Home-page/
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── pages/
+│   └── login.html
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       ├── home.css
+│       └── login.css
+└── js/
+    └── main.js
+```
