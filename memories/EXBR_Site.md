@@ -483,3 +483,56 @@ Home-page/
 ├── js/
 └── data/
 ```
+
+
+---
+
+# UPDATE — 06/09/2026 — Permissão do repositório
+
+## CONFIRMADO
+
+- A conta `mrserluiz` foi adicionada como colaboradora de `EXBRClub/Home-page`.
+- O GitHub passou a indicar permissão `push` para a conta.
+- A primeira versão da Home foi preparada com HTML, CSS modular e JavaScript.
+- A base preparada utiliza interface tática futurista, painéis semitransparentes, navegação responsiva e seções Início, Sobre, Operações, Recrutamento e Comunidade.
+
+## NÃO IMPLEMENTADO NO REPOSITÓRIO
+
+Os arquivos ainda não foram gravados em `EXBRClub/Home-page`.
+
+A instalação do aplicativo GitHub disponível nesta sessão pertence somente à conta `mrserluiz`. O GitHub recusou operações de gravação no repositório pertencente à conta `EXBRClub` com o retorno `Resource not accessible by integration`.
+
+## BLOQUEIO ATUAL
+
+O aplicativo GitHub precisa ser instalado ou conectado pela conta proprietária `EXBRClub`, com acesso ao repositório `Home-page`.
+
+Conceder colaboração à conta `mrserluiz` não autoriza automaticamente a instalação do aplicativo vinculada a essa conta a modificar repositórios pertencentes a outro usuário.
+
+## PRÓXIMO PASSO
+
+Conectar a conta `EXBRClub` ao GitHub no ChatGPT e autorizar o repositório `Home-page`. Depois disso, publicar a base preparada e verificar os arquivos diretamente no repositório.
+
+## MAPA ATUAL CONFIRMADO
+
+```text
+Home-page/
+└── LICENSE
+```
+
+## MAPA PREPARADO — AINDA NÃO PUBLICADO
+
+```text
+Home-page/
+├── LICENSE
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       └── home.css
+└── js/
+    └── main.js
+```
