@@ -1070,3 +1070,173 @@ Home-page/
     ├── login.html
     └── perfil.html
 ```
+
+
+---
+
+# UPDATE — 07/09/2026 — Painel administrativo de membros
+
+## OBJETIVO
+
+Implementar a gestão administrativa visual de membros, patentes e medalhas seguindo as referências anotadas pelo usuário, sem inserir as marcações vermelhas no design.
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`9587b8e2e74dac24218ba06a0f211be8c93d96bf` — `feat: adiciona painel administrativo de membros`.
+
+### Sessão e navegação
+
+- Na Home, o botão `Login` muda automaticamente para `Perfil` quando existe uma sessão Firebase ativa.
+- O último botão da barra tática inferior também alterna entre Login e Perfil.
+- Na página de membro, o botão superior permanece como `Perfil`.
+- A saída da conta foi mantida como ação separada dentro do Perfil e da Área administrativa.
+
+### Perfil do membro
+
+- O botão `Editar perfil` começa oculto.
+- O botão só é revelado quando o dono do perfil clica ou usa o teclado sobre o próprio avatar.
+- Após 30 segundos sem atividade na área de identidade, os controles são fechados e ocultados novamente.
+- Um usuário padrão somente pode abrir o próprio perfil.
+- Administradores podem consultar o perfil de outros membros por `pages/perfil.html?uid={uid}`.
+- Os controles de avatar e bandeira nunca são mostrados ao administrador quando ele consulta o perfil de outra pessoa.
+
+### Área administrativa
+
+Nova rota protegida:
+
+`pages/admin.html`
+
+Recursos implementados:
+
+- acesso exclusivo para perfis com `role: admin`;
+- redirecionamento de membros comuns para o próprio Perfil;
+- pesquisa de soldados por nome, e-mail ou patente;
+- lista com avatar, nome e patente atual;
+- dois cliques ou tecla Enter sobre o registro abrem o perfil do membro;
+- seletor com as 17 patentes de `data/patentes.json`;
+- salvamento automático da patente no Firestore;
+- botão individual `Adicionar medalha`;
+- janela de condecorações com pesquisa;
+- campos de operação e data;
+- adição automática ao selecionar `+`;
+- remoção automática ao selecionar `−`;
+- atualização direta de `users/{uid}/medals/{medalId}`.
+
+### Catálogo de medalhas
+
+Criado:
+
+`data/medalhas.json`
+
+Catálogo inicial:
+
+- Medalha de Honra;
+- Linha de Frente;
+- Precisão Tática;
+- Irmandade EXBR;
+- Operação Osprey;
+- Serviço Distinto.
+
+Os emojis continuam temporários. Cada medalha aceita `iconUrl` para futura substituição pelos ícones PNG oficiais.
+
+## SEGURANÇA
+
+As regras existentes do Firestore já protegem esse fluxo:
+
+- somente `admin` pode listar membros;
+- somente `admin` pode alterar patentes;
+- somente `admin` pode criar ou remover medalhas;
+- membros comuns não ganham novas permissões;
+- a verificação visual do painel não substitui as regras do Firestore.
+
+Não foi necessário enfraquecer nem alterar `firestore.rules`.
+
+## ARQUIVOS CRIADOS
+
+```text
+pages/admin.html
+css/pages/admin.css
+js/admin.js
+js/session-ui.js
+data/medalhas.json
+```
+
+## ARQUIVOS ATUALIZADOS
+
+```text
+index.html
+pages/perfil.html
+css/pages/perfil.css
+js/perfil.js
+README.md
+FIREBASE.md
+MAPA-SITE.txt
+```
+
+## NÃO IMPLEMENTADO
+
+- painel de criação e edição do catálogo de tipos de medalha;
+- ícones PNG oficiais das medalhas;
+- editor administrativo de operações;
+- bot do Discord;
+- coleta de presença em operações;
+- integração com Recursion Tracker.
+
+## MAPA ATUAL DO SITE
+
+```text
+Home-page/
+├── LICENSE
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── FIREBASE.md
+├── firestore.rules
+├── site.webmanifest
+├── assets/
+│   ├── icons/
+│   │   ├── favicon.svg
+│   │   ├── apple-touch-icon.png
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   └── dock/
+│   │       ├── inicio.png
+│   │       ├── sobre.png
+│   │       ├── operacoes.png
+│   │       ├── recrutamento.png
+│   │       ├── comunidade.png
+│   │       └── login.png
+│   └── profile/
+│       ├── avatars/
+│       │   ├── assalto.webp
+│       │   ├── pesado.webp
+│       │   └── reconhecimento.webp
+│       └── banners/
+│           └── brasil.webp
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       ├── admin.css
+│       ├── home.css
+│       ├── login.css
+│       └── perfil.css
+├── data/
+│   ├── medalhas.json
+│   └── patentes.json
+├── js/
+│   ├── admin.js
+│   ├── firebase-client.js
+│   ├── login.js
+│   ├── main.js
+│   ├── operations.js
+│   ├── perfil.js
+│   └── session-ui.js
+└── pages/
+    ├── admin.html
+    ├── login.html
+    └── perfil.html
+```
