@@ -1457,3 +1457,23 @@ Commit: `d1f9f990081ee7856ae4cc05571044ff69b41b5a` — `fix: centraliza janelas 
 - A janela principal do catálogo de medalhas foi centralizada horizontal e verticalmente na tela.
 - O editor de criação e edição de medalhas recebeu o mesmo alinhamento.
 - A correção neutraliza a margem zerada pelo reset global e mantém a centralização em desktop e celular.
+
+
+---
+
+# UPDATE — 07/09/2026 — Detalhes das medalhas no Perfil
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`0675ec19697cb783d143dbd470339f12a72433d0` — `feat: adiciona detalhes das medalhas no perfil`.
+
+- Cada medalha do Perfil passou a ser um controle selecionável por mouse, toque ou teclado.
+- Ao selecionar uma medalha, abre uma janela tática centralizada.
+- A janela apresenta nome, imagem PNG ampliada, descrição, operação e data da concessão.
+- Imagens ausentes, inválidas ou indisponíveis continuam usando `assets/icons/dock/recrutamento.png`.
+- Medalhas antigas que possuam `catalogId` consultam o modelo atual em `medalCatalog/{medalId}`, permitindo mostrar descrição e imagem atualizadas.
+- O botão administrativo de remoção permanece separado da abertura dos detalhes.
+- O catálogo de medalhas passou a permitir leitura para usuários autenticados; criação, edição e exclusão continuam exclusivas para `role: admin`.
+- A nova versão de `firestore.rules` precisa ser publicada no Firebase `exbr-0709` para liberar a consulta atualizada do catálogo aos membros.
