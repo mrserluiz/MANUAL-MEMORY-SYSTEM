@@ -1261,3 +1261,122 @@ Alterações realizadas em `pages/login.html` e `css/pages/login.css`:
 - ponto verde recebeu pulsação calma;
 - pulsação é desativada quando o usuário utiliza preferência de movimentos reduzidos;
 - nenhuma marcação vermelha da imagem de referência foi incluída no design.
+
+
+---
+
+# UPDATE — 07/09/2026 — Página dedicada de Operações
+
+## OBJETIVO
+
+Criar uma página exclusiva para consultar e participar das operações da EXBR, mantendo simultaneamente o resumo de operações e o monitor do PS2Alerts no setor atual da Home.
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`56d72eedc233d6300e9625b82543122887eea95c` — `feat: cria pagina dedicada de operacoes`.
+
+### Home e navegação
+
+- O setor `#operacoes` da Home continua existindo.
+- A Home carrega até três operações atuais do Firestore e usa `data/operacoes.json` como conteúdo reserva.
+- Os cartões não exibem as antigas numerações 01, 02 e 03.
+- Cada cartão abre diretamente a operação correspondente em `pages/operacoes.html`.
+- As imagens de operação aceitam PNG por caminho relativo ou URL e se deslocam levemente para a direita ao passar o mouse.
+- O primeiro uso do atalho inferior de Operações em uma guia leva ao setor da Home.
+- Depois que a página dedicada é visitada, o mesmo atalho passa a retornar diretamente para ela enquanto a guia permanecer aberta.
+
+### Página dedicada
+
+Nova rota:
+
+`pages/operacoes.html`
+
+Recursos:
+
+- lista vertical rolável de operações;
+- imagem, nome, tipo, descrição, detalhes, data e horário;
+- medalha prevista com emoji temporário ou `medalIconUrl` para PNG definitivo;
+- botão de participação para membros autenticados;
+- redirecionamento ao Login quando o visitante ainda não está autenticado;
+- destaque por URL usando `#operationId`;
+- layout responsivo e compatível com GitHub Pages;
+- nenhuma marcação vermelha das referências faz parte do design.
+
+### Participação e perfil
+
+Ao confirmar participação, o site grava atomicamente:
+
+- `users/{uid}/participations/{operationId}`;
+- `operations/{operationId}/participants/{uid}`.
+
+O membro pode criar apenas o próprio registro e somente com estado `confirmed`. A área central antes reservada do Perfil agora apresenta as operações em que o membro confirmou participação.
+
+### Administração de operações
+
+Usuários com `role: admin` recebem controles para:
+
+- criar operações;
+- editar operações;
+- definir status de inscrições;
+- configurar imagens PNG;
+- definir a medalha prevista e seu PNG futuro.
+
+Usuários padrão não recebem esses controles e continuam protegidos pelas regras do Firestore.
+
+### Medalhas repetidas e remoção
+
+- Cada concessão de medalha passa a usar um documento com ID automático.
+- O mesmo jogador pode receber o mesmo tipo de medalha várias vezes em operações ou datas distintas.
+- A janela administrativa serve somente para conceder medalhas.
+- A remoção administrativa foi movida para o perfil consultado, preservando cada concessão individual.
+
+## FIRESTORE
+
+O arquivo versionado `firestore.rules` foi atualizado para permitir a criação segura da própria participação e manter a administração das operações protegida por `role: admin`.
+
+**PENDÊNCIA OPERACIONAL:** esta nova versão das regras está no repositório, mas ainda precisa ser publicada no projeto Firebase `exbr-0709` pelo Console ou pela CLI. Até essa publicação, o botão de participação poderá ser recusado pelas regras atualmente ativas.
+
+## NOVOS ARQUIVOS
+
+```text
+pages/operacoes.html
+css/pages/operacoes.css
+js/operations-page.js
+js/home-operations.js
+data/operacoes.json
+```
+
+## MAPA ATUAL RELEVANTE
+
+```text
+Home-page/
+├── index.html
+├── firestore.rules
+├── data/
+│   ├── medalhas.json
+│   ├── operacoes.json
+│   └── patentes.json
+├── pages/
+│   ├── admin.html
+│   ├── login.html
+│   ├── operacoes.html
+│   └── perfil.html
+├── css/pages/
+│   ├── admin.css
+│   ├── home.css
+│   ├── login.css
+│   ├── operacoes.css
+│   └── perfil.css
+└── js/
+    ├── admin.js
+    ├── firebase-client.js
+    ├── home-operations.js
+    ├── login.js
+    ├── main.js
+    ├── operations-page.js
+    ├── operations.js
+    ├── perfil.js
+    └── session-ui.js
+```
