@@ -957,3 +957,116 @@ Home-page/
     ├── login.html
     └── perfil.html
 ```
+
+
+---
+
+# UPDATE — 07/09/2026 — Cadastro de membros e código temporário
+
+## CORREÇÃO DE DECISÃO
+
+Este update substitui a decisão anterior que dizia que as contas seriam criadas pela administração.
+
+Os membros podem criar suas próprias contas normalmente pelo portal. A administração não precisa cadastrar e-mails nem criar contas de membros.
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`8a43b5b3b53ff660d23874acb41696a2e562eeef` — `feat: permite cadastro de membros com codigo temporario`.
+
+A página `pages/login.html` agora oferece dois modos:
+
+- Entrar;
+- Criar conta.
+
+O cadastro solicita:
+
+- nome de operador;
+- e-mail;
+- senha e confirmação;
+- código de registro em seis campos individuais.
+
+Código temporário desta fase:
+
+`[0][7][0][9][2][2]`
+
+Após o cadastro, o Firebase Authentication cria a conta e o primeiro acesso cria `users/{uid}` com:
+
+- `role: member`;
+- `rankId: soldado`.
+
+A administração permanece responsável por atribuir patentes e conceder medalhas. O membro não pode alterar a própria função, patente ou condecorações.
+
+## LIMITAÇÃO DE SEGURANÇA ATUAL
+
+O código `070922` está implementado no JavaScript público do GitHub Pages. Ele funciona como protótipo do fluxo e filtro visual, mas não é um segredo nem uma barreira de segurança definitiva.
+
+A versão definitiva deverá validar códigos únicos em um ambiente confiável, como Cloud Functions ou outro backend, e não no navegador.
+
+## PLANEJADO — NÃO IMPLEMENTADO
+
+- Bot do Discord para gerar códigos únicos de registro;
+- códigos com expiração, uso único e vínculo ao usuário do Discord;
+- gestão de membros do Discord;
+- registro de presença nas operações;
+- estudo do funcionamento e das fontes autorizadas do Recursion Tracker;
+- futuro complemento da EXBR para coletar eventos permitidos de combate e apresentar estatísticas no site.
+
+Referência futura para investigação:
+
+`https://recursiontracker.com`
+
+Nenhuma integração com Discord ou Recursion Tracker foi implementada nesta etapa.
+
+## MAPA ATUAL DO SITE
+
+```text
+Home-page/
+├── LICENSE
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── FIREBASE.md
+├── firestore.rules
+├── site.webmanifest
+├── assets/
+│   ├── icons/
+│   │   ├── favicon.svg
+│   │   ├── apple-touch-icon.png
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   └── dock/
+│   │       ├── inicio.png
+│   │       ├── sobre.png
+│   │       ├── operacoes.png
+│   │       ├── recrutamento.png
+│   │       ├── comunidade.png
+│   │       └── login.png
+│   └── profile/
+│       ├── avatars/
+│       │   ├── assalto.webp
+│       │   ├── pesado.webp
+│       │   └── reconhecimento.webp
+│       └── banners/
+│           └── brasil.webp
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       ├── home.css
+│       ├── login.css
+│       └── perfil.css
+├── data/
+│   └── patentes.json
+├── js/
+│   ├── firebase-client.js
+│   ├── login.js
+│   ├── main.js
+│   ├── operations.js
+│   └── perfil.js
+└── pages/
+    ├── login.html
+    └── perfil.html
+```
