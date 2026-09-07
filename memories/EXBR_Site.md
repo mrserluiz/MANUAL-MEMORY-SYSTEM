@@ -1240,3 +1240,24 @@ Home-page/
     ├── login.html
     └── perfil.html
 ```
+
+
+---
+
+# UPDATE — 07/09/2026 — Refinamento visual do Login
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`3479a39be5edb52163345b5bd313d296665d5821` — `style: refina indicadores da pagina de acesso`.
+
+Alterações realizadas em `pages/login.html` e `css/pages/login.css`:
+
+- removido completamente o emblema circular `EXBR AUTH` do terminal de identificação;
+- o título e o formulário passaram a ocupar naturalmente o espaço liberado;
+- indicador `Canal de acesso ativo` alterado do laranja para o verde do Login e do Portal ativo;
+- linha lateral, ponto luminoso, fundo e brilho agora usam verde;
+- ponto verde recebeu pulsação calma;
+- pulsação é desativada quando o usuário utiliza preferência de movimentos reduzidos;
+- nenhuma marcação vermelha da imagem de referência foi incluída no design.
