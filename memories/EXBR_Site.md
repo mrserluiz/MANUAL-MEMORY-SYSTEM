@@ -3,7 +3,7 @@
 **ID da memória:** `#EXBR_Site`  
 **Arquivo:** `memories/EXBR_Site.md`  
 **Criado em:** 06/09/2026  
-**Última atualização:** 06/09/2026  
+**Última atualização:** 07/09/2026  
 **Status geral:** EM DESENVOLVIMENTO
 
 ---
@@ -765,4 +765,195 @@ Home-page/
 │       └── login.css
 └── js/
     └── main.js
+```
+
+
+---
+
+# UPDATE — 07/09/2026 — Consolidação do portal, área de membros e Firebase
+
+## OBJETIVO DESTA ETAPA
+
+Transformar a interface demonstrativa de Login e Perfil em uma área funcional de membros, com autenticação por e-mail e senha, persistência no Firestore e separação segura entre usuários padrão e administradores.
+
+## ESTADO DOS REPOSITÓRIOS
+
+O fluxo duplo permanece confirmado:
+
+- desenvolvimento e atualizações pela IA: `mrserluiz/Home-page`;
+- repositório oficial: `EXBRClub/Home-page`;
+- o usuário mantém os dois repositórios sincronizados manualmente pelo remote duplo;
+- todos os caminhos internos continuam relativos e compatíveis com os dois endereços do GitHub Pages.
+
+Commit atual do repositório de desenvolvimento:
+
+`2b68b66b001652e4f35090be0f648511c81dae60` — `feat: integra Firebase Auth e perfis com permissões`.
+
+## INTERFACE E IDENTIDADE — IMPLEMENTADO
+
+- Home responsiva com interface militar futurista espacial.
+- Cabeçalho estreito, navegação com iluminação central e Login chanfrado.
+- Indicador verde de Portal ativo com pulsação suave.
+- Barra tática inferior curva com seis ícones PNG individuais.
+- Somente o item selecionado recebe borda e iluminação amarelas e deslocamento vertical.
+- Cascata ambiente de pontos, com correção de compatibilidade para Opera GX e fase preservada por guia.
+- Efeito inicial de montagem executado apenas na primeira abertura da Home em cada guia.
+- Favicon, ícones para celular e manifesto de aplicativo web.
+- Cabeçalho, rodapé e espaçamento da marca EXBR corrigidos para celular.
+- Discord oficial de recrutamento: `https://discord.gg/CGYwr2uCSu`.
+
+## OPERAÇÕES E ALERTAS — IMPLEMENTADO
+
+- Monitor de alertas integrado à API pública do PS2Alerts.
+- Fonte de consulta: `https://ps2alerts.com/alert-history`.
+- Connery e Emerald são tratados visualmente como o servidor unificado Osprey.
+- Alertas ativos exibem mapa, tempo restante, território e população.
+- Sem alerta ativo, o portal informa `SEM ALERTA ATIVO` sem afirmar que o servidor foi desligado.
+- O último mapa iniciado registrado pelo PS2Alerts é mantido como referência.
+- Falhas da API exibem estado de conexão instável e link para o histórico.
+
+## PERFIL DO MEMBRO — IMPLEMENTADO
+
+- Página protegida `pages/perfil.html`.
+- Visitantes sem sessão são redirecionados ao Login.
+- Nome, função, patente, avatar, bandeira e medalhas são carregados do Firestore.
+- Três templates de soldado: Assalto, Pesado e Reconhecimento.
+- Bandeira brasileira animada com tratamentos Brasil, Comando e Noturna.
+- Controles de personalização ficam escondidos e abrem pelo botão Editar perfil.
+- Medalhas usam emoji temporário e aceitam `iconUrl` para PNG definitivo.
+- Hierarquia militar com 17 patentes em `data/patentes.json`.
+- Patente inicial confirmada: Soldado.
+- Área central do perfil permanece reservada para desenvolvimento futuro.
+
+## FIREBASE — CONFIRMADO E IMPLEMENTADO
+
+Projeto Firebase: `exbr-0709`.
+
+Configuração realizada em 07/09/2026:
+
+- aplicativo Web registrado como `EXBR Portal`;
+- Firebase Authentication inicializado;
+- provedor E-mail/senha ativado;
+- SDK modular Firebase para navegador conectado ao site;
+- persistência de sessão ativada no navegador;
+- redefinição de senha por e-mail disponível;
+- Cloud Firestore conectado ao perfil;
+- regras de segurança publicadas e versionadas em `firestore.rules`;
+- nenhuma chave de conta de serviço ou credencial privada foi adicionada ao repositório.
+
+Não existe cadastro público no site. Inicialmente, as contas serão criadas pela administração no Firebase Authentication.
+
+No primeiro login, o portal cria automaticamente:
+
+`users/{uid}`
+
+com os campos `email`, `displayName`, `role`, `rankId`, `avatarId`, `bannerId`, `createdAt` e `updatedAt`.
+
+## PAPÉIS E PERMISSÕES — CONFIRMADO
+
+Papéis iniciais:
+
+- `member`: usuário padrão;
+- `admin`: administrador.
+
+Todo novo perfil criado pelo site recebe obrigatoriamente:
+
+- `role: member`;
+- `rankId: soldado`.
+
+Permissões do membro:
+
+- ler o próprio perfil;
+- ler as próprias medalhas;
+- alterar somente nome de exibição, avatar e bandeira;
+- não pode promover a própria conta;
+- não pode alterar função, patente, medalhas ou operações.
+
+Permissões do administrador:
+
+- consultar e editar perfis;
+- alterar função e patente;
+- criar, editar e excluir operações;
+- conceder, editar e remover medalhas.
+
+O primeiro administrador deve ser definido manualmente no Firestore, alterando `users/{uid}.role` para `admin` depois do primeiro login. Depois disso, o painel administrativo futuro poderá assumir essas tarefas.
+
+Estruturas reservadas:
+
+- medalhas: `users/{uid}/medals/{medalId}`;
+- operações: `operations/{operationId}`.
+
+## VALIDAÇÃO REALIZADA
+
+- Sintaxe dos módulos JavaScript validada.
+- Login publicado no GitHub Pages com campos habilitados.
+- Acesso direto ao Perfil sem sessão redireciona corretamente para o Login.
+- Provedor E-mail/senha confirmado como ativado no Console Firebase.
+- Nova versão das regras confirmada no histórico do Firestore.
+- Documentação técnica criada em `FIREBASE.md`.
+
+## NÃO IMPLEMENTADO
+
+- cadastro público;
+- painel visual de administração;
+- editor de operações;
+- interface administrativa para conceder medalhas;
+- interface administrativa para alterar patentes e papéis;
+- contas iniciais de membros;
+- escolha do conteúdo para a área central do perfil.
+
+## PRÓXIMO PASSO
+
+Criar a primeira conta no Firebase Authentication, realizar o primeiro login para gerar `users/{uid}` e promover manualmente esse perfil para `admin`. Em seguida, construir o painel administrativo.
+
+## MAPA ATUAL DO SITE
+
+```text
+Home-page/
+├── LICENSE
+├── index.html
+├── README.md
+├── MAPA-SITE.txt
+├── FIREBASE.md
+├── firestore.rules
+├── site.webmanifest
+├── assets/
+│   ├── icons/
+│   │   ├── favicon.svg
+│   │   ├── apple-touch-icon.png
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   └── dock/
+│   │       ├── inicio.png
+│   │       ├── sobre.png
+│   │       ├── operacoes.png
+│   │       ├── recrutamento.png
+│   │       ├── comunidade.png
+│   │       └── login.png
+│   └── profile/
+│       ├── avatars/
+│       │   ├── assalto.webp
+│       │   ├── pesado.webp
+│       │   └── reconhecimento.webp
+│       └── banners/
+│           └── brasil.webp
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       ├── home.css
+│       ├── login.css
+│       └── perfil.css
+├── data/
+│   └── patentes.json
+├── js/
+│   ├── firebase-client.js
+│   ├── login.js
+│   ├── main.js
+│   ├── operations.js
+│   └── perfil.js
+└── pages/
+    ├── login.html
+    └── perfil.html
 ```
