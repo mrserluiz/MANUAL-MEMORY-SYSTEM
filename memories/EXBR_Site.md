@@ -1444,3 +1444,16 @@ FIREBASE.md
 README.md
 MAPA-SITE.txt
 ```
+
+
+---
+
+# UPDATE — 07/09/2026 — Centralização das janelas de medalhas
+
+## CORREÇÃO IMPLEMENTADA
+
+Commit: `d1f9f990081ee7856ae4cc05571044ff69b41b5a` — `fix: centraliza janelas de medalhas`.
+
+- A janela principal do catálogo de medalhas foi centralizada horizontal e verticalmente na tela.
+- O editor de criação e edição de medalhas recebeu o mesmo alinhamento.
+- A correção neutraliza a margem zerada pelo reset global e mantém a centralização em desktop e celular.
