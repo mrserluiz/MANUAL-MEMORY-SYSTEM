@@ -1380,3 +1380,67 @@ Home-page/
     ├── perfil.js
     └── session-ui.js
 ```
+
+
+---
+
+# UPDATE — 07/09/2026 — Catálogo editável de medalhas
+
+## OBJETIVO
+
+Permitir que administradores criem novas medalhas e editem os modelos existentes, removendo os emojis temporários e adotando um PNG padrão até que cada condecoração receba uma imagem própria válida.
+
+## IMPLEMENTADO
+
+Commit do repositório de desenvolvimento:
+
+`e540e5857300f02fb98f761ba69c9c8120bf358f` — `feat: adiciona catalogo editavel de medalhas`.
+
+### Catálogo administrativo
+
+- Nova coleção persistente: `medalCatalog/{medalId}`.
+- Na primeira abertura administrativa, os seis modelos de `data/medalhas.json` são copiados para o Firestore quando a coleção ainda está vazia.
+- Botão `Criar` adicionado ao cabeçalho da janela de medalhas.
+- Cada modelo existente recebe uma ação própria de edição.
+- O editor permite alterar nome, descrição e caminho/URL do ícone PNG.
+- A ação `+` continua separada e serve somente para conceder a medalha ao jogador selecionado.
+- A mesma medalha continua podendo ser concedida mais de uma vez em operações e datas diferentes.
+
+### Ícone padrão
+
+Ícone padrão confirmado:
+
+`../assets/icons/dock/recrutamento.png`
+
+- Emojis deixaram de ser usados na exibição das medalhas.
+- Medalhas antigas sem `iconUrl` passam a mostrar automaticamente o PNG padrão.
+- Novos modelos sem URL também recebem o PNG padrão.
+- Um endereço personalizado somente é aceito quando o caminho termina em `.png`.
+- Se o PNG personalizado falhar ao carregar, a interface retorna ao `recrutamento.png`.
+- O mesmo fallback foi aplicado às medalhas previstas na página de Operações.
+
+### Segurança
+
+O arquivo `firestore.rules` passou a reservar `medalCatalog/{medalId}` exclusivamente para leitura e escrita de administradores.
+
+**PENDÊNCIA OPERACIONAL:** a versão atualizada das regras precisa ser publicada no Firebase `exbr-0709`. Até isso acontecer, o catálogo local continuará visível, mas criação e edição poderão ser recusadas pelo Firestore.
+
+## ARQUIVOS PRINCIPAIS ATUALIZADOS
+
+```text
+pages/admin.html
+css/pages/admin.css
+js/admin.js
+data/medalhas.json
+pages/perfil.html
+css/pages/perfil.css
+js/perfil.js
+pages/operacoes.html
+css/pages/operacoes.css
+js/operations-page.js
+data/operacoes.json
+firestore.rules
+FIREBASE.md
+README.md
+MAPA-SITE.txt
+```
