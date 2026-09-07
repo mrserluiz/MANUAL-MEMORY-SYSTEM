@@ -1477,3 +1477,52 @@ Commit do repositório de desenvolvimento:
 - O botão administrativo de remoção permanece separado da abertura dos detalhes.
 - O catálogo de medalhas passou a permitir leitura para usuários autenticados; criação, edição e exclusão continuam exclusivas para `role: admin`.
 - A nova versão de `firestore.rules` precisa ser publicada no Firebase `exbr-0709` para liberar a consulta atualizada do catálogo aos membros.
+
+
+---
+
+# UPDATE — 07/09/2026 — Área Comunidade e perfis públicos
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`31bd1ae0371ead65ca079936cccb93af7c4df8b4` — `feat: integra perfis publicos da comunidade`.
+
+- Criada a página protegida `pages/comunidade.html`, acessível somente a usuários autenticados.
+- A lista permite pesquisar membros por nome ou patente.
+- Cada registro mostra avatar, nome, patente, atividade recente, até cinco medalhas em destaque e o comando `Ver perfil`.
+- Os atalhos de Comunidade do cabeçalho móvel e do menu tático inferior agora levam à página dedicada.
+- `perfil.html?uid={uid}` permite consultar o perfil público de outro membro.
+- Administradores mantêm a consulta administrativa completa; membros comuns recebem somente os dados públicos permitidos.
+- O layout é responsivo e preserva a identidade visual futurista EXBR, sem incorporar as anotações vermelhas das referências.
+
+## PRIVACIDADE E FIRESTORE
+
+Nova coleção sanitizada:
+
+`publicProfiles/{uid}`
+
+Campos públicos previstos:
+
+- `displayName`
+- `rankId`
+- `avatarId`
+- `bannerId`
+- `featuredMedals` — máximo de cinco
+- `recentActivities` — máximo de três
+- `updatedAt`
+
+O documento privado `users/{uid}` permanece restrito ao dono e aos administradores. E-mail, função administrativa e demais informações privadas não são copiados para a Comunidade.
+
+A sincronização do perfil público acontece ao abrir a Comunidade ou o próprio Perfil, ao editar avatar/nome/bandeira, ao confirmar participação em operação e quando um administrador altera patente ou medalhas. A abertura da área administrativa também cria/atualiza a identidade pública dos membros existentes.
+
+**PENDÊNCIA OPERACIONAL:** publicar a versão atual de `firestore.rules` no Firebase `exbr-0709`. Sem essa publicação, a página poderá informar que o registro comunitário está indisponível.
+
+## NOVOS ARQUIVOS
+
+```text
+pages/comunidade.html
+css/pages/comunidade.css
+js/comunidade.js
+```
