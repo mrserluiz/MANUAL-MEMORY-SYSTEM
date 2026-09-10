@@ -1526,3 +1526,54 @@ pages/comunidade.html
 css/pages/comunidade.css
 js/comunidade.js
 ```
+
+
+---
+
+# UPDATE — 10/09/2026 — Editores administrativos de Operações e Medalhas
+
+## OBJETIVO
+
+Corrigir o posicionamento e os campos de data dos editores, vincular medalhas existentes às operações e dar ao catálogo de medalhas um acesso independente dentro da Área administrativa.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`e07c0c05aff0788a9ae500ab6d77427a6727100a` — `feat: aprimora editores administrativos`.
+
+### Operações
+
+- A janela de criação e edição foi fixada e centralizada no meio da tela.
+- O antigo campo combinado foi dividido em `Data da operação` e `Horário`.
+- Os seletores nativos receberam suporte visual e acionamento compatível com navegadores Chromium/Opera GX.
+- Datas anteriores e futuras são permitidas; o resultado continua sendo salvo no Firestore como `startsAt`.
+- A medalha prevista agora é escolhida a partir dos modelos existentes em `medalCatalog`.
+- A seleção mostra uma prévia com ícone, nome e descrição.
+- A operação salva o snapshot `medalCatalogId`, `medalName`, `medalDescription` e `medalIconUrl`.
+
+### Medalhas
+
+- O painel administrativo recebeu as abas `Soldados` e `Catálogo de medalhas`.
+- A aba do catálogo permite pesquisar, criar e editar modelos sem abrir a janela de concessão de um membro.
+- A concessão de medalhas mantém a seleção de operação e agora identifica claramente o campo `Data da conquista`.
+- O administrador pode escolher qualquer data válida, inclusive uma data passada, para registrar a medalha retroativamente.
+- O seletor de data também recebeu compatibilidade de abertura para Opera GX.
+
+## ARQUIVOS PRINCIPAIS ATUALIZADOS
+
+```text
+pages/admin.html
+pages/operacoes.html
+css/pages/admin.css
+css/pages/operacoes.css
+js/admin.js
+js/operations-page.js
+README.md
+FIREBASE.md
+MAPA-SITE.txt
+```
+
+## FIREBASE
+
+Não foi necessário ampliar permissões nesta etapa. Operações e modelos de medalhas continuam sendo gravados nas coleções já protegidas para administradores pelas regras atuais.
