@@ -1629,3 +1629,88 @@ Home-page/
     ├── operacoes.html
     └── perfil.html
 ```
+
+
+---
+
+# UPDATE — 11/09/2026 — Perfis detalhados e Galeria da Comunidade
+
+## OBJETIVO
+
+Ampliar a área comunitária com uma galeria de fotos e vídeos hospedados externamente e enriquecer os perfis dos membros com apresentação pessoal, classe favorita e facção favorita em PlanetSide 2.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`cbca53e25b2e30e0935ab1c84ab6b7faa2c10ff4` — `feat: adiciona perfis detalhados e galeria comunitária`.
+
+### Perfil do membro
+
+- Campo público `bio` com até 220 caracteres, editável somente pelo dono do perfil.
+- A apresentação aparece no centro do perfil em um monitor tecnológico avariado, com scanlines, falha de sinal e tremor discreto de texto.
+- Os efeitos respeitam `prefers-reduced-motion`.
+- Campo `favoriteClass` para escolher entre Infiltrador, Assalto leve, Médico de combate, Engenheiro, Assalto pesado e MAX.
+- Campo `favoriteFaction` para escolher Terran Republic, New Conglomerate, Vanu Sovereignty ou Nanite Systems Operatives.
+- Classe favorita exibida no canto inferior esquerdo do cartão do avatar.
+- Facção favorita exibida no canto superior direito, abaixo do nome.
+- Símbolos geométricos são temporários e a estrutura está preparada para receber ícones oficiais futuramente.
+- Perfis antigos recebem valores padrão vazios e são migrados de forma compatível quando as novas regras estiverem ativas.
+
+### Comunidade
+
+- A página `pages/comunidade.html` ganhou as abas `Membros` e `Galeria`.
+- A busca de membros agora considera nome, patente, classe e facção.
+- Cada membro mostra biografia curta, classe favorita, facção favorita, atividade recente e medalhas em destaque.
+- A Galeria EXBR aceita imagens, vídeos diretos, YouTube e Vimeo.
+- Nenhum arquivo de mídia é enviado ou salvo no site; apenas URL, título, descrição e metadados são persistidos.
+- Somente endereços HTTPS são aceitos.
+
+### Administração
+
+- A Área administrativa ganhou a aba `Galeria`.
+- Administradores podem publicar registros escolhendo tipo, URL, título e descrição.
+- Administradores podem remover registros existentes.
+- A mídia permanece hospedada no serviço externo informado.
+
+### Firestore
+
+Nova coleção:
+
+`communityGallery/{itemId}`
+
+Leitura permitida para usuários autenticados; criação, alteração e remoção continuam exclusivas para administradores.
+
+Os documentos `users/{uid}` e `publicProfiles/{uid}` passam a aceitar:
+
+- `bio`
+- `favoriteClass`
+- `favoriteFaction`
+
+**PENDÊNCIA OPERACIONAL:** publicar a nova versão de `firestore.rules` no projeto Firebase `exbr-0709`. Sem essa publicação, os novos campos e a Galeria não poderão ser gravados, embora as funções anteriores do portal continuem disponíveis.
+
+## NOVO ARQUIVO
+
+```text
+js/community-media.js
+```
+
+## MAPA ATUALIZADO RELEVANTE
+
+```text
+Home-page/
+├── firestore.rules
+├── pages/
+│   ├── admin.html
+│   ├── comunidade.html
+│   └── perfil.html
+├── css/pages/
+│   ├── admin.css
+│   ├── comunidade.css
+│   └── perfil.css
+└── js/
+    ├── admin.js
+    ├── community-media.js
+    ├── comunidade.js
+    └── perfil.js
+```
