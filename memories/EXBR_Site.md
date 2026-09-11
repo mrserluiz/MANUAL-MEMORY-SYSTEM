@@ -1764,3 +1764,29 @@ As regras foram ampliadas para:
 
 O conjunto foi publicado em `mrserluiz/Home-page`. O usuário deve sincronizar `EXBRClub/Home-page` pelo remote duplo após atualizar a cópia local.
 
+
+---
+
+# UPDATE — 11/09/2026 — Registro imediato e lista de membros em tempo real
+
+## PROBLEMA
+
+Um usuário podia existir no Firebase Authentication sem aparecer no painel administrativo. O cadastro criava primeiro a conta de autenticação, mas deixava a criação de `users/{uid}` para a abertura posterior do Perfil. Além disso, o painel administrativo consultava a coleção de usuários somente uma vez ao carregar.
+
+## CORREÇÃO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`15649f8fa87dd538ef47c3a76ceed02087ad671a` — `fix: registra e atualiza novos membros`.
+
+- O cadastro passa a criar imediatamente `users/{uid}` com função `member`, patente `soldado` e preferências padrão.
+- Mantido fallback compatível com regras antigas do Firestore.
+- Se a conta do Authentication for criada e a gravação do perfil falhar, o usuário é encaminhado ao Perfil, cuja rotina existente tenta reparar o documento.
+- O painel administrativo usa escuta em tempo real na coleção `users`.
+- Novos documentos aparecem sem precisar atualizar manualmente a página.
+- O espelho `publicProfiles/{uid}` continua sendo sincronizado pelo administrador.
+
+## CONTA CRIADA ANTES DA CORREÇÃO
+
+Uma conta que já esteja somente no Firebase Authentication precisa entrar novamente no portal e abrir o Perfil para criar/reparar `users/{uid}`. Depois disso, aparecerá automaticamente no painel administrativo.
+
