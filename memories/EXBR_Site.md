@@ -1714,3 +1714,53 @@ Home-page/
     ├── comunidade.js
     └── perfil.js
 ```
+
+
+---
+
+# UPDATE — 11/09/2026 — Destaques escolhidos e publicações dos membros
+
+## OBJETIVO
+
+Permitir que cada membro escolha quais condecorações aparecem em destaque para a Comunidade e publique seus próprios registros visuais na Galeria EXBR por meio de URLs externas.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`cd5ada39f4525d936aef72cbdc68f97ce70399eb` — `feat: permite destaques e publicações dos membros`.
+
+### Medalhas em destaque
+
+- O documento privado `users/{uid}` ganhou o campo `featuredMedalIds`, limitado a cinco IDs de concessões.
+- No próprio perfil, cada medalha apresenta uma estrela para adicionar ou remover o destaque.
+- Um contador informa quantas das cinco posições estão em uso.
+- A ordem escolhida pelo membro é preservada no espelho público `publicProfiles/{uid}.featuredMedals`.
+- A Comunidade mostra exatamente as medalhas escolhidas pelo membro.
+- Perfis antigos mantêm temporariamente as cinco medalhas mais recentes e são migrados para a seleção explícita ao abrir o Perfil.
+- Se um administrador remover uma concessão destacada, o ID também é removido da seleção e o perfil público é sincronizado.
+
+### Publicações na Galeria
+
+- A aba Galeria ganhou um formulário recolhível para membros autenticados.
+- O membro escolhe imagem ou vídeo e informa URL HTTPS, título e descrição.
+- A publicação registra o UID e o nome público do autor.
+- Cada membro pode remover somente as próprias publicações.
+- Administradores continuam autorizados a remover qualquer registro e gerenciar a Galeria pelo painel.
+- Nenhum arquivo é enviado ao portal; somente URL e metadados são armazenados.
+
+### Firestore
+
+As regras foram ampliadas para:
+
+- permitir ao dono atualizar `featuredMedalIds`, com no máximo cinco itens;
+- permitir criação de registros em `communityGallery` por usuário autenticado, com validação dos campos e autoria;
+- permitir remoção pelo próprio autor ou por administrador;
+- manter a edição de publicações exclusiva para administradores.
+
+**PENDÊNCIA OPERACIONAL:** publicar a versão atual de `firestore.rules` no projeto Firebase `exbr-0709`. Sem isso, a escolha de destaques e as publicações dos membros serão recusadas pelo Firestore.
+
+## FLUXO DUPLO
+
+O conjunto foi publicado em `mrserluiz/Home-page`. O usuário deve sincronizar `EXBRClub/Home-page` pelo remote duplo após atualizar a cópia local.
+
