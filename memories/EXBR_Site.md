@@ -3,7 +3,7 @@
 **ID da memória:** `#EXBR_Site`  
 **Arquivo:** `memories/EXBR_Site.md`  
 **Criado em:** 06/09/2026  
-**Última atualização:** 07/09/2026  
+**Última atualização:** 11/09/2026  
 **Status geral:** EM DESENVOLVIMENTO
 
 ---
@@ -1577,3 +1577,55 @@ MAPA-SITE.txt
 ## FIREBASE
 
 Não foi necessário ampliar permissões nesta etapa. Operações e modelos de medalhas continuam sendo gravados nas coleções já protegidas para administradores pelas regras atuais.
+
+
+---
+
+# UPDATE — 11/09/2026 — Compatibilidade das imagens de medalhas
+
+## PROBLEMA CORRIGIDO
+
+Alguns membros não conseguiam visualizar imagens de medalhas porque concessões antigas preservavam caminhos ou URLs já substituídos, e diferentes formas de endereço eram interpretadas de maneira inconsistente entre navegador, GitHub Pages e os dois repositórios espelhados.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`950d271699e8e019477df7701b8a16fc87a1d4c5` — `Corrige carregamento das imagens de medalhas`.
+
+- Criado o módulo compartilhado `js/medal-images.js`.
+- Caminhos locais como `assets/...`, `/assets/...` e `../assets/...` são normalizados para o formato relativo compatível com GitHub Pages.
+- Links do GitHub no formato `github.com/.../blob/...png` são convertidos para `raw.githubusercontent.com`.
+- Somente URLs HTTPS terminadas em `.png` são aceitas como imagens externas.
+- Imagens externas usam `referrerPolicy: no-referrer` para reduzir bloqueios por proteção contra hotlink.
+- Falhas de rede, URL removida ou arquivo inválido retornam automaticamente para `assets/icons/dock/recrutamento.png`.
+- O fallback recebeu versão de cache para evitar que navegadores mantenham respostas antigas quebradas.
+- Perfil, Comunidade, Operações e Área administrativa usam o mesmo resolvedor de imagens.
+- Perfis e Comunidade passam a priorizar a definição atual da medalha em `medalCatalog`, inclusive quando a concessão antiga possui um snapshot de imagem desatualizado.
+- A página de Operações também prioriza a imagem atual do catálogo para medalhas vinculadas.
+
+## FIREBASE
+
+Nenhuma alteração nas regras do Firestore foi necessária. O fluxo utiliza a leitura autenticada de `medalCatalog` já prevista pelas regras atuais; criação e edição permanecem exclusivas para administradores.
+
+## FLUXO DUPLO
+
+A correção foi publicada em `mrserluiz/Home-page`. O usuário continuará sincronizando manualmente `EXBRClub/Home-page` pelo remote duplo.
+
+## MAPA ATUALIZADO RELEVANTE
+
+```text
+Home-page/
+├── assets/icons/dock/recrutamento.png
+├── js/
+│   ├── medal-images.js
+│   ├── admin.js
+│   ├── comunidade.js
+│   ├── operations-page.js
+│   └── perfil.js
+└── pages/
+    ├── admin.html
+    ├── comunidade.html
+    ├── operacoes.html
+    └── perfil.html
+```
