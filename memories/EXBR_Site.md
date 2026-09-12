@@ -1990,3 +1990,12 @@ Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo P
 - Depois da seleção, o texto inferior do marcador passa de “Classe” ou “Facção” para o nome escolhido.
 - O tamanho desse texto é calculado conforme o comprimento do nome para permanecer dentro do marcador.
 - A persistência no Firestore continua usando apenas os identificadores existentes; nenhuma mudança de regra ou migração de dados foi necessária.
+
+
+### Revisão — substituição de ícones no Cloudinary
+
+- O usuário substituiu alguns PNGs de classe diretamente pela função Replace do Cloudinary, mantendo os mesmos `public_id`.
+- As referências do Perfil e da Comunidade deixaram de fixar a versão antiga `/v.../` no caminho.
+- Foi adicionada a revisão de cache `rev=20260912-2` para que os navegadores solicitem os arquivos substituídos.
+- As seis URLs foram validadas com resposta HTTP 200.
+- Commit do site: `72b3bba98791c4c1b05199c0ac72de07d961e183`.
