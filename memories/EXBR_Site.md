@@ -1971,3 +1971,22 @@ Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo P
 - A lista de membros da Comunidade também mostra o símbolo ao lado do nome completo da facção.
 - Nomes, títulos e rótulos acessíveis foram preservados.
 - Nenhuma alteração nas regras do Firebase foi necessária.
+
+
+---
+
+## Atualização — 12/09/2026 — Ícones holográficos de classe e marcadores de perfil
+
+**Commits do site:**
+- `2c1e02e91a28bb96054b6dfd256257357ede3aa7` — adiciona ícones holográficos das classes.
+- `300b728e5c487f75bc3cc021a5cdae9f6b6ca9e3` — aprimora marcadores de classe e facção.
+
+- Mapeamento de classes confirmado: Infiltrador, Assalto leve, Médico de combate, Engenheiro, Assalto pesado e MAX.
+- Os seis símbolos enviados foram recortados com canal alfa real e receberam tratamento holográfico azul, mais intenso no centro e suave nas extremidades.
+- Os ícones foram publicados no Cloudinary em `exbr-site/classes`, incluídos como cópia de segurança em `assets/classes` e ligados ao seletor de classe, ao marcador do Perfil e à Comunidade.
+- Os quatro emblemas de facção tiveram o fundo preto removido, preservando cores e formas, e foram publicados no Cloudinary em `exbr-site/factions-v2`.
+- Os arquivos transparentes de facção também ficam versionados em `assets/factions`.
+- Quando classe ou facção ainda não foi selecionada, o marcador usa `assets/icons/dock/recrutamento.png` apenas como indicação visual; ele não aparece como opção.
+- Depois da seleção, o texto inferior do marcador passa de “Classe” ou “Facção” para o nome escolhido.
+- O tamanho desse texto é calculado conforme o comprimento do nome para permanecer dentro do marcador.
+- A persistência no Firestore continua usando apenas os identificadores existentes; nenhuma mudança de regra ou migração de dados foi necessária.
