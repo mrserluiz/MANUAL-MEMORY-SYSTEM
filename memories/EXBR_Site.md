@@ -1949,3 +1949,25 @@ Reorganizar o crescente histórico de condecorações como um inventário visual
 ## FIREBASE
 
 Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo Perfil continua restrita a administradores pelas regras existentes da subcoleção `users/{uid}/medals`.
+
+
+---
+
+# UPDATE — 12/09/2026 — Símbolos visuais das facções
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`5a2841466bbe5a72dace2d94a3ad9b5d96fa36d0` — `Atualiza mapa dos recursos de facção`.
+
+- Recebidos quatro símbolos visuais fornecidos pelo usuário.
+- Mapeamento confirmado: imagem 1 New Conglomerate, imagem 2 Terran Republic, imagem 3 Vanu Sovereignty e imagem 4 Nanite Systems Operatives.
+- Os arquivos recebidos possuíam extensão `.webp`, mas conteúdo JPEG sem transparência.
+- As quatro imagens foram arquivadas permanentemente no Cloudinary da EXBR, na área de facções, com entrega otimizada em 256 × 256 px.
+- Os símbolos temporários foram substituídos nos quatro botões de escolha de facção do Perfil.
+- A facção continua persistida no Firestore somente pelo identificador `nc`, `tr`, `vs` ou `nso`.
+- O cartão do Perfil passa a mostrar o ícone da facção escolhida no marcador superior.
+- A lista de membros da Comunidade também mostra o símbolo ao lado do nome completo da facção.
+- Nomes, títulos e rótulos acessíveis foram preservados.
+- Nenhuma alteração nas regras do Firebase foi necessária.
