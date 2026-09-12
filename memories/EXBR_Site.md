@@ -1999,3 +1999,21 @@ Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo P
 - Foi adicionada a revisão de cache `rev=20260912-2` para que os navegadores solicitem os arquivos substituídos.
 - As seis URLs foram validadas com resposta HTTP 200.
 - Commit do site: `72b3bba98791c4c1b05199c0ac72de07d961e183`.
+
+
+---
+
+## Atualização — 12/09/2026 — Catálogo oficial de avatares
+
+**Commit do site:** `b983c3dfa2bf0c19c9313d454307c6322ca0e7b5`
+
+- A pasta `AVATARES-EXBR` do Cloudinary foi adotada como fonte dos avatares oficiais.
+- Foram identificados e validados 23 arquivos: 6 NC, 6 TR, 6 VS e 5 NS.
+- O novo módulo `js/avatar-catalog.js` centraliza nomes, grupos, versões e URLs otimizadas do Cloudinary.
+- O avatar padrão de novas contas passa a ser `NS_light_assault`.
+- Compatibilidade visual para perfis antigos: `assalto` aponta para `NS_light_assault`, `pesado` para `NS_heavy_assault` e `reconhecimento` para `NS_infiltrator`.
+- Os três arquivos antigos permanecem disponíveis como `personalizado_assalto`, `personalizado_pesado` e `personalizado_reconhecimento`.
+- O seletor do Perfil agora é uma faixa horizontal deslizante, com botões de navegação, suporte a gesto e grupos na ordem NC, TR, VS, NS e Personalizados.
+- Os botões exibem somente a imagem; nomes continuam presentes em títulos e rótulos acessíveis.
+- Comunidade, Administração e Operações passaram a resolver os avatares pelo catálogo compartilhado.
+- `firestore.rules` foi ampliado para aceitar todos os identificadores novos e os legados. A regra precisa ser implantada no Firebase para liberar a persistência em produção.
