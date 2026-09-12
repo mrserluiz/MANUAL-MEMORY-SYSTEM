@@ -1878,3 +1878,22 @@ Nenhuma mudança nas regras do Firestore foi necessária.
 Último commit do conjunto no repositório de desenvolvimento:
 
 `6746026048a0e841680a21355db98582e5cb3343` — `Documenta migração automática de imagens`.
+
+
+---
+
+# UPDATE — 12/09/2026 — Zoom de inspeção das medalhas
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`7853b9322b180a0bc061fd68b9bb9b2c28678509` — `Atualiza mapa do perfil`.
+
+- A imagem ampliada da medalha no Perfil ganhou zoom de inspeção de 2,4×.
+- O ponto ampliado acompanha a posição do cursor, no estilo de visualização de produtos em lojas virtuais.
+- A área mostra a orientação discreta `MOVA PARA INSPECIONAR` antes da interação.
+- O zoom é ativado somente em computadores com mouse ou ponteiro preciso e largura superior a 768 px.
+- Celulares e dispositivos de toque mantêm a exibição estática anterior.
+- Ao retirar o cursor ou fechar a janela, a imagem retorna automaticamente ao estado normal.
+- Nenhuma mudança nas regras do Firebase foi necessária.
