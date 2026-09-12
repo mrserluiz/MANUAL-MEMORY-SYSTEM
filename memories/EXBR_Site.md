@@ -2017,3 +2017,5 @@ Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo P
 - Os botões exibem somente a imagem; nomes continuam presentes em títulos e rótulos acessíveis.
 - Comunidade, Administração e Operações passaram a resolver os avatares pelo catálogo compartilhado.
 - `firestore.rules` foi ampliado para aceitar todos os identificadores novos e os legados. A regra precisa ser implantada no Firebase para liberar a persistência em produção.
+
+- 2026-09-12: 22 banners oficiais do Cloudinary foram adicionados ao perfil por meio de `js/banner-catalog.js`; `Bunner_022` é o padrão e os IDs antigos `brasil/comando/noturna` são normalizados para compatibilidade. O cabeçalho passou a mostrar apenas a patente; no mobile, classe + facção permanecem em uma linha e a biografia comunitária ocupa até duas linhas.
