@@ -3,7 +3,7 @@
 **ID da memória:** `#EXBR_Site`  
 **Arquivo:** `memories/EXBR_Site.md`  
 **Criado em:** 06/09/2026  
-**Última atualização:** 11/09/2026  
+**Última atualização:** 12/09/2026  
 **Status geral:** EM DESENVOLVIMENTO
 
 ---
@@ -1850,3 +1850,31 @@ O preset é público por necessidade do GitHub Pages, mas deve permanecer limita
 
 Nenhuma alteração adicional nas regras do Firestore foi necessária nesta etapa. O Cloudinary substitui o Firebase Storage, que exigiria o plano Blaze.
 
+
+
+---
+
+# UPDATE — 12/09/2026 — Migração automática centralizada de imagens
+
+## DECISÃO
+
+A migração das imagens externas antigas foi centralizada na abertura da Área administrativa. Uma única visita de um administrador ao painel verifica medalhas, fotos da Galeria e imagens de operações, importa os arquivos elegíveis para o Cloudinary e atualiza as respectivas URLs no Firestore.
+
+## COMPORTAMENTO
+
+- A execução ocorre automaticamente após a autenticação administrativa.
+- Não é necessário abrir separadamente o editor de Operações.
+- Caminhos locais do próprio site não são duplicados.
+- Vídeos permanecem externos.
+- Se uma importação falhar, a URL original é preservada e uma nova tentativa ocorre no próximo acesso administrativo.
+- Por ser um site estático no GitHub Pages, a rotina depende da abertura do painel e não executa em segundo plano quando o site está fechado.
+
+## FIREBASE
+
+Nenhuma mudança nas regras do Firestore foi necessária.
+
+## PUBLICAÇÃO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`6746026048a0e841680a21355db98582e5cb3343` — `Documenta migração automática de imagens`.
