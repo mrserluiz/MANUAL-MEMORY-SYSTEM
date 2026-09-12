@@ -2019,3 +2019,22 @@ Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo P
 - `firestore.rules` foi ampliado para aceitar todos os identificadores novos e os legados. A regra precisa ser implantada no Firebase para liberar a persistência em produção.
 
 - 2026-09-12: 22 banners oficiais do Cloudinary foram adicionados ao perfil por meio de `js/banner-catalog.js`; `Bunner_022` é o padrão e os IDs antigos `brasil/comando/noturna` são normalizados para compatibilidade. O cabeçalho passou a mostrar apenas a patente; no mobile, classe + facção permanecem em uma linha e a biografia comunitária ocupa até duas linhas.
+
+
+---
+
+## Atualização — 12/09/2026 — EXBR online na Comunidade via Honu
+
+**Commits do site:**
+- `8bed0d032364480ee85770aef51b6ba8803678d8` — adiciona a aba “No jogo”.
+- `2245ae5f3d70c96828080f7bd060a24a27802c93` — integra a telemetria online do Honu.
+- `3932d931605afc9c60c5dd2724432450c8d297bc` — cria o painel responsivo de atividade.
+
+- A área Comunidade ganhou a terceira aba `No jogo`, mantendo a Galeria como abertura padrão.
+- A fonte pública é o Honu/Watchtower da Outfit EXBR: `https://wt.honu.pw/o/37576258294147955?tag=EXBR`.
+- A consulta usa a rota leve `/api/outfit/37576258294147955/online`, que retorna somente os personagens atualmente conectados.
+- O painel exibe quantidade online, servidor Osprey, hora da última leitura, nome, Battle Rank, ASP e link individual para os dados de combate.
+- A leitura ocorre ao abrir a aba e se repete a cada 60 segundos; é pausada quando a aba deixa de ser exibida ou o navegador fica em segundo plano.
+- Há timeout, tratamento de indisponibilidade, nova tentativa automática e link direto para o painel completo do Honu.
+- A futura apuração de presença em operações, eliminações e capturas de bases exigirá associar cada perfil do site ao ID/nome do personagem no PlanetSide 2 e registrar os eventos por intervalo da operação em um processo confiável no servidor.
+- Nenhuma mudança nas regras do Firestore foi necessária nesta etapa.
