@@ -1790,3 +1790,63 @@ Um usuário podia existir no Firebase Authentication sem aparecer no painel admi
 
 Uma conta que já esteja somente no Firebase Authentication precisa entrar novamente no portal e abrir o Perfil para criar/reparar `users/{uid}`. Depois disso, aparecerá automaticamente no painel administrativo.
 
+
+---
+
+# UPDATE — 12/09/2026 — Arquivamento permanente de imagens no Cloudinary
+
+## OBJETIVO
+
+Impedir que imagens desapareçam quando URLs externas expiram, mudam ou bloqueiam carregamento direto, mantendo o Firebase no plano gratuito.
+
+## SERVIÇO CONFIGURADO
+
+- Plataforma: Cloudinary.
+- Cloud name público: `uofznsju`.
+- Upload preset sem assinatura: `exbr_site_images`.
+- Pasta de ativos: `exbr-site`.
+- Sobrescrita desativada e identificadores únicos.
+- API Secret não é usado nem exposto no site.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`173a167ac5f07de3ef38bc36b2745c4267732c6b` — `feat: arquiva imagens externas no Cloudinary`.
+
+- Criado `js/cloudinary-images.js` como módulo central de importação.
+- URLs HTTPS externas são enviadas ao Cloudinary uma única vez.
+- Links `github.com/.../blob/...` são convertidos para o arquivo bruto antes da importação.
+- A URL gravada utiliza HTTPS e entrega transformada em PNG.
+- Caminhos locais em `assets/` continuam locais e não são duplicados.
+- Tempo limite de 45 segundos e mensagens de erro legíveis.
+- O preset foi testado com `assets/icons/dock/recrutamento.png` e retornou uma cópia PNG válida na pasta `exbr-site`.
+
+### Medalhas
+
+- O editor aceita PNG, JPG, JPEG ou WebP por URL HTTPS.
+- A imagem é arquivada antes da gravação em `medalCatalog`.
+- URLs externas antigas do catálogo são migradas quando um administrador abre a Área administrativa.
+- Sem imagem válida, permanece o fallback `recrutamento.png`.
+
+### Operações
+
+- O editor aceita caminho local ou URL externa.
+- URLs externas são arquivadas antes de salvar a operação.
+- Operações antigas do Firestore são migradas quando um administrador abre a página dedicada de Operações.
+
+### Galeria
+
+- Fotos publicadas por membros ou administradores são arquivadas antes da criação do documento.
+- Vídeos diretos, YouTube e Vimeo permanecem hospedados externamente.
+- Fotos antigas são migradas quando um administrador abre a Área administrativa.
+- O Firestore continua armazenando apenas URL e metadados.
+
+## SEGURANÇA E MANUTENÇÃO
+
+O preset é público por necessidade do GitHub Pages, mas deve permanecer limitado a imagens, tamanho máximo reduzido, pasta exclusiva, nomes únicos e sobrescrita desativada. A remoção de um registro no Firestore não exclui automaticamente o arquivo do Cloudinary; a limpeza física pode ser feita na Biblioteca de Mídia ou receber uma função protegida futuramente.
+
+## FIREBASE
+
+Nenhuma alteração adicional nas regras do Firestore foi necessária nesta etapa. O Cloudinary substitui o Firebase Storage, que exigiria o plano Blaze.
+
