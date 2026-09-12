@@ -1897,3 +1897,55 @@ Nenhuma mudança nas regras do Firestore foi necessária.
 - Celulares e dispositivos de toque mantêm a exibição estática anterior.
 - Ao retirar o cursor ou fechar a janela, a imagem retorna automaticamente ao estado normal.
 - Nenhuma mudança nas regras do Firebase foi necessária.
+
+
+---
+
+# UPDATE — 12/09/2026 — Inventário de medalhas e destaque da Galeria
+
+## OBJETIVO
+
+Reorganizar o crescente histórico de condecorações como um inventário visual de jogo, facilitar a escolha de destaques e permitir concessões diretamente no Perfil, além de priorizar a Galeria na Comunidade e corrigir problemas de exibição mobile.
+
+## IMPLEMENTADO
+
+Último commit do conjunto no repositório de desenvolvimento:
+
+`14138df89f2f81000716c467e8f36cc486aadb55` — `Atualiza mapa do perfil e comunidade`.
+
+### Inventário no Perfil
+
+- O bloco mantém o cabeçalho, a descrição e o estado vazio anteriores.
+- O contador numérico do canto superior direito foi removido.
+- Com medalhas, o conteúdo usa três colunas e nove slots iniciais.
+- Acima de nove itens, novas linhas são criadas e consultadas pela rolagem vertical existente.
+- Slots não ocupados permanecem visíveis como espaços para futuras condecorações.
+- Ao passar o mouse sobre um item, seu nome aparece sobre o slot.
+- O clique continua abrindo a janela com imagem, descrição, operação, data e zoom de inspeção no computador.
+- Cada medalha possui uma estrela mínima no canto inferior direito; `☆` indica normal e `★` indica favorita.
+
+### Favoritos
+
+- A janela de detalhes ganhou o botão `Favoritar medalha ☆` no canto inferior direito.
+- O botão explica que até cinco medalhas favoritas aparecem na área Membros da Comunidade.
+- O limite existente de cinco destaques foi preservado.
+- Inventário, janela de detalhes e `publicProfiles/{uid}.featuredMedals` são sincronizados após a alteração.
+
+### Concessão administrativa pelo Perfil
+
+- Contas administrativas veem um botão `+` no cabeçalho do bloco de medalhas ao consultar um perfil.
+- O botão abre uma janela grande com pesquisa, operação e data retroativa.
+- O catálogo administrativo usa nove colunas no computador e espaços vazios para manter a aparência de inventário.
+- Selecionar um item concede a medalha ao perfil consultado.
+- A mesma medalha continua podendo ser concedida em operações ou datas diferentes.
+
+### Comunidade e mobile
+
+- A página Comunidade passa a abrir inicialmente na Galeria.
+- A ordem visual das abas foi invertida para `Galeria` e `Membros`.
+- No mobile, as cinco medalhas favoritas usam uma grade ajustável e aparecem juntas, sem rolagem horizontal.
+- O avatar do Perfil recebeu uma camada de renderização mais estável no mobile, removendo o filtro custoso nessa largura e evitando que desapareça após descer e subir a página.
+
+## FIREBASE
+
+Nenhuma alteração nas regras do Firestore foi necessária. A concessão pelo Perfil continua restrita a administradores pelas regras existentes da subcoleção `users/{uid}/medals`.
