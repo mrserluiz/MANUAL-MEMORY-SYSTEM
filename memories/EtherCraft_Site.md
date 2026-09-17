@@ -1,35 +1,34 @@
 # UPDATE — ETHERCRAFT SITE
-## Firebase Authentication + Perfil do Jogador
-### Data: 06/09/2026
+## Firebase, Perfil, Área Administrativa, Wiki + Firestore e próximos passos visuais
+### Data: 16/09/2026
 
 ---
 
-# 1. OBJETIVO DESTA ETAPA
+# 1. OBJETIVO ATUAL
 
-Foi iniciada a implementação do sistema de contas do site EtherCraft.
+O site EtherCraft evoluiu da fase de autenticação básica para uma estrutura funcional com:
 
-Objetivos definidos:
+- Firebase Authentication;
+- perfis persistentes via Firestore;
+- sistema de roles;
+- área administrativa;
+- listagem de usuários;
+- Wiki conectada ao Firestore;
+- CRUD administrativo da Wiki;
+- preparação para upload de imagens via Cloudinary;
+- nova direção visual da Wiki baseada em livros temáticos.
 
-- permitir cadastro de jogadores;
-- permitir login/logout;
-- manter sessão entre as páginas;
-- criar perfil individual;
-- vincular nome de exibição e nick do Minecraft;
-- criar sistema fechado de avatares;
-- transformar Login em Perfil quando autenticado;
-- registrar favoritos e páginas recentes;
-- preparar progresso de eventos;
-- futuramente usar Firestore para sincronização e permissões administrativas.
+O repositório principal continua sendo:
 
-Foi criado um projeto Firebase separado chamado:
+`https://github.com/mrserluiz/EtherCraft`
 
-`EtherCraft`
+Hospedagem:
 
-Este Firebase é exclusivo para o site principal e NÃO deve ser confundido com integrações Firebase anteriores do módulo Amigo Secreto.
+`https://mrserluiz.github.io/EtherCraft/`
 
 ---
 
-# 2. FIREBASE — ESTADO CONFIRMADO
+# 2. FIREBASE — ESTADO ATUAL
 
 Projeto Firebase:
 
@@ -39,149 +38,116 @@ Project ID:
 
 `ethercraft-378c3`
 
-Authentication configurado com:
+Authentication:
 
-`E-mail/Senha`
+- Email/Password ✅
+- Cadastro ✅
+- Login ✅
+- Logout ✅
+- Recuperação de senha ✅
+- Verificação de e-mail ✅
+- Persistência de sessão ✅
+- Domínio `mrserluiz.github.io` autorizado ✅
 
-Domínio autorizado:
-
-`mrserluiz.github.io`
-
-Cadastro foi testado com sucesso.
-
-Login foi testado com sucesso.
-
-Sessão autenticada foi testada com sucesso.
-
-E-mail de verificação foi recebido e confirmado.
-
-O primeiro e-mail havia sido direcionado para Spam/Lixo eletrônico.
-
-Portanto:
-
-| Sistema | Estado |
-|---|---|
-| Firebase Web App | ✅ FUNCIONANDO |
-| Email/Password | ✅ FUNCIONANDO |
-| Cadastro | ✅ FUNCIONANDO |
-| Login | ✅ FUNCIONANDO |
-| Logout | ✅ FUNCIONANDO |
-| Sessão persistente | ✅ FUNCIONANDO |
-| Verificação de e-mail | ✅ FUNCIONANDO |
-| Domínio GitHub Pages | ✅ AUTORIZADO |
-| Firestore | ❌ AINDA NÃO IMPLEMENTADO |
-
----
-
-# 3. ALERTA DA API KEY
-
-GitHub Secret Scanning identificou a Firebase Web API Key presente em:
-
-`js/firebase.js`
-
-Foi investigado que esta é uma Firebase Web API Key utilizada no frontend.
-
-Decisão atual:
-
-- NÃO revogar automaticamente a chave;
-- NÃO ativar cobrança;
-- NÃO contratar Google Cloud;
-- NÃO utilizar nenhuma configuração que obrigue ativação de billing neste momento.
-
-O usuário informou que não pode investir financeiramente nesta etapa.
-
-O desenvolvimento atual deve permanecer compatível com o plano gratuito/Spark sempre que possível.
-
-IMPORTANTE:
-
-Nunca colocar no frontend:
-
-- Service Account JSON;
-- Firebase Admin private key;
-- `client_secret`;
-- GitHub token;
-- Gemini API key;
-- qualquer credencial administrativa real.
-
----
-
-# 4. ARQUIVOS PRINCIPAIS DO LOGIN
-
-## `js/firebase.js`
-
-Responsável por:
-
-- inicializar Firebase;
-- inicializar Firebase Authentication;
-- disponibilizar `auth`;
-- configurar persistência da autenticação.
-
-Firebase JS utilizado:
+Firebase JS SDK utilizado:
 
 `12.18.0`
 
----
+`js/firebase.js` inicializa:
 
-## `js/auth.js`
-
-Sistema implementado:
-
-- criar conta;
-- login por e-mail/senha;
-- logout;
-- recuperação de senha;
-- envio de verificação de e-mail;
-- reenvio de verificação;
-- nome de exibição;
-- tratamento de erros;
-- publicação do estado da autenticação;
-- redirecionamento após login.
-
-Evento utilizado:
-
-`ethercraft:auth-changed`
-
-Objeto global:
-
-`window.EtherCraftAuth`
-
-O login bem-sucedido agora encaminha o jogador para:
-
-`pages/perfil.html`
-
-Se um usuário já autenticado tentar acessar:
-
-`pages/login.html`
-
-ele deve ser encaminhado para o Perfil.
+- Firebase App;
+- Authentication;
+- persistência local;
+- Cloud Firestore.
 
 ---
 
-# 5. CADASTRO
+# 3. FIRESTORE — IMPLEMENTADO E FUNCIONAL
 
-O cadastro atualmente possui:
+A antiga etapa planejada de Firestore foi concluída.
 
-- Nome de exibição;
-- Nome no Minecraft;
-- E-mail;
-- Senha;
-- Confirmação de senha.
+Estrutura usada:
 
-O campo:
+```text
+usuarios/
+  {uid}/
+    nome
+    email
+    minecraftNick
+    avatar
+    role
+    favoritos
+    recentes
+    criadoEm
+```
 
-`Nome no Minecraft`
+Fluxo:
 
-foi adicionado porque a conta do site deverá representar também a identidade do jogador dentro do servidor EtherCraft.
+```text
+Firebase Authentication
+        ↓
+       UID
+        ↓
+Firestore
+usuarios/{uid}
+```
 
-Atualmente o nick Minecraft ainda não está no Firestore.
+Ao abrir o perfil:
 
-Enquanto o banco não for implementado, dados complementares do perfil utilizam armazenamento local por UID.
+- se o documento já existe, é lido normalmente;
+- se não existe, é criado automaticamente;
+- dados antigos locais podem ser migrados para o Firestore.
+
+O usuário testou a sincronização entre sessões/dispositivos e confirmou que os dados reapareceram corretamente.
+
+Portanto:
+
+Firestore perfil persistente:
+✅ FUNCIONANDO
+
+Sincronização entre sessões:
+✅ FUNCIONANDO
 
 ---
 
-# 6. PERFIL DO JOGADOR
+# 4. ROLES E SEGURANÇA
 
-Página criada:
+Roles atuais utilizadas:
+
+```text
+player
+admin
+```
+
+A conta administrativa foi promovida manualmente pelo Firebase Console para:
+
+```text
+role: "admin"
+```
+
+A intenção é impedir que o próprio cliente eleve permissões.
+
+Security Rules publicadas com lógica de:
+
+- jogador lê o próprio perfil;
+- admin pode ler qualquer perfil;
+- jogador pode editar o próprio perfil sem alterar `role`;
+- admin pode editar qualquer usuário;
+- admin pode excluir documentos de usuários;
+- conteúdo da Wiki pode ser lido publicamente;
+- somente admin pode criar/editar/excluir conteúdo da Wiki.
+
+Princípio obrigatório:
+
+Nunca confiar apenas em JavaScript para segurança de cargo.
+
+A autorização real deve permanecer nas Firestore Security Rules.
+
+---
+
+# 5. PERFIL DO JOGADOR — ESTADO ATUAL
+
+Página:
 
 `pages/perfil.html`
 
@@ -189,7 +155,7 @@ Script:
 
 `js/profile.js`
 
-O perfil atualmente possui:
+Funcionalidades:
 
 - avatar;
 - nome de exibição;
@@ -198,528 +164,662 @@ O perfil atualmente possui:
 - status de verificação;
 - edição do perfil;
 - logout;
-- páginas favoritas;
-- páginas visitadas recentemente;
-- estrutura de progresso de eventos.
+- favoritos;
+- páginas recentes;
+- progresso de eventos visual;
+- leitura do `role` via Firestore.
 
-O antigo botão:
+O sistema de avatar continua fechado:
 
-`Abrir Wiki`
+- emojis oficiais;
+- futuramente PNGs oficiais;
+- não permitir foto externa arbitrária por URL.
 
-foi REMOVIDO do perfil.
+Correções anteriores do avatar continuam válidas:
 
-Motivo:
-
-A Wiki já possui acesso pelo menu principal e o botão era redundante.
-
----
-
-# 7. SISTEMA DE AVATAR
-
-Decisão de design:
-
-O EtherCraft NÃO permitirá que jogadores utilizem qualquer imagem externa através de URL.
-
-A ideia anterior de:
-
-`URL personalizada para foto`
-
-foi REMOVIDA.
-
-O sistema passa a utilizar somente avatares permitidos pelo EtherCraft.
-
-Estrutura planejada:
-
-## Emojis
-
-Disponíveis imediatamente como avatares padrão.
-
-Exemplos:
-
-- 🧙
-- 👑
-- 🐉
-- ⚔️
-- etc.
-
-## Fotos oficiais
-
-Futuramente serão adicionados arquivos `.png` definidos pela administração.
-
-Pasta proposta:
-
-`assets/images/avatars/`
-
-Exemplo futuro:
-
-`avatar_01.png`
-`avatar_02.png`
-`avatar_03.png`
-
-No `profile.js` existe estrutura preparada para receber essas imagens.
+- linha horizontal removida;
+- centralização corrigida;
+- hover `Editar foto` funcionando;
+- modal centralizado.
 
 ---
 
-# 8. EDIÇÃO DO AVATAR
+# 6. PERFIL ADMIN — VISUAL
 
-A foto do jogador funciona como botão.
+Quando o Firestore retorna:
 
-Normalmente aparece apenas:
+```text
+role: "admin"
+```
 
-`avatar`
+o perfil muda visualmente.
 
-Ao passar o mouse sobre ela:
+Regras atuais:
 
-`Editar foto`
+- nome do perfil fica verde;
+- aparece botão `Área Administrativa`;
+- botão fica no canto superior direito do card inteiro do perfil;
+- posicionamento absoluto;
+- não altera o tamanho do card.
 
-Clicando, abre um menu centralizado na tela.
-
-Estrutura:
-
-Escolher foto de perfil
-
-Emojis
-[ opções ]
-
-Fotos
-[ PNGs oficiais futuramente ]
-
-[ Fechar e salvar ]
-
-O usuário escolhe uma opção e:
-
-`Fechar e salvar`
-
-fecha o menu e mantém automaticamente a escolha.
-
----
-
-# 9. CORREÇÃO VISUAL DO AVATAR
-
-Durante os testes apareceu um artefato:
-
-`linha horizontal atravessando o círculo do avatar`
-
-Também foi identificado que o emoji parecia não estar perfeitamente centralizado.
-
-Foram realizadas várias correções até localizar a estrutura problemática.
-
-Solução final:
-
-- foto e fallback passaram a ocupar a mesma área;
-- posicionamento absoluto dentro do círculo;
-- centralização explícita;
-- `object-position: center center`;
-- elementos `[hidden]` são realmente removidos visualmente;
-- botão circular passou a ser o próprio elemento interativo;
-- removida estrutura de botão invisível sobreposto.
-
-Após a última correção o usuário confirmou:
+O usuário enviou uma referência visual marcando a área desejada e confirmou depois:
 
 `perfeito`
 
-Portanto:
-
-Avatar circular:
-✅ CORRIGIDO
-
-Centralização:
-✅ CORRIGIDA
-
-Linha horizontal:
-✅ CORRIGIDA
-
-Hover "Editar foto":
-✅ FUNCIONANDO
-
-Menu de avatar:
-✅ CENTRALIZADO
+Portanto a posição atual do botão ADM deve ser preservada.
 
 ---
 
-# 10. SESSÃO
+# 7. ÁREA ADMINISTRATIVA
 
-Objetivo definido:
+Página criada:
 
-A conta NÃO deve desaparecer simplesmente porque o usuário mudou de página.
+`pages/admin.html`
 
-A sessão deve permanecer enquanto o jogador utiliza o site.
+Script:
 
-Foi criada uma política própria de inatividade:
+`js/admin.js`
 
-`12 horas`
+A área administrativa atualmente possui:
 
-Enquanto houver atividade, a sessão permanece.
+- validação de sessão;
+- validação de `role == admin`;
+- redirecionamento para perfil se não for admin;
+- leitura da coleção `usuarios`;
+- listagem dos usuários;
+- tabela com:
+  - Nome no Minecraft;
+  - Nome de exibição;
+  - Cargo;
+- contador de usuários;
+- destaque visual para Admin.
 
-Atividades monitoradas incluem interação com a página.
+Objetivo futuro:
 
-Depois de aproximadamente 12 horas sem atividade:
-
-`logout automático`
-
-Também permanece disponível:
-
-`logout manual`
-
-Portanto:
-
-| Sessão | Estado |
-|---|---|
-| Entre páginas | ✅ |
-| Logout manual | ✅ |
-| Logout por inatividade | ✅ 12h |
+expandir a área ADM para ferramentas adicionais, inclusive gestão da Wiki.
 
 ---
 
-# 11. BOTÃO CIRCULAR GLOBAL DO PERFIL
-
-Quando autenticado, existe um botão circular de perfil.
-
-Ele utiliza o avatar escolhido pelo jogador.
-
-O objetivo é fornecer acesso rápido ao perfil enquanto navega pelo site.
-
-Quando deslogado:
-
-o botão não deve aparecer.
-
-Quando logado:
-
-o botão leva para:
-
-`pages/perfil.html`
-
----
-
-# 12. MENU PRINCIPAL
-
-Foi definida uma regra global para a navegação.
+# 8. MENU E NAVEGAÇÃO GLOBAL
 
 Ordem oficial:
 
+```text
 Home
 Eventos
 Regras
 Como Jogar
 Wiki
 Login / Perfil
+```
 
-Portanto:
+Regras:
 
-`Wiki`
+- `Wiki` sempre penúltimo;
+- `Login / Perfil` sempre último;
+- deslogado → `Login`;
+- logado → `Perfil`.
 
-deve ser SEMPRE o penúltimo item.
+`js/main.js` faz atualização dinâmica da conta e sessão.
 
-`Login / Perfil`
+Correções já confirmadas:
 
-deve ser SEMPRE o último item.
-
----
-
-# 13. LOGIN → PERFIL
-
-Quando NÃO autenticado:
-
-`Login`
-
-Quando autenticado:
-
-`Perfil`
-
-Portanto o mesmo espaço do menu representa a conta.
-
-Exemplo deslogado:
-
-Home
-Eventos
-Regras
-Como Jogar
-Wiki
-Login
-
-Exemplo logado:
-
-Home
-Eventos
-Regras
-Como Jogar
-Wiki
-Perfil
+- `pages/regras.html` usa caminho correto para `../js/main.js`;
+- `pages/eventos.html` usa caminho correto;
+- navegação das páginas foi ajustada;
+- páginas internas da Wiki devem usar `../../js/...`.
 
 ---
 
-# 14. PROBLEMA DESCOBERTO EM REGRAS E EVENTOS
+# 9. SESSÃO
 
-Durante testes foi descoberto que:
+Persistência local do Firebase está ativa.
 
-`pages/regras.html`
+Política própria de inatividade:
 
-e:
+`12 horas`
 
-`pages/eventos.html`
+Com atividade do usuário:
 
-ainda apresentavam o menu antigo.
+- sessão permanece.
 
-Investigação mostrou que essas páginas carregavam:
+Após longa inatividade:
 
-`js/main.js`
+- logout automático.
 
-usando caminho incorreto.
-
-Como estão dentro de `/pages/`, deveriam utilizar:
-
-`../js/main.js`
-
-Por causa disso, a lógica global de autenticação/menu não estava sendo executada nessas páginas.
-
-Foi corrigido.
-
-Também foi corrigida diretamente a ordem dos links no HTML.
-
-Estado:
-
-`pages/regras.html`
-✅ CORRIGIDO
-
-`pages/eventos.html`
-✅ CORRIGIDO
+Logout manual também permanece disponível.
 
 ---
 
-# 15. REGRA DE PATHS DO GITHUB PAGES
+# 10. FAVORITOS E RECENTES
 
-Manter esta regra:
+Anteriormente eram apenas locais.
 
-## Root
+Agora a estrutura Firestore do perfil possui:
 
-`index.html`
+```text
+favoritos
+recentes
+```
 
-Usar:
+A integração atual usa esses campos no perfil persistente.
 
-`pages/...`
+O site também mantém chaves locais como fallback/cache durante a transição.
 
----
+Status:
 
-## Dentro de `/pages/`
+Favoritos:
+✅ ESTRUTURA FIRESTORE
 
-Usar:
+Recentes:
+✅ ESTRUTURA FIRESTORE
 
-`../index.html`
-
-`../js/...`
-
-`../css/...`
-
-ou arquivos irmãos diretamente:
-
-`wiki.html`
-`perfil.html`
-`login.html`
+Sincronização principal de perfil:
+✅ CONFIRMADA
 
 ---
 
-## Dentro de `/pages/wiki/`
+# 11. PROGRESSO DE EVENTOS
 
-Usar:
-
-`../../index.html`
-
-`../../js/...`
-
-`../../css/...`
-
-`../../data/...`
-
-GitHub Pages diferencia maiúsculas/minúsculas.
-
-A pasta correta é:
-
-`pages/`
-
----
-
-# 16. FAVORITOS
-
-Perfil possui:
-
-`⭐ Páginas favoritas`
-
-O usuário pode marcar páginas acessadas como favoritas.
-
-Atualmente:
-
-`localStorage`
-
-Portanto:
-
-✅ funciona no navegador atual
-
-❌ ainda não sincroniza entre dispositivos
-
-Exemplo:
-
-PC → favoritos próprios locais
-
-Celular → ainda não recebe os mesmos favoritos
-
-Sincronização ficará para Firestore.
-
----
-
-# 17. VISITADAS RECENTEMENTE
-
-Perfil possui:
-
-`🕘 Visitadas recentemente`
-
-O site registra automaticamente páginas navegadas.
-
-Atualmente o histórico é local.
-
-Objetivo futuro:
-
-sincronizar através da conta do jogador.
-
----
-
-# 18. PROGRESSO DE EVENTOS
-
-Foi criada no perfil a seção:
+Seção visual existe no perfil:
 
 `🏆 Progresso de eventos`
-
-Neste momento é SOMENTE estrutura visual.
-
-Ainda NÃO existe conexão entre eventos e conta.
 
 Estado:
 
 Interface:
 ✅ EXISTE
 
-Dados reais:
-❌ NÃO IMPLEMENTADOS
-
-Firestore:
-❌ NÃO IMPLEMENTADO
+Dados reais de eventos:
+❌ AINDA NÃO IMPLEMENTADOS
 
 Integração com eventos:
-❌ NÃO IMPLEMENTADA
+❌ AINDA NÃO IMPLEMENTADA
 
-Não tratar `0%` atual como progresso real do jogador.
-
----
-
-# 19. FIRESTORE — PRÓXIMA GRANDE ETAPA
-
-Após estabilização completa da interface de conta, a próxima etapa planejada é Cloud Firestore.
-
-Estrutura proposta:
-
-usuarios/
-  {uid}/
-    nome
-    email
-    role
-    minecraftNick
-    avatar
-    favoritos
-    recentes
-    criadoEm
-
-Possíveis cargos:
-
-player
-moderator
-admin
-
-Arquitetura:
-
-Firebase Authentication
-        ↓
-       UID
-        ↓
-Firestore
-usuarios/{uid}
-        ↓
-role + dados do jogador
+Não interpretar o `0%` atual como progresso real.
 
 ---
 
-# 20. SEGURANÇA DOS CARGOS
+# 12. WIKI — ESTRUTURA DE PÁGINAS
+
+Página inicial:
+
+`pages/wiki.html`
+
+Categorias:
+
+```text
+pages/wiki/
+├── mecanicas.html
+├── receitas.html
+├── bestiario.html
+├── dimensoes.html
+├── encantamentos.html
+└── economia.html
+```
+
+Dados antigos estáticos ainda existem em:
+
+```text
+data/wiki/
+├── mecanicas.json
+├── receitas.json
+├── mobs.json
+├── dimensoes.json
+├── encantamentos.json
+└── economia.json
+```
+
+Esses JSONs agora funcionam como fonte inicial/fallback, não como destino definitivo de publicação.
+
+---
+
+# 13. WIKI + FIRESTORE — IMPLEMENTADO
+
+Arquivo criado:
+
+`js/wiki-firestore.js`
+
+Responsabilidades:
+
+- conectar a Wiki ao Firestore;
+- ler conteúdo por categoria;
+- gravar conteúdo;
+- excluir conteúdo;
+- verificar role atual;
+- importar automaticamente JSON inicial quando a coleção está vazia e o usuário é Admin.
+
+Estrutura Firestore:
+
+```text
+wiki/
+  receitas/
+    entries/{id}
+  mobs/
+    entries/{id}
+  encantamentos/
+    entries/{id}
+  dimensoes/
+    entries/{id}
+  economia/
+    entries/{id}
+  mecanicas/
+    entries/{id}
+```
+
+A Wiki usa:
+
+```text
+wiki/{categoria}/entries/{id}
+```
+
+Security Rules:
+
+- leitura pública;
+- escrita apenas por admin.
+
+---
+
+# 14. MIGRAÇÃO JSON → FIRESTORE
+
+Lógica atual:
+
+```text
+abrir categoria
+      ↓
+Firestore verifica entries
+      ↓
+se vazio + usuário admin
+      ↓
+carrega data/wiki/*.json
+      ↓
+cria documentos no Firestore
+```
+
+Se Firestore estiver indisponível:
+
+- a página tenta carregar o JSON local como fallback.
+
+Portanto o design/conteúdo não deve simplesmente desaparecer por falha de backend.
+
+---
+
+# 15. CRUD ADMINISTRATIVO DA WIKI
+
+`js/wiki-content.js` foi atualizado.
+
+Admin atualmente pode visualizar controles:
+
+```text
+[ + Adicionar ]
+[ ✏️ Editar ]
+[ 🗑️ Excluir ]
+```
+
+Jogador comum:
+
+- não vê esses controles.
+
+A detecção de admin foi reforçada:
+
+- lê estado global da autenticação;
+- também consulta o role via Firestore.
+
+Excluir:
+
+- exige confirmação antes de apagar;
+- chama Firestore;
+- remove o conteúdo da interface após sucesso.
+
+Salvar:
+
+- grava diretamente no Firestore;
+- alteração passa a ser global para todos os visitantes.
+
+Arquivos envolvidos:
+
+```text
+js/wiki-content.js
+js/wiki-firestore.js
+css/pages/wiki-content.css
+```
+
+---
+
+# 16. WIKI — DESIGN VISUAL ATUAL VS NOVA DIREÇÃO
 
 IMPORTANTE:
 
-Nunca confiar somente em JavaScript como:
+O usuário enviou novas referências visuais em 16/09/2026.
 
-`role = "admin"`
+As alterações feitas até aqui na Wiki foram principalmente FUNCIONAIS.
 
-para proteger funções administrativas.
+O usuário informou:
 
-Firestore Security Rules deverá controlar autorização real.
+`não vejo as alterações visuais no site`
 
-Jogadores comuns NÃO poderão alterar o próprio:
+Isso é esperado porque a integração Firestore/CRUD ainda preserva majoritariamente a estrutura visual anterior.
 
-`role`
+Nova decisão visual:
 
-Administração deverá controlar a promoção para:
+## Página inicial da Wiki
 
-`moderator`
+Usar um livro genérico como identidade visual inicial.
 
-ou:
+Referência enviada como:
 
-`admin`
+`Imagem 1`
 
----
+## Categorias da Wiki
 
-# 21. WIKI + ADMIN
+Usar um novo fundo/base de livro aberto para:
 
-A Wiki já possui preparação para verificar:
+- Bestiário;
+- Receitas;
+- Encantamentos;
+- Dimensões;
+- Economia;
+- Mecânicas.
 
-`window.EtherCraftAuth?.currentUser?.role === 'admin'`
+Referência enviada como:
 
-Porém o sistema de roles ainda NÃO está conectado.
+`Imagem 5`
 
-Portanto:
+A ideia é que o Firestore apenas forneça os dados.
 
-Editor administrativo real:
-❌ NÃO LIBERADO
-
-Firestore:
-❌ NÃO CONECTADO
-
-Publicação entre dispositivos:
-❌ NÃO IMPLEMENTADA
-
-O editor atual não deve ser tratado como sistema administrativo seguro até Firestore + Rules serem implementados.
+O design de livro deve permanecer como camada visual independente.
 
 ---
 
-# 22. ESTADO ATUAL DO PROJETO
+# 17. RESPONSIVIDADE DO NOVO LIVRO
 
+No desktop:
+
+```text
+┌──────────────────────────────────────┐
+│          LIVRO ABERTO               │
+│                                      │
+│ página esquerda | página direita     │
+│                                      │
+└──────────────────────────────────────┘
+```
+
+No mobile:
+
+NÃO encolher o livro inteiro até o texto ficar ilegível.
+
+A experiência desejada é separar visualmente:
+
+```text
+[PÁGINA ESQUERDA]
+       ↓
+ próxima
+       ↓
+[PÁGINA DIREITA]
+```
+
+Ou mecanismo equivalente de paginação/folheio.
+
+A referência mobile foi enviada pelo usuário.
+
+---
+
+# 18. FONTE MINECRAFT
+
+O usuário enviou:
+
+`minecraft.zip`
+
+O ZIP contém uma fonte para uso nos elementos temáticos dos livros.
+
+Arquivo citado:
+
+`Minecraft.ttf`
+
+Direção de uso:
+
+- títulos de livros;
+- capítulos;
+- elementos visuais Minecraft;
+- partes futuras do site quando fizer sentido.
+
+NÃO aplicar indiscriminadamente a todo o site.
+
+Texto comum deve preservar legibilidade.
+
+Planejamento de estrutura:
+
+```text
+assets/fonts/Minecraft.ttf
+```
+
+IMPORTANTE:
+
+não compartilhar externamente o arquivo de fonte.
+
+---
+
+# 19. CLOUDINARY — NOVA ETAPA
+
+O usuário quer armazenar as imagens da Wiki no Cloudinary.
+
+Objetivo:
+
+```text
+Admin escolhe imagem
+      ↓
+Cloudinary
+      ↓
+URL segura
+      ↓
+Firestore salva URL
+      ↓
+Wiki renderiza imagem
+```
+
+Tipos previstos:
+
+- imagem de mob;
+- ícone de drop;
+- ingredientes de receita;
+- resultado de receita;
+- imagem de encantamento;
+- ícones de equipamentos;
+- imagem de dimensão;
+- imagem de mecânica;
+- imagens de economia.
+
+Não salvar binários diretamente no Firestore.
+
+Firestore deve guardar apenas URLs e metadados.
+
+---
+
+# 20. CLOUDINARY — ACESSO E UPLOAD PRESET
+
+Foi discutida a criação de:
+
+`Unsigned Upload Preset`
+
+Nome sugerido:
+
+`ethercraft_wiki`
+
+Configuração planejada:
+
+```text
+Signing mode: Unsigned
+Asset folder: EtherCraft/Wiki
+Allowed formats: png, webp, jpg, jpeg
+Unique filename: ON
+Disallow public ID: ON
+```
+
+Nunca colocar no frontend:
+
+- Cloudinary API Secret;
+- senha;
+- credenciais privadas.
+
+Cloud name e preset unsigned podem ser usados pelo cliente.
+
+O usuário informou que em outra instância consegue trabalhar no Cloudinary pelo navegador suspenso / Cloud Browser do ChatGPT Work.
+
+Decisão:
+
+Ao mudar de instância, usar Work/Cloud Browser para operar diretamente o Cloudinary e configurar tudo de uma vez.
+
+Esta conversa NÃO possui o mesmo acesso de navegador da outra instância.
+
+---
+
+# 21. PRÓXIMO FLUXO RECOMENDADO NA NOVA INSTÂNCIA
+
+Objetivo: fazer a próxima fase em bloco, evitando pequenos remendos separados.
+
+Sequência recomendada:
+
+1. Abrir o Cloudinary via Work/Cloud Browser.
+2. Criar/verificar `Unsigned Upload Preset`.
+3. Organizar pasta de assets da Wiki.
+4. Definir `cloud_name` e `upload_preset` no frontend, sem segredo.
+5. Criar upload direto pelo painel ADM da Wiki.
+6. Salvar URLs no Firestore.
+7. Integrar upload aos campos do editor da Wiki.
+8. Adicionar a fonte Minecraft ao projeto.
+9. Aplicar o novo visual de livro da Imagem 5 às categorias.
+10. Manter Imagem 1 como direção visual da entrada da Wiki.
+11. Criar comportamento mobile página esquerda → página direita.
+12. Testar CRUD completo:
+
+```text
+Admin
+ ↓
+Adicionar conteúdo
+ ↓
+Upload imagem
+ ↓
+Cloudinary
+ ↓
+URL
+ ↓
+Firestore
+ ↓
+Wiki pública
+```
+
+---
+
+# 22. COMMITS IMPORTANTES DESTA FASE
+
+Perfil ADM / botão área administrativa:
+
+```text
+9e876aace6f6e8bf7472e5490c6a55c10a0af019
+c2a84bd3af70d7fcf6630cad330e4ccb0136444e
+```
+
+Área administrativa:
+
+```text
+55e27ddccc56ecda743a202fe1d0c270d44afa27
+b841c5d204d46c42db4b930682e1cc0b42e4adc7
+```
+
+Botão do perfil apontando para Admin:
+
+```text
+4a201c030d00ad9859eedbda70661c94381d6de8
+```
+
+Wiki + Firestore:
+
+```text
+88f3bf5c1f151c566cf999dd327116080cf20a91
+e06884e859d5b5f43d766c1f1670657e773610dc
+```
+
+Atualizações das páginas da Wiki para nova integração:
+
+```text
+074f7aa791bb7b23304d5cf225952503e7cc5c16
+ca4caa14957264e0fdadd709b198c12a0d3a6f53
+73c68c881de95ccccee77f4f3aff9053971f4d96
+af9c4d9c4fc3bbda2af8dc697d1c8f59a60961d3
+23d3c5828df166614f3c7c851a9fd8d096a6d2b4
+fd4be27f31cd03e3e3cd9062b8e5fb095c5c4db9
+```
+
+CRUD / delete / reconhecimento de Admin na Wiki:
+
+```text
+408884dfa5564dc350ba0bb800f521be2f976a23
+f7a290b1653c08c4c13b786e1ea7651587b0f7f2
+```
+
+---
+
+# 23. REGRAS DE PATHS DO GITHUB PAGES
+
+Manter:
+
+## Root
+
+```text
+index.html
+```
+
+usar:
+
+```text
+pages/...
+js/...
+css/...
+```
+
+## Dentro de `/pages/`
+
+usar:
+
+```text
+../index.html
+../js/...
+../css/...
+```
+
+## Dentro de `/pages/wiki/`
+
+usar:
+
+```text
+../../index.html
+../../js/...
+../../css/...
+../../data/...
+```
+
+A pasta correta é minúscula:
+
+`pages/`
+
+GitHub Pages é case-sensitive.
+
+---
+
+# 24. ARQUIVOS PRINCIPAIS ATUAIS
+
+```text
 EtherCraft
+│
+├── index.html
 │
 ├── pages/
 │   ├── login.html
-│   │   └── ✅ autenticação
-│   │
 │   ├── perfil.html
-│   │   ├── ✅ avatar
-│   │   ├── ✅ nome
-│   │   ├── ✅ nick Minecraft
-│   │   ├── ✅ e-mail
-│   │   ├── ✅ favoritos
-│   │   ├── ✅ recentes
-│   │   └── 🟡 progresso de eventos visual
-│   │
+│   ├── admin.html
 │   ├── eventos.html
-│   │   └── ✅ menu corrigido
-│   │
 │   ├── regras.html
-│   │   └── ✅ menu corrigido
-│   │
 │   ├── wiki.html
-│   │
 │   └── wiki/
 │       ├── mecanicas.html
 │       ├── receitas.html
@@ -730,23 +830,23 @@ EtherCraft
 │
 ├── js/
 │   ├── firebase.js
-│   │   └── ✅ Firebase/Auth
-│   │
 │   ├── auth.js
-│   │   └── ✅ cadastro/login
-│   │
 │   ├── profile.js
-│   │   └── ✅ perfil/avatar
-│   │
+│   ├── admin.js
 │   ├── main.js
-│   │   ├── ✅ conta global
-│   │   ├── ✅ Login ↔ Perfil
-│   │   ├── ✅ histórico
-│   │   └── ✅ inatividade 12h
-│   │
 │   ├── wiki.js
 │   ├── wiki-content.js
+│   ├── wiki-firestore.js
 │   └── wiki-motion.js
+│
+├── css/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   └── pages/
+│       ├── wiki.css
+│       ├── wiki-content.css
+│       └── wiki-motion.css
 │
 ├── data/
 │   └── wiki/
@@ -758,766 +858,208 @@ EtherCraft
 │       └── mecanicas.json
 │
 ├── assets/
-│   └── images/
-│       └── avatars/
-│           └── ⏳ PROPOSTO — PNGs oficiais futuros
+│   ├── images/
+│   │   └── wiki/
+│   │       ├── livro-inicial        ← PLANEJADO / referência enviada
+│   │       └── livro-categoria      ← PLANEJADO / referência enviada
+│   └── fonts/
+│       └── Minecraft.ttf            ← ARQUIVO ENVIADO / AINDA INTEGRAR
 │
 └── Firebase EtherCraft
-    ├── Authentication
-    │   ├── ✅ Email/Password
-    │   ├── ✅ Cadastro
-    │   ├── ✅ Login
-    │   ├── ✅ Sessão
-    │   └── ✅ Verificação de e-mail
-    │
-    └── Firestore
-        └── ⏳ PRÓXIMA ETAPA
+    ├── Authentication              ✅
+    ├── Firestore usuarios          ✅
+    ├── Roles                       ✅
+    ├── Rules administrativas       ✅
+    └── Wiki Firestore              ✅ estrutura/código
+```
 
 ---
 
-# 23. DECISÕES CONSOLIDADAS
+# 25. ESTADO ATUAL CONSOLIDADO
 
-1. Firebase principal do site será separado de sistemas antigos.
+## CONFIRMADO / FUNCIONAL
 
-2. Authentication usa e-mail/senha.
+Authentication:
+✅
 
-3. Perfil é obrigatório como área central da conta.
+Perfil persistente:
+✅
 
-4. Nick Minecraft faz parte da identidade do jogador.
+Firestore usuários:
+✅
 
-5. Não permitir avatar externo por URL.
+Sincronização entre sessões:
+✅
 
-6. Avatares serão:
-   - emojis oficiais;
-   - PNGs oficiais definidos pelo EtherCraft.
+Role `admin`:
+✅
 
-7. Login vira Perfil automaticamente quando autenticado.
+Security Rules administrativas:
+✅ PUBLICADAS
 
-8. Login/Perfil é sempre o ÚLTIMO item do menu.
+Nome verde para Admin:
+✅
 
-9. Wiki é sempre o PENÚLTIMO item.
+Botão Área Administrativa:
+✅ posição aprovada
 
-10. Sessão permanece entre páginas.
+Página Admin:
+✅
 
-11. Logout automático somente após aproximadamente 12h de inatividade.
+Tabela de usuários:
+✅
 
-12. Favoritos e recentes funcionam localmente nesta fase.
+Listagem de nick Minecraft:
+✅
 
-13. Firestore posteriormente sincronizará dados entre dispositivos.
+Wiki com Firestore:
+✅ CÓDIGO IMPLEMENTADO
 
-14. Progresso de eventos será vinculado à conta futuramente.
+CRUD Admin da Wiki:
+✅ CÓDIGO IMPLEMENTADO
 
-15. Roles deverão ser protegidas por Firestore Security Rules.
+Leitura pública da Wiki via Rules:
+✅ LIBERADA
 
-16. Não ativar billing/Google Cloud pago sem necessidade e sem autorização explícita do usuário.
+JSON fallback:
+✅
 
----
+## AINDA PRECISA DE TESTE / FINALIZAÇÃO
 
-# 24. PRÓXIMO PASSO RECOMENDADO
+Migração de todas as categorias para Firestore:
+🟡 TESTAR categoria por categoria
 
-Não expandir vários sistemas simultaneamente.
+Edição real de entrada e recarregamento:
+🟡 TESTAR
 
-Authentication e interface de Perfil já atingiram estado funcional.
+Exclusão real:
+🟡 TESTAR
 
-Próxima etapa lógica:
+Upload de imagens Cloudinary:
+❌ AINDA NÃO IMPLEMENTADO
 
-`FIRESTORE — PERFIL PERSISTENTE`
+Unsigned Upload Preset:
+❌ AINDA NÃO CONFIGURADO NESTA INSTÂNCIA
 
-Objetivo inicial:
+Novo visual de livro das categorias:
+❌ AINDA NÃO IMPLEMENTADO
 
-criar:
+Fonte Minecraft no GitHub:
+❌ AINDA NÃO INTEGRADA
 
-usuarios/{uid}
+Responsividade livro página esquerda/direita:
+❌ AINDA NÃO IMPLEMENTADA
 
-e migrar progressivamente:
-
-- nome;
-- minecraftNick;
-- avatar;
-- role;
-- favoritos;
-- dados necessários da conta.
-
-Depois:
-
-`ROLE ADMIN`
-
-e somente então conectar:
-
-`WIKI ADMIN`
-
-e:
-
-`PROGRESSO DE EVENTOS`
-
----
-
-# STATUS DO UPDATE
-
-AUTHENTICATION:
-✅ FUNCIONAL
-
-PERFIL:
-✅ FUNCIONAL
-
-AVATAR:
-✅ FUNCIONAL / ARTEFATO CORRIGIDO
-
-NAVEGAÇÃO:
-✅ CORRIGIDA
-
-FAVORITOS:
-🟡 LOCAL
-
-RECENTES:
-🟡 LOCAL
-
-PROGRESSO DE EVENTOS:
-🟡 SOMENTE INTERFACE
-
-FIRESTORE:
+Progresso real de eventos:
 ❌ NÃO IMPLEMENTADO
 
-ROLES:
-❌ NÃO IMPLEMENTADOS
+---
 
-WIKI ADMIN SEGURO:
-❌ NÃO IMPLEMENTADO
+# 26. DECISÕES IMPORTANTES PARA CONTINUIDADE
 
-PRÓXIMA FASE:
-→ FIRESTORE / PERFIL PERSISTENTE
-# EtherCraft — Memória do Projeto Site
-
-## Identificação
-
-**Projeto:** EtherCraft — Site Oficial
-**Repositório principal:** `https://github.com/mrserluiz/EtherCraft`
-**Memória persistente:** `https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM`
-**Hospedagem:** GitHub Pages
-**URL pública:** `https://mrserluiz.github.io/EtherCraft/`
+1. Não redesenhar a Wiki apenas por causa do Firestore.
+2. Firestore é camada de dados; livro é camada visual.
+3. Jogadores comuns não veem ferramentas ADM.
+4. Admin pode adicionar, editar e excluir conteúdo.
+5. Segurança real deve permanecer nas Rules.
+6. Imagens da Wiki devem ir para Cloudinary; Firestore guarda URL.
+7. Não colocar API Secret do Cloudinary no frontend.
+8. Fonte Minecraft deve ser usada de forma temática, não global.
+9. Desktop usa livro aberto com duas páginas.
+10. Mobile deve apresentar as páginas separadamente em sequência/paginação, e não simplesmente encolher tudo.
+11. A entrada da Wiki usa direção visual do livro genérico enviado como Imagem 1.
+12. Categorias usam o novo fundo de livro enviado como Imagem 5.
+13. Preservar design já aprovado do restante do site.
+14. Continuar compatível com GitHub Pages.
+15. Sempre verificar arquivos atuais no repositório antes de grandes alterações.
 
 ---
 
-# Objetivo do Projeto
+# 27. PRÓXIMA ETAPA NA NOVA INSTÂNCIA
 
-Criar e manter o site oficial do servidor Minecraft **EtherCraft**, utilizando uma arquitetura estática, modular, responsiva e preparada para expansão futura.
+Abrir o projeto em uma instância com **Work / Cloud Browser** disponível para operar o Cloudinary diretamente.
 
-O site deve funcionar como:
-
-* Página institucional do servidor.
-* Central de navegação para jogadores.
-* Página de regras.
-* Página de eventos.
-* Área “Como Jogar”.
-* Futuras páginas de login, staff e outros sistemas.
-* Hospedagem de eventos especiais reutilizáveis.
-* Interface administrativa para sistemas específicos.
-
-O site deve permanecer compatível com **GitHub Pages**.
-
----
-
-# Tecnologias
-
-## CONFIRMADO
-
-* HTML5
-* CSS3
-* JavaScript Vanilla
-* GitHub Pages
-* Firebase/Firestore em módulos que exigem persistência
-* JSON para dados estáticos
-* Manifest/PWA
-* Design responsivo
-* Mobile First
-* SEO básico e Open Graph
-
----
-
-# Identidade Visual
-
-## CONFIRMADO
-
-O site segue estética baseada em tons de:
-
-* Roxo escuro
-* Indigo
-* Lilás
-* Branco/esbranquiçado
-
-Cores já utilizadas:
+Começar por:
 
 ```text
-#0b0614
-#28104f
-#8d65d1
-#fff9ff
+Cloudinary
+├── configurar/verificar unsigned upload preset
+├── organizar EtherCraft/Wiki
+└── obter cloud_name + preset público
 ```
 
-A direção artística deve transmitir:
-
-* Fantasia
-* Medieval
-* Magia
-* Minecraft
-* Visual moderno
-* Interface limpa
-
----
-
-# Cabeçalho da Home
-
-## CONFIRMADO
-
-A página inicial utiliza:
-
-* Logo EtherCraft centralizada.
-* Logo responsiva para desktop e celular.
-* Header fixo inicialmente.
-* Efeito de fade-out da logo ao rolar a página.
-* Fade-in ao retornar ao topo.
-* A logo acompanha o usuário apenas no trecho inicial da Home.
-
-Arquivo da logo:
+Depois continuar no GitHub:
 
 ```text
-assets/images/Ether_Logo.png
-```
-
-Esse comportamento é específico da **Home** e não deve ser automaticamente aplicado às páginas internas.
-
----
-
-# Menu de Navegação
-
-## CONFIRMADO
-
-O menu principal possui:
-
-```text
-Home | Eventos | Regras | Como Jogar | Login
-```
-
-Características:
-
-* Barra roxa/lilás.
-* Navegação fixa no topo.
-* Deve permanecer disponível durante toda a rolagem.
-* Botões retangulares integrados visualmente à barra.
-* Hover suave.
-* Responsivo.
-* Estrutura fácil para adicionar novos links.
-
-## Regra de Caminhos
-
-Na Home:
-
-```html
-pages/regras.html
-pages/eventos.html
-pages/login.html
-#como-jogar
-```
-
-Nas páginas dentro de `/pages/`:
-
-```html
-../index.html
-../pages/regras.html
-../pages/eventos.html
-../pages/login.html
-../index.html#como-jogar
-```
-
-Não utilizar caminhos começando apenas por:
-
-```text
-/pages/
-```
-
-porque no GitHub Pages isso aponta para:
-
-```text
-https://mrserluiz.github.io/pages/
-```
-
-e ignora `/EtherCraft/`.
-
----
-
-# Home
-
-## CONFIRMADO
-
-A Home utiliza uma seção `.hero`.
-
-Características principais:
-
-* Grande destaque inicial.
-* Conteúdo centralizado.
-* Fundo em gradiente roxo.
-* Logo grande.
-* Navegação fixa.
-* Hero responsivo.
-* Botões de ação.
-* Seções institucionais.
-
-Arquivo específico:
-
-```text
-css/pages/home.css
+Wiki
+├── upload direto de imagem pelo editor ADM
+├── URL salva no Firestore
+├── integração da Minecraft.ttf
+├── novo visual dos livros
+└── mobile em páginas separadas
 ```
 
 ---
 
-# Páginas Internas
-
-## DECISÃO DE ARQUITETURA
-
-As páginas internas não devem reutilizar integralmente o comportamento visual da `.hero` da Home.
-
-Exemplos:
-
-* Regras
-* Eventos
-* Login
-* Futuras páginas internas
-
-A Home pode possuir:
+# STATUS FINAL DESTE UPDATE
 
 ```text
-.site-main
-.hero
-.site-header
+AUTHENTICATION              ✅ FUNCIONAL
+PERFIL                      ✅ FUNCIONAL
+FIRESTORE PERFIL            ✅ FUNCIONAL
+ROLE ADMIN                  ✅ FUNCIONAL
+RULES ADMIN                 ✅ PUBLICADAS
+ÁREA ADMINISTRATIVA         ✅ FUNCIONAL
+LISTA DE USUÁRIOS           ✅ FUNCIONAL
+WIKI FIRESTORE              ✅ IMPLEMENTADO EM CÓDIGO
+WIKI CRUD ADMIN             ✅ IMPLEMENTADO EM CÓDIGO
+WIKI VISUAL NOVO            ❌ PENDENTE
+CLOUDINARY                  ❌ PENDENTE NESTA INSTÂNCIA
+MINECRAFT.TTF               🟡 ARQUIVO ENVIADO / PENDENTE INTEGRAÇÃO
+PROGRESSO DE EVENTOS        ❌ PENDENTE
 ```
 
-As páginas internas devem evoluir para algo como:
-
-```text
-.page-main
-.page-header
-.page-content
-```
-
-Objetivo:
-
-* Evitar grandes espaços verticais herdados da Home.
-* Manter navegação consistente.
-* Permitir layouts compactos.
-* Preservar a identidade visual.
-
----
-
-# CSS Modular
-
-## CONFIRMADO
-
-Estrutura adotada:
-
-```text
-css/
-├── reset.css
-├── base.css
-├── components.css
-└── pages/
-```
-
-Responsabilidades:
-
-### `reset.css`
-
-Normalização dos estilos padrão do navegador.
-
-### `base.css`
-
-Responsável por:
-
-* Variáveis de cor.
-* Tipografia.
-* Fundo.
-* Containers.
-* Tokens globais.
-* Espaçamentos básicos.
-* Transições.
-
-### `components.css`
-
-Responsável por componentes reutilizáveis:
-
-* `.site-header`
-* `.brand-logo`
-* `.site-nav`
-* `.nav-shell`
-* `.nav-link`
-* `.btn`
-* `.btn-primary`
-* `.btn-secondary`
-* `.cards-grid`
-* `.feature-card`
-* `.content-panel`
-
-### `pages/*.css`
-
-Responsável exclusivamente pelo comportamento específico de cada página.
-
----
-
-# Estrutura Visual Atual do components.css
-
-## CONFIRMADO
-
-Já possui:
-
-* Header fixo.
-* Fade do header.
-* Logo responsiva.
-* Navbar fixa.
-* Barra com gradiente.
-* Hover dos links.
-* Botões reutilizáveis.
-* Cards.
-* Painéis de conteúdo.
-* Media queries para mobile e desktop.
-
-Não reescrever esse arquivo sem necessidade.
-
-Preservar o design atual sempre que possível.
-
----
-
-# Layout da Página Regras
-
-## EM DESENVOLVIMENTO
-
-A página:
-
-```text
-pages/regras.html
-```
-
-deve manter a estética do site principal, mas sem o grande espaço da Home.
-
-Planejamento:
-
-* Menu principal no topo.
-* Conteúdo central.
-* Menu lateral esquerdo com tópicos.
-* Caixa principal de regras à direita/centro.
-* Navegação por âncoras.
-
-Exemplo conceitual:
-
-```text
-[ MENU GLOBAL ]
-
-[ Tópicos ] [ Conteúdo das regras ]
-[ Tópicos ] [ Conteúdo das regras ]
-[ Tópicos ] [ Conteúdo das regras ]
-```
-
-No mobile:
-
-```text
-[ MENU GLOBAL ]
-
-[ TÓPICOS HORIZONTAIS ]
-
-[ CONTEÚDO ]
-```
-
----
-
-# Layout da Página Eventos
-
-## EM DESENVOLVIMENTO
-
-Página:
-
-```text
-pages/eventos.html
-```
-
-Deve utilizar o mesmo padrão visual das páginas internas.
-
-Cabeçalho conceitual:
-
-```html
-<p class="eyebrow">EtherCraft</p>
-<h1>Eventos</h1>
-<p>Eventos da Comunidade de EtherCraft</p>
-```
-
-A `.hero` da Home não deve necessariamente ser utilizada permanentemente nessa página.
-
----
-
-# Conteúdo Centralizado
-
-## CONFIRMADO
-
-O projeto utiliza:
-
-```text
-.container
-.content-panel
-.hero-content
-```
-
-Textos institucionais podem utilizar blocos centrais.
-
-Para textos longos, preferir alinhamento à esquerda dentro de containers centralizados.
-
-Títulos podem permanecer centralizados.
-
----
-
-# Imagens dentro do Conteúdo
-
-Imagens podem ser inseridas entre parágrafos através de `<img>` ou preferencialmente `<figure>`.
-
-Exemplo:
-
-```html
-<figure class="content-figure">
-  <img src="..." alt="...">
-  <figcaption>...</figcaption>
-</figure>
-```
-
-Devem ser responsivas.
-
----
-
-# Favicons e PWA
-
-## CONFIRMADO
-
-Arquivos existentes:
-
-```text
-assets/icons/
-├── android-chrome-192x192.png
-├── android-chrome-512x512.png
-├── apple-touch-icon.png
-├── favicon-16x16.png
-├── favicon-32x32.png
-├── favicon.ico
-└── site.webmanifest
-```
-
-Na Home:
-
-```html
-href="assets/icons/..."
-```
-
-Nas páginas em `/pages/`:
-
-```html
-href="../assets/icons/..."
-```
-
-O manifest deve considerar o projeto hospedado em:
-
-```text
-/EtherCraft/
-```
-
----
-
-# Evento Amigo Secreto
-
-## CONFIRMADO — MÓDULO FUNCIONAL
-
-O projeto começou originalmente como um site de evento de Amigo Secreto.
-
-Esse sistema deve ser preservado para eventos futuros.
-
-Características existentes:
-
-* Steps 1 a 6.
-* Validação do participante.
-* Sorteio inteligente.
-* Bloqueio contra auto-sorteio.
-* Reserva global dos sorteados.
-* Persistência via localStorage.
-* Firebase/Firestore.
-* Escolha entre oito opções visuais.
-* Nome do item.
-* Mensagem.
-* Painel administrativo.
-* Reset do evento.
-* Tabela em tempo real.
-* Status dos participantes.
-* Interface administrativa.
-
-A lógica funcional não deve ser alterada durante trabalhos exclusivamente visuais.
-
----
-
-# Firebase
-
-## CONFIRMADO
-
-Firebase/Firestore é utilizado no sistema de eventos.
-
-Coleções utilizadas no Amigo Secreto:
-
-```text
-participantes
-usuarios
-```
-
-O frontend valida participantes antes de liberar o sorteio.
-
-Documentos de usuários são criados através de `setDoc(..., { merge: true })` para evitar erro de atualização de documentos inexistentes.
-
----
-
-# Painel Administrativo
-
-Arquivos conhecidos:
-
-```text
-admin/
-├── painel.html
-├── painel.js
-├── reset-evento.html
-└── reset.js
-```
-
-Funções:
-
-* Login ADM.
-* Visualização da tabela.
-* Atualização em tempo real.
-* Copiar tabela.
-* Resetar evento.
-* Voltar ao site principal.
-
----
-
-# Estrutura Atual do Projeto
-
-## MAPA DE REFERÊNCIA
+# MAPA FINAL PARA CONTINUIDADE
 
 ```text
 EtherCraft
 │
-├── index.html
+├── Site principal
+│   ├── Home
+│   ├── Eventos
+│   ├── Regras
+│   ├── Login
+│   ├── Perfil
+│   └── Área Administrativa
 │
-├── pages/
-│   ├── regras.html
-│   ├── eventos.html
-│   ├── login.html
-│   └── como-jogar.html
+├── Conta
+│   ├── Firebase Authentication
+│   ├── Firestore usuarios/{uid}
+│   ├── roles player/admin
+│   └── sessão 12h
 │
-├── assets/
-│   ├── images/
-│   │   ├── Ether_Logo.png
-│   │   ├── backgrounds/
-│   │   └── eventos/
-│   │       └── amigo-secreto/
-│   ├── icons/
-│   │   ├── android-chrome-192x192.png
-│   │   ├── android-chrome-512x512.png
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   ├── favicon.ico
-│   │   └── site.webmanifest
-│   └── fonts/
+├── Wiki
+│   ├── Entrada visual em livro
+│   ├── Mecânicas
+│   ├── Receitas
+│   ├── Bestiário
+│   ├── Dimensões
+│   ├── Encantamentos
+│   └── Economia
 │
-├── css/
-│   ├── reset.css
-│   ├── base.css
-│   ├── components.css
-│   └── pages/
-│       ├── home.css
-│       ├── generic.css
-│       ├── regras.css
-│       ├── eventos.css
-│       └── login.css
+├── Backend
+│   ├── usuarios/{uid}
+│   └── wiki/{categoria}/entries/{id}
 │
-├── js/
-│   ├── main.js
-│   ├── firebase.js
-│   └── modules/
-│       └── amigo-secreto/
-│           ├── index.html
-│           ├── app.js
-│           └── style.css
+├── Administração Wiki
+│   ├── + Adicionar
+│   ├── Editar
+│   └── Excluir
 │
-├── data/
-│   └── participantes.json
-│
-└── admin/
-    ├── painel.html
-    ├── painel.js
-    ├── reset-evento.html
-    └── reset.js
+└── Próxima fase
+    ├── Cloudinary
+    ├── upload de imagens
+    ├── Minecraft.ttf
+    ├── novo fundo de livro
+    └── mobile página esquerda → direita
 ```
-
----
-
-# Regras de Continuidade
-
-1. O repositório `mrserluiz/EtherCraft` é a fonte de verdade para o estado técnico atual do site.
-
-2. Antes de grandes alterações, verificar os arquivos existentes no GitHub.
-
-3. Não substituir funcionalidades funcionando sem necessidade.
-
-4. Diferenciar claramente:
-
-   * `CONFIRMADO`
-   * `EM DESENVOLVIMENTO`
-   * `PLANEJADO`
-   * `NÃO IMPLEMENTADO`
-
-5. A memória é cumulativa.
-
-6. Updates futuros devem acrescentar histórico em vez de apagar decisões anteriores.
-
-7. Alterações visuais não devem quebrar sistemas funcionais.
-
-8. Todo update importante deve terminar com o mapa atualizado do site para confirmar alinhamento estrutural.
-
----
-
-# Estado Atual
-
-**STATUS:** EM DESENVOLVIMENTO
-
-## CONFIRMADO
-
-* Home funcional.
-* GitHub Pages ativo.
-* CSS modular.
-* Navegação global.
-* Design roxo/medieval.
-* Responsividade.
-* Fade da logo na Home.
-* Favicons/PWA estruturados.
-* Amigo Secreto funcional.
-* Painel administrativo funcional.
-* Firebase integrado.
-
-## EM DESENVOLVIMENTO
-
-* `pages/regras.html`
-* `pages/eventos.html`
-* Layout genérico das páginas internas.
-* Organização definitiva de CSS específico das páginas.
-
-## PRÓXIMA ETAPA
-
-Consolidar o padrão visual das páginas internas sem alterar o visual já aprovado da Home.
-
-Prioridades:
-
-1. Definir `generic.css`.
-2. Finalizar `regras.css`.
-3. Finalizar página Eventos.
-4. Garantir consistência da navegação.
-5. Preservar responsividade e SEO.
