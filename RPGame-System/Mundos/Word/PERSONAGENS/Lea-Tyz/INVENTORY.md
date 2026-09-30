@@ -6,3 +6,6 @@ Registrar itens confirmados com ID, possuidor/local, quantidade, condição, eve
 ## Evidência histórica — S002
 I001: adaga em mão em S002-01; caída no chão em S002-05. Não consta recuperação até S002-10. Não registrar descarte definitivo ou inventário atual vazio.
 Ver [registro de itens](../../ITEMS/README.md). Não equiparar a posse histórica ao inventário atual desconhecido.
+
+## Atualização histórica — S003
+I006: facas caem em J010 e são recolhidas em J012; contagem desconhecida. I007: outros itens caídos sem recuperação confirmada. I008: manto vestido e empoeirado, limpo por ela. I001: identidade com facas recolhidas ainda pendente.

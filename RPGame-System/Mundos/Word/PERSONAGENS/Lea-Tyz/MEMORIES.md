@@ -12,3 +12,11 @@ Fonte: [transcrição](../../SOURCES/S002-inicio-da-jornada.md). Estes registros
 - M-S002-02 | REPORTED | J005: ouviu Lyanna atribuir mil anos à queda do Imperador; em fala posterior diz “ele disse”, divergência P009.
 - M-S002-03 | REPORTED | J006: ouviu MysteryLuz identificar-se como Grande Imperador Dragão do Leste.
 - M-S002-04 | BELIEF | Diz só conhecer o Rei Jahnne e reagir com surpresa às lendas. Não conhece automaticamente o selo ou toda a origem dos Dragões.
+
+## Parte 2 do encontro — S003
+Fonte: [transcrição](../../SOURCES/S003-inicio-da-jornada-parte-2.md). Memórias históricas posteriores a S002; não transportar conhecimento para cenas anteriores.
+
+M-S003-01 | OBSERVED | J010: foi levantada/balançada pelo manto; facas e itens caíram; voltou ao chão e protestou.
+M-S003-02 | REPORTED | J011: ouviu MysteryLuz relatar selo de mil anos e desaparecimento do clã; hipótese de último sobrevivente não comprovada.
+M-S003-03 | OBSERVED | J012: recolheu facas. Sua compaixão expressa não elimina vergonha e raiva anteriores.
+M-S003-04 | OBSERVED/REPORTED | J013–J014: participou do diálogo sobre norte/Ruínas de Valehart e presenciou a manifestação do braço em brasa/convite. Aproximação não mostrada.

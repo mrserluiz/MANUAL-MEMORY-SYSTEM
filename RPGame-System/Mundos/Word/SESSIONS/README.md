@@ -4,3 +4,6 @@ Importação disponível: [sessão 001 — Início da Jornada](session-001-inici
 Ao importar: preservar texto bruto e ordem disponível, registrar arquivo de origem, separar cenas e sinalizar trechos faltantes. Não reescrever o texto bruto para ajustar coerência.
 
 Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, participantes, texto da cena, eventos e alterações, pendências e referências. Atualizar CANON, TIMELINE, CURRENT-STATE e registros individuais no mesmo commit.
+
+## Segundo lote
+[Session 002 — Início da Jornada, parte 2](session-002-inicio-da-jornada-parte-2.md), transcrição [S003](../SOURCES/S003-inicio-da-jornada-parte-2.md). Continuação parcial da sessão importada 001, sem avançar a história.

@@ -1,4 +1,4 @@
-# Cânone inicial — v0.2
+# Cânone inicial — v0.3
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -42,4 +42,28 @@ Escopo: configuração e fragmentos de evolução em S001, não a história prin
 - P009: Lea diz “ele disse mil anos”, mas o trecho visível atribui essa informação a Lyanna. Possível erro do aplicativo ou fala ausente; não corrigir a fonte silenciosamente.
 - P010: cabeçalho usa usuário4967 e falas usam MysteryLuz. Alias provável; não criar outro personagem.
 - P011: Screenshot_20260929-212118_Saylo.jpg tem horário de arquivo anterior, mas conteúdo parece continuar S002-08 e preceder S002-10. Posição editorial provisória.
-- P012: posse posterior da adaga de Lea e ferimentos após a queda não confirmados.
+- P012: S003 mostra recuperação de facas e braço dolorido de Lea. Identidade com adaga I001 e lesões específicas continuam não confirmadas.
+
+## Importação S003 — parte 2
+Fonte: [S003](SOURCES/S003-inicio-da-jornada-parte-2.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C020 | CANON | MysteryLuz declara não pretender matar as três e sentir cheiro familiar nelas (J008); motivo da familiaridade não revelado |
+| C021 | REPORTED | MysteryLuz compara a espada a farpa capaz de ferir a pele, mas não de matá-lo; não houve teste de dano (J009) |
+| C022 | CANON | MysteryLuz levanta Lea pelo manto e a balança; itens e facas caem; Lea volta ao chão (J010) |
+| C023 | REPORTED | MysteryLuz relata ter ficado selado por mil anos e que seu clã já não existe; origem do conhecimento não especificada (J011) |
+| C024 | BELIEF | MysteryLuz supõe ser o último de sua espécie: “devo ser”; não confirma extinção global |
+| C025 | CANON | Lea recolhe facas e Elara embainha espada; Lyanna pede ensino (J012) |
+| C026 | REPORTED | Elara informa destino ao norte, Ruínas de Valehart, e busca de Lionel (J013) |
+| C027 | CANON | MysteryLuz declara não conhecer o homem; seu braço fica em brasa rosa avermelhada e convida aproximação (J014) |
+| C028 | CANON | Narração registra Lea esfregando braço dolorido; gravidade e causa exata desconhecidas (S003-09) |
+
+### Pendências adicionais
+- P013: cheiro familiar não explica ascendência, magia, reencarnação ou ligação das três com o clã.
+- P014: duração do selo é relatada por MysteryLuz e se aproxima do relato de Lyanna, mas queda imperial e aprisionamento não são necessariamente o mesmo evento datado.
+- P015: “Me solta” aparece após Lea voltar ao chão. Possível inconsistência temporal do aplicativo; manter texto e não inventar segunda contenção.
+- P016: facas recuperadas não comprovam recuperação da adaga I001 nem de todos os outros itens caídos.
+- P017: identidade entre Ruínas de Valehart e Castelo Valehart não estabelecida; localização real de Lionel desconhecida.
+- P018: expressão “Leão do anel” provavelmente se refere a Lionel pelo contexto; não criar outro personagem ou anel.
+- P019: efeito térmico efetivo, controle/duração do braço em brasa e resposta ao convite ainda não mostrados.

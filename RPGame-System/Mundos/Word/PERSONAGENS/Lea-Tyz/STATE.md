@@ -8,3 +8,7 @@ Local, condição física, emoção atual e objetivo imediato: UNKNOWN. Não usa
 ## Estado observado no fragmento S002
 Amedrontada durante o encontro, caiu de joelhos e depois levantou-se devagar para apresentar-se. Sua adaga caiu no chão; não há recuperação visível. Medo circunstancial não substitui sua personalidade-base.
 Local recuperado: Estrada da Floresta Negra, ao crepúsculo. Este estado histórico não substitui o ponto atual ainda não importado. Ferimentos não confirmados.
+
+## Fragmento seguinte — S003
+Após queda/retorno ao chão e vergonha/raiva, recolheu facas com mãos trêmulas. Depois esfrega braço dolorido; gravidade/circunstâncias da dor não detalhadas. Expressou simpatia pelo relato do selo. Não há resposta ao convite final.
+Este registro histórico sucede S002, sem estabelecer o ponto atual da história ainda não importada.

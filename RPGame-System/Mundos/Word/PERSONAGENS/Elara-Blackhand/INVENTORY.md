@@ -6,3 +6,6 @@ Registrar itens confirmados com ID, possuidor/local, quantidade, condição, eve
 ## Evidência histórica — S002
 I002: espada curta sacada (S002-02), depois abaixada, sem abandono mostrado. I003: elmo ajustado (S002-01). Outras armas da ficha não confirmadas.
 Ver [registro de itens](../../ITEMS/README.md). Não equiparar a posse histórica ao inventário atual desconhecido.
+
+## Atualização histórica — S003
+I002: espada guardada na bainha em J012. I003: elmo sem transferência registrada. Não adicionar novas armas.

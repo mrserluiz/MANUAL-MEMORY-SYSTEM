@@ -18,3 +18,8 @@ Não há relato de libertação do selo nem dos acontecimentos posteriores. E008
 Fonte: S002; ver [sessão 001](SESSIONS/session-001-inicio-da-jornada.md).
 Ordem sugerida: J001 estrondo/discussão → J002 rugido e sombra → J003 chegada/queda → J004 primeira fala e armas baixadas → J005 pergunta sobre Imperador e relato de mil anos → J006 autoidentificação imperial → J007 apresentações.
 Há lacunas entre capturas. Esses eventos pertencem ao início de E008; não ocorrem depois do discipulado. O discipulado e a proteção de S001 ainda aguardam cenas. A posição de E007 frente ao encontro permanece pendente.
+
+## Parte 2 do encontro E008
+Fonte: S003; [sessão 002](SESSIONS/session-002-inicio-da-jornada-parte-2.md).
+J008 declaração de não agressão/cheiro → J009 comparação de arma → J010 Lea levantada e devolvida ao chão → J011 relato do selo/clã → J012 facas recolhidas e espada embainhada/pedido de ensino → J013 destino informado → J014 braço em brasa e convite.
+Mil anos para o selo agora são relatados pelo jogador (C023). Não usar automaticamente como data da queda imperial ou provar inexistência de sobreviventes.

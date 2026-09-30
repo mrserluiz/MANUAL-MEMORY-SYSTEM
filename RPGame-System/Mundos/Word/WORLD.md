@@ -15,3 +15,6 @@ Trama-base: Lyanna, Lea e Elara precisam cooperar em torno de Sir Lionel Valehar
 - [Relações](RELATIONSHIPS/README.md), [lugares](LOCATIONS/README.md), [itens](ITEMS/README.md), [sessões](SESSIONS/README.md)
 
 Word é o identificador herdado do arquivo, não uma correção para World. Etiquetas de gênero da fonte não impõem eventos ou traços a todos os personagens.
+
+## Importação seguinte
+[S003 — parte 2](SOURCES/S003-inicio-da-jornada-parte-2.md) e [sessão importada 002](SESSIONS/session-002-inicio-da-jornada-parte-2.md): diálogo sobre selo/clã, facas recuperadas, destino e convite junto ao braço em brasa. “Fractured Oaths” é o título exibido pelo Saylo na captura; Word permanece identificador da pasta.

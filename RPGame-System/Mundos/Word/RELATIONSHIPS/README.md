@@ -14,3 +14,7 @@ Submissão na cena não estabelece vínculo romântico, obediência permanente o
 ## Relações observadas no início do encontro (S002)
 As três sentem medo e demonstram posturas defensivas, depois respondem a MysteryLuz e se apresentam. Elara ainda trata Lea com aspereza. Isso não revoga a amizade posterior descrita em S001.
 Lyanna atribui a MysteryLuz busca por reconhecimento; registrar como interpretação dela, sem determinar os pensamentos do jogador.
+
+## Evolução durante a parte 2 — S003
+MysteryLuz declara não querer matá-las. Lea sofre vergonha/raiva ao ser levantada pelo manto; Elara observa sem intervir e Lyanna pede que não a machuque. Após o relato do selo, Lea expressa simpatia, Lyanna compaixão e pedido de ensino, Elara disponibilidade pragmática para ouvir.
+São reações contextualizadas, não mudança permanente da personalidade, perdão automático ou romance. Pedido de ensino de Lyanna ainda não é a declaração de discipulado de R003.
