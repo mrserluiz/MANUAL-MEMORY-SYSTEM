@@ -27,3 +27,10 @@ Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro h
 M-S004-01 | OBSERVED/BELIEF | Aceita calor e interpreta-o como chama da vida/purificação do medo; não é regra mágica demonstrada.
 M-S004-02 | OBSERVED/AÇÃO | Aceita fruta, ouve título de discípulas e defende disciplina/responsabilidade.
 M-S004-03 | OBSERVED | Vê cabana surgir, levanta-se e sugere entrada.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+M-S005-01 | AÇÃO | Entra, senta e pega pão; agradece hospitalidade, confia na proteção.
+M-S005-02 | OBSERVED/BELIEF | Reage sonolenta ao ruído e primeiro atribui à neve; depois interpreta grito como proteção brutal.
+M-S005-03 | OBSERVED/INFERENCE | Ao amanhecer vê sangue recente e múltiplas pegadas; conclui patrulha, ainda sem confirmação de identidade/facção.

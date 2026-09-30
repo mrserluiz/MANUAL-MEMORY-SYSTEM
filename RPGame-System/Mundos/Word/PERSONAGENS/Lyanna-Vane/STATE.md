@@ -17,3 +17,8 @@ Este registro histórico sucede S002, sem estabelecer o ponto atual da história
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 Levantou-se ao admirar cabana; pede entrada com gratidão. Ainda não entrou. Gratidão e compromisso com ensino documentados, sem juramento adicional.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+De pé ao amanhecer, ajusta armadura e examina/interpreta rastros com gravidade. Hipótese de patrulha não equivale a identificação real. Sono indicado por voz rouca e despertar, sem duração.

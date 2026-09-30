@@ -17,3 +17,8 @@ Este registro histórico sucede S002, sem estabelecer o ponto atual da história
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 Após oferta de comida e declaração de discipulado, afastou-se entre árvores; construção ocorre depois. Posição corporal precisa e retorno ao grupo não mostrados.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+Ao amanhecer desenrola-se da cabana, liberando entrada de ar frio. Estado acordado exato e reação individual aos vestígios ainda não mostrados. Não atribuir conhecimento das deduções de Elara sem conversa.

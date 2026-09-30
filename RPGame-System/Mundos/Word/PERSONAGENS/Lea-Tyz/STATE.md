@@ -17,3 +17,8 @@ Este registro histórico sucede S002, sem estabelecer o ponto atual da história
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 Come pão e aponta para cabana surpreendida; não entrou nem dormiu. Dor do braço anterior não recebe avaliação ou cura explícita. S004 mostra confiança circunstancial maior, sem apagar cautela ou personalidade.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+Desperta ao amanhecer, espreguiça-se e olha porta aberta com inquietação. Adaga estivera na mão durante alerta. Ferimentos anteriores não reavaliados; rum bebido não prova embriaguez.

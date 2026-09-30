@@ -27,3 +27,7 @@ Mil anos para o selo agora são relatados pelo jogador (C023). Não usar automat
 ## Primeira noite — S004
 J015 calor aceito → J016 pedido de comida/menção a alunas → J017 bens pelo vórtice → J018 início da refeição → J019 declaração de discipulado e promessa de aposentos → J020 construção de cabana.
 J019 detalha a declaração em E008/C011. A construção e refeição ocorrem na transição ao período noturno; não há dia seguinte, deslocamento para ruínas ou sono recuperados.
+
+## Primeira noite, parte 2 — S005
+J021 entrada/refeição no interior → J022 repouso com Dragão envolvendo abrigo/neve → J023 ruído e despertar → J024 grito/reação e retorno ao repouso → J025 amanhecer/análise de rastros.
+Agora há passagem explícita para manhã, sem duração exata da noite. O incidente externo não tem sequência visual de combate ou resultado vital recuperados.

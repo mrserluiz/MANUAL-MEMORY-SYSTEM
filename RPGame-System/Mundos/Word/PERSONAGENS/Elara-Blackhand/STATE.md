@@ -17,3 +17,8 @@ Este registro histórico sucede S002, sem estabelecer o ponto atual da história
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 Última ação individual visível: recostada no tapete, cortando carne e recomendando comer rápido. Não houve entrada, sono ou reação individual posterior à cabana recuperada.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+Ao amanhecer agachada na soleira, examinando pegadas. Faca guardada após incidente. Turno de vigia e sono completos não documentados; não presumir vigília contínua.

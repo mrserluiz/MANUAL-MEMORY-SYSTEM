@@ -27,3 +27,10 @@ Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro h
 M-S004-01 | OBSERVED | Aproximou-se do calor agradável; presenciou vórtice, oferta de alimentos e cabana.
 M-S004-02 | OBSERVED | Ouviu declaração de novas discípulas e reage com humor; agarra/come pão.
 M-S004-03 | ESTADO/FALA | Expressa fome, entusiasmo e surpresa; “Eu amo você” dirigido ao provedor de comida não estabelece romance.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+M-S005-01 | OBSERVED/AÇÃO | Transportada para cabana; bebe rum da caneca, deita no tapete e depois desperta ao ruído.
+M-S005-02 | OBSERVED/BELIEF | Ouve grito e fala do Dragão; especula sobre bandido/espião morto, sem visão do confronto.
+M-S005-03 | OBSERVED | Amanhece, olha porta aberta e ouve/participa da discussão sobre rastros. Sonho de ser devorada não é acontecimento real.

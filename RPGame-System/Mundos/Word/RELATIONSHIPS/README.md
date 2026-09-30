@@ -23,3 +23,7 @@ São reações contextualizadas, não mudança permanente da personalidade, perd
 R003: MysteryLuz → Lyanna/Lea/Elara: declaração explícita de “minhas novas discípulas” em J019. A oferta de calor, comida e abrigo concretiza proteção descrita em S001.
 Lyanna aceita o papel com gratidão e responsabilidade; Lea responde com humor, ligada à refeição; Elara aceita pragmaticamente se ensino ajudar a capturar Lionel. Não presumir igual devoção ou obediência irrestrita.
 O entusiasmo “Eu amo você” de Lea surge ao agarrar pão; não registrar romance automático. Lyanna chama as outras de amigas; grau e história da amizade permanecem dependentes de S001 e das cenas.
+
+## Proteção, cautela e incidente — S005
+Lea agradece “chefe-dragão” e se sente segura, mas volta ao choque após grito. Lyanna declara confiança e defende sua proteção. Elara aceita conforto mantendo avaliação de risco, oferece vigília e admira eficiência que atribui ao Dragão.
+Não transportar a confiança inicial para todas as cenas: o incidente provoca reações novas. “Refém” de Lea não estabelece captura formal; violência e justiça são interpretações sem visão do resultado externo.

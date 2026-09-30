@@ -17,3 +17,8 @@ L005 — Ruínas de Valehart: Elara informa que o grupo seguia ao norte em sua d
 
 ## Abrigo da primeira noite — S004
 L006 — Cabana criada por MysteryLuz, perto do encontro na Estrada da Floresta Negra. Surge do solo em J020, com paredes de pedra antiga, caráter rústico e fogo interno aceso. Interior detalhado, quartos, camas e permanência estrutural: desconhecidos. Não há entrada confirmada no lote.
+
+## Interior e amanhecer — S005
+L006: porta, janela, lareira, parede de pedra e elemento de madeira tocado/relatado por Elara. Tapetes e refeição levados ao interior; as três entram.
+MysteryLuz repousa envolvendo casa; após incidente escamas bloqueiam porta; ao amanhecer ele se desenrola e porta está aberta. Neve, sangue e pegadas no exterior.
+“Cabana de Azygridrachi” é o rótulo do mesmo abrigo no cabeçalho S005-09. Não cria novo local ou confirma nome verdadeiro do Dragão. Quartos/camas desconhecidos.

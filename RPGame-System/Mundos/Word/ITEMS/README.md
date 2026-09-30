@@ -37,3 +37,10 @@ I006 é um registro de conjunto; não inventar quantidade nem duplicar I001. Nen
 | I015 | Faca usada por Elara na refeição | Pega para cortar carne; origem desconhecida, não equiparar à espada ou outra faca |
 
 Bens oferecidos para uso do grupo, sem distribuição permanente além das ações registradas. Cabana é lugar L006; vórtice é manifestação, não objeto portátil. Adaga mencionada não deve duplicar I001 por suposição.
+
+## Movimentação da primeira noite — S005
+I009–I013 e refeição são transportados pelos tapetes para interior de L006, perto da lareira. Não listar sobras exatas.
+I016 — rum: presente no interior em S005-02; Lea segura caneca e bebe gole. Origem, volume e relação com vinho I014 desconhecidos.
+I017 — caneca de rum de Lea: segurada por ela em S005-02; posse posterior não mostrada.
+I015 — faca usada por Elara: limpa na manga; posteriormente guarda lâmina, desembainha faca no alerta e a guarda depois. Continuidade sugere mesma faca, mas identidade não comprovada; não criar cópias ou transferência arbitrária.
+I001 — adaga anterior: S005 mostra adaga na mão de Lea, sem cena de recuperação de I001; identidade provável ainda pendente. I004 — espada de Lyanna acessível no despertar. Nenhum abandono de armas confirmado.

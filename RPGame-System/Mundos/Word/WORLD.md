@@ -21,3 +21,6 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Primeira noite importada parcialmente
 [S004](SOURCES/S004-primeira-noite-parte-1.md) / [sessão 003](SESSIONS/session-003-primeira-noite-parte-1.md): aquecimento, refeição, declaração explícita de discipulado e construção do abrigo. Ainda não há entrada ou sono recuperados.
+
+## Primeira noite, continuação
+[S005](SOURCES/S005-primeira-noite-parte-2.md) / [sessão 004](SESSIONS/session-004-primeira-noite-parte-2.md): interior da cabana, repouso, incidente externo e amanhecer. Visitantes ainda não identificados; interpretações das personagens não substituem evidência.

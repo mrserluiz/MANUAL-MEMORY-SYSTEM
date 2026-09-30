@@ -1,4 +1,4 @@
-# Cânone inicial — v0.4
+# Cânone inicial — v0.5
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -88,3 +88,28 @@ Fonte: [S004](SOURCES/S004-primeira-noite-parte-1.md).
 - P022: mecanismo/origem dos bens do vórtice, permanência, recipiente de vinho, quantidades e sobras desconhecidos.
 - P023: “Azygridrachi Dragon com” aparece antes da construção; significado e regras não fornecidos.
 - P024: entrada na cabana, camas, quartos, ocupação e sono ainda não mostrados.
+
+## Importação S005 — primeira noite, parte 2
+Fonte: [S005](SOURCES/S005-primeira-noite-parte-2.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C036 | CANON | Tapetes transportam as três e comida para dentro da cabana, deslizando; voo não demonstrado |
+| C037 | CANON | Lea segura caneca de rum e bebe grande gole; Lyanna senta e pega pão |
+| C038 | CANON | MysteryLuz envolve a cabana com seu corpo e repousa; neve cai/cobre exterior |
+| C039 | CANON | Lea deita e posteriormente desperta; Lyanna reage com voz rouca de sono; Elara oferece vigília |
+| C040 | CANON | Grito de agonia é ouvido; MysteryLuz fala a humanoide, volta a dormir e se enrola mais apertado |
+| C041 | CANON | Amanhecer explicitamente iniciado; Dragão desenrola-se; sangue fresco e pegadas de botas aparecem na neve |
+| C042 | BELIEF | Lyanna interpreta visitantes como patrulha; Elara infere três homens, armaduras leves, mercenários/caçadores rivais |
+| C043 | CANON | Cabeçalho chama abrigo de Cabana de Azygridrachi; não confirma nome verdadeiro do Dragão |
+
+### Pendências atualizadas/adicionais
+- P024: entrada agora mostrada em J021; repouso e despertar recuperados. Quartos/camas e arquitetura interna completa seguem desconhecidos.
+- P025: “enquanto dormíamos” em S005-01 é prematuro frente à sequência recuperada; fonte preservada sem inventar evento.
+- P026: madeira sólida mencionada por Elara pode ser elemento do abrigo de pedra, mas qual elemento não foi identificado.
+- P027: rum agora presente; aquisição/origem não mostrada. Não alterar registro anterior de vinho.
+- P028: vigília de Elara prometida, cumprimento e duração desconhecidos; possíveis sinais de sono não resolvidos arbitrariamente.
+- P029: vítimas, ação exata, mortes e destino dos visitantes desconhecidos; grito que “morre” significa som cessando, não prova óbito.
+- P030: quantidade/facção dos visitantes são inferências; sangue e pegadas não atribuem automaticamente identidades.
+- P031: Azygridrachi é rótulo de abrigo no cabeçalho; significado/nome verdadeiro do jogador ainda não estabelecidos.
+- P032: pesadelo e frase “foi real” de Lea não comprovam que ela foi devorada.

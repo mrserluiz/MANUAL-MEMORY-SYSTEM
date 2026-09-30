@@ -14,3 +14,8 @@ I002: espada guardada na bainha em J012. I003: elmo sem transferência registrad
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 I015: faca pega para cortar I010; origem desconhecida. Usa tapete I013. Espada I002 anteriormente embainhada sem mudança confirmada; vinho apenas observado.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+Faca limpa, guardada, desembainhada no alerta e guardada depois. Continuidade sugere I015, identidade não comprovada; nenhuma nova arma duplicada. Espada I002 sem mudança de posse confirmada.

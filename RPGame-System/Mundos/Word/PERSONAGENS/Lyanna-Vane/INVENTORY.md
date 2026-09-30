@@ -14,3 +14,8 @@ Sem novas transferências de espada I004 ou escudo I005 confirmadas. Mãos ergui
 Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
 
 I011: aceita uma fruta; consumo completo não mostrado. Armadura presente ao limpar mãos (S004-09). Não inventar armazenamento ou perda da espada/escudo.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+Pega pão I009 no interior. Armadura presente; mão no cabo da espada I004 ao despertar. Sem descarte de espada/escudo ou contagem de alimentos consumidos.

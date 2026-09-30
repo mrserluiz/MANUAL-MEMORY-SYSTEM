@@ -23,3 +23,10 @@ Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro h
 
 M-S004-01 | OBSERVED | Ouviu Lea pedir comida/vilarejo e Lyanna chamar o grupo de alunas.
 M-S004-02 | AÇÃO DO JOGADOR | Ofereceu calor e bens pelo vórtice; chamou as três de novas discípulas, prometeu aposentos e criou cabana. Conhecimento das falas entre elas após afastamento não presumido.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+M-S005-01 | AÇÃO DO JOGADOR | Leva comida e as três para interior por tapetes; envolve casa para repousar/proteger.
+M-S005-02 | AÇÃO | Após grito externo, dirige fala a humanoide e volta a dormir, apertando casa. Não há relato de mecanismo ou resultado vital.
+M-S005-03 | OBSERVED | Amanhecer e desenrolar-se são registrados. Conversas internas durante seu sono não se tornam automaticamente suas memórias.

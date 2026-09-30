@@ -28,3 +28,10 @@ Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro h
 M-S004-01 | OBSERVED/BELIEF | Aceita calor com cautela; interpreta “Leão do anel” como confusão ou teste, sem decidir motivo do jogador.
 M-S004-02 | OBSERVED | Presencia fornecimento de bens e título de discípulas; disposição para aceitar ensino ligada a capturar Lionel.
 M-S004-03 | AÇÃO | Senta/recosta no tapete e corta carne com faca; ainda desconfia do vinho. Presença no local da construção não comprova inspeção do interior.
+
+## Primeira noite, parte 2 — S005
+Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
+
+M-S005-01 | REPORTED/AÇÃO | Diz ter tocado madeira sólida; aceita risco do abrigo; oferece vigília e guarda faca.
+M-S005-02 | OBSERVED/INFERENCE | No alerta, arma-se e interpreta som como metal raspando pedra/visitante testando defesa. Ouve grito; deduz problema resolvido, guarda faca e deita.
+M-S005-03 | OBSERVED/INFERENCE | Agacha na soleira examinando pegadas; infere três homens/armaduras leves/mercenários ou caçadores rivais. Não conhece identidades comprovadas.

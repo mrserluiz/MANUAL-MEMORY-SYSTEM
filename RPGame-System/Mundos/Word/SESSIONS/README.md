@@ -10,3 +10,6 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Terceiro lote
 [Sessão 003 — Primeira noite, parte 1](session-003-primeira-noite-parte-1.md), fonte [S004](../SOURCES/S004-primeira-noite-parte-1.md). Primeira captura repete o final de S003; os demais trechos avançam até surgimento da cabana.
+
+## Quarto lote
+[Sessão 004 — Primeira noite, parte 2](session-004-primeira-noite-parte-2.md), fonte [S005](../SOURCES/S005-primeira-noite-parte-2.md). Entrada, repouso, incidente noturno e amanhecer; termina na análise de pegadas.
