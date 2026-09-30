@@ -39,3 +39,7 @@ M-S005-03 | OBSERVED | Amanhece, olha porta aberta e ouve/participa da discussã
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga de Lionel e transmite rumor de refúgio no Templo das Cinco Lanças ao norte da Cordilheira Gélida. Lyanna associa templo à Dragon DignusHex. Informação atribuída, sem verificação. MysteryLuz confirma ter ouvido; não inferir compartilhamento de pensamentos.
+
+
+## Complemento histórico S007, antes de S006
+Presencia retorno/entrega de cinco inconscientes e seleção do menor para despertar. Identificação narrativa: Lança Dragônica; Lyanna interpreta ligação da coroa. Reações ao ataque não estabelecem contagem de mortos. Não regredir memórias posteriores.

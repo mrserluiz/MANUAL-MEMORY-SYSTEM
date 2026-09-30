@@ -4,3 +4,7 @@ A sociedade é descrita como sem magia aberta. Magia humana tem baixo poder; mil
 
 Dragões são a exceção, com magia quase ilimitada. Não atribuir acesso humano a poderes ancestrais sem evento ou regra estabelecida.
 Limites específicos, custos, aprendizado e significado de “nenhuma magia aberta” estão pendentes.
+
+
+## S007
+Sono de rocha é nome dado por MysteryLuz à condição de cinco capturados. Ele aponta a garra e pronuncia Acarderaizz vividus", seguido do despertar de um. Exclusividade do comando é declaração dele; não definir petrificação, duração, resistência, miniaturização ou regras gerais. Fogo/luz são efeitos residuais narrados, sem sequência completa de ataque.

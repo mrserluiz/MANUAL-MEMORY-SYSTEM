@@ -27,3 +27,7 @@ De pé ao amanhecer, ajusta armadura e examina/interpreta rastros com gravidade.
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Na clareira; interrogou oficial, identificou templo como base radical e afiou espada com pedra. Convidada a subir, sem montagem mostrada.
+
+
+## Complemento histórico S007
+Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.

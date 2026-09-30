@@ -27,3 +27,7 @@ Ao amanhecer agachada na soleira, examinando pegadas. Faca guardada após incide
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Nas costas de MysteryLuz, após interrogatório e oficial amarrado a árvore. Punhal embainhado. Propõe captura de Lionel no templo, sem execução ainda.
+
+
+## Complemento histórico S007
+Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.

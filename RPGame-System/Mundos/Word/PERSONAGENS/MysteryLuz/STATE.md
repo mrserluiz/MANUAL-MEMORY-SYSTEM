@@ -27,3 +27,7 @@ Ao amanhecer desenrola-se da cabana, liberando entrada de ar frio. Estado acorda
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Na clareira, respondeu ao grito de Elara com bafo acolhedor e colocou-a nas costas pelo casaco; convidou outras duas. Confirma ter ouvido interrogatório enquanto deitado. Viagem ainda não mostrada.
+
+
+## Complemento histórico S007
+Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.

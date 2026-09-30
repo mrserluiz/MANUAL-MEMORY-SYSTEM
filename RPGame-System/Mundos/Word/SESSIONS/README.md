@@ -17,3 +17,7 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Quinto lote
 [Sessão 005 — Massacre da cabana — primeira manhã](session-005-massacre-da-cabana-primeira-manha.md), fonte [S006](../SOURCES/S006-massacre-da-cabana-primeira-manha.md). Interrogatório, pista do templo e Elara colocada nas costas; ataque à fortaleza não mostrado.
+
+
+## Sexto lote — complemento anterior
+[Sessão 006 — Retorno e capturados](session-006-primeira-manha-retorno-e-capturados.md), fonte [S007](../SOURCES/S007-primeira-manha-retorno-e-capturados.md). Inserir antes da sessão 005; última captura repete primeiro despertar de S006.

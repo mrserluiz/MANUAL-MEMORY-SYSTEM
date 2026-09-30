@@ -31,3 +31,7 @@ Não transportar a confiança inicial para todas as cenas: o incidente provoca r
 
 ## S006
 MysteryLuz entrega interrogatório às três e confirma ter ouvido; coloca Elara nas costas com cuidado. Oficial sofre ameaças de Elara e pressão de Lyanna, com provocações de Lea; não inferir lealdade/confissão confiável. Vellard é acusado pelo oficial; nenhuma relação pessoal direta mostrada.
+
+
+## Complemento S007
+MysteryLuz chama Lyanna de discípula de muita fé, Lea de fé debochada e Elara de pouca fé. São qualificações na fala, sem escalas objetivas. Cinco capturados entregues ao grupo para possível interrogatório; comércio não executado.

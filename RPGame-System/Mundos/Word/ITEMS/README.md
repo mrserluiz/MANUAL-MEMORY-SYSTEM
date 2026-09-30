@@ -52,3 +52,7 @@ I001 — adaga anterior: S005 mostra adaga na mão de Lea, sem cena de recupera�
 - I020 — Casaco de Elara: agarrado gentilmente pelos dentes de MysteryLuz para colocá-la nas costas; sem dano descrito.
 - Punhal de Elara usado em ameaças e finalmente embainhado. Identidade com I015 não confirmada; não duplicar arma por troca de nomenclatura.
 - Vara comprida é intenção de Lea, sem aquisição mostrada.
+
+
+## Complemento S007
+Estandartes rasgados dos capturados e selo de autoridade no peito de um homem são mencionados; sem saque/transferência demonstrados. Pessoas não são inventário: frase de guardá-las no cinto é inconsistência P040. Recompensas/venda/troca apenas propostas. Elara recolhe equipamentos sem lista nova.

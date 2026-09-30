@@ -1,6 +1,6 @@
-# Estado atual — v0.6
+# Estado atual — v0.7
 - Fase: RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
-- Fontes: S001–S006; cinco lotes de dez capturas, com repetição entre S003/S004.
+- Fontes: S001–S007; seis lotes de dez capturas, com repetição entre S003/S004.
 - Ponto atual definitivo no Saylo: ainda não recuperado.
 
 ## Último fragmento — primeira manhã, após interrogatório
@@ -13,3 +13,7 @@ Lea/Lyanna ainda não montaram; nenhuma partida, voo ou chegada confirmados. “
 
 ## Próxima importação
 Continuar após convite para subir; recuperar lacuna do ataque/captura se fornecida. Não executar propostas como ações nem confirmar refúgio de Lionel.
+
+
+## Complemento S007 — histórico anterior
+Retorno com cinco capturados da Lança Dragônica e despertar de um agora recuperados. Outros quatro sem despertar posterior mostrado; destino final pendente. Não regredir estado final S006 nem supor transporte deles na viagem. Ataque completo permanece ausente.

@@ -28,3 +28,7 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Primeira manhã
 [S006](SOURCES/S006-massacre-da-cabana-primeira-manha.md) / [sessão 005](SESSIONS/session-005-massacre-da-cabana-primeira-manha.md): oficial interrogado, pista atribuída sobre Lionel e preparação para viagem. Falta ponte do ataque/captura. Elara sobe pelas ações do jogador; outras duas apenas convidadas.
+
+
+## Complemento da primeira manhã
+[S007](SOURCES/S007-primeira-manha-retorno-e-capturados.md) / [sessão 006](SESSIONS/session-006-primeira-manha-retorno-e-capturados.md) recupera retorno com cinco capturados e comando anterior ao interrogatório. Numeração segue importação; cronologia antecede sessão 005.

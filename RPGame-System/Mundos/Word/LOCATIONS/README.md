@@ -29,3 +29,7 @@ MysteryLuz repousa envolvendo casa; após incidente escamas bloqueiam porta; ao 
 - L008 — Fortaleza sem nome: narração a descreve destruída e com cinzas; localização e identidade com outros castelos desconhecidas.
 - L009 — Templo das Cinco Lanças: refúgio de Lionel segundo rumor transmitido pelo oficial; base radical segundo Lyanna. Não visitado.
 - L010 — Cordilheira Gélida: referência geográfica no testemunho; templo estaria ao norte dela. Distância/rota não verificadas.
+
+
+## Complemento S007
+L007 recebe cinco capturados trazidos pelo dragão. L008 é associada às reações sobre fogo/luz no horizonte; coordenadas, identidade e cratera real desconhecidas. Taverna dos Aventureiros é mencionada como possibilidade de recompensa, sem visita ou localização.

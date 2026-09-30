@@ -21,3 +21,7 @@ Grito externo e sangue posterior não bastam para definir mecanismo de ataque ou
 
 ## S006
 Bafo quente/acolhedor e transporte cuidadoso de Elara pelo casaco confirmados. Relatos sobre fogo da fortaleza não definem regras, alcance ou contagem de mortos. MysteryLuz confirma ouvir o interrogatório enquanto deitado; aparência de sono não impediu conhecimento declarado.
+
+
+## S007
+Sono de rocha é nome dado por MysteryLuz à condição de cinco capturados. Ele aponta a garra e pronuncia Acarderaizz vividus", seguido do despertar de um. Exclusividade do comando é declaração dele; não definir petrificação, duração, resistência, miniaturização ou regras gerais. Fogo/luz são efeitos residuais narrados, sem sequência completa de ataque.

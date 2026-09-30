@@ -38,3 +38,8 @@ Fonte: [sessão 005](SESSIONS/session-005-massacre-da-cabana-primeira-manha.md).
 Lacuna após J025, antes de J026: captura, comando anterior e ataque à fortaleza não mostrados.
 J026 despertar/interrogatório e aliases → J027 relato do fogo e afastamento → J028 testemunho Vellard/fuga/refúgio → J029 debate templo → J030 oficial amarrado e repouso/debate → J031 despertar solicitado e Elara colocada nas costas.
 Último cabeçalho: meio da manhã, clareira diante da cabana. Passagem de meia hora contraditória; viagem ainda não começou no trecho.
+
+
+## Inserção retroativa — S007
+Entre J025 e J026: J025a promessa de retorno → J025b efeitos residuais do fogo/luz e reações → J025c pouso e cinco capturados → J025d identificação/debate → J025e seleção e comando.
+S007-10 = S006-01/J026; não duplicar despertar. Importação 006 é anterior na história à importação 005. Ataque completo ainda não mostrado.

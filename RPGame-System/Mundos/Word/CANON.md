@@ -1,4 +1,4 @@
-# Cânone inicial — v0.6
+# Cânone inicial — v0.7
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -140,4 +140,26 @@ Fonte: [S006](SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 - P037: jogador diz não ter passado tempo em S006-08; Lea diz meia hora em S006-09. Intervalo não fixado.
 - P038: “os 5” em S006-10 tem referente não identificado; apenas um oficial aparece interrogado. Destino dele após montagem pendente.
 - P039: convite não prova montagem das outras duas nem deslocamento.
+
+
+
+## Complemento anterior ao interrogatório — S007
+Fonte: [S007](SOURCES/S007-primeira-manha-retorno-e-capturados.md). Posterior na importação, anterior a C044.
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C054 | CANON | MysteryLuz promete retorno; narração mostra efeitos residuais de coluna de fogo/linha de luz no horizonte |
+| C055 | CANON | MysteryLuz pousa e deposita cinco humanoides inconscientes cobertos de pó cinzento |
+| C056 | CANON | Narração identifica capturados como membros da Lança Dragônica pelos estandartes |
+| C057 | REPORTED | MysteryLuz diz tê-los capturado e mantê-los em sono de rocha, despertável apenas por seu comando |
+| C058 | REPORTED | Lyanna interpreta selo como oficiais de ligação da coroa; aprovação real direta é inferência dela |
+| C059 | CANON | Elara escolhe menor oficial; MysteryLuz aponta garra e pronuncia comando; ele desperta (mesmo evento C044) |
+| C060 | BELIEF | Lea supõe cratera; Lyanna interpreta marca territorial; Elara atribui precisão e possível observação pela cavalaria |
+
+### Pendências revistas
+- P033 parcialmente resolvida: retorno com capturados e comando agora recuperados. Ainda faltam execução integral do ataque, captura no local e ponte completa desde amanhecer.
+- P038 parcialmente resolvida: “os 5” refere-se aos cinco capturados de S007; um é despertado. Destino dos outros quatro após interrogatório não mostrado.
+- P040: descrição de Elara guardando humanos no cinto/pesando-os na mão é inconsistente; não transformar pessoas em objetos nem inventar miniaturização.
+- P041: vínculo entre Lança Dragônica, coroa, Dragon DignusHex e HexDragon não estabelecido; distinguir narração de dedução.
+- P042: três minutos são fala de Elara, não cronômetro confirmado; não quantificar vítimas ou alcance da coluna de fogo.
 

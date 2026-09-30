@@ -24,3 +24,7 @@ Faca limpa, guardada, desembainhada no alerta e guardada depois. Continuidade su
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Corda usada no oficial, restante guardado; casaco vestido usado para levantar; punhal embainhado, identidade com faca anterior incerta.
+
+
+## Complemento S007
+Recolhe equipamentos sem especificar lista. Cinco humanos capturados não são objetos de inventário; descrição de guardá-los no cinto é inconsistente (P040). Sem venda, recompensa recebida ou transferência de estandartes/selos confirmadas.

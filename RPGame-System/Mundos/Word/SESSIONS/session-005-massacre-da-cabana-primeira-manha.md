@@ -21,3 +21,7 @@ Clareira em frente à cabana, último cabeçalho: meio da manhã. Elara montada,
 
 ## Limites
 Fortaleza destruída é afirmada pela narração; mecanismo, ação completa, vítimas e números não recuperados. Relato do oficial é coagido, localização de Lionel é informação de segunda mão. “Os 5” não estabelece cinco prisioneiros identificados. Dragon DignusHex não foi equiparada automaticamente à HexDragon.
+
+
+## Lacuna parcialmente preenchida por S007
+[Complemento anterior](session-006-primeira-manha-retorno-e-capturados.md): retorno com cinco capturados, seleção e comando recuperados. “Os 5” explicado. Ataque integral e destino posterior dos outros quatro ainda faltam.
