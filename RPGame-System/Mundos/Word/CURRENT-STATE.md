@@ -1,13 +1,13 @@
-# Estado atual
-- Versão: 0.1.
-- Fase: RECONSTRUÇÃO / IMPORTAÇÃO.
-- Continuação narrativa: aguardando recuperação e validação do ponto de parada.
-- Fonte disponível: S001, configuração e evolução parcial.
-- História principal completa: não importada.
-- Jogador identificado: MysteryLuz.
-- Vínculo mais recente descrito na fonte: amizade entre Lyanna, Lea e Elara; discipulado declarado por um Dragão cuja identificação nominal está pendente.
-- Local, horário, presentes, objetivos imediatos, ferimentos e inventários atuais: UNKNOWN.
-- Situação de Lionel, selo de MysteryLuz e resultados da missão: UNKNOWN.
+# Estado atual — v0.2
+- Fase: RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
+- Fontes: S001 e S002 (dez capturas do início da jornada).
+- História principal completa e ponto atual do Saylo: ainda não recuperados.
+- Continuação narrativa: aguardando importação e validação do ponto de parada real.
 
-## Para validar a retomada
-Importar a história principal e a última cena; cruzar com CANON/TIMELINE; resolver ambiguidades relevantes; registrar quem está presente, onde, quando e o que cada participante sabe. Não escolher uma cena inicial por suposição.
+## Último fragmento recuperado — não o presente definitivo
+Na sessão importada 001, MysteryLuz encontra Lea, Lyanna e Elara na Estrada da Floresta Negra ao crepúsculo. Identifica-se como Grande Imperador Dragão do Leste; Lyanna relata uma queda há mil anos. As três acabam de apresentar seus nomes.
+Lea deixou a adaga cair anteriormente, sem recuperação visível; Elara baixou a espada; Lyanna fez reverência. Ferimentos, recursos e condição posterior: UNKNOWN.
+
+## Evolução mencionada na configuração S001
+Amizade íntima e declaração de discipulado continuam registradas, mas não são mostradas neste lote. Não apagar essa evolução nem supor que as apresentações sejam o fim da história.
+A forma de libertação do selo, o desfecho de Lionel e as cenas posteriores permanecem desconhecidos.

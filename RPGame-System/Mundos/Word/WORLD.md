@@ -1,5 +1,5 @@
 # Word — mundo em reconstrução
-Fonte S001: [Word-original.txt](SOURCES/Word-original.txt), preservada do arquivo original Mundos/Word. Todos os fatos iniciais desta pasta derivam de S001; não há sessões completas importadas.
+Fonte S001: [Word-original.txt](SOURCES/Word-original.txt), preservada do arquivo original Mundos/Word. Todos os fatos iniciais desta pasta derivam de S001; não há sessões completas importadas. O início da jornada foi parcialmente transcrito em [S002](SOURCES/S002-inicio-da-jornada.md) e organizado na [sessão 001](SESSIONS/session-001-inicio-da-jornada.md).
 
 Fantasia medieval feudal, marcada por honra, traição, intriga política e superstição. Magia humana de baixo poder; feitos de alto poder e milagres são descritos como raros ou impossíveis. Dragões constituem uma exceção ancestral.
 
