@@ -31,3 +31,7 @@ Nas costas de MysteryLuz, após interrogatório e oficial amarrado a árvore. Pu
 
 ## Complemento histórico S007
 Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.
+
+
+## S008
+Montada, segura escamas e bate levemente na base do pescoço. Oferece orientar voo baixo; voo não ocorreu no material.

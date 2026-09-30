@@ -39,3 +39,7 @@ Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga d
 
 ## Complemento histórico S007, antes de S006
 Presencia retorno/entrega de cinco inconscientes e seleção do menor para despertar. Identificação narrativa: Lança Dragônica; Lyanna interpreta ligação da coroa. Reações ao ataque não estabelecem contagem de mortos. Não regredir memórias posteriores.
+
+
+## S008
+Elara oferece orientação ao templo; MysteryLuz pergunta direção. Não atribuir conhecimento de rota precisa sem resposta. Afirmação narrativa de sono fingido contradiz ação anterior do jogador.

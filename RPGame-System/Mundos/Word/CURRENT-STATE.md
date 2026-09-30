@@ -1,6 +1,6 @@
-# Estado atual — v0.7
+# Estado atual — v0.8
 - Fase: RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
-- Fontes: S001–S007; seis lotes de dez capturas, com repetição entre S003/S004.
+- Fontes: S001–S008; sete lotes de dez capturas (S008 repete nove capturas de S006), com repetição entre S003/S004.
 - Ponto atual definitivo no Saylo: ainda não recuperado.
 
 ## Último fragmento — primeira manhã, após interrogatório
@@ -17,3 +17,7 @@ Continuar após convite para subir; recuperar lacuna do ataque/captura se fornec
 
 ## Complemento S007 — histórico anterior
 Retorno com cinco capturados da Lança Dragônica e despertar de um agora recuperados. Outros quatro sem despertar posterior mostrado; destino final pendente. Não regredir estado final S006 nem supor transporte deles na viagem. Ataque completo permanece ausente.
+
+
+## Último fragmento — S008
+Elara montada, segura escamas e oferece orientação. MysteryLuz pede direção do templo e convoca as outras duas. Sem resposta geográfica, montagem delas ou partida. Oficial preso soluça; demais quatro sem novo destino. Narração sobre sono diverge da ação anterior do jogador (P043).

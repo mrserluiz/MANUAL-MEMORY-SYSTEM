@@ -1,4 +1,4 @@
-# Cânone inicial — v0.7
+# Cânone inicial — v0.8
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -163,3 +163,11 @@ Fonte: [S007](SOURCES/S007-primeira-manha-retorno-e-capturados.md). Posterior na
 - P041: vínculo entre Lança Dragônica, coroa, Dragon DignusHex e HexDragon não estabelecido; distinguir narração de dedução.
 - P042: três minutos são fala de Elara, não cronômetro confirmado; não quantificar vítimas ou alcance da coluna de fogo.
 
+
+
+## Importação S008
+Fonte: [S008](SOURCES/S008-primeira-manha-direcao-do-templo.md).
+- C061 — CANON: Elara segura escamas e bate levemente no pescoço, oferecendo apontar caminho se voarem baixo; proposta ainda não executada.
+- C062 — CANON: MysteryLuz renova convite e pergunta direção do Templo das Cinco Lanças, chamado “dos 5 gravetos”; sem partida.
+- P043: narração diz nunca ter dormido, contrariando ação explícita de dormir em S006-08. Não substituir autoridade do jogador sobre suas ações.
+- P039 permanece: montagem de Lea/Lyanna e viagem não mostradas.

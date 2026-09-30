@@ -21,3 +21,7 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Sexto lote — complemento anterior
 [Sessão 006 — Retorno e capturados](session-006-primeira-manha-retorno-e-capturados.md), fonte [S007](../SOURCES/S007-primeira-manha-retorno-e-capturados.md). Inserir antes da sessão 005; última captura repete primeiro despertar de S006.
+
+
+## Sétimo lote
+[Sessão 007 — Direção do templo](session-007-primeira-manha-direcao-do-templo.md), fonte [S008](../SOURCES/S008-primeira-manha-direcao-do-templo.md). Nove repetições e uma continuação, antes de partida.

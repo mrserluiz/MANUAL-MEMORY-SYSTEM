@@ -32,3 +32,7 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Complemento da primeira manhã
 [S007](SOURCES/S007-primeira-manha-retorno-e-capturados.md) / [sessão 006](SESSIONS/session-006-primeira-manha-retorno-e-capturados.md) recupera retorno com cinco capturados e comando anterior ao interrogatório. Numeração segue importação; cronologia antecede sessão 005.
+
+
+## Continuação da primeira manhã
+[S008](SOURCES/S008-primeira-manha-direcao-do-templo.md) acrescenta reação de Elara e pedido de direção. Viagem ainda não mostrada.

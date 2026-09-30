@@ -43,3 +43,7 @@ J026 despertar/interrogatório e aliases → J027 relato do fogo e afastamento �
 ## Inserção retroativa — S007
 Entre J025 e J026: J025a promessa de retorno → J025b efeitos residuais do fogo/luz e reações → J025c pouso e cinco capturados → J025d identificação/debate → J025e seleção e comando.
 S007-10 = S006-01/J026; não duplicar despertar. Importação 006 é anterior na história à importação 005. Ataque completo ainda não mostrado.
+
+
+## S008 — continuação
+J032 sucede J031: reação de Elara montada, oferta de orientação e pedido de direção pelo jogador. S008-01–09 repetem S006-02–10; sem eventos duplicados.
