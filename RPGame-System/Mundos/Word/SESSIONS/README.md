@@ -13,3 +13,7 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Quarto lote
 [Sessão 004 — Primeira noite, parte 2](session-004-primeira-noite-parte-2.md), fonte [S005](../SOURCES/S005-primeira-noite-parte-2.md). Entrada, repouso, incidente noturno e amanhecer; termina na análise de pegadas.
+
+
+## Quinto lote
+[Sessão 005 — Massacre da cabana — primeira manhã](session-005-massacre-da-cabana-primeira-manha.md), fonte [S006](../SOURCES/S006-massacre-da-cabana-primeira-manha.md). Interrogatório, pista do templo e Elara colocada nas costas; ataque à fortaleza não mostrado.

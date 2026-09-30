@@ -19,3 +19,8 @@ I015: faca pega para cortar I010; origem desconhecida. Usa tapete I013. Espada I
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Faca limpa, guardada, desembainhada no alerta e guardada depois. Continuidade sugere I015, identidade não comprovada; nenhuma nova arma duplicada. Espada I002 sem mudança de posse confirmada.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Corda usada no oficial, restante guardado; casaco vestido usado para levantar; punhal embainhado, identidade com faca anterior incerta.

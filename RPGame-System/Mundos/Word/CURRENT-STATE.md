@@ -1,15 +1,15 @@
-# Estado atual — v0.5
+# Estado atual — v0.6
 - Fase: RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
-- Fontes: S001–S005; quatro lotes de dez capturas, com uma repetição entre S003/S004.
+- Fontes: S001–S006; cinco lotes de dez capturas, com repetição entre S003/S004.
 - Ponto atual definitivo no Saylo: ainda não recuperado.
 
-## Último fragmento — amanhecer após primeira noite
-Abrigo L006, chamado no cabeçalho Cabana de Azygridrachi, na região do encontro da Estrada da Floresta Negra.
-MysteryLuz desenrolou-se da casa; porta aberta e ar frio entrando. Sangue fresco e pegadas de botas na neve do exterior.
-Lea desperta, Lyanna de pé ajustando armadura, Elara agachada na soleira examinando pegadas. Elas interpretam ataque/visitantes, mas identidade, número real, destino e mortes não confirmados.
-À noite: tapetes levaram pessoas e comida para dentro; Lea bebeu rum, houve repouso, ruído, grito e retorno de MysteryLuz a dormir. Elara prometeu vigiar, mas turno não documentado integralmente.
-Espada de Lyanna e adaga de Lea acessíveis durante alerta; origem/identidade da adaga anterior continua pendente. Faca de Elara guardada após incidente.
-Missão de Lionel sem desfecho; destino norte/Ruínas de Valehart não alcançado no material.
+## Último fragmento — primeira manhã, após interrogatório
+Clareira em frente à Cabana de Azygridrachi; último cabeçalho marca meio da manhã.
+MysteryLuz coloca Elara gentilmente nas costas e convida Lea/Lyanna a subir. Confirma ter ouvido interrogatório enquanto deitado. Elara tem punhal embainhado; Lyanna afiou espada com pedra; Lea estava repousando em pedra.
+Oficial Menor vivo, pulsos amarrados a árvore por Elara. Destino posterior não mostrado.
+Pista: segundo oficial coagido, inquisitor Vellard ordenou caçada; Lionel escapou antes do ataque e disseram que buscou refúgio no Templo das Cinco Lanças, ao norte da Cordilheira Gélida. Lyanna associa templo à ala radical da Dragon DignusHex; relação com HexDragon incerta.
+Narração menciona fortaleza destruída/cinzas, mas cena de ataque e ponte desde amanhecer ausentes. Não associar automaticamente aos visitantes noturnos.
+Lea/Lyanna ainda não montaram; nenhuma partida, voo ou chegada confirmados. “Os 5” e intervalo de meia hora seguem ambíguos.
 
 ## Próxima importação
-Continuar recuperando o diálogo e acontecimentos após análise dos rastros. Não inventar combate externo, mortos, patrulha identificada ou partida.
+Continuar após convite para subir; recuperar lacuna do ataque/captura se fornecida. Não executar propostas como ações nem confirmar refúgio de Lionel.

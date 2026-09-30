@@ -24,3 +24,7 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Primeira noite, continuação
 [S005](SOURCES/S005-primeira-noite-parte-2.md) / [sessão 004](SESSIONS/session-004-primeira-noite-parte-2.md): interior da cabana, repouso, incidente externo e amanhecer. Visitantes ainda não identificados; interpretações das personagens não substituem evidência.
+
+
+## Primeira manhã
+[S006](SOURCES/S006-massacre-da-cabana-primeira-manha.md) / [sessão 005](SESSIONS/session-005-massacre-da-cabana-primeira-manha.md): oficial interrogado, pista atribuída sobre Lionel e preparação para viagem. Falta ponte do ataque/captura. Elara sobe pelas ações do jogador; outras duas apenas convidadas.

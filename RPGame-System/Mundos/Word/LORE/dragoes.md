@@ -17,3 +17,7 @@ Calor rosa agradável que oferece abrigo contra o frio na cena; abertura/fechame
 ## Abrigo e transporte — S005
 Tapetes mágicos deslizam, levando pessoas/comida para interior; capacidade de transporte agora mostrada, sem voo comprovado. Corpo de MysteryLuz envolve cabana e oferece proteção contra frio; não generalizar para barreira inviolável universal.
 Grito externo e sangue posterior não bastam para definir mecanismo de ataque ou capacidade específica. “Nada entra sem permissão” é crença de Lyanna, não regra mágica validada.
+
+
+## S006
+Bafo quente/acolhedor e transporte cuidadoso de Elara pelo casaco confirmados. Relatos sobre fogo da fortaleza não definem regras, alcance ou contagem de mortos. MysteryLuz confirma ouvir o interrogatório enquanto deitado; aparência de sono não impediu conhecimento declarado.

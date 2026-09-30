@@ -22,3 +22,8 @@ Levantou-se ao admirar cabana; pede entrada com gratidão. Ainda não entrou. Gr
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 De pé ao amanhecer, ajusta armadura e examina/interpreta rastros com gravidade. Hipótese de patrulha não equivale a identificação real. Sono indicado por voz rouca e despertar, sem duração.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Na clareira; interrogou oficial, identificou templo como base radical e afiou espada com pedra. Convidada a subir, sem montagem mostrada.

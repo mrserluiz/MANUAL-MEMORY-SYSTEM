@@ -19,3 +19,8 @@ I009: pão agarrado/comido, quantidade restante desconhecida. S004 cita mão per
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Rum I016 consumido em gole, caneca I017 em mão durante refeição; saldo desconhecido. Adaga acessível e em mão no alerta, mas identidade com I001/recuperação continuam pendentes. Repousa em tapete I013.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Sem aquisição/transferência de objetos confirmada neste lote.

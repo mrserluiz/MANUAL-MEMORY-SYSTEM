@@ -22,3 +22,8 @@ Come pão e aponta para cabana surpreendida; não entrou nem dormiu. Dor do bra�
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Desperta ao amanhecer, espreguiça-se e olha porta aberta com inquietação. Adaga estivera na mão durante alerta. Ferimentos anteriores não reavaliados; rum bebido não prova embriaguez.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Na clareira; provocou oficial e repousou em pedra. Convidada a subir, sem montagem mostrada.

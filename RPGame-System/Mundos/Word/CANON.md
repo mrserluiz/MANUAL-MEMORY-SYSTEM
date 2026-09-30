@@ -1,4 +1,4 @@
-# Cânone inicial — v0.5
+# Cânone inicial — v0.6
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -113,3 +113,31 @@ Fonte: [S005](SOURCES/S005-primeira-noite-parte-2.md).
 - P030: quantidade/facção dos visitantes são inferências; sangue e pegadas não atribuem automaticamente identidades.
 - P031: Azygridrachi é rótulo de abrigo no cabeçalho; significado/nome verdadeiro do jogador ainda não estabelecidos.
 - P032: pesadelo e frase “foi real” de Lea não comprovam que ela foi devorada.
+
+
+## Importação S006 — primeira manhã
+Fonte: [S006](SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C044 | CANON | Oficial Menor desperta capturado e é interrogado pelas três; identidade/captura anterior ausentes |
+| C045 | CANON | Jogador esclarece Leão do Anel/Mel/Joel = Lionel, erros deliberados; nenhum novo personagem/anel |
+| C046 | REPORTED | Oficial relata incêndio, pedra derretendo, metal retorcendo e soldados atingidos; contagem/resultados individuais não verificados |
+| C047 | REPORTED | Oficial atribui comando da fortaleza e ordem de caçada ao inquisitor Vellard |
+| C048 | REPORTED | Oficial diz que Lionel escapou antes do ataque e que disseram que buscou Templo das Cinco Lanças, ao norte da Cordilheira Gélida |
+| C049 | REPORTED | Lyanna chama templo de base da ala radical da Dragon DignusHex |
+| C050 | CANON | Narração menciona cheiro de cinzas da fortaleza destruída; ataque não mostrado neste lote |
+| C051 | CANON | Elara amarra pulsos do oficial a árvore; ele permanece vivo e ora |
+| C052 | CANON | Lea repousa em pedra; Lyanna afia espada com pedra; debate sobre partir permanece proposta |
+| C053 | CANON | MysteryLuz coloca Elara gentilmente nas costas pelo casaco e convida Lea/Lyanna a subir; confirma ter ouvido interrogatório |
+
+### Pendências S006
+- P018 resolvida: S006-02 esclarece aliases de Lionel. Interpretações anteriores como figura mítica não são fatos.
+- P033: ponte entre amanhecer e interrogatório ausente; não reconstruir captura, comando ou ataque à fortaleza.
+- P034: identidade/localização da fortaleza e vítimas desconhecidos; não equiparar a cabana, Castelo Valehart ou castelo do Leste.
+- P035: Vellard/caçada e fuga/refúgio de Lionel são testemunhos sob ameaça; refúgio é de segunda mão.
+- P036: relação entre Dragon DignusHex e Igreja HexDragon não estabelecida.
+- P037: jogador diz não ter passado tempo em S006-08; Lea diz meia hora em S006-09. Intervalo não fixado.
+- P038: “os 5” em S006-10 tem referente não identificado; apenas um oficial aparece interrogado. Destino dele após montagem pendente.
+- P039: convite não prova montagem das outras duas nem deslocamento.
+

@@ -22,3 +22,8 @@ Após oferta de comida e declaração de discipulado, afastou-se entre árvores;
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Ao amanhecer desenrola-se da cabana, liberando entrada de ar frio. Estado acordado exato e reação individual aos vestígios ainda não mostrados. Não atribuir conhecimento das deduções de Elara sem conversa.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Na clareira, respondeu ao grito de Elara com bafo acolhedor e colocou-a nas costas pelo casaco; convidou outras duas. Confirma ter ouvido interrogatório enquanto deitado. Viagem ainda não mostrada.

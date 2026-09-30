@@ -44,3 +44,11 @@ I016 — rum: presente no interior em S005-02; Lea segura caneca e bebe gole. Or
 I017 — caneca de rum de Lea: segurada por ela em S005-02; posse posterior não mostrada.
 I015 — faca usada por Elara: limpa na manga; posteriormente guarda lâmina, desembainha faca no alerta e a guarda depois. Continuidade sugere mesma faca, mas identidade não comprovada; não criar cópias ou transferência arbitrária.
 I001 — adaga anterior: S005 mostra adaga na mão de Lea, sem cena de recuperação de I001; identidade provável ainda pendente. I004 — espada de Lyanna acessível no despertar. Nenhum abandono de armas confirmado.
+
+
+## Primeira manhã — S006
+- I018 — Corda de Elara: usada para amarrar pulsos do oficial a árvore; restante guardado; origem/quantidade desconhecidas.
+- I019 — Pedra usada por Lyanna para afiar espada; posse posterior não mostrada.
+- I020 — Casaco de Elara: agarrado gentilmente pelos dentes de MysteryLuz para colocá-la nas costas; sem dano descrito.
+- Punhal de Elara usado em ameaças e finalmente embainhado. Identidade com I015 não confirmada; não duplicar arma por troca de nomenclatura.
+- Vara comprida é intenção de Lea, sem aquisição mostrada.

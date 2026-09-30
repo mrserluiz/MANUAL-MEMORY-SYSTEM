@@ -27,3 +27,7 @@ O entusiasmo “Eu amo você” de Lea surge ao agarrar pão; não registrar rom
 ## Proteção, cautela e incidente — S005
 Lea agradece “chefe-dragão” e se sente segura, mas volta ao choque após grito. Lyanna declara confiança e defende sua proteção. Elara aceita conforto mantendo avaliação de risco, oferece vigília e admira eficiência que atribui ao Dragão.
 Não transportar a confiança inicial para todas as cenas: o incidente provoca reações novas. “Refém” de Lea não estabelece captura formal; violência e justiça são interpretações sem visão do resultado externo.
+
+
+## S006
+MysteryLuz entrega interrogatório às três e confirma ter ouvido; coloca Elara nas costas com cuidado. Oficial sofre ameaças de Elara e pressão de Lyanna, com provocações de Lea; não inferir lealdade/confissão confiável. Vellard é acusado pelo oficial; nenhuma relação pessoal direta mostrada.

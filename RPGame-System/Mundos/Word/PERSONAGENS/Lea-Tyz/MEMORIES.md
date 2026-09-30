@@ -34,3 +34,8 @@ Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro h
 M-S005-01 | OBSERVED/AÇÃO | Transportada para cabana; bebe rum da caneca, deita no tapete e depois desperta ao ruído.
 M-S005-02 | OBSERVED/BELIEF | Ouve grito e fala do Dragão; especula sobre bandido/espião morto, sem visão do confronto.
 M-S005-03 | OBSERVED | Amanhece, olha porta aberta e ouve/participa da discussão sobre rastros. Sonho de ser devorada não é acontecimento real.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga de Lionel e transmite rumor de refúgio no Templo das Cinco Lanças ao norte da Cordilheira Gélida. Lyanna associa templo à Dragon DignusHex. Informação atribuída, sem verificação. MysteryLuz confirma ter ouvido; não inferir compartilhamento de pensamentos.

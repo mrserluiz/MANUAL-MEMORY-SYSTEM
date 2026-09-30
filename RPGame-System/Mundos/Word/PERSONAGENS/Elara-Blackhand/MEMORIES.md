@@ -35,3 +35,8 @@ Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro h
 M-S005-01 | REPORTED/AÇÃO | Diz ter tocado madeira sólida; aceita risco do abrigo; oferece vigília e guarda faca.
 M-S005-02 | OBSERVED/INFERENCE | No alerta, arma-se e interpreta som como metal raspando pedra/visitante testando defesa. Ouve grito; deduz problema resolvido, guarda faca e deita.
 M-S005-03 | OBSERVED/INFERENCE | Agacha na soleira examinando pegadas; infere três homens/armaduras leves/mercenários ou caçadores rivais. Não conhece identidades comprovadas.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga de Lionel e transmite rumor de refúgio no Templo das Cinco Lanças ao norte da Cordilheira Gélida. Lyanna associa templo à Dragon DignusHex. Informação atribuída, sem verificação. MysteryLuz confirma ter ouvido; não inferir compartilhamento de pensamentos.

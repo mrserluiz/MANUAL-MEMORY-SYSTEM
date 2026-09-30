@@ -19,3 +19,8 @@ I011: aceita uma fruta; consumo completo não mostrado. Armadura presente ao lim
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Pega pão I009 no interior. Armadura presente; mão no cabo da espada I004 ao despertar. Sem descarte de espada/escudo ou contagem de alimentos consumidos.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Espada afiada com pedra; destino da pedra após ação desconhecido.

@@ -30,3 +30,8 @@ Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro h
 M-S005-01 | AÇÃO DO JOGADOR | Leva comida e as três para interior por tapetes; envolve casa para repousar/proteger.
 M-S005-02 | AÇÃO | Após grito externo, dirige fala a humanoide e volta a dormir, apertando casa. Não há relato de mecanismo ou resultado vital.
 M-S005-03 | OBSERVED | Amanhecer e desenrolar-se são registrados. Conversas internas durante seu sono não se tornam automaticamente suas memórias.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga de Lionel e transmite rumor de refúgio no Templo das Cinco Lanças ao norte da Cordilheira Gélida. Lyanna associa templo à Dragon DignusHex. Informação atribuída, sem verificação. MysteryLuz confirma ter ouvido; não inferir compartilhamento de pensamentos.

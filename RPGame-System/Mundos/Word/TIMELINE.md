@@ -31,3 +31,10 @@ J019 detalha a declaração em E008/C011. A construção e refeição ocorrem na
 ## Primeira noite, parte 2 — S005
 J021 entrada/refeição no interior → J022 repouso com Dragão envolvendo abrigo/neve → J023 ruído e despertar → J024 grito/reação e retorno ao repouso → J025 amanhecer/análise de rastros.
 Agora há passagem explícita para manhã, sem duração exata da noite. O incidente externo não tem sequência visual de combate ou resultado vital recuperados.
+
+
+## Primeira manhã — S006
+Fonte: [sessão 005](SESSIONS/session-005-massacre-da-cabana-primeira-manha.md).
+Lacuna após J025, antes de J026: captura, comando anterior e ataque à fortaleza não mostrados.
+J026 despertar/interrogatório e aliases → J027 relato do fogo e afastamento → J028 testemunho Vellard/fuga/refúgio → J029 debate templo → J030 oficial amarrado e repouso/debate → J031 despertar solicitado e Elara colocada nas costas.
+Último cabeçalho: meio da manhã, clareira diante da cabana. Passagem de meia hora contraditória; viagem ainda não começou no trecho.

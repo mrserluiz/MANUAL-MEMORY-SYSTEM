@@ -22,3 +22,10 @@ L006 — Cabana criada por MysteryLuz, perto do encontro na Estrada da Floresta 
 L006: porta, janela, lareira, parede de pedra e elemento de madeira tocado/relatado por Elara. Tapetes e refeição levados ao interior; as três entram.
 MysteryLuz repousa envolvendo casa; após incidente escamas bloqueiam porta; ao amanhecer ele se desenrola e porta está aberta. Neve, sangue e pegadas no exterior.
 “Cabana de Azygridrachi” é o rótulo do mesmo abrigo no cabeçalho S005-09. Não cria novo local ou confirma nome verdadeiro do Dragão. Quartos/camas desconhecidos.
+
+
+## Lugares em S006
+- L007 — Clareira em frente à Cabana de Azygridrachi (L006): local do interrogatório e montagem; meio da manhã.
+- L008 — Fortaleza sem nome: narração a descreve destruída e com cinzas; localização e identidade com outros castelos desconhecidas.
+- L009 — Templo das Cinco Lanças: refúgio de Lionel segundo rumor transmitido pelo oficial; base radical segundo Lyanna. Não visitado.
+- L010 — Cordilheira Gélida: referência geográfica no testemunho; templo estaria ao norte dela. Distância/rota não verificadas.

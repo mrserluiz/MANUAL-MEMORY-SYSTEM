@@ -22,3 +22,8 @@ Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro h
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Ao amanhecer agachada na soleira, examinando pegadas. Faca guardada após incidente. Turno de vigia e sono completos não documentados; não presumir vigília contínua.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Nas costas de MysteryLuz, após interrogatório e oficial amarrado a árvore. Punhal embainhado. Propõe captura de Lionel no templo, sem execução ainda.

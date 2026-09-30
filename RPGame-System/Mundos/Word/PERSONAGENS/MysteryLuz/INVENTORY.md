@@ -19,3 +19,8 @@ Ofereceu bens I009–I014 ao grupo; origem/estoque pessoal desconhecidos. Não d
 Fonte: [transcrição](../../SOURCES/S005-primeira-noite-parte-2.md). Registro histórico posterior a S004; o ponto final do Saylo ainda falta.
 
 Tapetes/bens movidos ao interior. Rum presente sem aquisição narrada; não presumir estoque pessoal ou transformação de vinho. Nenhum saque dos visitantes registrado.
+
+
+## Primeira manhã — S006
+Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
+Sem aquisição/transferência de objetos confirmada neste lote.
