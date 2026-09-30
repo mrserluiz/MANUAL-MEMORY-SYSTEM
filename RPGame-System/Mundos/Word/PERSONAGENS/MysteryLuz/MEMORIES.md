@@ -17,3 +17,9 @@ Fonte: [transcrição](../../SOURCES/S003-inicio-da-jornada-parte-2.md). Memóri
 
 M-S003-01 | OBSERVED/REPORTED | J013: ouviu Elara indicar norte/Ruínas de Valehart e busca de Lionel. Ele declara não conhecer o homem.
 M-S003-02 | AÇÃO DO JOGADOR | J008–J014: declarou não querer matá-las e sentir cheiro familiar; levantou Lea pelo manto; relatou selo/clã e suspeita sobre sobreviventes; fez braço ficar em brasa e convidou aproximação. Não atribuir motivos além dos que expressou.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+M-S004-01 | OBSERVED | Ouviu Lea pedir comida/vilarejo e Lyanna chamar o grupo de alunas.
+M-S004-02 | AÇÃO DO JOGADOR | Ofereceu calor e bens pelo vórtice; chamou as três de novas discípulas, prometeu aposentos e criou cabana. Conhecimento das falas entre elas após afastamento não presumido.

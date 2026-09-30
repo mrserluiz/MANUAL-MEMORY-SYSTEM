@@ -12,3 +12,8 @@ Local recuperado: Estrada da Floresta Negra, ao crepúsculo. Este estado histór
 ## Fragmento seguinte — S003
 Braço em brasa rosa avermelhada, após convite para aproximação. Resposta das três desconhecida. Destino informado por Elara, sem deslocamento. Percepção do cheiro permanece sem explicação.
 Este registro histórico sucede S002, sem estabelecer o ponto atual da história ainda não importada.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+Após oferta de comida e declaração de discipulado, afastou-se entre árvores; construção ocorre depois. Posição corporal precisa e retorno ao grupo não mostrados.

@@ -9,3 +9,8 @@ Ver [registro de itens](../../ITEMS/README.md). Não equiparar a posse históric
 
 ## Atualização histórica — S003
 I006: facas caem em J010 e são recolhidas em J012; contagem desconhecida. I007: outros itens caídos sem recuperação confirmada. I008: manto vestido e empoeirado, limpo por ela. I001: identidade com facas recolhidas ainda pendente.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+I009: pão agarrado/comido, quantidade restante desconhecida. S004 cita mão perto de adaga: disponibilidade sugerida, recuperação e identidade com I001 pendentes. Nenhuma bebida ingerida explicitamente.

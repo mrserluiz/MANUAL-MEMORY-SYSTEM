@@ -1,4 +1,4 @@
-# Cânone inicial — v0.3
+# Cânone inicial — v0.4
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -18,7 +18,7 @@ Escopo: configuração e fragmentos de evolução em S001, não a história prin
 | C013 | CANON | A palavra do rei é lei no reino |
 
 ## Pendências e ambiguidades
-- P001: identidade do Dragão do encontro recuperado confirmada como MysteryLuz em S002-06–10: ele se declara Imperador Dragão e as respostas dirigem-se à criatura. A ligação com a declaração de discipulado de C011 continua baseada em S001; a cena do discipulado ainda falta.
+- P001: identidade do Dragão do encontro recuperado confirmada como MysteryLuz em S002-06–10: ele se declara Imperador Dragão e as respostas dirigem-se à criatura. S004-08 confirma que MysteryLuz chama as três de novas discípulas; S004-02–10 mostra oferta de calor, comida e abrigo.
 - P002: não há relato de libertação de MysteryLuz, datas, situação exata do selo ou ponto atual da história.
 - P003: a primeira descrição de Lyanna diz que busca limpar seu nome; não informa acusação nem relação exata com a acusação de Lionel.
 - P004: “os leais dispersos de Lionel ... acreditam que ele incriminou” é ambíguo e potencialmente mal traduzido. Preservado em S001, sem completar o sentido.
@@ -67,3 +67,24 @@ Fonte: [S003](SOURCES/S003-inicio-da-jornada-parte-2.md).
 - P017: identidade entre Ruínas de Valehart e Castelo Valehart não estabelecida; localização real de Lionel desconhecida.
 - P018: expressão “Leão do anel” provavelmente se refere a Lionel pelo contexto; não criar outro personagem ou anel.
 - P019: efeito térmico efetivo, controle/duração do braço em brasa e resposta ao convite ainda não mostrados.
+
+## Importação S004 — primeira noite, parte 1
+Fonte: [S004](SOURCES/S004-primeira-noite-parte-1.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C029 | CANON | Calor do braço é agradável na cena; Lea se aproxima e as três aceitam o aquecimento com diferentes níveis de cautela |
+| C030 | CANON | Vórtice fornece carnes, pães, frutas, panelas, tapetes e vinho, depois fecha; origem dos bens desconhecida |
+| C031 | CANON | Lea come pão; Lyanna aceita fruta; Elara senta-se e corta carne com faca |
+| C032 | CANON | MysteryLuz chama as três de novas discípulas, oferece aposentos e afasta-se entre árvores |
+| C033 | CANON | Cabana surge do solo, com paredes de pedra e fogo interno; Lyanna propõe entrar |
+| C034 | BELIEF | Lyanna denomina o calor “chama da vida” e diz que purifica medo; efeito sobrenatural específico não demonstrado |
+| C035 | CANON | Cabeçalho passa de crepúsculo a noite em S004-08, mantendo Estrada da Floresta Negra |
+
+### Atualização das pendências
+- P019: aquecimento e aproximação agora confirmados em S004-02–05. Permanecem desconhecidos duração, limites e controle completo.
+- P020: mão de Lea perto de adaga sugere arma acessível; nenhuma recuperação de I001 aparece. Não inventar aquisição ou afirmar identidade sem evidência.
+- P021: “Eu amo você” de Lea é entusiasmo pela comida no contexto; significado romântico não estabelecido.
+- P022: mecanismo/origem dos bens do vórtice, permanência, recipiente de vinho, quantidades e sobras desconhecidos.
+- P023: “Azygridrachi Dragon com” aparece antes da construção; significado e regras não fornecidos.
+- P024: entrada na cabana, camas, quartos, ocupação e sono ainda não mostrados.

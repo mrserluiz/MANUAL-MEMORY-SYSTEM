@@ -12,3 +12,8 @@ Local recuperado: Estrada da Floresta Negra, ao crepúsculo. Este estado histór
 ## Fragmento seguinte — S003
 Interveio por Lea com mãos erguidas em sinal de paz; depois manifestou compaixão, pediu ensino e auxílio sobre Lionel. Esperança coexistindo com risco do encontro, sem reescrever personalidade. Resposta ao convite final ausente.
 Este registro histórico sucede S002, sem estabelecer o ponto atual da história ainda não importada.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+Levantou-se ao admirar cabana; pede entrada com gratidão. Ainda não entrou. Gratidão e compromisso com ensino documentados, sem juramento adicional.

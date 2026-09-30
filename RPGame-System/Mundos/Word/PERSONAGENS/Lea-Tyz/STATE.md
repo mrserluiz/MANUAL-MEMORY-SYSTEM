@@ -12,3 +12,8 @@ Local recuperado: Estrada da Floresta Negra, ao crepúsculo. Este estado histór
 ## Fragmento seguinte — S003
 Após queda/retorno ao chão e vergonha/raiva, recolheu facas com mãos trêmulas. Depois esfrega braço dolorido; gravidade/circunstâncias da dor não detalhadas. Expressou simpatia pelo relato do selo. Não há resposta ao convite final.
 Este registro histórico sucede S002, sem estabelecer o ponto atual da história ainda não importada.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+Come pão e aponta para cabana surpreendida; não entrou nem dormiu. Dor do braço anterior não recebe avaliação ou cura explícita. S004 mostra confiança circunstancial maior, sem apagar cautela ou personalidade.

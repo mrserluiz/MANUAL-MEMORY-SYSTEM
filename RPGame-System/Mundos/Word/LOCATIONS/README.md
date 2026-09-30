@@ -14,3 +14,6 @@ L004 — Estrada da Floresta Negra: local indicado nos cabeçalhos de S002-06 e 
 
 ## Destino declarado — S003
 L005 — Ruínas de Valehart: Elara informa que o grupo seguia ao norte em sua direção, procurando Lionel (S003-09–10). Informação relatada, sem chegada ou presença do alvo comprovadas. Correspondência com L002 (Castelo Valehart) pendente.
+
+## Abrigo da primeira noite — S004
+L006 — Cabana criada por MysteryLuz, perto do encontro na Estrada da Floresta Negra. Surge do solo em J020, com paredes de pedra antiga, caráter rústico e fogo interno aceso. Interior detalhado, quartos, camas e permanência estrutural: desconhecidos. Não há entrada confirmada no lote.

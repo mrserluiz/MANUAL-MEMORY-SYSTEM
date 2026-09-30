@@ -18,3 +18,8 @@ Lyanna atribui a MysteryLuz busca por reconhecimento; registrar como interpreta�
 ## Evolução durante a parte 2 — S003
 MysteryLuz declara não querer matá-las. Lea sofre vergonha/raiva ao ser levantada pelo manto; Elara observa sem intervir e Lyanna pede que não a machuque. Após o relato do selo, Lea expressa simpatia, Lyanna compaixão e pedido de ensino, Elara disponibilidade pragmática para ouvir.
 São reações contextualizadas, não mudança permanente da personalidade, perdão automático ou romance. Pedido de ensino de Lyanna ainda não é a declaração de discipulado de R003.
+
+## Discipulado agora documentado — S004
+R003: MysteryLuz → Lyanna/Lea/Elara: declaração explícita de “minhas novas discípulas” em J019. A oferta de calor, comida e abrigo concretiza proteção descrita em S001.
+Lyanna aceita o papel com gratidão e responsabilidade; Lea responde com humor, ligada à refeição; Elara aceita pragmaticamente se ensino ajudar a capturar Lionel. Não presumir igual devoção ou obediência irrestrita.
+O entusiasmo “Eu amo você” de Lea surge ao agarrar pão; não registrar romance automático. Lyanna chama as outras de amigas; grau e história da amizade permanecem dependentes de S001 e das cenas.

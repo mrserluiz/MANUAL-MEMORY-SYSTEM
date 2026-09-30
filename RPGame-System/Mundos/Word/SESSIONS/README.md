@@ -7,3 +7,6 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Segundo lote
 [Session 002 — Início da Jornada, parte 2](session-002-inicio-da-jornada-parte-2.md), transcrição [S003](../SOURCES/S003-inicio-da-jornada-parte-2.md). Continuação parcial da sessão importada 001, sem avançar a história.
+
+## Terceiro lote
+[Sessão 003 — Primeira noite, parte 1](session-003-primeira-noite-parte-1.md), fonte [S004](../SOURCES/S004-primeira-noite-parte-1.md). Primeira captura repete o final de S003; os demais trechos avançam até surgimento da cabana.

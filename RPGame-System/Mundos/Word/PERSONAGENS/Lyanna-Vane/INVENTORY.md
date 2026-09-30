@@ -9,3 +9,8 @@ Ver [registro de itens](../../ITEMS/README.md). Não equiparar a posse históric
 
 ## Atualização histórica — S003
 Sem novas transferências de espada I004 ou escudo I005 confirmadas. Mãos erguidas não comprovam descarte, armazenamento ou entrega dessas armas.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+I011: aceita uma fruta; consumo completo não mostrado. Armadura presente ao limpar mãos (S004-09). Não inventar armazenamento ou perda da espada/escudo.

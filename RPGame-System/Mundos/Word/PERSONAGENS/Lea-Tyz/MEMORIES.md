@@ -20,3 +20,10 @@ M-S003-01 | OBSERVED | J010: foi levantada/balançada pelo manto; facas e itens 
 M-S003-02 | REPORTED | J011: ouviu MysteryLuz relatar selo de mil anos e desaparecimento do clã; hipótese de último sobrevivente não comprovada.
 M-S003-03 | OBSERVED | J012: recolheu facas. Sua compaixão expressa não elimina vergonha e raiva anteriores.
 M-S003-04 | OBSERVED/REPORTED | J013–J014: participou do diálogo sobre norte/Ruínas de Valehart e presenciou a manifestação do braço em brasa/convite. Aproximação não mostrada.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+M-S004-01 | OBSERVED | Aproximou-se do calor agradável; presenciou vórtice, oferta de alimentos e cabana.
+M-S004-02 | OBSERVED | Ouviu declaração de novas discípulas e reage com humor; agarra/come pão.
+M-S004-03 | ESTADO/FALA | Expressa fome, entusiasmo e surpresa; “Eu amo você” dirigido ao provedor de comida não estabelece romance.

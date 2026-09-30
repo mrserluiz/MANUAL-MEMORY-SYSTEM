@@ -23,3 +23,7 @@ Há lacunas entre capturas. Esses eventos pertencem ao início de E008; não oco
 Fonte: S003; [sessão 002](SESSIONS/session-002-inicio-da-jornada-parte-2.md).
 J008 declaração de não agressão/cheiro → J009 comparação de arma → J010 Lea levantada e devolvida ao chão → J011 relato do selo/clã → J012 facas recolhidas e espada embainhada/pedido de ensino → J013 destino informado → J014 braço em brasa e convite.
 Mil anos para o selo agora são relatados pelo jogador (C023). Não usar automaticamente como data da queda imperial ou provar inexistência de sobreviventes.
+
+## Primeira noite — S004
+J015 calor aceito → J016 pedido de comida/menção a alunas → J017 bens pelo vórtice → J018 início da refeição → J019 declaração de discipulado e promessa de aposentos → J020 construção de cabana.
+J019 detalha a declaração em E008/C011. A construção e refeição ocorrem na transição ao período noturno; não há dia seguinte, deslocamento para ruínas ou sono recuperados.

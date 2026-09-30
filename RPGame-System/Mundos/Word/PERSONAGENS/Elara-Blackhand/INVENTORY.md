@@ -9,3 +9,8 @@ Ver [registro de itens](../../ITEMS/README.md). Não equiparar a posse históric
 
 ## Atualização histórica — S003
 I002: espada guardada na bainha em J012. I003: elmo sem transferência registrada. Não adicionar novas armas.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+I015: faca pega para cortar I010; origem desconhecida. Usa tapete I013. Espada I002 anteriormente embainhada sem mudança confirmada; vinho apenas observado.

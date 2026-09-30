@@ -22,3 +22,18 @@ Não acrescentar as outras armas possíveis de S001 como itens confirmados. Poss
 | I008 | Manto de Lea | Vestido e usado como ponto de pega em J010; Lea limpa sua poeira depois |
 
 I006 é um registro de conjunto; não inventar quantidade nem duplicar I001. Nenhum item transferido para posse de MysteryLuz. Braço em brasa não é objeto de inventário.
+
+## Bens e consumo — S004
+
+| ID | Registro | Estado observado |
+| --- | --- | --- |
+| I001 | Adaga anterior de Lea | Recuperação ainda não mostrada; S004-02 cita mão perto de uma adaga, identidade pendente |
+| I009 | Pães, lote sem contagem | Saem do vórtice; Lea agarra pão e come; não calcular sobras |
+| I010 | Carnes, lote sem contagem | Oferecidas pelo vórtice; Elara corta carne; ingestão não explicitada |
+| I011 | Frutas, lote sem contagem | Oferecidas; Lyanna aceita uma fruta, sem consumo completo demonstrado |
+| I012 | Panelas, conjunto | Oferecidas; quantidade/material desconhecidos |
+| I013 | Tapetes, conjunto | Saem do vórtice e se estendem no solo; Elara senta/recosta; voo não demonstrado |
+| I014 | Vinho em recipiente não esclarecido | Oferecido; sem ingestão confirmada ou volume |
+| I015 | Faca usada por Elara na refeição | Pega para cortar carne; origem desconhecida, não equiparar à espada ou outra faca |
+
+Bens oferecidos para uso do grupo, sem distribuição permanente além das ações registradas. Cabana é lugar L006; vórtice é manifestação, não objeto portátil. Adaga mencionada não deve duplicar I001 por suposição.

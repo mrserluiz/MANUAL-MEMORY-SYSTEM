@@ -20,3 +20,10 @@ M-S003-01 | OBSERVED | J010: testemunhou o tratamento de Lea e interveio pedindo
 M-S003-02 | REPORTED | J011: ouviu o relato de selo de mil anos, desaparecimento do clã e hipótese de último sobrevivente; não é confirmação independente.
 M-S003-03 | AÇÃO | J012: pediu ensino por compaixão; declaração formal de discipulado ainda não aparece.
 M-S003-04 | OBSERVED/REPORTED | J013–J014: ouviu Elara declarar destino e busca de Lionel, pediu ajuda e presenciou braço em brasa/convite.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+M-S004-01 | OBSERVED/BELIEF | Aceita calor e interpreta-o como chama da vida/purificação do medo; não é regra mágica demonstrada.
+M-S004-02 | OBSERVED/AÇÃO | Aceita fruta, ouve título de discípulas e defende disciplina/responsabilidade.
+M-S004-03 | OBSERVED | Vê cabana surgir, levanta-se e sugere entrada.

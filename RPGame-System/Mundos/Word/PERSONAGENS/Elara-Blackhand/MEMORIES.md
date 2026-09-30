@@ -21,3 +21,10 @@ M-S003-02 | OBSERVED | J010: observou Lea sendo levantada e não interveio.
 M-S003-03 | REPORTED | J011: ouviu relato do selo/clã; comenta loucura ou sabedoria como possibilidades, não diagnóstico.
 M-S003-04 | AÇÃO/REPORTED | J012–J013: embainhou espada e informou ao Dragão norte/Ruínas de Valehart, procurando Lionel. Não prova localização real do alvo.
 M-S003-05 | OBSERVED | J014: presente na manifestação do braço em brasa e convite; resposta ainda não recuperada.
+
+## Primeira noite — S004
+Fonte: [transcrição](../../SOURCES/S004-primeira-noite-parte-1.md). Registro histórico posterior a S003; não é presente definitivo da história.
+
+M-S004-01 | OBSERVED/BELIEF | Aceita calor com cautela; interpreta “Leão do anel” como confusão ou teste, sem decidir motivo do jogador.
+M-S004-02 | OBSERVED | Presencia fornecimento de bens e título de discípulas; disposição para aceitar ensino ligada a capturar Lionel.
+M-S004-03 | AÇÃO | Senta/recosta no tapete e corta carne com faca; ainda desconfia do vinho. Presença no local da construção não comprova inspeção do interior.

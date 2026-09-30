@@ -18,3 +18,6 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Importação seguinte
 [S003 — parte 2](SOURCES/S003-inicio-da-jornada-parte-2.md) e [sessão importada 002](SESSIONS/session-002-inicio-da-jornada-parte-2.md): diálogo sobre selo/clã, facas recuperadas, destino e convite junto ao braço em brasa. “Fractured Oaths” é o título exibido pelo Saylo na captura; Word permanece identificador da pasta.
+
+## Primeira noite importada parcialmente
+[S004](SOURCES/S004-primeira-noite-parte-1.md) / [sessão 003](SESSIONS/session-003-primeira-noite-parte-1.md): aquecimento, refeição, declaração explícita de discipulado e construção do abrigo. Ainda não há entrada ou sono recuperados.
