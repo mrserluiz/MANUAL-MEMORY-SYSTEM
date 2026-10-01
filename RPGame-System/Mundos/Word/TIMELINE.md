@@ -47,3 +47,8 @@ S007-10 = S006-01/J026; não duplicar despertar. Importação 006 é anterior na
 
 ## S008 — continuação
 J032 sucede J031: reação de Elara montada, oferta de orientação e pedido de direção pelo jogador. S008-01–09 repetem S006-02–10; sem eventos duplicados.
+
+
+## S009 — montagem, deslocamento e armazém
+J033 duas sobem e orientações → J034 debate/asas/meio-dia → J035 oficial adormecido → J036 fumaça/orientações/relato de sentinelas → J037 voo baixo e ruínas → J038 planos/liberação cavalo → J039 entrada armazém/carta/rastros.
+O voo é mostrado, sem duração real estabelecida. Noite é mencionada depois de cabeçalhos de meio-dia; passagem incompleta. Não registrar pernoite como consumado.

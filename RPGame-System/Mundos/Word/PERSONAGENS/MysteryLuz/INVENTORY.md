@@ -24,3 +24,8 @@ Tapetes/bens movidos ao interior. Rum presente sem aquisição narrada; não pre
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Sem aquisição/transferência de objetos confirmada neste lote.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Sem aquisição de itens. Cavalo liberado da cerca, sem posse ou transporte confirmado.

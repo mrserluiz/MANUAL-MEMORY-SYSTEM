@@ -35,3 +35,8 @@ Na clareira antes do interrogatório, com cinco capturados. Estado final continu
 
 ## S008
 Montada, segura escamas e bate levemente na base do pescoço. Oferece orientar voo baixo; voo não ocorreu no material.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Viajou nas costas; observou fumaça/rastros e preparou-se para saltar antes do pouso. Salto/posição final após entrada não descritos; não presumir permanência montada.

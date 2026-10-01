@@ -31,3 +31,8 @@ Na clareira, respondeu ao grito de Elara com bafo acolhedor e colocou-a nas cost
 
 ## Complemento histórico S007
 Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Transportou as três em voo baixo até aldeia. Quebrou cerca para cavalo; narração o mostra encolhendo-se para entrada do armazém. Propõe pernoite e templo amanhã, sem execução ainda.

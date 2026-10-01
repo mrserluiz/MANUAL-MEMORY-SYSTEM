@@ -25,3 +25,7 @@ Bafo quente/acolhedor e transporte cuidadoso de Elara pelo casaco confirmados. R
 
 ## S007
 Sono de rocha é nome dado por MysteryLuz à condição de cinco capturados. Ele aponta a garra e pronuncia Acarderaizz vividus", seguido do despertar de um. Exclusividade do comando é declaração dele; não definir petrificação, duração, resistência, miniaturização ou regras gerais. Fogo/luz são efeitos residuais narrados, sem sequência completa de ataque.
+
+
+## S009
+Transporte das três em voo planado baixo é mostrado. Afirmação de inexistência de escamas frouxas não é teste de vulnerabilidade. Narração de encolher-se para caber pode ser postura; não impor transformação.

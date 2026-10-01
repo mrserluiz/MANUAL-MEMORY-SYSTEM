@@ -24,3 +24,8 @@ Pega pão I009 no interior. Armadura presente; mão no cabo da espada I004 ao de
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Espada afiada com pedra; destino da pedra após ação desconhecido.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Espada ajustada no quadril/mão no cabo. Mochila/mapa mencionados, sem posse ou coleta.

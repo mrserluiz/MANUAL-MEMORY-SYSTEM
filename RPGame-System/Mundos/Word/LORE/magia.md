@@ -8,3 +8,7 @@ Limites específicos, custos, aprendizado e significado de “nenhuma magia aber
 
 ## S007
 Sono de rocha é nome dado por MysteryLuz à condição de cinco capturados. Ele aponta a garra e pronuncia Acarderaizz vividus", seguido do despertar de um. Exclusividade do comando é declaração dele; não definir petrificação, duração, resistência, miniaturização ou regras gerais. Fogo/luz são efeitos residuais narrados, sem sequência completa de ataque.
+
+
+## S009
+Comando “RockS Profunto! Durma!” seguido de oficial roncando enfeitiçado. Não definir duração, resistência ou efeitos gerais. MysteryLuz nega ter usado sono nos sentinelas da fortaleza. Encolher-se na entrada não comprova redução mágica.

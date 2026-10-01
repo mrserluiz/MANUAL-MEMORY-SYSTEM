@@ -1,4 +1,4 @@
-# Cânone inicial — v0.8
+# Cânone inicial — v0.9
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -171,3 +171,33 @@ Fonte: [S008](SOURCES/S008-primeira-manha-direcao-do-templo.md).
 - C062 — CANON: MysteryLuz renova convite e pergunta direção do Templo das Cinco Lanças, chamado “dos 5 gravetos”; sem partida.
 - P043: narração diz nunca ter dormido, contrariando ação explícita de dormir em S006-08. Não substituir autoridade do jogador sobre suas ações.
 - P039 permanece: montagem de Lea/Lyanna e viagem não mostradas.
+
+
+## Importação S009 — Amanhecer
+Fonte: [S009](SOURCES/S009-amanhecer.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C063 | CANON | Lea e Lyanna sobem nas costas de MysteryLuz; três montadas |
+| C064 | REPORTED | Lyanna descreve templo no pico mais alto da serra, névoa perpétua e acesso pela Garganta do Caçador |
+| C065 | CANON | Cabeçalhos passam a meio-dia; oficial amarrado adormece após comando RockS Profunto |
+| C066 | REPORTED | Lyanna orienta Garganta a noroeste, três horas de voo baixo e aldeia na entrada |
+| C067 | REPORTED | MysteryLuz nega sono mágico dos sentinelas da fortaleza e diz que os repartiu ao meio antes de tudo |
+| C068 | CANON | Grupo desloca-se em voo planado baixo; aldeia em ruínas/chamas e corpos de soldados da igreja mostrados |
+| C069 | CANON | MysteryLuz quebra cerca do cavalo e propõe pernoite; entrada do armazém narrada |
+| C070 | CANON | Lea pega/lê/guarda carta com selo DignusHex parcialmente derretido e mancha de vinho |
+| C071 | REPORTED | Carta lida por Lea anuncia reforços na lua cheia; cumprimento/data/autenticidade desconhecidos |
+| C072 | BELIEF | Lyanna estima ataque recente e três pessoas nos rastros; Lea conjectura facções/Lionel |
+| C073 | CANON | Cenário do armazém inclui sacos rasgados, barris virados e lamparina acesa; suprimentos coletados não mostrados |
+
+### Pendências atualizadas
+- P039 resolvida quanto à montagem das duas e deslocamento; templo ainda não alcançado.
+- P038: oficial adormecido amarrado deixado na clareira antes da viagem; demais quatro sem destino novo.
+- P044: cabeçalhos de meio-dia coexistem com jogador dizendo noite pairando. Transição/duração não recuperadas; não impor três horas reais de viagem.
+- P045: referência anterior ao templo ao norte da cordilheira versus pico/serra agora relatado; geografia precisa não verificada.
+- P046: autoria, vítimas totais, filiação exata e relação entre aldeia/fortaleza/vila dos sinos desconhecidas.
+- P047: encolher-se não confirma transformação mágica; descidas/pouso completos ausentes.
+- P048: mochila e mapa parcial mencionados com frase cortada; região/posse não estabelecidas.
+- P049: carta sobre lua cheia não prova reforços efetivos; pernoite e visita amanhã ainda planos.
+- P050: figura de dragão na bandeira não comprova cadáver de dragão.
+

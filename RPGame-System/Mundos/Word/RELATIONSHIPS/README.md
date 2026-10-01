@@ -35,3 +35,7 @@ MysteryLuz entrega interrogatório às três e confirma ter ouvido; coloca Elara
 
 ## Complemento S007
 MysteryLuz chama Lyanna de discípula de muita fé, Lea de fé debochada e Elara de pouca fé. São qualificações na fala, sem escalas objetivas. Cinco capturados entregues ao grupo para possível interrogatório; comércio não executado.
+
+
+## S009
+Provocações de Elara são respondidas por MysteryLuz como piadas; ele diz gostar disso nela. Não estabelecer romance ou agressão executada. Três aceitam transporte; Lyanna orienta rota, Elara recomenda discrição. Oficial adormecido antes de partida.

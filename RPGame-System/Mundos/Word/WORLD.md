@@ -36,3 +36,7 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Continuação da primeira manhã
 [S008](SOURCES/S008-primeira-manha-direcao-do-templo.md) acrescenta reação de Elara e pedido de direção. Viagem ainda não mostrada.
+
+
+## Amanhecer — continuação importada
+[S009](SOURCES/S009-amanhecer.md) / [sessão 008](SESSIONS/session-008-amanhecer.md) mostra montagem das duas, voo baixo até aldeia e busca no armazém. Título não substitui horários de meio-dia/menção posterior a noite; templo ainda não visitado.

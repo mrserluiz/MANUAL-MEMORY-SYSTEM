@@ -25,3 +25,7 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Sétimo lote
 [Sessão 007 — Direção do templo](session-007-primeira-manha-direcao-do-templo.md), fonte [S008](../SOURCES/S008-primeira-manha-direcao-do-templo.md). Nove repetições e uma continuação, antes de partida.
+
+
+## Oitavo lote
+[Sessão 008 — Amanhecer](session-008-amanhecer.md), fonte [S009](../SOURCES/S009-amanhecer.md). Montagem, deslocamento, aldeia e carta no armazém; última frase cortada.

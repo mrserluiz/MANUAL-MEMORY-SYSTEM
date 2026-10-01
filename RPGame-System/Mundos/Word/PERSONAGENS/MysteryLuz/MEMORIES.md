@@ -43,3 +43,8 @@ Presencia retorno/entrega de cinco inconscientes e seleção do menor para despe
 
 ## S008
 Elara oferece orientação ao templo; MysteryLuz pergunta direção. Não atribuir conhecimento de rota precisa sem resposta. Afirmação narrativa de sono fingido contradiz ação anterior do jogador.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Ouviu orientações de Lyanna sobre templo, névoa, Garganta a noroeste e tempo estimado; testemunhou proximidade da aldeia em ruínas e deslocamento. Relato de sentinelas atribuído a MysteryLuz. Não atribuir leitura integral da carta ou mapa sem cena.

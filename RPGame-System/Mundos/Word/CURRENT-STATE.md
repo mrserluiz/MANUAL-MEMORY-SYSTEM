@@ -1,23 +1,15 @@
-# Estado atual — v0.8
-- Fase: RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
-- Fontes: S001–S008; sete lotes de dez capturas (S008 repete nove capturas de S006), com repetição entre S003/S004.
-- Ponto atual definitivo no Saylo: ainda não recuperado.
+# Estado atual — v0.9
+- RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
+- Fontes S001–S009; oito lotes de dez capturas, com sobreposições.
+- Ponto final definitivo no Saylo ainda não recuperado.
 
-## Último fragmento — primeira manhã, após interrogatório
-Clareira em frente à Cabana de Azygridrachi; último cabeçalho marca meio da manhã.
-MysteryLuz coloca Elara gentilmente nas costas e convida Lea/Lyanna a subir. Confirma ter ouvido interrogatório enquanto deitado. Elara tem punhal embainhado; Lyanna afiou espada com pedra; Lea estava repousando em pedra.
-Oficial Menor vivo, pulsos amarrados a árvore por Elara. Destino posterior não mostrado.
-Pista: segundo oficial coagido, inquisitor Vellard ordenou caçada; Lionel escapou antes do ataque e disseram que buscou refúgio no Templo das Cinco Lanças, ao norte da Cordilheira Gélida. Lyanna associa templo à ala radical da Dragon DignusHex; relação com HexDragon incerta.
-Narração menciona fortaleza destruída/cinzas, mas cena de ataque e ponte desde amanhecer ausentes. Não associar automaticamente aos visitantes noturnos.
-Lea/Lyanna ainda não montaram; nenhuma partida, voo ou chegada confirmados. “Os 5” e intervalo de meia hora seguem ambíguos.
+## Último fragmento — armazém da aldeia
+Grupo viajou em voo planado baixo desde a clareira; três mulheres montaram. Aldeia sem nome em ruínas no sopé da Cordilheira Gélida: casas em chamas, corpos de soldados da igreja, cavalo preso. MysteryLuz quebra cerca para liberá-lo e propõe passar noite; destino do cavalo não mostrado.
+Narração mostra dragão acomodando-se à entrada do armazém, raspando escamas na madeira. Lea pega/lê carta e guarda no bolso. Lyanna examina rastros; localização precisa de Elara após chegada não descrita.
+Carta com selo DignusHex: anúncio de reforços na lua cheia, sem confirmação de execução. Lyanna interpreta três pessoas nos rastros; mochila com mapa parcial mencionada, frase cortada.
+Grãos em sacos rasgados, barris de água virados e lamparina acesa no local; nenhum suprimento recolhido confirmado.
+Oficial Menor adormecido por comando, amarrado à árvore na clareira antes de partida; demais quatro capturados sem destino recuperado.
+Templo não alcançado. Orientações da Garganta e estimativa de três horas atribuídas a Lyanna. Último cabeçalho é meio-dia; jogador menciona noite, sem ponte temporal.
 
 ## Próxima importação
-Continuar após convite para subir; recuperar lacuna do ataque/captura se fornecida. Não executar propostas como ações nem confirmar refúgio de Lionel.
-
-
-## Complemento S007 — histórico anterior
-Retorno com cinco capturados da Lança Dragônica e despertar de um agora recuperados. Outros quatro sem despertar posterior mostrado; destino final pendente. Não regredir estado final S006 nem supor transporte deles na viagem. Ataque completo permanece ausente.
-
-
-## Último fragmento — S008
-Elara montada, segura escamas e oferece orientação. MysteryLuz pede direção do templo e convoca as outras duas. Sem resposta geográfica, montagem delas ou partida. Oficial preso soluça; demais quatro sem novo destino. Narração sobre sono diverge da ação anterior do jogador (P043).
+Continuar frase cortada do mapa e acontecimentos no armazém. Não completar região do mapa, distribuir provisões ou executar pernoite por suposição.

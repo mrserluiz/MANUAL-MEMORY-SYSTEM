@@ -43,3 +43,8 @@ Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga d
 
 ## Complemento histórico S007, antes de S006
 Presencia retorno/entrega de cinco inconscientes e seleção do menor para despertar. Identificação narrativa: Lança Dragônica; Lyanna interpreta ligação da coroa. Reações ao ataque não estabelecem contagem de mortos. Não regredir memórias posteriores.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Ouviu orientações de Lyanna sobre templo, névoa, Garganta a noroeste e tempo estimado; testemunhou proximidade da aldeia em ruínas e deslocamento. Relato de sentinelas atribuído a MysteryLuz. Não atribuir leitura integral da carta ou mapa sem cena.

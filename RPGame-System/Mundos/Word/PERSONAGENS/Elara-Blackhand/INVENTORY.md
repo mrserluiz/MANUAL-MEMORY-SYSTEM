@@ -28,3 +28,8 @@ Corda usada no oficial, restante guardado; casaco vestido usado para levantar; p
 
 ## Complemento S007
 Recolhe equipamentos sem especificar lista. Cinco humanos capturados não são objetos de inventário; descrição de guardá-los no cinto é inconsistente (P040). Sem venda, recompensa recebida ou transferência de estandartes/selos confirmadas.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Punhal ajustado na cintura. Ameaças de retirar dente/escama não executadas.

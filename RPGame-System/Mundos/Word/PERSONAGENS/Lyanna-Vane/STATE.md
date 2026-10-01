@@ -31,3 +31,8 @@ Na clareira; interrogou oficial, identificou templo como base radical e afiou es
 
 ## Complemento histórico S007
 Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Subiu e orientou rota atribuída ao templo/garganta; no armazém examina rastros e menciona mochila com mapa parcial em frase cortada.

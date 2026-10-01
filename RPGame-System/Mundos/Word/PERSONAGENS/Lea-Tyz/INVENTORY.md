@@ -24,3 +24,8 @@ Rum I016 consumido em gole, caneca I017 em mão durante refeição; saldo descon
 ## Primeira manhã — S006
 Fonte: [S006](../../SOURCES/S006-massacre-da-cabana-primeira-manha.md).
 Sem aquisição/transferência de objetos confirmada neste lote.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+I021 carta guardada no bolso. Sem coleta de grãos, água, mochila ou mapa confirmada.

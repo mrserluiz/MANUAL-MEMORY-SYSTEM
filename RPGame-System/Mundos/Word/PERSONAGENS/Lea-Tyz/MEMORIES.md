@@ -43,3 +43,8 @@ Conhecimento adquirido: oficial atribui caçada/comando a Vellard, afirma fuga d
 
 ## Complemento histórico S007, antes de S006
 Presencia retorno/entrega de cinco inconscientes e seleção do menor para despertar. Identificação narrativa: Lança Dragônica; Lyanna interpreta ligação da coroa. Reações ao ataque não estabelecem contagem de mortos. Não regredir memórias posteriores.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Leu carta sobre reforços na lua cheia e a guardou; autenticidade/calendário não confirmados. Ouviu MysteryLuz negar sono dos sentinelas e relatar tê-los repartido ao meio. Sua conjectura de ataque por Lionel/facções não é conhecimento confirmado.

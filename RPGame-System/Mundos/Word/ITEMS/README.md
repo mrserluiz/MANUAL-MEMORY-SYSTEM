@@ -56,3 +56,15 @@ I001 — adaga anterior: S005 mostra adaga na mão de Lea, sem cena de recupera�
 
 ## Complemento S007
 Estandartes rasgados dos capturados e selo de autoridade no peito de um homem são mencionados; sem saque/transferência demonstrados. Pessoas não são inventário: frase de guardá-las no cinto é inconsistência P040. Recompensas/venda/troca apenas propostas. Elara recolhe equipamentos sem lista nova.
+
+
+## S009 — armazém
+- I021 — Carta: chão do armazém, mancha de vinho e selo DignusHex parcialmente derretido; Lea pega, lê, dobra e guarda no bolso. Anuncia reforços na lua cheia, sem data precisa.
+- I022 — Mochila esquecida mencionada por Lyanna; não pega no trecho.
+- I023 — Mapa parcial associado à mochila na fala cortada; região/conteúdo/restante e posse desconhecidos.
+- I024 — Sacos rasgados de grãos no armazém; sem coleta.
+- I025 — Barris de água virados; Lea chuta barril vazio, identidade com conjunto não definida; sem água recolhida.
+- I026 — Uma lamparina acesa, pendurada na viga; sem retirada.
+- I027 — Bandeira rasgada com motivo de dragão empalado cortado ao meio; observada por Lyanna, sem coleta.
+I004 espada de Lyanna ajustada no quadril e mão no cabo; punhal de Elara na cintura. Sem perda/saque de armas ou dente/escama realmente retirados.
+Cavalo é animal vivo liberado da cerca, não aquisição de montaria.

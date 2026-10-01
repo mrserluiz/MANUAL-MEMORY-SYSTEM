@@ -33,3 +33,11 @@ MysteryLuz repousa envolvendo casa; após incidente escamas bloqueiam porta; ao 
 
 ## Complemento S007
 L007 recebe cinco capturados trazidos pelo dragão. L008 é associada às reações sobre fogo/luz no horizonte; coordenadas, identidade e cratera real desconhecidas. Taverna dos Aventureiros é mencionada como possibilidade de recompensa, sem visita ou localização.
+
+
+## S009
+- L009 templo: Lyanna o situa no pico mais alto da serra, escondido por névoa perpétua; não visitado.
+- L011 — Garganta do Caçador: passagem relatada por Lyanna, a noroeste e três horas de voo baixo; exclusividade de acesso não testada.
+- L012 — Aldeia abandonada em ruínas, sopé da Cordilheira Gélida: grupo chega às proximidades e entra no armazém; nome desconhecido. Não equiparar automaticamente à vila dos sinos ou fortaleza.
+- L013 — Armazém central de L012: entrada/interior recuperados, madeira, grãos/barris/lamparina/carta e pegadas.
+Tempo/distância e aldeia na entrada da garganta são orientações atribuídas, não mapa verificado.

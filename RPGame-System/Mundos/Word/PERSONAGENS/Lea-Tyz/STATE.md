@@ -31,3 +31,8 @@ Na clareira; provocou oficial e repousou em pedra. Convidada a subir, sem montag
 
 ## Complemento histórico S007
 Na clareira antes do interrogatório, com cinco capturados. Estado final continua S006; este lote retroativo não desloca personagem nem executa partida.
+
+
+## Amanhecer — S009
+Fonte: [S009](../../SOURCES/S009-amanhecer.md).
+Subiu atrás de Elara; no armazém chuta barril vazio, pega/lê/dobra carta e a guarda no bolso. Sem ferimento novo ou provisões recolhidas.
