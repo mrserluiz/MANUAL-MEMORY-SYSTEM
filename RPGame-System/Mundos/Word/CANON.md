@@ -228,3 +228,10 @@ Fonte: [S010](SOURCES/S010-a-vila-destruida.md).
 - P055: duas crianças sem nome, parentesco não estabelecido; abrigá-las não prova adoção ou inclusão permanente no grupo.
 - P056: esgotos/passagens e rota secreta para Garganta são conjecturas; pedido de mais informações ainda sem resposta.
 - P057: “Dedos Sujos” apenas citado na pergunta de Lea; filiação dos convidados não demonstrada.
+
+## Ficha autoral de Lionel Valehart
+Fonte: [ficha do jogador](SOURCES/FICHA-Lionel-Valehart.md); informação de configuração, sem novo evento cronológico.
+- C085 — CANON: Lionel tem 52 anos, 1,88 m, cabelos/barba prateados, olhos cinzentos e cicatrizes; título Guerreiro / Paladino Veterano.
+- C086 — CANON: ficha define voz grave/pausada, formalidade, firmeza sem gritos, proteção e afeto discreto; origem sem nobreza de berço e título conquistado por disciplina/conduta.
+- C087 — CANON: armadura habitual de placa pesada, limpa e cuidada, com insígnias da falecida rainha; não implica atualização automática de condição/posse em cena.
+- P058: ficha menciona Rainha Elena, enquanto S001 registra Jahnne II. Relação entre nomes não estabelecida; não fundir identidades nem criar sucessão por suposição.
