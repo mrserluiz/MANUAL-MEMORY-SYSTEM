@@ -1,4 +1,4 @@
-# Cânone inicial — v0.9
+# Cânone inicial — v0.10
 Escopo: configuração e fragmentos de evolução em S001, não a história principal completa. Fontes: [S001](SOURCES/Word-original.txt) e [S002](SOURCES/S002-inicio-da-jornada.md).
 
 | ID | Categoria | Registro |
@@ -201,3 +201,30 @@ Fonte: [S009](SOURCES/S009-amanhecer.md).
 - P049: carta sobre lua cheia não prova reforços efetivos; pernoite e visita amanhã ainda planos.
 - P050: figura de dragão na bandeira não comprova cadáver de dragão.
 
+## Importação S010 — A vila destruída
+Fonte: [S010](SOURCES/S010-a-vila-destruida.md).
+
+| ID | Categoria | Registro |
+| --- | --- | --- |
+| C074 | CANON | Elara encontra carne seca e lança pedaços a Lyanna e Lea; consumo não mostrado |
+| C075 | CANON | Pernoite no armazém e manhã seguinte mostrados; cavalo desaparece na escuridão; lamparina apagada ao amanhecer |
+| C076 | CANON | Pegadas pequenas de botas circundam armazém; mulheres examinam marcas; autoria não estabelecida |
+| C077 | CANON | MysteryLuz chama mulheres para café fora; mantém forma escamada; Elara serve-se e bebe |
+| C078 | CANON | Jogador corrige interpretação de prisioneiros: convidados são crianças da vila; narração posterior confirma três crianças |
+| C079 | REPORTED | MysteryLuz diz que crianças buscaram abrigo à noite, contribuíram com café e acharam galinhas e um galo |
+| C080 | CANON | Mira identifica-se; mais velha das três, idade narrada como talvez doze; segura galinha marrom perto da fonte |
+| C081 | REPORTED | MysteryLuz transmite relato de pastor e moradores favoráveis aos dragões, rejeitados pela igreja |
+| C082 | REPORTED | Mira afirma que queimaram pastor diante da igreja e o chamaram herege a serviço do demônio alado |
+| C083 | CANON | Fonte com água límpida e estátua partida de dragão mostrada; Lea senta na borda |
+| C084 | BELIEF | Elara atribui asa quebrada a martelo e supõe esconderijos/passagens; Lea supõe que moradores esperavam dragão |
+
+### Pendências atualizadas
+- P048 parcialmente resolvida: mapa parcial da serra, completado pela abertura; mochila/mapa sem recolha ou leitura demonstrada.
+- P049: pernoite confirmado; reforços e visita ao templo permanecem não executados.
+- P051: turnos de três horas propostos; troca de vigia e vigília contínua não mostradas.
+- P052: figuras inicialmente narradas com mãos atadas e tratadas como prisioneiros; jogador corrige identidade/condição de convidados. Não inventar captura ou desamarração; vínculo físico descrito permanece inconsistente/não esclarecido.
+- P053: autoria dos rastros, marcação para seguir/entregar e mensageiro anão são hipóteses. Enxofre/resina e idade dos rastros são avaliações de Elara.
+- P054: responsáveis pela execução, nome do pastor e destino dos moradores desconhecidos; não atribuir automaticamente a Vellard ou facção específica.
+- P055: duas crianças sem nome, parentesco não estabelecido; abrigá-las não prova adoção ou inclusão permanente no grupo.
+- P056: esgotos/passagens e rota secreta para Garganta são conjecturas; pedido de mais informações ainda sem resposta.
+- P057: “Dedos Sujos” apenas citado na pergunta de Lea; filiação dos convidados não demonstrada.

@@ -52,3 +52,7 @@ J032 sucede J031: reação de Elara montada, oferta de orientação e pedido de 
 ## S009 — montagem, deslocamento e armazém
 J033 duas sobem e orientações → J034 debate/asas/meio-dia → J035 oficial adormecido → J036 fumaça/orientações/relato de sentinelas → J037 voo baixo e ruínas → J038 planos/liberação cavalo → J039 entrada armazém/carta/rastros.
 O voo é mostrado, sem duração real estabelecida. Noite é mencionada depois de cabeçalhos de meio-dia; passagem incompleta. Não registrar pernoite como consumado.
+
+## S010 — pernoite e manhã seguinte
+J040 completa mapa da serra e distribuição de carne/propostas de vigia → J041 repouso no armazém e cavalo some → J042 amanhecer/pegadas → J043 café fora e convidados inicialmente mal interpretados → J044 correção de MysteryLuz sobre crianças/abrigo → J045 fonte, identificação de Mira e testemunho do pastor.
+Agora pernoite consumado. Turnos efetivos não recuperados. Esta é a manhã após a noite no armazém; templo não alcançado.

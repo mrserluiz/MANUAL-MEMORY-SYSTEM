@@ -41,3 +41,9 @@ L007 recebe cinco capturados trazidos pelo dragão. L008 é associada às reaç�
 - L012 — Aldeia abandonada em ruínas, sopé da Cordilheira Gélida: grupo chega às proximidades e entra no armazém; nome desconhecido. Não equiparar automaticamente à vila dos sinos ou fortaleza.
 - L013 — Armazém central de L012: entrada/interior recuperados, madeira, grãos/barris/lamparina/carta e pegadas.
 Tempo/distância e aldeia na entrada da garganta são orientações atribuídas, não mapa verificado.
+
+## Atualização S010
+- L012/L013: pernoite efetivo no armazém da vila destruída; manhã seguinte recuperada, sem nome da vila nem chegada ao templo.
+- L014: fonte da vila, água límpida e estátua partida de dragão. Grupo e três crianças na cena final.
+- L015: igreja da vila, citada por Mira como lugar diante do qual queimaram pastor; não visitada nesta cena.
+Mapa parcial da serra mencionado, não recolhido. Esgotos/passagens secretas apenas conjectura de Elara; não registrar acesso confirmado.

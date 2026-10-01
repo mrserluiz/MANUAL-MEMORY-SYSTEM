@@ -39,3 +39,6 @@ MysteryLuz chama Lyanna de discípula de muita fé, Lea de fé debochada e Elara
 
 ## S009
 Provocações de Elara são respondidas por MysteryLuz como piadas; ele diz gostar disso nela. Não estabelecer romance ou agressão executada. Três aceitam transporte; Lyanna orienta rota, Elara recomenda discrição. Oficial adormecido antes de partida.
+
+## S010 — convidados da vila
+MysteryLuz identifica três crianças como convidados que buscaram abrigo, corrigindo suspeita de prisioneiros. Mira é uma delas; nenhum parentesco entre crianças estabelecido. Lyanna conversa suavemente com Mira. Acolhimento não estabelece adoção, discipulado nem filiação permanente.

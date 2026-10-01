@@ -29,3 +29,5 @@ Para novas sessões validadas, criar session-NNN.md com ID, estado inicial, part
 
 ## Oitavo lote
 [Sessão 008 — Amanhecer](session-008-amanhecer.md), fonte [S009](../SOURCES/S009-amanhecer.md). Montagem, deslocamento, aldeia e carta no armazém; última frase cortada.
+
+- [Sessão 009 — A vila destruída](session-009-a-vila-destruida.md): S010, pernoite e manhã seguinte, Mira e testemunho do pastor.

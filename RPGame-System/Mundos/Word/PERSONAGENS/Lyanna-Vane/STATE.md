@@ -36,3 +36,7 @@ Na clareira antes do interrogatório, com cinco capturados. Estado final continu
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Subiu e orientou rota atribuída ao templo/garganta; no armazém examina rastros e menciona mochila com mapa parcial em frase cortada.
+
+## Último fragmento importado — S010
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou; ao amanhecer examinou pegadas com espada meio desembainhada. Agora ajoelhada diante de Mira, conversando suavemente; ouviu relato do pastor. Não confirmou rota secreta.

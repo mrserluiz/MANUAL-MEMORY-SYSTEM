@@ -29,3 +29,6 @@ Sono de rocha é nome dado por MysteryLuz à condição de cinco capturados. Ele
 
 ## S009
 Transporte das três em voo planado baixo é mostrado. Afirmação de inexistência de escamas frouxas não é teste de vulnerabilidade. Narração de encolher-se para caber pode ser postura; não impor transformação.
+
+## S010
+MysteryLuz transmite relato de pastor/moradores favoráveis à era dos dragões. Mira diz que pastor foi queimado e acusado de servir demônio alado. Testemunhos atribuídos; não estabelecem expectativa profética nem identidade entre estátua da fonte e antigo selo do jogador.

@@ -40,3 +40,6 @@ Word é o identificador herdado do arquivo, não uma correção para World. Etiq
 
 ## Amanhecer — continuação importada
 [S009](SOURCES/S009-amanhecer.md) / [sessão 008](SESSIONS/session-008-amanhecer.md) mostra montagem das duas, voo baixo até aldeia e busca no armazém. Título não substitui horários de meio-dia/menção posterior a noite; templo ainda não visitado.
+
+## Importação S010
+[Sessão 009 — A vila destruída](SESSIONS/session-009-a-vila-destruida.md): noite no armazém e manhã seguinte; três crianças convidadas, incluindo Mira, relatam perseguição ao pastor. Último estado em CURRENT-STATE.md; templo não alcançado.

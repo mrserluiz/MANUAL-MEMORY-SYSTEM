@@ -53,3 +53,8 @@ Elara oferece orientação ao templo; MysteryLuz pergunta direção. Não atribu
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Ouviu orientações de Lyanna sobre templo, névoa, Garganta a noroeste e tempo estimado; testemunhou proximidade da aldeia em ruínas e deslocamento. Relato de sentinelas atribuído a MysteryLuz. Não atribuir leitura integral da carta ou mapa sem cena.
+
+## S010 — armazém e fonte
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou tensa junto a barril com punhal no colo; manhã examinou rastros. Fora do armazém, terminou café e pede informação sobre era dos dragões. Dano por martelo e passagens são interpretações; não resposta das crianças.
+Informações partilhadas: três crianças da vila; Mira relata pastor queimado diante da igreja e acusado de servir demônio alado. Presenciar conversa não comprova execução. Não herdar pensamentos alheios nem confirmar suspeitas de inimigos.

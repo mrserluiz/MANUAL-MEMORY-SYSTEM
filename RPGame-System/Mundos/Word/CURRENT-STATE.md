@@ -1,15 +1,16 @@
-# Estado atual — v0.9
+# Estado atual — v0.10
 - RECONSTRUÇÃO / IMPORTAÇÃO PARCIAL.
-- Fontes S001–S009; oito lotes de dez capturas, com sobreposições.
+- Fontes S001–S010; último lote com nove capturas.
 - Ponto final definitivo no Saylo ainda não recuperado.
 
-## Último fragmento — armazém da aldeia
-Grupo viajou em voo planado baixo desde a clareira; três mulheres montaram. Aldeia sem nome em ruínas no sopé da Cordilheira Gélida: casas em chamas, corpos de soldados da igreja, cavalo preso. MysteryLuz quebra cerca para liberá-lo e propõe passar noite; destino do cavalo não mostrado.
-Narração mostra dragão acomodando-se à entrada do armazém, raspando escamas na madeira. Lea pega/lê carta e guarda no bolso. Lyanna examina rastros; localização precisa de Elara após chegada não descrita.
-Carta com selo DignusHex: anúncio de reforços na lua cheia, sem confirmação de execução. Lyanna interpreta três pessoas nos rastros; mochila com mapa parcial mencionada, frase cortada.
-Grãos em sacos rasgados, barris de água virados e lamparina acesa no local; nenhum suprimento recolhido confirmado.
-Oficial Menor adormecido por comando, amarrado à árvore na clareira antes de partida; demais quatro capturados sem destino recuperado.
-Templo não alcançado. Orientações da Garganta e estimativa de três horas atribuídas a Lyanna. Último cabeçalho é meio-dia; jogador menciona noite, sem ponte temporal.
+## Último fragmento — manhã na vila destruída
+Após pernoite no armazém central, grupo está fora, junto à fonte com estátua partida de dragão. MysteryLuz permanece escamado. Lea sentada na borda; Lyanna ajoelhada diante de Mira; Elara terminou o café e pede mais informações sobre o pastor/era dos dragões.
+Três convidados são crianças da vila, conforme correção explícita do jogador e narração posterior. Mira, a mais velha, talvez doze anos, segura galinha marrom e está chorosa ao relatar pastor queimado diante da igreja. Outras duas sem nome. Nenhuma filiação inimiga confirmada.
+Descrição inicial de mãos atadas não foi esclarecida; não registrar captura nem desamarração inventadas. MysteryLuz relata que buscaram abrigo à noite e ajudaram com café/aves pela manhã.
+Pegadas pequenas foram examinadas; associação individual aos convidados e intenção hostil não comprovadas. Fonte limpa e estátua visíveis; dano por martelo e passagens secretas são interpretações de Elara.
+Cavalo desapareceu na escuridão. Lamparina apagada. Elara distribuiu carne seca a Lea/Lyanna, sem consumo narrado. Carta continua com Lea; mochila/mapa parcial da serra sem recolha confirmada.
+Oficial Menor foi deixado adormecido/amarrado na clareira antes da viagem; atualização posterior ausente, assim como destino dos outros quatro.
+Templo das Cinco Lanças/Garganta ainda destinos planejados. Reforços na lua cheia apenas conteúdo da carta.
 
 ## Próxima importação
-Continuar frase cortada do mapa e acontecimentos no armazém. Não completar região do mapa, distribuir provisões ou executar pernoite por suposição.
+Continuar após pedido de Elara sobre ensinamentos do pastor. Não executar partida, descobrir passagens ou definir responsáveis pela destruição por suposição.

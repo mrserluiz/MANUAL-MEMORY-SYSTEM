@@ -48,3 +48,8 @@ Presencia retorno/entrega de cinco inconscientes e seleção do menor para despe
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Ouviu orientações de Lyanna sobre templo, névoa, Garganta a noroeste e tempo estimado; testemunhou proximidade da aldeia em ruínas e deslocamento. Relato de sentinelas atribuído a MysteryLuz. Não atribuir leitura integral da carta ou mapa sem cena.
+
+## S010 — armazém e fonte
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou; ao amanhecer examinou pegadas com espada meio desembainhada. Agora ajoelhada diante de Mira, conversando suavemente; ouviu relato do pastor. Não confirmou rota secreta.
+Informações partilhadas: três crianças da vila; Mira relata pastor queimado diante da igreja e acusado de servir demônio alado. Presenciar conversa não comprova execução. Não herdar pensamentos alheios nem confirmar suspeitas de inimigos.

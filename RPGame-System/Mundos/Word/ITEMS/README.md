@@ -68,3 +68,14 @@ Estandartes rasgados dos capturados e selo de autoridade no peito de um homem s�
 - I027 — Bandeira rasgada com motivo de dragão empalado cortado ao meio; observada por Lyanna, sem coleta.
 I004 espada de Lyanna ajustada no quadril e mão no cabo; punhal de Elara na cintura. Sem perda/saque de armas ou dente/escama realmente retirados.
 Cavalo é animal vivo liberado da cerca, não aquisição de montaria.
+
+## Atualização S010
+- I023: abertura resolve mapa parcial **da serra**; posse/recolha desconhecidas.
+- I024: Lea usa saco de grãos como travesseiro; não comprova conteúdo consumido.
+- I026: lamparina apagada na manhã seguinte.
+- I028: carne seca achada por Elara, pedaços lançados a Lea/Lyanna; ingestão não mostrada.
+- I029: chaleira de ferro junto à fogueira, usada por Elara; aquisição desconhecida.
+- I030: caneca de metal usada por Elara, café terminado; descarte da caneca não mostrado.
+- I031: café disponível; MysteryLuz diz prepará-lo e relata contribuição das crianças; demais ingestões não individualizadas.
+- I032: estátua partida de dragão na fonte, imóvel; asa quebrada observada, causa por martelo inferida por Elara.
+Galinha marrom no colo de Mira; outras galinhas/galo relatados pelo jogador, quantidade e custódia desconhecidas. Cavalo anterior agora desapareceu na escuridão.

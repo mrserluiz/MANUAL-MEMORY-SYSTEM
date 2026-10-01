@@ -36,3 +36,7 @@ Na clareira antes do interrogatório, com cinco capturados. Estado final continu
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Transportou as três em voo baixo até aldeia. Quebrou cerca para cavalo; narração o mostra encolhendo-se para entrada do armazém. Propõe pernoite e templo amanhã, sem execução ainda.
+
+## Último fragmento importado — S010
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Permanece escamado, fora do armazém pela manhã, com mulheres e três crianças perto da fonte. Ofereceu vigília e relata acolhimento; turno contínuo não demonstrado. Corrige crianças como convidados, não prisioneiros. Ainda não respondeu ao pedido final de Elara.

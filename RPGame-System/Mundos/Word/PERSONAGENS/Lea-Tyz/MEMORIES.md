@@ -48,3 +48,8 @@ Presencia retorno/entrega de cinco inconscientes e seleção do menor para despe
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Leu carta sobre reforços na lua cheia e a guardou; autenticidade/calendário não confirmados. Ouviu MysteryLuz negar sono dos sentinelas e relatar tê-los repartido ao meio. Sua conjectura de ataque por Lionel/facções não é conhecimento confirmado.
+
+## S010 — armazém e fonte
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou usando saco como travesseiro; amanheceu e examinou pegadas. Agora sentada na borda da fonte, mão na água; ouviu correção sobre crianças e testemunho de Mira. Expectativa prévia dos moradores é hipótese sua.
+Informações partilhadas: três crianças da vila; Mira relata pastor queimado diante da igreja e acusado de servir demônio alado. Presenciar conversa não comprova execução. Não herdar pensamentos alheios nem confirmar suspeitas de inimigos.

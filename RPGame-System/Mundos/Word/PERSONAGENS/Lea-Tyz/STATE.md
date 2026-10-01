@@ -36,3 +36,7 @@ Na clareira antes do interrogatório, com cinco capturados. Estado final continu
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Subiu atrás de Elara; no armazém chuta barril vazio, pega/lê/dobra carta e a guarda no bolso. Sem ferimento novo ou provisões recolhidas.
+
+## Último fragmento importado — S010
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou usando saco como travesseiro; amanheceu e examinou pegadas. Agora sentada na borda da fonte, mão na água; ouviu correção sobre crianças e testemunho de Mira. Expectativa prévia dos moradores é hipótese sua.

@@ -40,3 +40,7 @@ Montada, segura escamas e bate levemente na base do pescoço. Oferece orientar v
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Viajou nas costas; observou fumaça/rastros e preparou-se para saltar antes do pouso. Salto/posição final após entrada não descritos; não presumir permanência montada.
+
+## Último fragmento importado — S010
+Fonte: [S010](../../SOURCES/S010-a-vila-destruida.md).
+Repousou tensa junto a barril com punhal no colo; manhã examinou rastros. Fora do armazém, terminou café e pede informação sobre era dos dragões. Dano por martelo e passagens são interpretações; não resposta das crianças.

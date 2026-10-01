@@ -29,3 +29,6 @@ Espada afiada com pedra; destino da pedra após ação desconhecido.
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Espada ajustada no quadril/mão no cabo. Mochila/mapa mencionados, sem posse ou coleta.
+
+## S010
+Elara lança um pedaço de carne seca à personagem; recebimento/consumo não detalhados. Não adicionar aves ao inventário. Demais objetos anteriores sem transferência nova demonstrada.

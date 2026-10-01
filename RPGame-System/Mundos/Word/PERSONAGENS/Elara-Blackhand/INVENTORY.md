@@ -33,3 +33,6 @@ Recolhe equipamentos sem especificar lista. Cinco humanos capturados não são o
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 Punhal ajustado na cintura. Ameaças de retirar dente/escama não executadas.
+
+## S010
+Encontrou carne seca e lançou pedaços a Lyanna/Lea. Usa chaleira de ferro e caneca de metal para servir café; bebida consumida, destino posterior dos utensílios não mostrado. Punhal no colo à noite e na mão ao investigar marcas; equivalência com faca anterior não resolvida.

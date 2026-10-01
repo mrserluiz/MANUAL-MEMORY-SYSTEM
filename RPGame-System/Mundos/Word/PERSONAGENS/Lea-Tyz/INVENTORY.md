@@ -29,3 +29,6 @@ Sem aquisição/transferência de objetos confirmada neste lote.
 ## Amanhecer — S009
 Fonte: [S009](../../SOURCES/S009-amanhecer.md).
 I021 carta guardada no bolso. Sem coleta de grãos, água, mochila ou mapa confirmada.
+
+## S010
+Elara lança um pedaço de carne seca à personagem; recebimento/consumo não detalhados. Não adicionar aves ao inventário. Demais objetos anteriores sem transferência nova demonstrada.
