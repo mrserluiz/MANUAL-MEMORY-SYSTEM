@@ -28,7 +28,7 @@ Repositórios principais:
 
 Memória persistente deste projeto:
 
-https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/Hydraxia_rebuild
+[https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/Hydraxia_rebuild](https://github.com/mrserluiz/MANUAL-MEMORY-SYSTEM/blob/main/memories/Hydraxia_rebuild.md)
 
 Fonte de verdade operacional:
 
